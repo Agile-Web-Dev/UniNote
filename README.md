@@ -8,6 +8,7 @@
     - [Project Setup](#project-setup)
     - [Development](#development)
     - [Tests](#tests)
+    - [Database](#database)
     - [Contributions](#contributions)
 
 ## Team Members
@@ -58,9 +59,9 @@ Otherwise:
 - Run `pytest` to run all unit tests.
 
 ## Database
-alembic is added in requirements(just pip install from there)
-to initialize migration run `alembic revision --autogenerate -m "create UniNote DB"`
-initialize the database using `alembic upgrade heads`
+
+- To generate a migration run `alembic revision --autogenerate -m "<migration message>"`.
+initialize the database using `alembic upgrade head`.
   !todo:
   create strings for visual representation of data
 

@@ -46,4 +46,11 @@ Otherrwise:
 
 - Run `pytest` to run all unit tests.
 
+## Database
+alembic is added in requirements(just pip install from there)
+to initialize migration run `alembic revision --autogenerate -m "create UniNote DB"`
+initialize the database using `alembic upgrade heads`
+  !todo:
+  create strings for visual representation of data
+
 ## Contributions

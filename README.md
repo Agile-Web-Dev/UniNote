@@ -24,6 +24,7 @@ Sample text.
 
 ### Tooling
 
+- alembic for database migrations
 - black for code formatting
 - flake8 for linting
 - isort for import sorting

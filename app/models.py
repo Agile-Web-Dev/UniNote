@@ -1,10 +1,13 @@
-from app import db
 from datetime import datetime
 from uuid import uuid4
 
+from app import db
+
+
 class TimeMixin(object):
-    created_at =  db.Column(db.DateTime, default=datetime.utcnow)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow)
+
 
 user_class = db.Table(
     "user_class",
@@ -20,8 +23,8 @@ note_tag = db.Table(
 
 
 class User(db.Model, TimeMixin):
-    __tablename__ = 'user'
-    
+    __tablename__ = "user"
+
     email = db.Column(db.String, primary_key=True, nullable=False)
     user_id = db.Column(db.String, primary_key=True, nullable=False, default=uuid4)
     password = db.Column(db.String, nullable=False)
@@ -31,18 +34,18 @@ class User(db.Model, TimeMixin):
     )
     role = db.Column(db.String, nullable=False)
 
+
 class Class(db.Model, TimeMixin):
-    __tablename__ = 'class'
+    __tablename__ = "class"
 
     class_id = db.Column(db.String, primary_key=True, nullable=False, default=uuid4)
-    user_ids = db.relationship(
-        "User", secondary=user_class, back_populates="class_ids"
-    )
-    name = db.Column(db.String, nullable= False)
+    user_ids = db.relationship("User", secondary=user_class, back_populates="class_ids")
+    name = db.Column(db.String, nullable=False)
     links = db.Column(db.String)
 
+
 class Message(db.Model, TimeMixin):
-    __tablename__ = 'message'
+    __tablename__ = "message"
 
     message_id = db.Column(db.String, primary_key=True, nullable=False, default=uuid4)
     created_by = db.Column(db.ForeignKey("user.user_id"), nullable=False)
@@ -51,25 +54,19 @@ class Message(db.Model, TimeMixin):
 
 
 class Note(db.Model, TimeMixin):
-    __tablename__ = 'note'
+    __tablename__ = "note"
 
     note_id = db.Column(db.String, primary_key=True, nullable=False, default=uuid4)
     created_by = db.Column(db.ForeignKey("user.user_id"), nullable=False)
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
     title = db.Column(db.String, nullable=False)
     content = db.Column(db.String, nullable=False)
-    tag_ids = db.relationship(
-        "Tag", secondary=note_tag, back_populates="tag_nmes"
-    )
+    tag_ids = db.relationship("Tag", secondary=note_tag, back_populates="tag_nmes")
 
 
 class Tag(db.Model, TimeMixin):
-    __tablename__ = 'tag'
+    __tablename__ = "tag"
 
     name = db.Column(db.String, nullable=False, primary_key=True)
-    class_id= db.Column(db.ForeignKey("class.class_id"), nullable=False)
-    note_ids = db.relationship(
-        "Note", secondary=note_tag, back_populates="note_ids"
-    )
-
-
+    class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
+    note_ids = db.relationship("Note", secondary=note_tag, back_populates="note_ids")

@@ -1,9 +1,12 @@
 from flask import Flask
+from flask_login import LoginManager
+from flask_migrate import Migrate
 from flask_socketio import SocketIO
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
+
 from config import Config
 
+login_manager = LoginManager()
 db = SQLAlchemy()
 socketio = SocketIO()
 migrate = Migrate()
@@ -26,5 +29,6 @@ def create_app(config_class=Config):
     app.register_blueprint(main_bp)
 
     return app
+
 
 from app import models

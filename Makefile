@@ -1,7 +1,7 @@
 lint:
-	flake8 app app.py config.py models.py migration/env.py
+	flake8 app app.py config.py app/models.py migrations/env.py
 format:
-	isort app app.py config.py models.py migration/env.py && black app app.py config.py models.py migration/env.py
+	isort app app.py config.py app/models.py migrations/env.py && black app app.py config.py app/models.py migrations/env.py
 install:
 	pip install -r requirements.txt
 run:

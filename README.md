@@ -60,9 +60,10 @@ Otherwise:
 
 ## Database
 
-- To generate a migration run `alembic revision --autogenerate -m "<migration message>"`.
-initialize the database using `alembic upgrade head`.
-  !todo:
-  create strings for visual representation of data
+- To generate a migration run `flask db migrate -m "<message>"`.
+- Initialize the database using `flask db upgrade`.
+
+todo:
+- [ ] create strings for visual representation of data
 
 ## Contributions

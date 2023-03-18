@@ -1,8 +1,9 @@
 from datetime import datetime
 from uuid import uuid4
 
-from app import db
-
+from flask_login import UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
+from app import db, login
 
 class TimeMixin(object):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
@@ -22,18 +23,29 @@ note_tag = db.Table(
 )
 
 
-class User(db.Model, TimeMixin):
+class User(db.Model, TimeMixin, UserMixin):
     __tablename__ = "user"
 
     email = db.Column(db.String, primary_key=True, nullable=False)
     user_id = db.Column(db.String, primary_key=True, nullable=False, default=uuid4)
     password = db.Column(db.String, nullable=False)
-    salt = db.Column(db.String, nullable=False)
     class_ids = db.relationship(
         "Class", secondary=user_class, back_populates="user_ids"
     )
     role = db.Column(db.String, nullable=False)
 
+    def set_password(self, password):
+        self.password = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.password, password)
+    
+    def get_id(self):
+        return self.user_id
+
+@login.user_loader
+def load_user(user_id):
+    return User.query.filter_by(user_id=user_id).first()
 
 class Class(db.Model, TimeMixin):
     __tablename__ = "class"
@@ -61,7 +73,7 @@ class Note(db.Model, TimeMixin):
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
     title = db.Column(db.String, nullable=False)
     content = db.Column(db.String, nullable=False)
-    tag_ids = db.relationship("Tag", secondary=note_tag, back_populates="tag_nmes")
+    tag_names = db.relationship("Tag", secondary=note_tag, back_populates="note_ids")
 
 
 class Tag(db.Model, TimeMixin):
@@ -69,4 +81,4 @@ class Tag(db.Model, TimeMixin):
 
     name = db.Column(db.String, nullable=False, primary_key=True)
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
-    note_ids = db.relationship("Note", secondary=note_tag, back_populates="note_ids")
+    note_ids = db.relationship("Note", secondary=note_tag, back_populates="tag_names")

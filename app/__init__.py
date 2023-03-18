@@ -6,10 +6,10 @@ from flask_sqlalchemy import SQLAlchemy
 
 from config import Config
 
-login_manager = LoginManager()
 db = SQLAlchemy()
-socketio = SocketIO()
 migrate = Migrate()
+login = LoginManager()
+socketio = SocketIO()
 
 
 def create_app(config_class=Config):
@@ -18,11 +18,17 @@ def create_app(config_class=Config):
 
     db.init_app(app)
     migrate.init_app(app, db)
+    login.init_app(app)
     socketio.init_app(app)
 
     from app.api.routes import bp as api_bp
 
     app.register_blueprint(api_bp, url_prefix="/api")
+    
+    
+    from app.auth.routes import bp as auth_bp
+
+    app.register_blueprint(auth_bp, url_prefix="/api/auth")
 
     from app.main.routes import bp as main_bp
 

@@ -2,8 +2,10 @@ from datetime import datetime
 from uuid import uuid4
 
 from flask_login import UserMixin
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
+
 from app import db, login
+
 
 class TimeMixin(object):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
@@ -40,13 +42,15 @@ class User(db.Model, TimeMixin, UserMixin):
 
     def check_password(self, password):
         return check_password_hash(self.password, password)
-    
+
     def get_id(self):
         return self.user_id
+
 
 @login.user_loader
 def load_user(user_id):
     return User.query.filter_by(user_id=user_id).first()
+
 
 class Class(db.Model, TimeMixin):
     __tablename__ = "class"

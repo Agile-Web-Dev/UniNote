@@ -38,4 +38,4 @@ def register():
 
     db.session.add(user)
     db.session.commit()
-    return make_response({"msg": "Registration successful"}, 200)
+    return make_response({"msg": "Registration successful"}, 201)

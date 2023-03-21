@@ -21,11 +21,14 @@ jobs:
 
       - name: Black
         uses: psf/black@stable
+        with: 
+          black_args: "app app.py config.py app/models.py migrations/env.py --check --diff"
 
       - name: Isort
         uses: isort/isort-action@v1.1.0
         with:
           requirements-files: "requirements.txt"
+          sort-paths: app app.py config.py app/models.py migrations/env.py
 
       - name: Setup Python
         uses: actions/setup-python@v1

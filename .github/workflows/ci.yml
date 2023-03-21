@@ -64,6 +64,6 @@ jobs:
           output: both
           thresholds: '60 80'
 
-      - name: Add Coverage Workflow Summary
+      - name: Add Coverage Workflow Summary 💬
         run: |
           cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY

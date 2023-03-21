@@ -25,22 +25,24 @@ def setup(app):
 
 
 def test_login_user_id(client, setup):
+    assert len(client.cookie_jar) == 0
     response = client.post(
         "/api/auth/login", json={"username": "123", "password": "password"}
     )
 
     assert response.status_code == 200
-    assert response.headers["Set-Cookie"] is not None
+    assert next((c for c in client.cookie_jar if "session" == c.name), None) is not None
 
 
 def test_login_email(client, setup):
+    assert len(client.cookie_jar) == 0
     response = client.post(
         "/api/auth/login",
         json={"username": "hello@example.com", "password": "password"},
     )
 
     assert response.status_code == 200
-    assert response.headers["Set-Cookie"] is not None
+    assert next((c for c in client.cookie_jar if "session" == c.name), None) is not None
 
 
 def test_login_username_fail(client, setup):

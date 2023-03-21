@@ -31,6 +31,5 @@ def login():
     if user is None or not user.check_password(password):
         return make_response({"msg": "Invalid username or password"}, 401)
 
-    if login_user(user):
-        print(user)
+    login_user(user)
     return make_response({"msg": "Logged in"}, 200)

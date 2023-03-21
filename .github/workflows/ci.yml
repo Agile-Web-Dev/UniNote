@@ -11,36 +11,46 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+
 jobs:
   CI:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: [3.10.10]
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3 🛎
 
-      - name: Black
-        uses: psf/black@stable
-        with: 
-          black_args: "app app.py config.py app/models.py migrations/env.py --check --diff"
-
-      - name: Isort
-        uses: isort/isort-action@v1.1.0
+      - name: Setup Python env 🏗
+        uses: actions/setup-python@v4
         with:
-          requirements-files: "requirements.txt"
-          sort-paths: app app.py config.py app/models.py migrations/env.py
-
-      - name: Setup Python
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.10.10
+          python-version: ${{ matrix.python-version }}
           architecture: x64
 
-      - name: Install flake8
-        run: pip install flake8
-      - name: Run flake8
-        uses: suo/flake8-github-action@releases/v1
+      - name: Install dependencies 👨🏻‍💻
+        run: pip install -r requirements.txt
+
+
+      - name: Run linter 👀
+        run: |
+          flake8 app app.py config.py app/models.py migrations/env.py
+          black app app.py config.py app/models.py migrations/env.py --check --diff
+          isort app app.py config.py app/models.py migrations/env.py --check
+
+      - name: Run Migrations 🕊️
+        run: |
+          flask db upgrade
+
+      - name: Run tests 🧪
+        run: |
+          coverage run -m pytest
+          coverage xml
+
+      - name: Code Coverage Summary Report 📝
+        uses: irongut/CodeCoverageSummary@v1.3.0
         with:
-          checkName: "CI" # NOTE: this needs to be the same as the job name
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          filename: coverage.xml

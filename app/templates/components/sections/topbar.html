@@ -1,0 +1,19 @@
+{% block topbar %}
+<header>
+  <h1>UniNote</h1>
+  <ul>
+    <li>
+      <a href="{{url_for('api.ping')}}">
+        <div>CITS3403</div>
+        <a>X</a>
+      </a>
+    </li>
+    <li>
+      <a>
+        <div>CITS3002</div>
+        <div>X</div>
+      </a>
+    </li>
+  </ul>
+</header>
+{% endblock %}

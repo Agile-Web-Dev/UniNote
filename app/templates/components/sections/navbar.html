@@ -1,5 +1,9 @@
-<ul>
-  <li>
-    <a href="{{ url_for('api.ping') }}">Ping</a>
-  </li>
-</ul>
+{% block navbar %}
+<nav>
+  <ul>
+    <li>
+      <a href="{{ url_for('api.ping') }}">Ping</a>
+    </li>
+  </ul>
+</nav>
+{% endblock %}

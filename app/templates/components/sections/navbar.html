@@ -1,9 +1,12 @@
-{% block navbar %}
-<nav>
-  <ul>
-    <li>
-      <a href="{{ url_for('api.ping') }}">Ping</a>
-    </li>
-  </ul>
+<nav class="nav-wrapper col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2 row">
+    <ul class="nav-container">
+        {% for nav_item in nav_items %}
+            <li class="nav-item-wrapper">
+                <a class="nav-item-container">
+                    <i class="nav-item-image bi bi-pencil-square"></i>
+                </a>
+                <a class="nav-item-title">{{ nav_item }}</a>
+            </li>
+        {% endfor %}
+    </ul>
 </nav>
-{% endblock %}

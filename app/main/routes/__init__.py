@@ -8,4 +8,4 @@ from app.main.routes import login
 
 from app.main.routes import chatroom
 
-from app.main.routes import notes
+from app.main.routes import forum

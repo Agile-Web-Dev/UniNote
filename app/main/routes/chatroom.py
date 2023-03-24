@@ -4,5 +4,9 @@ from . import bp
 
 
 @bp.route("/chatroom", methods=["GET"])
-def home():
-    return render_template("chatroom.html", title="Chatroom")
+def chatroom():
+    return render_template(
+        "chatroom.html",
+        title="Chatroom",
+        nav_items=["Chat", "Notes", "Labs", "Project", "Exam"],
+    )

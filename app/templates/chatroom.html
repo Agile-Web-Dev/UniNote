@@ -1,6 +1,17 @@
-{% extends 'layouts/index.html' %} {% block main %} {% include
-"components/sections/topbar.html" %} {% include
-"components/sections/navbar.html" %}
-
-<div>Chatroom!</div>
-{% endblock %}
+{% extends "layouts/index.html" %}
+{% block main %}
+    {% include
+    "components/sections/topbar.html" %}
+    <div class="chatroom-container">
+        {% include
+        "components/sections/navbar.html" %}
+        {% include
+        "components/chat/chatcontainer.html" %}
+        {% include "components/sections/sidebar.html" %}
+    </div>
+{% endblock main %}
+{% block style %}
+    <link rel="stylesheet"
+          type="text/css"
+          href="{{ url_for('static', filename='css/chatroom.css') }}"/>
+{% endblock style %}

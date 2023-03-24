@@ -1,3 +1,9 @@
-{% extends 'layouts/index.html' %} {% block main %}
-<div>Login Page!</div>
-{% endblock %}
+{% extends "layouts/index.html" %}
+{% block main %}
+  <div>Login Page!</div>
+{% endblock main %}
+{% block style %}
+  <link rel="stylesheet"
+        type="text/css"
+        href="{{ url_for('static', filename='css/login.css') }}"/>
+{% endblock style %}

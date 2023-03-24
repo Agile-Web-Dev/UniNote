@@ -1,15 +1,15 @@
 # CITS3403 Project
 
 - [CITS3403 Project](#cits3403-project)
-    - [Team Members](#team-members)
-    - [Project Overview](#project-overview)
-        - [Architecture](#architecture)
-        - [Tooling](#tooling)
-    - [Project Setup](#project-setup)
-    - [Development](#development)
-    - [Tests](#tests)
-    - [Database](#database)
-    - [Contributions](#contributions)
+  - [Team Members](#team-members)
+  - [Project Overview](#project-overview)
+    - [Architecture](#architecture)
+    - [Tooling](#tooling)
+  - [Project Setup](#project-setup)
+  - [Development](#development)
+  - [Tests](#tests)
+  - [Database](#database)
+  - [Contributions](#contributions)
 
 ## Team Members
 
@@ -64,6 +64,7 @@ Otherwise:
 - Initialize the database using `flask db upgrade`.
 
 todo:
+
 - [ ] create strings for visual representation of data
 
 ## Contributions

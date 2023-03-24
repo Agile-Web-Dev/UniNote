@@ -29,7 +29,7 @@ class User(db.Model, TimeMixin, UserMixin):
     __tablename__ = "user"
 
     email = db.Column(db.String, primary_key=True, nullable=False)
-    user_id = db.Column(db.String, primary_key=True, nullable=False, default=uuid4)
+    user_id = db.Column(db.String, primary_key=True, nullable=False)
     password = db.Column(db.String, nullable=False)
     name = db.Column(db.String, nullable=False)
     class_ids = db.relationship(

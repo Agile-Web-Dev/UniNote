@@ -13,27 +13,25 @@ def register():
     Register a new student.
     Endpoint: /api/auth/register
     POST JSON data:
-    - student_id
+    - user_id
     - email
     - password
     - name
     """
     data = request.get_json()
-    student_id = data.get("student_id", "")
+    user_id = data.get("user_id", "")
     email = data.get("email", "")
     password = data.get("password", "")
     name = data.get("name", "")
 
-    if student_id == "" or email == "" or password == "" or name == "":
+    if user_id == "" or email == "" or password == "" or name == "":
         return make_response({"msg": "Missing fields"}, 400)
 
-    user = User.query.filter(
-        (User.user_id == student_id) | (User.email == email)
-    ).first()
+    user = User.query.filter((User.user_id == user_id) | (User.email == email)).first()
     if user is not None:
         return make_response({"msg": "User already exists"}, 400)
 
-    user = User(user_id=student_id, email=email, name=name, role="student")
+    user = User(user_id=user_id, email=email, name=name, role="student")
     user.set_password(password)
 
     db.session.add(user)

@@ -1,12 +1,12 @@
 from flask import make_response, request
-from flask_login import current_user, login_user
+from flask_login import current_user, login_required, login_user
 
 from app import db
 from app.models import User
 
 from . import bp
 
-
+@login_required
 @bp.route("/user", methods=["GET"])
 def get_user():
     """

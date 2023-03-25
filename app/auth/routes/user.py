@@ -6,6 +6,7 @@ from app.models import User
 
 from . import bp
 
+
 @login_required
 @bp.route("/user", methods=["GET"])
 def get_user():

@@ -1,15 +1,15 @@
 # CITS3403 Project
 
 - [CITS3403 Project](#cits3403-project)
-    - [Team Members](#team-members)
-    - [Project Overview](#project-overview)
-        - [Architecture](#architecture)
-        - [Tooling](#tooling)
-    - [Project Setup](#project-setup)
-    - [Development](#development)
-    - [Tests](#tests)
-    - [Database](#database)
-    - [Contributions](#contributions)
+  - [Team Members](#team-members)
+  - [Project Overview](#project-overview)
+    - [Architecture](#architecture)
+    - [Tooling](#tooling)
+  - [Project Setup](#project-setup)
+  - [Development](#development)
+  - [Tests](#tests)
+  - [Database](#database)
+  - [Contributions](#contributions)
 
 ## Team Members
 
@@ -51,8 +51,8 @@ On UNIX like systems:
 
 Otherwise:
 
-- Linting is done with `flake8 app app.py config.py app/models.py migrations/env.py`.
-- Formatting is done with `isort app app.py config.py app/models.py migrations/env.py && black app app.py config.py app/models.py migrations/env.py`.
+- Linting is done with `flake8 app app.py config.py app/models.py migrations/env.py` and `djlint app`.
+- Formatting is done with `isort app app.py config.py app/models.py migrations/env.py` and `black app app.py config.py app/models.py migrations/env.py`.
 
 ## Tests
 

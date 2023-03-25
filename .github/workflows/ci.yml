@@ -1,0 +1,70 @@
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+
+jobs:
+  CI:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: [3.10.10]
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout 🛎
+        uses: actions/checkout@v3
+
+      - name: Setup Python env 🏗
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+
+      - name: Install dependencies 👨🏻‍💻
+        run: pip install -r requirements.txt
+
+
+      - name: Run linter 👀
+        run: |
+          flake8 app app.py config.py app/models.py migrations/env.py
+          black app app.py config.py app/models.py migrations/env.py --check --diff
+          isort app app.py config.py app/models.py migrations/env.py --check
+
+      - name: Run Migrations 🕊️
+        run: |
+          flask db upgrade
+
+      - name: Run tests 🧪
+        run: |
+          coverage run -m pytest
+          coverage xml
+
+      - name: Code Coverage Summary Report 📝
+        uses: irongut/CodeCoverageSummary@v1.3.0
+        if: github.event_name == 'pull_request'
+        with:
+          filename: coverage.xml
+          badge: true
+          format: markdown
+          hide_branch_rate: false
+          hide_complexity: true
+          indicators: true
+          output: both
+          thresholds: '60 80'
+
+      - name: Add Coverage Workflow Summary 💬
+        if: github.event_name == 'pull_request'
+        run: |
+          cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY

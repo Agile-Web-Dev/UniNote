@@ -4,8 +4,8 @@ from flask_login import login_required, logout_user
 from . import bp
 
 
-@bp.route("/logout", methods=["GET"])
 @login_required
+@bp.route("/logout", methods=["GET"])
 def logout():
     """
     Logs out a user.

@@ -21,24 +21,11 @@
   align-items: center;
 }
 
-.nav-item-container {
-  position: relative;
-  padding: 2rem;
+.nav-item-image {
+  aspect-ratio: 1 / 1;
+  padding: 0.5rem;
   border-radius: 1.25rem;
   background: var(--app-grey-50);
-  width: 4rem;
-  height: 4rem;
-}
-
-.nav-item-image {
-  position: absolute;
-  line-height: 0;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
 }
 
 .side-container {

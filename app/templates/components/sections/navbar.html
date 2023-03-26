@@ -1,11 +1,9 @@
 <nav class="nav-wrapper">
-  <ul class="nav-container overflow-hidden">
+  <ul class="nav-container nav nav-sidebar row">
     {% for nav_item in nav_items %}
-      <li class="nav-item-wrapper">
-        <a class="nav-item-container">
-          <i class="nav-item-image bi bi-pencil-square"></i>
-        </a>
-        <a class="nav-item-title">{{ nav_item }}</a>
+      <li class="nav-item-container">
+        <img width="64" height="64" alt="{{ nav_item }}" src={{ url_for('static', filename='assets/pencil-square.svg') }} class="nav-item-image" />
+        <a href="#" class="nav-item-title">{{ nav_item }}</a>
       </li>
     {% endfor %}
   </ul>

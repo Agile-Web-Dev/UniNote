@@ -3,6 +3,7 @@
 }
 
 .nav-wrapper {
+  background: var(--app-grey-800);
 }
 
 .nav-container {
@@ -37,7 +38,7 @@
   position: relative;
   padding: 2rem;
   border-radius: 1.25rem;
-  background: #d9d9d9;
+  background: var(--app-grey-50);
   width: 4rem;
   height: 4rem;
 }

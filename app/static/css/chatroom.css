@@ -1,5 +1,5 @@
 .nav-item-container {
-  background: #d9d9d9;
+  background: var(--app-grey-800);
   width: 5rem;
   height: 5rem;
 }

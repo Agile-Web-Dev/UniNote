@@ -1,4 +1,16 @@
-main {
+html {
   height: 100svh;
   overflow: hidden;
+}
+
+:root {
+  --app-accent-light: #522886;
+  --app-accent-dark: #231336;
+  --app-grey-0: white;
+  --app-grey-50: #d9d9d9;
+  --app-grey-100: #aaaaaa;
+  --app-grey-200: #59626c;
+  --app-grey-600: #414040;
+  --app-grey-800: #201f1f;
+  --app-grey-900: black;
 }

@@ -7,8 +7,8 @@ from app.models import User
 from . import bp
 
 
-@login_required
 @bp.route("/user", methods=["GET"])
+@login_required
 def get_user():
     """
     Returns the current user.

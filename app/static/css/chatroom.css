@@ -3,6 +3,7 @@
 }
 
 .nav-wrapper {
+  height: 100%;
   background: var(--app-grey-800);
 }
 
@@ -10,7 +11,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   padding: 2rem;
   gap: 1rem;
 }

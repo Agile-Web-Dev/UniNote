@@ -1,6 +1,7 @@
 html {
   height: 100svh;
-  overflow: hidden;
+  /* overflow: hidden; */
+  background: black;
 }
 
 :root {
@@ -13,4 +14,36 @@ html {
   --app-grey-600: #414040;
   --app-grey-800: #201f1f;
   --app-grey-900: black;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--app-grey-800) var(--app-grey-0);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--app-grey-800);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--app-grey-50);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--app-grey-50);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }

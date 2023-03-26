@@ -1,3 +1,7 @@
 {
-  "recommendations": ["samuelcolvin.jinjahtml"]
+  "recommendations": [
+    "samuelcolvin.jinjahtml",
+    "monosans.djlint",
+    "batisteo.vscode-django"
+  ]
 }

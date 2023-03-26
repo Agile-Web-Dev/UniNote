@@ -1,4 +1,13 @@
 {
   "python.linting.enabled": true,
-  "python.analysis.typeCheckingMode": "basic"
+  "editor.indentSize": 2,
+  "files.associations": {
+    "**/templates/**": "django-html",
+  },
+  "[django-html]": {
+    "editor.defaultFormatter": "monosans.djlint"
+  },
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  }
 }

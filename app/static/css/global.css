@@ -1,3 +1,4 @@
-.bg-gradient {
-  background-image: var(--bs-gradient);
+main {
+  height: 100svh;
+  overflow: hidden;
 }

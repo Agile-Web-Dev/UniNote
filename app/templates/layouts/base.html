@@ -6,15 +6,15 @@
   </header>
 {% endblock header %}
 {% block main %}
-  <div class="row">
-    <section class="col">
+  <div class="row g-0">
+    <nav class="col nav-wrapper">
       {% include "components/sections/navbar.html" %}
-    </section>
-    <section class="col-7">
+    </nav>
+    <section class="col-8 bg-secondary">
       {% block content %}
       {% endblock content %}
     </section>
-    <section class="col">
+    <section class="col bg-body-tertiary">
       {% include "components/sections/sidebar.html" %}
     </section>
   </div class="row">

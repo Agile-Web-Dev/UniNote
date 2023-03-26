@@ -2,22 +2,25 @@
   height: 100%;
 }
 
-.nav-wrapper {
+.side-wrapper {
   height: 100%;
   background: var(--app-grey-800);
+}
+
+.side-container {
 }
 
 .nav-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
-  gap: 1.5rem;
-  padding: 1.5rem;
+  gap: 1rem;
 }
 
 .nav-item-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  list-style-type: none;
 }
 
 .nav-item-image {
@@ -25,9 +28,14 @@
   padding: 0.5rem;
   border-radius: 1.25rem;
   background: var(--app-grey-50);
+  object-fit: fill;
+  width: 100%;
+  height: 100%; /* remove these to not scale image on resize */
 }
 
-.side-container {
-  display: flex;
-  /* width: 36rem; */
+.sidebar-line {
+  height: 2px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background: var(--app-grey-600);
 }

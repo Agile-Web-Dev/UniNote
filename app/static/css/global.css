@@ -16,6 +16,11 @@ html {
   --app-grey-900: black;
 }
 
+.colour-grey-0 {
+  color: var(--app-grey-0);
+  fill: white;
+}
+
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--app-grey-800) var(--app-grey-0);

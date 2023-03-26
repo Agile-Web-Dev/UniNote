@@ -7,15 +7,15 @@
 {% endblock header %}
 {% block main %}
   <div class="row g-0">
-    <nav class="col nav-wrapper">
+    <section class="col side-wrapper">
       {% include "components/sections/navbar.html" %}
-    </nav>
+    </section>
     <section class="col-8 bg-secondary">
       {% block content %}
       {% endblock content %}
     </section>
-    <section class="col bg-body-tertiary">
-      {% include "components/sections/sidebar.html" %}
+    <section class="col side-wrapper">
+      {% include "components/sections/notesbar.html" %}
     </section>
   </div class="row">
 {% endblock main %}

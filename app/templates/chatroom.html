@@ -9,3 +9,6 @@
         type="text/css"
         href="{{ url_for('static', filename='css/chatroom.css') }}"/>
 {% endblock style %}
+{% block script %}
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock script %}

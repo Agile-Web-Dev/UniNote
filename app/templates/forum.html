@@ -1,11 +1,7 @@
-{% extends "layouts/index.html" %}
-{% block main %}
-  {% include
-  "components/sections/topbar.html" %}
-  {% include
-  "components/sections/navbar.html" %}
-  <div>Notes Forum Page!</div>
-{% endblock main %}
+{% extends "layouts/base.html" %}
+{% block content %}
+  {% include "components/forum/forumcontainer.html" %}
+{% endblock content %}
 {% block style %}
   <link rel="stylesheet"
         type="text/css"

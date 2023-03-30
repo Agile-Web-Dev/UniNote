@@ -4,21 +4,21 @@ html {
   background: black;
 }
 
+body {
+  background: var(--app-grey-800);
+}
+
 :root {
   --app-accent-light: #522886;
   --app-accent-dark: #231336;
   --app-grey-0: white;
   --app-grey-50: #d9d9d9;
   --app-grey-100: #aaaaaa;
-  --app-grey-200: #59626c;
+  --app-grey-300: #676666;
+  --app-grey-400: #59626c;
   --app-grey-600: #414040;
   --app-grey-800: #201f1f;
   --app-grey-900: black;
-}
-
-.colour-grey-0 {
-  color: var(--app-grey-0);
-  fill: white;
 }
 
 * {
@@ -28,25 +28,25 @@ html {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 2px;
+  height: 2px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--app-grey-800);
+  background: var(--app-grey-900);
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--app-grey-50);
+  background: var(--app-grey-100);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--app-grey-50);
+  background: var(--app-grey-100);
 }
 
 ::-webkit-scrollbar-corner {

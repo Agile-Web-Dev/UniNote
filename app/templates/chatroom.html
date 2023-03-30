@@ -1,15 +1,14 @@
 {% extends "layouts/base.html" %}
 {% block content %}
-  <div class="row flex-fill">
-    <div class="col">
-      {% include "components/chat/chatcontainer.html" %}
-      {% include
-      "components/chat/chatbox.html" %}
-    </div>
-  </div>
+  {% include "components/chat/chatcontainer.html" %}
+  {% include
+  "components/chat/chatbox.html" %}
 {% endblock content %}
 {% block style %}
   <link rel="stylesheet"
         type="text/css"
         href="{{ url_for('static', filename='css/chatroom.css') }}"/>
 {% endblock style %}
+{% block script %}
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock script %}

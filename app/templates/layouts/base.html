@@ -6,16 +6,16 @@
   </header>
 {% endblock header %}
 {% block main %}
-  <div class="row g-0">
-    <section class="col side-wrapper">
+  <div class="row flex-grow-1 overflow-auto">
+    <section class="col-2 h-100 overflow-auto side-wrapper">
       {% include "components/sections/navbar.html" %}
     </section>
-    <section class="col-8 bg-secondary">
+    <section class="col">
       {% block content %}
       {% endblock content %}
     </section>
-    <section class="col side-wrapper">
-      {% include "components/sections/notesbar.html" %}
+    <section class="col">
+      {% include "components/sections/sidebar.html" %}
     </section>
   </div class="row">
 {% endblock main %}

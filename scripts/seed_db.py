@@ -43,5 +43,5 @@ with app.app_context():
     db.session.commit()
 
     print("Db has been populated")
-    for entry in db.session.query(Note).filter(Note.class_id == "CITS3403"):
-        print(entry.content)
+    for entry in db.session.query(Note).all():
+        print(entry._mapping)

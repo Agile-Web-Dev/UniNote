@@ -7,15 +7,13 @@ from app.models import User
 
 @pytest.fixture
 def setup(app):
-    with app.app_context():
-        User.query.delete()
-        db.session.commit()
+    User.query.delete()
+    db.session.commit()
 
     yield app
 
-    with app.app_context():
-        User.query.delete()
-        db.session.commit()
+    User.query.delete()
+    db.session.commit()
 
 
 def test_register(client, setup):

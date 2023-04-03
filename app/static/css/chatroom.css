@@ -7,3 +7,7 @@
 .nav-item-image {
   font-size: 3rem;
 }
+
+.emoji-picker:not(.shown) {
+  display: none;
+}

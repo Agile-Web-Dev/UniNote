@@ -4,6 +4,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
+
 from app import create_app
 
 
@@ -14,14 +15,16 @@ def app():
 
     with app.app_context():
         yield app
-        
+
+
 @pytest.fixture(scope="session")
 def server():
     app = create_app()
     app.config.update({"TESTING": True})
-    t = threading.Thread(target=app.run, kwargs={"port":"5000", "use_reloader": False})
+    t = threading.Thread(target=app.run, kwargs={"port": "5000", "use_reloader": False})
     t.daemon = True
     t.start()
+
 
 @pytest.fixture(scope="session")
 def driver(server):
@@ -32,8 +35,9 @@ def driver(server):
 
 
 @pytest.fixture(scope="session")
-def wait(driver ):
+def wait(driver):
     yield WebDriverWait(driver, 3)
+
 
 @pytest.fixture()
 def client(app):

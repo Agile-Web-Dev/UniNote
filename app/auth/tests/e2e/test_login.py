@@ -34,13 +34,13 @@ def test_login_user_id(driver: webdriver.Chrome, wait, setup):
 
     username = driver.find_element(By.ID, "username")
     username.send_keys("123")
-    
+
     password = driver.find_element(By.ID, "password")
     password.send_keys("password")
 
     submit = driver.find_element(By.ID, "submit")
     submit.click()
-    
+
     wait.until(EC.title_contains("Dashboard"))
 
     assert driver.get_cookie("session") is not None

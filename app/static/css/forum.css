@@ -8,9 +8,14 @@
 }
 
 .note-list {
+  height: fit-content;
+  overflow-y: scroll;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .searchbar-container {
@@ -18,9 +23,24 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.75rem;
   background: var(--app-grey-50);
   border-radius: 9999px;
+}
+
+.searchbar-container > input {
+  width: 100%;
+  border: none;
+  border-radius: 9999px;
+  background: transparent;
+  outline: none;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.searchbar-container > img {
+  fill: var(--app-grey-100);
+  margin-right: 1rem;
 }
 
 .forum-container {

@@ -1,12 +1,11 @@
 html {
   height: 100svh;
   /* overflow: hidden; */
-  background: black;
 }
 
-body {
+/* body {
   background: var(--app-grey-800);
-}
+} */
 
 :root {
   --app-accent-light: #522886;
@@ -51,6 +50,22 @@ body {
 
 ::-webkit-scrollbar-corner {
   background: transparent;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--app-grey-100);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--app-grey-100);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--app-grey-100);
 }
 
 .side-wrapper {

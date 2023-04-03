@@ -45,6 +45,10 @@ class User(db.Model, TimeMixin, UserMixin):
 
     def get_id(self):
         return self.user_id
+    
+    def serialize(self):
+        return {"email": self.email, "user_id": self.user_id, "name": self.name, "Class_ids": self.class_ids}
+
 
 
 @login.user_loader
@@ -59,6 +63,10 @@ class Class(db.Model, TimeMixin):
     user_ids = db.relationship("User", secondary=user_class, back_populates="class_ids")
     name = db.Column(db.String, nullable=False)
     links = db.Column(db.String)
+    
+    def serialize(self):
+        return {"class_id": self.class_id, "user_ids": self.user_ids, "name": self.name, "links": self.links}
+
 
 
 class Message(db.Model, TimeMixin):
@@ -68,6 +76,10 @@ class Message(db.Model, TimeMixin):
     created_by = db.Column(db.ForeignKey("user.user_id"), nullable=False)
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
     content = db.Column(db.String)
+    
+    def serialize(self):
+        return {"message_id": self.message_id, "created_by": self.created_by, "class_id": self.class_id, "content": self.content, "created_at": TimeMixin.created_at, "updated_at": TimeMixin.created_at}
+
 
 
 class Note(db.Model, TimeMixin):
@@ -81,7 +93,7 @@ class Note(db.Model, TimeMixin):
     tag_names = db.relationship("Tag", secondary=note_tag, back_populates="note_ids")
 
     def serialize(self):
-        return {"note_id": self.note_id, "created_by": self.created_by}
+        return {"note_id": self.note_id, "created_by": self.created_by, "class_id": self.class_id, "title": self.title, "content": self.content}
 
 
 class Tag(db.Model, TimeMixin):
@@ -90,3 +102,7 @@ class Tag(db.Model, TimeMixin):
     name = db.Column(db.String, nullable=False, primary_key=True)
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
     note_ids = db.relationship("Note", secondary=note_tag, back_populates="tag_names")
+
+    def serialize(self):
+        return {"name": self.name, "class_id": self.class_id, "note_ids": self.note_ids,"created_at": TimeMixin.created_at, "updated_at": TimeMixin.created_at}
+

@@ -18,5 +18,5 @@ def get_user():
     if user is None:
         return make_response({"msg": "User not found"}, 404)
     return make_response(
-        {"user_id": user.user_id, "email": user.email, "name": user.name}, 200
+        user.serialize(), 200
     )

@@ -80,6 +80,9 @@ class Note(db.Model, TimeMixin):
     content = db.Column(db.String, nullable=False)
     tag_names = db.relationship("Tag", secondary=note_tag, back_populates="note_ids")
 
+    def serialize(self):
+        return {"note_id": self.note_id, "created_by": self.created_by}
+
 
 class Tag(db.Model, TimeMixin):
     __tablename__ = "tag"

@@ -1,8 +1,11 @@
 import threading
-from app import socketio
+
 import pytest
 from selenium import webdriver
-from app import create_app
+
+from selenium.webdriver.support.ui import WebDriverWait
+from app import create_app, socketio
+
 
 @pytest.fixture()
 def app():
@@ -16,7 +19,7 @@ def app():
 def server():
     app = create_app()
     app.config.update({"TESTING": True})
-    t = threading.Thread(target=app.run, kwargs={"port":"3000", "use_reloader": False})
+    t = threading.Thread(target=app.run, kwargs={"port":"5000", "use_reloader": False})
     t.daemon = True
     t.start()
 
@@ -24,7 +27,11 @@ def server():
 def driver(server):
     with webdriver.Chrome() as driver:
         yield driver
-        
+
+
+@pytest.fixture(scope="session")
+def wait(driver ):
+    yield WebDriverWait(driver, 3)
 
 @pytest.fixture()
 def client(app):

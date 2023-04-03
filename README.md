@@ -56,8 +56,8 @@ Otherwise:
 
 ## Tests
 
-- Run `pytest` to run all unit tests.
-
+- Run `pytest` to run all unit and end to end (e2e) tests.
+- TODO: add instructions to set up selenium
 ## Database
 
 - To generate a migration run `flask db migrate -m "<message>"`.

@@ -36,7 +36,7 @@ jobs:
         uses: browser-actions/setup-chrome@v1
 
       - name: Install chromedriver 🤖
-        uses: nanasess/setup-chromedriver@v2
+        uses: nanasess/setup-chromedriver@v2.0.0
 
       - name: Install Python dependencies 👨🏻‍💻
         run: pip install -r requirements.txt

@@ -9,6 +9,18 @@ const noteData = [
 jQuery(() => {
   const noteList = $("#note-list");
   noteList.html(noteData.map(NoteItem).join(""));
+
+  $("#note-searchbar-form").on("submit", (e) => {
+    e.preventDefault();
+    console.log("search");
+    const searchQuery = $("#note-searchbar").val();
+    const filteredNotes = noteData.filter(
+      (note) =>
+        note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        note.content.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    noteList.html(filteredNotes.map(NoteItem).join(""));
+  });
 });
 
 const NoteItem = ({ title, content }) => {

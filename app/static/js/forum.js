@@ -12,7 +12,7 @@ jQuery(() => {
 
   $("#note-searchbar-form").on("submit", (e) => {
     e.preventDefault();
-    console.log("search");
+
     const searchQuery = $("#note-searchbar").val();
     const filteredNotes = noteData.filter(
       (note) =>

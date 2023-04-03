@@ -47,8 +47,12 @@ class User(db.Model, TimeMixin, UserMixin):
         return self.user_id
     
     def serialize(self):
-        return {"email": self.email, "user_id": self.user_id, "name": self.name, "Class_ids": self.class_ids}
-
+        print()
+        return {"email": self.email, "user_id": self.user_id, "name": self.name, "Class_ids": [Class.serialize_for_user() for Class in self.class_ids]}
+    
+    def serialize_for_classes(self):
+        print()
+        return {"user_id": self.user_id}
 
 
 @login.user_loader
@@ -65,7 +69,9 @@ class Class(db.Model, TimeMixin):
     links = db.Column(db.String)
     
     def serialize(self):
-        return {"class_id": self.class_id, "user_ids": self.user_ids, "name": self.name, "links": self.links}
+        return {"class_id": self.class_id,"user_ids":[User.serialize_for_classes() for User in self.user_ids] ,"name": self.name, "links": self.links}
+    def serialize_for_user(self):
+        return {"class_id": self.class_id, "name": self.name}
 
 
 

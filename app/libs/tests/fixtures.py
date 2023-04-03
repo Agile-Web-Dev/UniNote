@@ -2,9 +2,9 @@ import threading
 
 import pytest
 from selenium import webdriver
-
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
-from app import create_app, socketio
+from app import create_app
 
 
 @pytest.fixture()
@@ -25,7 +25,9 @@ def server():
 
 @pytest.fixture(scope="session")
 def driver(server):
-    with webdriver.Chrome() as driver:
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    with webdriver.Chrome(options=chrome_options) as driver:
         yield driver
 
 

@@ -16,9 +16,30 @@ with app.app_context():
     Tag.query.delete()
     Class.query.delete()
 
-    user = User(email="testes@test.com", user_id="23030303", name="Test", role="student", class_ids = [Class(class_id = "CITS3403", name = "Agile Web Dev", 
-    links = "http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline"),
-    Class(class_id = "CITS2401", name = "Python", links = "http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline")])
+    cits3401 = Class(class_id = "CITS3403", name = "Agile Web Dev", 
+    links = "http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline")
+    cits2401 = Class(class_id = "CITS2401", name = "Python", links = "http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline")
+    classes = [cits3401,cits2401]
+    print("CLASSES", classes)
+    db.session.add_all(classes)
+
+    user = User(email="testes@test.com", user_id="23030303", name="Test", role="student")
+
+    user2 = User(email="not@test.com", user_id="12312312", name="danny", role="student")
+    user.set_password("123")
+    user2.set_password("123")
+    db.session.add_all([user,user2])
+    db.session.commit()
+
+    user.class_ids.append(cits3401)
+    user2.class_ids.append(cits3401)
+    user.class_ids.append(cits2401)
+    user2.class_ids.append(cits2401)
+    db.session.commit()
+
+
+
+    print("users TEST", user.get_id, user.class_ids, user2)
 
     notes = [
     Note(note_id = 202, created_by = 123, class_id = "CITS3403",title = "My Mom",content = "my mommy is cool and the best."),
@@ -33,9 +54,9 @@ with app.app_context():
     ]
 
 
-    user.set_password("123")
+ 
 
-    db.session.add(user)
+    
     db.session.add_all(notes)
     db.session.add_all(tags)
     db.session.commit()

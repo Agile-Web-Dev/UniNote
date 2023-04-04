@@ -1,4 +1,6 @@
 <article class="searchbar-container m-4 mb-0">
-  <input placeholder="Search for notes..." />
+  <form id="note-searchbar-form" class="h-100 w-100">
+    <input id="note-searchbar" placeholder="Search for notes..." />
+  </form>
   <img width="16" height="16" alt="Search for notes" src={{ url_for('static', filename='assets/search.svg') }} />
 </article>

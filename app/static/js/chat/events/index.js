@@ -9,7 +9,7 @@ export const setupSocketIO = () => {
   socket = io.connect(`${document.location.host}/chat`);
   socket.on("connect", connect);
   socket.on("join", join);
-  socket.on("receiveMessage", receiveMessage);
+  socket.on("receiveMessage", receiveMessage);    
 
   $("#chatbox").on("keypress", (e) => {
     const message = $("#chatbox").val().trim();

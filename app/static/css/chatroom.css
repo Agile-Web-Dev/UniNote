@@ -8,6 +8,6 @@
   font-size: 3rem;
 }
 
-.emoji-picker:not(.shown) {
+#emoji-picker:not(.shown) {
   display: none;
 }

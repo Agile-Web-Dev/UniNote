@@ -19,6 +19,8 @@ def login():
     """
     username = request.get_json().get("username", "")
     password = request.get_json().get("password", "")
+    remember = request.get_json().get("remember", False)
+
     if username == "" or password == "":
         return make_response({"msg": "Missing username or password"}, 400)
 
@@ -31,5 +33,5 @@ def login():
     if user is None or not user.check_password(password):
         return make_response({"msg": "Invalid username or password"}, 401)
 
-    login_user(user)
+    login_user(user, remember=remember)
     return make_response({"msg": "Logged in"}, 200)

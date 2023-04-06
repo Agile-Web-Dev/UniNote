@@ -7,7 +7,7 @@
   color: white;
 }
 
-.note-list {
+#note-list {
   height: fit-content;
   overflow-y: scroll;
   display: grid;

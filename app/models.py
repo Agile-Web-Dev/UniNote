@@ -93,11 +93,13 @@ class Message(db.Model, TimeMixin):
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
     content = db.Column(db.String)
 
-    def serialize(self):
+    def serialize(self, user_id):
+        currUser = db.session.query(User).filter(User.user_id == user_id)
         return {
             "message_id": self.message_id,
             "created_by": self.created_by,
             "class_id": self.class_id,
+            "role": currUser.role,
             "content": self.content,
             "created_at": TimeMixin.created_at,
             "updated_at": TimeMixin.created_at,

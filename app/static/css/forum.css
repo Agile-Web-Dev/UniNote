@@ -9,7 +9,7 @@
 }
 
 .note-item:hover {
-  background: var(--app-grey-350);
+  background: var(--app-grey-400);
   transition: 0.25s;
 }
 

@@ -1,6 +1,6 @@
 .note-item {
   aspect-ratio: 1 / 1;
-  width: 100%;
+  max-width: 100%;
   background: var(--app-grey-300);
   padding: 1rem;
   border-radius: 1rem;
@@ -17,7 +17,7 @@
   height: fit-content;
   overflow-y: scroll;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: 1.5rem;
   margin-left: 1.5rem;
   margin-right: 0.75rem;

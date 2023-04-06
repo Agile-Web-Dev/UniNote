@@ -2,7 +2,7 @@
   "python.linting.enabled": true,
   "editor.indentSize": 2,
   "files.associations": {
-    "**/templates/**": "django-html",
+    "**/templates/**": "django-html"
   },
   "[django-html]": {
     "editor.defaultFormatter": "monosans.djlint"

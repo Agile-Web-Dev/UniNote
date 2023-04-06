@@ -36,5 +36,6 @@ def create_app(config_class=Config):
 
     return app
 
+
 import app.chat.events
 from app import models

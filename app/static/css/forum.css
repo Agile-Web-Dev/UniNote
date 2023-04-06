@@ -5,6 +5,12 @@
   padding: 1rem;
   border-radius: 1rem;
   color: white;
+  cursor: pointer;
+}
+
+.note-item:hover {
+  background: var(--app-grey-350);
+  transition: 0.25s;
 }
 
 #note-list {

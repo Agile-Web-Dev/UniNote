@@ -1,6 +1,4 @@
 export const receiveMessage = (message) => {
-  const messageElem = document.createElement("p");
-  messageElem.innerText = message.msg;
 
-  $("#chat-container").append(messageElem);
+  $("#chat-container").append(`<p>${message.msg}</p>`);
 };

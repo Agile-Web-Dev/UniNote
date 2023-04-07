@@ -4,6 +4,7 @@ from flask_socketio import emit, leave_room
 from app import socketio
 from app.auth.utils import login_required_socket
 
+
 @socketio.on("leave", namespace="/chat")
 def leave(message):
     """Sent by clients when they leave a room.

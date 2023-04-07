@@ -1,12 +1,11 @@
-{% extends "layouts/index.html" %}
-{% block main %}
-  <div>Dashboard Page!</div>
-  <button class="btn btn-primary" onclick="logoutHandler()"
-  >Log out</button>
-{% endblock main %}
-{% block style %}
-  <link rel="stylesheet"
-        type="text/css"
-        href="{{ url_for('static', filename='css/dashboard.css') }}"/>
-  <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+{% extends "layouts/base.html" %} {% block main %}
+<div>Dashboard Page!</div>
+<button class="btn btn-primary" onclick="logoutHandler()">Log out</button>
+{% endblock main %} {% block style %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='css/dashboard.css') }}"
+/>
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
 {% endblock style %}

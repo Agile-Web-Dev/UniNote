@@ -1,0 +1,21 @@
+{% extends "layouts/index.html" %}
+{% block header %}
+  <header>
+    {% include
+    "components/sections/topbar.html" %}
+  </header>
+{% endblock header %}
+{% block main %}
+  <div class="row flex-grow-1 overflow-auto">
+    <section class="col-2 h-100 overflow-auto">
+      {% include "components/sections/navbar.html" %}
+    </section>
+    <section class="col flex-grow-1 flex-column d-flex overflow-auto h-100">
+      {% block content %}
+      {% endblock content %}
+    </section>
+    <section class="col-3">
+      {% include "components/sections/sidebar.html" %}
+    </section>
+  </div class="row">
+{% endblock main %}

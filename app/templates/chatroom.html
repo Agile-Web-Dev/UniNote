@@ -1,17 +1,16 @@
-{% extends "layouts/index.html" %}
-{% block main %}
-    {% include
-    "components/sections/topbar.html" %}
-    <div class="chatroom-container">
-        {% include
-        "components/sections/navbar.html" %}
-        {% include
-        "components/chat/chatcontainer.html" %}
-        {% include "components/sections/sidebar.html" %}
-    </div>
-{% endblock main %}
+{% extends "layouts/base.html" %}
+{% block content %}
+  {% include "components/chat/chatcontainer.html" %}
+  {% include
+  "components/chat/chatbox.html" %}
+{% endblock content %}
 {% block style %}
-    <link rel="stylesheet"
-          type="text/css"
-          href="{{ url_for('static', filename='css/chatroom.css') }}"/>
+  <link rel="stylesheet"
+        type="text/css"
+        href="{{ url_for('static', filename='css/chatroom.css') }}"/>
 {% endblock style %}
+{% block script %}
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emoji-mart@5.5.2/dist/browser.min.js"></script>
+  <script type=module src="{{ url_for('static', filename='js/chat/index.js') }}"></script>
+{% endblock script %}

@@ -63,8 +63,3 @@ def test_login_empty(client, setup):
     response = client.post("/api/auth/login", json={"username": "", "password": ""})
 
     assert response.status_code == 400
-
-
-# todo: test remember
-def test_login_remember(client, setup):
-    pass

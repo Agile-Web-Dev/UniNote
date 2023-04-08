@@ -14,7 +14,7 @@ def receive_message(message):
     room = session.get("room")
     emit(
         "receiveMessage",
-        {"msg": current_user.name + ": " + message["msg"]},
+        {"name": current_user.name, "msg": message["msg"]},
         room=room,
         broadcast=True,
     )

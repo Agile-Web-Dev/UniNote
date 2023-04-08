@@ -1,25 +1,28 @@
 import { getAvatar } from "../../user.js";
 
 const messageHtml = `
-<div class="message">
+<div class="message d-flex gap-3">
   <div class="avatar-holder"></div>
-  <p class="name"></p>
-  <div class="message-content"></div>
+  <div class="d-flex flex-column">
+    <p class="name fw-bold mb-1"></p>
+    <div class="message-content"></div>
+  </div>
 </div>`;
 
 let lastParentMessage;
 let lastAuthor = "";
+
 export const receiveMessage = async (message) => {
   if (lastAuthor !== message.name) {
     const messageElement = $(messageHtml).appendTo("#chat-container");
-    messageElement.children(".avatar-holder").append(await getAvatar(message.name));
-    messageElement.children(".name").text(message.name);
-    messageElement.children(".message-content").text(message.msg);
+    messageElement
+      .children("div.avatar-holder")
+      .append(await getAvatar(message.name));
+    messageElement.children("div").children(".name").text(message.name);
+    messageElement.children("div").children(".message-content").text(message.msg);
     lastParentMessage = messageElement;
-  }
-  else {
-    lastParentMessage.children(".message-content").append(`<br>${message.msg}`);
+  } else {
+    lastParentMessage.children("div").children("div.message-content").append(`<br>${message.msg}`);
   }
   lastAuthor = message.name;
-
 };

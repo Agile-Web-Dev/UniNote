@@ -7,21 +7,19 @@ from app.models import User
 
 @pytest.fixture
 def setup(app):
-    with app.app_context():
-        User.query.delete()
+    User.query.delete()
 
-        user = User(
-            user_id="123", name="John Doe", email="hello@example.com", role="student"
-        )
-        user.set_password("password")
-        db.session.add(user)
-        db.session.commit()
+    user = User(
+        user_id="123", name="John Doe", email="hello@example.com", role="student"
+    )
+    user.set_password("password")
+    db.session.add(user)
+    db.session.commit()
 
     yield app
 
-    with app.app_context():
-        User.query.delete()
-        db.session.commit()
+    User.query.delete()
+    db.session.commit()
 
 
 def test_login_user_id(client, setup):
@@ -65,8 +63,3 @@ def test_login_empty(client, setup):
     response = client.post("/api/auth/login", json={"username": "", "password": ""})
 
     assert response.status_code == 400
-
-
-# todo: test remember
-def test_login_remember(client, setup):
-    pass

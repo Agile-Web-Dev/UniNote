@@ -5,7 +5,7 @@ const loginFormHandler = async (event) => {
   const password = $("#password").val();
   const remember = $("#remember").is(":checked");
 
-  if (!username && !password) {
+  if (!username || !password) {
     return;
   }
 

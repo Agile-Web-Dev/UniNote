@@ -1,4 +1,9 @@
+import threading
+
 import pytest
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
 
 from app import create_app
 
@@ -6,17 +11,32 @@ from app import create_app
 @pytest.fixture()
 def app():
     app = create_app()
-    app.config.update(
-        {
-            "TESTING": True,
-        }
-    )
+    app.config.update({"TESTING": True})
 
-    # other setup can go here
+    with app.app_context():
+        yield app
 
-    yield app
 
-    # clean up / reset resources here
+@pytest.fixture(scope="session")
+def server():
+    app = create_app()
+    app.config.update({"TESTING": True})
+    t = threading.Thread(target=app.run, kwargs={"port": "5000", "use_reloader": False})
+    t.daemon = True
+    t.start()
+
+
+@pytest.fixture(scope="session")
+def driver(server):
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    with webdriver.Chrome(options=chrome_options) as driver:
+        yield driver
+
+
+@pytest.fixture(scope="session")
+def wait(driver):
+    yield WebDriverWait(driver, 3)
 
 
 @pytest.fixture()

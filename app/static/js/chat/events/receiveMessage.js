@@ -18,11 +18,19 @@ export const receiveMessage = async (message) => {
     messageElement
       .children("div.avatar-holder")
       .append(await getAvatar(message.name));
+
     messageElement.children("div").children(".name").text(message.name);
-    messageElement.children("div").children(".message-content").text(message.msg);
+    const messageContainer = messageElement
+      .children("div")
+      .children(".message-content");
+    $('<p class="mb-0"></p>').text(message.msg).appendTo(messageContainer);
     lastParentMessage = messageElement;
   } else {
-    lastParentMessage.children("div").children("div.message-content").append(`<br>${message.msg}`);
+    const messageContainer = lastParentMessage
+      .children("div")
+      .children(".message-content");
+    $("<b></b>").appendTo(messageContainer);
+    $('<p class="mb-0"></p>').text(message.msg).appendTo(messageContainer);
   }
   lastAuthor = message.name;
 };

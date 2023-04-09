@@ -14,9 +14,9 @@ def get_notes(class_id):
 
 # when user saves their notes
 @bp.route("/", methods=["POST"])
-def post_notes( createdBy, classId, title, contents):
+def post_notes( createdBy, classId, title, content):
     '''upload notes based on the classID into database'''
-    note = Note(created_by = createdBy, class_id = classId ,title = title,content = contents)
+    note = Note(created_by = createdBy, class_id = classId ,title = title,content = content)
     db.session.add(note)
     db.session.commit()
     return note

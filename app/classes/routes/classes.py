@@ -8,7 +8,7 @@ from . import bp
 @bp.route("/<class_id>", methods=["GET"])
 def get_class_users(class_id):
     resArr = []
-    res = db.session.query(Class).filter(Class.class_id == class_id)
+    res = Class.query.filter(Class.class_id == class_id)
     for entry in res:
         resArr.append(entry.serialize())
     return resArr

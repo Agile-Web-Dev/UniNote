@@ -114,7 +114,12 @@ class Note(db.Model, TimeMixin):
     tag_names = db.relationship("Tag", secondary=note_tag, back_populates="note_ids")
 
     def serialize(self):
-        return {"note_id": self.note_id, "created_by": self.created_by, "class_id": self.class_id, "title": self.title, "content": self.content,"created_at": self.created_at, "updated_at":self.updated_at}
+        return {"note_id": self.note_id, 
+                "created_by": self.created_by, 
+                "class_id": self.class_id, "title": self.title, 
+                "content": self.content,
+                "created_at": self.created_at, 
+                "updated_at":self.updated_at}
 
 
 class Tag(db.Model, TimeMixin):
@@ -125,5 +130,9 @@ class Tag(db.Model, TimeMixin):
     note_ids = db.relationship("Note", secondary=note_tag, back_populates="tag_names")
 
     def serialize(self):
-        return {"name": self.name, "class_id": self.class_id, "note_ids": self.note_ids,"created_at": self.created_at, "updated_at": self.created_at}
+        return {"name": self.name, 
+                "class_id": self.class_id, 
+                "note_ids": self.note_ids,
+                "created_at": self.created_at, 
+                "updated_at": self.created_at}
 

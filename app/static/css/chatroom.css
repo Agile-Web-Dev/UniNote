@@ -8,9 +8,20 @@
   font-size: 3rem;
 }
 
+#chatbox {
+  resize: none;
+  height: 38px;
+  max-height: 200px;
+}
+
 #emoji-picker:not(.shown) {
   display: none;
 }
+
+#emoji-picker-button {
+  height: 38px;
+}
+
 
 .avatar {
   width: 3rem;

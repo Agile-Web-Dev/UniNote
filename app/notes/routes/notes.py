@@ -2,8 +2,6 @@ from app import db
 from app.models import Note
 
 from . import bp
-
-
 @bp.route("/<class_id>", methods=["GET"])
 def get_notes(class_id):
     '''get notes based on the classID'''
@@ -11,9 +9,10 @@ def get_notes(class_id):
     res = db.session.query(Note).filter(Note.class_id == class_id)
     for entry in res:
         resArr.append(entry.serialize())
-    return  resArr
+    return resArr
 
-#when user saves their notes
+
+# when user saves their notes
 @bp.route("/", methods=["POST"])
 def post_notes( createdBy, classId, title, contents):
     '''upload notes based on the classID into database'''

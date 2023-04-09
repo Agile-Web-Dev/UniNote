@@ -1,3 +1,7 @@
 .chatroom-container {
   height: 100%;
 }
+
+#emoji-picker:not(.shown) {
+  display: none;
+}

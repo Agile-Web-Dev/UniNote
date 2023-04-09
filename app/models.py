@@ -45,10 +45,16 @@ class User(db.Model, TimeMixin, UserMixin):
 
     def get_id(self):
         return self.user_id
-    
+
     def serialize(self):
-        return {"email": self.email, "user_id": self.user_id, "name": self.name, "Class_ids": [Class.serialize_for_user() for Class in self.class_ids]}
-    
+        print()
+        return {
+            "email": self.email,
+            "user_id": self.user_id,
+            "name": self.name,
+            "Class_ids": [Class.serialize_for_user() for Class in self.class_ids],
+        }
+
     def serialize_for_classes(self):
         return {"user_id": self.user_id}
 
@@ -65,12 +71,17 @@ class Class(db.Model, TimeMixin):
     user_ids = db.relationship("User", secondary=user_class, back_populates="class_ids")
     name = db.Column(db.String, nullable=False)
     links = db.Column(db.String)
-    
+
     def serialize(self):
-        return {"class_id": self.class_id,"user_ids":[User.serialize_for_classes() for User in self.user_ids] ,"name": self.name, "links": self.links}
+        return {
+            "class_id": self.class_id,
+            "user_ids": [User.serialize_for_classes() for User in self.user_ids],
+            "name": self.name,
+            "links": self.links,
+        }
+
     def serialize_for_user(self):
         return {"class_id": self.class_id, "name": self.name}
-
 
 
 class Message(db.Model, TimeMixin):
@@ -80,10 +91,16 @@ class Message(db.Model, TimeMixin):
     created_by = db.Column(db.ForeignKey("user.user_id"), nullable=False)
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
     content = db.Column(db.String)
-    
-    def serialize(self):
-        return {"message_id": self.message_id, "created_by": self.created_by, "class_id": self.class_id, "content": self.content, "created_at": self.created_at, "updated_at": self.created_at}
 
+    def serialize(self):
+        return {
+            "message_id": self.message_id,
+            "created_by": self.created_by,
+            "class_id": self.class_id,
+            "content": self.content,
+            "created_at": self.created_at,
+            "updated_at": self.created_at,
+        }
 
 
 class Note(db.Model, TimeMixin):

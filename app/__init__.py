@@ -9,7 +9,6 @@ from config import Config
 db = SQLAlchemy()
 migrate = Migrate()
 login = LoginManager()
-login.login_view = "main.login"
 socketio = SocketIO()
 
 
@@ -43,6 +42,7 @@ def create_app(config_class=Config):
     app.register_blueprint(main_bp)
 
     return app
+
 
 import app.chat.events
 from app import models

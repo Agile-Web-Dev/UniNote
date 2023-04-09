@@ -21,11 +21,26 @@ jQuery(() => {
     );
     noteList.html(filteredNotes.map(NoteItem).join(""));
   });
+
+  $(".note-item").on("click", function () {
+    $("#note-modal").modal("toggle");
+    const title = $(this).data("bs-title");
+    const content = $(this).data("bs-content");
+
+    $("#note-modal-title").text(title);
+    $("#note-modal-content").text(content);
+  });
 });
 
 const NoteItem = ({ title, content }) => {
   return `
-    <article class="note-item">
+    <article
+      class="note-item"
+      data-bs-toggle="modal"
+      data-bs-target="#note-modal"
+      data-bs-title="${title}"
+      data-bs-content="${content}"
+    >
       <h4>${title}</h4>
       <p>${content}</p>
     </article>

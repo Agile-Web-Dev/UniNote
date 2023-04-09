@@ -47,11 +47,9 @@ class User(db.Model, TimeMixin, UserMixin):
         return self.user_id
     
     def serialize(self):
-        print()
         return {"email": self.email, "user_id": self.user_id, "name": self.name, "Class_ids": [Class.serialize_for_user() for Class in self.class_ids]}
     
     def serialize_for_classes(self):
-        print()
         return {"user_id": self.user_id}
 
 
@@ -84,7 +82,7 @@ class Message(db.Model, TimeMixin):
     content = db.Column(db.String)
     
     def serialize(self):
-        return {"message_id": self.message_id, "created_by": self.created_by, "class_id": self.class_id, "content": self.content, "created_at": TimeMixin.created_at, "updated_at": TimeMixin.created_at}
+        return {"message_id": self.message_id, "created_by": self.created_by, "class_id": self.class_id, "content": self.content, "created_at": self.created_at, "updated_at": self.created_at}
 
 
 
@@ -99,7 +97,7 @@ class Note(db.Model, TimeMixin):
     tag_names = db.relationship("Tag", secondary=note_tag, back_populates="note_ids")
 
     def serialize(self):
-        return {"note_id": self.note_id, "created_by": self.created_by, "class_id": self.class_id, "title": self.title, "content": self.content}
+        return {"note_id": self.note_id, "created_by": self.created_by, "class_id": self.class_id, "title": self.title, "content": self.content,"created_at": self.created_at, "updated_at":self.updated_at}
 
 
 class Tag(db.Model, TimeMixin):
@@ -110,5 +108,5 @@ class Tag(db.Model, TimeMixin):
     note_ids = db.relationship("Note", secondary=note_tag, back_populates="tag_names")
 
     def serialize(self):
-        return {"name": self.name, "class_id": self.class_id, "note_ids": self.note_ids,"created_at": TimeMixin.created_at, "updated_at": TimeMixin.created_at}
+        return {"name": self.name, "class_id": self.class_id, "note_ids": self.note_ids,"created_at": self.created_at, "updated_at": self.created_at}
 

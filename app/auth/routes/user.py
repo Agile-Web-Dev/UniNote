@@ -17,6 +17,4 @@ def get_user():
     user = User.query.filter(User.user_id == current_user.user_id).first()
     if user is None:
         return make_response({"msg": "User not found"}, 404)
-    return make_response(
-        user.serialize(), 200
-    )
+    return make_response(user.serialize(), 200)

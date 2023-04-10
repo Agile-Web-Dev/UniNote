@@ -2,9 +2,9 @@ from flask import make_response, request
 from flask_login import current_user, login_required, login_user
 
 from app import db
-from app.models import User
+from app.models import User, load_user
 
-from . import bp
+from ...auth.routes import bp
 
 
 @bp.route("/user", methods=["GET"])
@@ -12,9 +12,9 @@ from . import bp
 def get_user():
     """
     Returns the current user.
-    Endpoint: /api/auth/user
+    Endpoint: /api/user
     """
-    user = User.query.filter(User.user_id == current_user.user_id).first()
+    user = load_user()
     if user is None:
         return make_response({"msg": "User not found"}, 404)
     return make_response(user.serialize(), 200)

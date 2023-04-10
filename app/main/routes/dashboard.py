@@ -1,5 +1,6 @@
 from flask import render_template
 from flask_login import login_required
+from app.models import User, load_user
 
 from . import bp
 
@@ -8,4 +9,9 @@ from . import bp
 @bp.route("/dashboard", methods=["GET"])
 @login_required
 def dashboard():
-    return render_template("dashboard.html", title="Dashboard")
+    user = load_user()
+    return render_template(
+        "dashboard.html",
+        title="Dashboard",
+        class_ids=user.class_ids
+    )

@@ -29,6 +29,7 @@ def test_get_user(client, setup):
 
     response = client.get("/api/auth/user")
     assert response.json == {
+        "Class_ids": [],
         "email": "hello@example.com",
         "name": "John Doe",
         "user_id": "123",

@@ -3,8 +3,8 @@ import { setupSocketIO } from "./events/index.js";
 
 // resize chatbox upwards
 export const resizeChatbox = (e) => {
-  $(e.target).css("height", "38px");
-  $(e.target).height(e.target.scrollHeight-12);
+  $(e.target).css("height", "30px");
+  $(e.target).height(e.target.scrollHeight-20);
 };
 
 $("#chatbox").on("input", (e) => {
@@ -32,7 +32,7 @@ const setup = () => {
     placement: "top-end",
   });
 
-  $("button").on("click", () => {
+  $("#emoji-picker-button").on("click", () => {
     emojiPopover.toggleClass("shown");
   });
 

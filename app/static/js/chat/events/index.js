@@ -13,9 +13,9 @@ export const setupSocketIO = () => {
   socket.on("receiveMessage", receiveMessage);
 
   $("#chatbox").on("keypress", (e) => {
-    const message = $("#chatbox").val().trim();
+    const message = $("#chatbox").val()
     if (e.key === "Enter" && !e.shiftKey) {
-      if (message.length > 0) {
+      if (message.trim().length > 0) {
         sendMessage(message);
         $("#chatbox").val("");
       }

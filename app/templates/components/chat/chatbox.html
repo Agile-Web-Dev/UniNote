@@ -1,8 +1,12 @@
 <div id="chatbox-container" class="sticky-bottom flex-row d-flex">
-  <textarea id="chatbox"
-            type="text"
-            class="form-control"
-            placeholder="Send message"></textarea>
-  <button id="emoji-picker-button">🤓</button>
+  <div id="chatbox-inner" class="d-flex flex-row flex-grow-1">
+    <textarea id="chatbox"
+              type="text"
+              class="flex-grow-1 rounded"
+              placeholder="Send message"></textarea>
+    <div id="chatbox-action-group">
+      <div id="emoji-picker-button">🤓</div>
+    </div>
+  </div>
 </div>
 <div id="emoji-picker"></div>

@@ -53,6 +53,29 @@ html {
   background: transparent;
 }
 
+/* Placeholder text color */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: var(--app-grey-50);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: var(--app-grey-50);
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: var(--app-grey-50);
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: var(--app-grey-50);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: var(--app-grey-50);
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color: var(--app-grey-50);
+}
+
 .side-wrapper {
   height: 100%;
   background: var(--app-grey-800);
@@ -99,4 +122,9 @@ html {
   font-size: 32px;
   color: var(--app-grey-100);
   line-height: 0;
+}
+
+#content-wrapper {
+  color: white;
+  background: var(--app-grey-600);
 }

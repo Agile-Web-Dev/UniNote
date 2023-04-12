@@ -8,10 +8,32 @@
   font-size: 3rem;
 }
 
+#chat-container {
+  white-space: pre-wrap;
+}
+
+#chatbox-inner {
+  margin: 20px 0;
+}
+
 #chatbox {
+  color: white; 
+  overflow: overlay;
+  outline: none;
+  padding: 10px;
+  padding-right: 55px;
   resize: none;
-  height: 38px;
+  height: 45.6px;
   max-height: 200px;
+  background: var(--app-grey-200);
+}
+
+#chatbox-action-group {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  height: 45.6px;
+  align-items: center;
 }
 
 #emoji-picker:not(.shown) {
@@ -19,7 +41,8 @@
 }
 
 #emoji-picker-button {
-  height: 38px;
+  font-size: x-large;
+  cursor: pointer;
 }
 
 

@@ -56,7 +56,8 @@ Otherwise:
 
 ## Tests
 
-- Run `pytest` to run all unit tests.
+- For e2e tests, download and add ChromeDriver to your PATH variable per the instructions [here](https://chromedriver.chromium.org/getting-started).
+- Run `pytest` to run all unit and end to end (e2e) tests.
 
 ## Database
 

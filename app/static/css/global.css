@@ -54,7 +54,6 @@ html {
 }
 
 .side-wrapper {
-  height: 100%;
   background: var(--app-grey-800);
 }
 
@@ -88,11 +87,28 @@ html {
   color: black;
 }
 
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background: var(--app-grey-600);
+  color: var(--app-grey-0);
+  padding: 2rem;
+  overflow: hidden;
+  height: 100%;
+}
+
+.notes-line {
+  height: 2px;
+  background: var(--app-grey-100);
+}
+
 .sidebar-line {
   height: 2px;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   background: var(--app-grey-600);
+  color: transparent;
 }
 
 .sidebar-icon {

@@ -1,9 +1,11 @@
-<div class="p-2 d-flex justify-content-end">
-  <!-- handle this logic with js instead or it will be a pain -->
-  <i class="bi bi-plus sidebar-icon"></i>
-</div>
-<div class="sidebar-line"></div>
-<div class="p-2">
-  {% block sidebarcontent %}
-  {% endblock sidebarcontent %}
+<div class="d-flex flex-column h-100">
+  <div class="p-2 d-flex justify-content-end">
+    <!-- handle this logic with js instead or it will be a pain -->
+    <i class="bi bi-plus sidebar-icon"></i>
+  </div>
+  <div class="sidebar-line">!!!</div>
+  <div class="p-2 overflow-hidden">
+    {% block sidebarcontent %}
+    {% endblock sidebarcontent %}
+  </div>
 </div>

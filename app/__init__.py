@@ -37,6 +37,10 @@ def create_app(config_class=Config):
 
     app.register_blueprint(classes_bp, url_prefix="/api/classes")
 
+    from app.chat.routes import bp as messages_bp
+
+    app.register_blueprint(messages_bp, url_prefix="/api/messages")
+
     from app.main.routes import bp as main_bp
 
     app.register_blueprint(main_bp)

@@ -1,5 +1,5 @@
 from app import create_app, db
-from app.models import User, Note, Class, Tag
+from app.models import User, Note, Class, Tag, Message
 from sqlalchemy.orm import load_only
 
 app = create_app()
@@ -15,6 +15,7 @@ with app.app_context():
     Note.query.delete()
     Tag.query.delete()
     Class.query.delete()
+    Message.query.delete()
 
     cits3401 = Class(class_id = "CITS3403", name = "Agile Web Dev", 
     links = "http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline")
@@ -53,10 +54,16 @@ with app.app_context():
         Tag(name = "API Lecture", class_id = "CITS3403")
     ]
 
+    messages = [
+        Message(message_id = 101, created_by = "Dan", class_id = "CITS3403", content = "hey wassup guys"),
+        Message(message_id = 102, created_by = "Bob", class_id = "CITS3403", content = "Hai"),
+        Message(message_id = 103, created_by = "John", class_id = "CITS3403", content = "Sup")
+    ]
+
 
  
 
-    
+    db.session.add_all(messages)    
     db.session.add_all(notes)
     db.session.add_all(tags)
     db.session.commit()

@@ -4,7 +4,9 @@
     <ul class="nav-container p-0">
       {% for nav_item in nav_items %}
         <li class="nav-item-container">
-          <img width="64" height="64" alt="{{ nav_item }}" src={{ url_for('static', filename='assets/pencil-square.svg') }} class="nav-item-image" />
+          <div class="nav-item-icon-wrapper">
+            <i class="bi bi-pencil-square nav-item-icon"></i>
+          </div>
           <a href="#" class="nav-item-title">{{ nav_item }}</a>
         </li>
       {% endfor %}

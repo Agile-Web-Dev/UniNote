@@ -55,9 +55,9 @@ with app.app_context():
     ]
 
     messages = [
-        Message(message_id = 101, created_by = "Dan", class_id = "CITS3403", content = "hey wassup guys"),
-        Message(message_id = 102, created_by = "Bob", class_id = "CITS3403", content = "Hai"),
-        Message(message_id = 103, created_by = "John", class_id = "CITS3403", content = "Sup")
+        Message(created_by = "Dan", class_id = "CITS3403", content = "hey wassup guys"),
+        Message(created_by = "Bob", class_id = "CITS3403", content = "Hai"),
+        Message(created_by = "John", class_id = "CITS3403", content = "Sup")
     ]
 
 

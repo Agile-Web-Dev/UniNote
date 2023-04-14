@@ -1,14 +1,13 @@
 import { setupSocketIO } from "./events/index.js";
 
-
 // resize chatbox upwards
 export const resizeChatbox = (e) => {
   $(e.target).css("height", "30px");
-  $(e.target).height(e.target.scrollHeight-20);
+  $(e.target).height(e.target.scrollHeight - 20);
 };
 
 $("#chatbox").on("input", (e) => {
-resizeChatbox(e);
+  resizeChatbox(e);
 });
 
 const setup = () => {
@@ -30,6 +29,14 @@ const setup = () => {
   const emojiPopover = $("#emoji-picker");
   Popper.createPopper(emojiBtn[0], emojiPopover[0], {
     placement: "top-end",
+    modifiers: [
+      {
+        name: "offset",
+        options: {
+          offset: [20, 15],
+        },
+      },
+    ],
   });
 
   $("#emoji-picker-button").on("click", () => {

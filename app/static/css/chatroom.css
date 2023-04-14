@@ -10,6 +10,12 @@
 
 #chat-container {
   white-space: pre-wrap;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#chatbox-container {
+  background: var(--app-grey-600);
 }
 
 #chatbox-inner {
@@ -17,7 +23,7 @@
 }
 
 #chatbox {
-  color: white; 
+  color: white;
   overflow: overlay;
   outline: none;
   padding: 10px;

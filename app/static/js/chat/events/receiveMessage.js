@@ -14,7 +14,7 @@ let lastAuthor = "";
 
 export const receiveMessage = async (message) => {
   if (lastAuthor !== message.name) {
-    const messageElement = $(messageHtml).appendTo("#chat-container");
+    const messageElement = $(messageHtml).appendTo("#chat-scroll-window");
     messageElement
       .children("div.avatar-holder")
       .append(await getAvatar(message.name));

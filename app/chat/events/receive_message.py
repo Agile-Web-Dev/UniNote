@@ -6,7 +6,6 @@ from app import socketio
 from app.auth.utils import login_required_socket
 
 
-
 @socketio.on("receive_message", namespace="/chat")
 @login_required_socket
 def receive_message(message):
@@ -19,5 +18,3 @@ def receive_message(message):
         room=room,
         broadcast=True,
     )
-
-

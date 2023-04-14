@@ -4,14 +4,14 @@ from app.models import Note
 from . import bp
 
 
-@bp.route("/<class_id>", methods=["GET"])
+@bp.route("/", methods=["GET"])
 def get_notes(class_id):
     """get notes based on the classID"""
-    resArr = []
-    res = db.session.query(Note).filter(Note.class_id == class_id)
-    for entry in res:
-        resArr.append(entry.serialize())
-    return resArr
+    res = [
+        note.serialize()
+        for note in db.session.query(Note).filter(Note.class_id == class_id)
+    ]
+    return res
 
 
 # when user saves their notes

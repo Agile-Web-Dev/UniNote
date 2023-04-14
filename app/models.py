@@ -96,7 +96,7 @@ class Message(db.Model, TimeMixin):
         return {
             "created_by": self.created_by,
             "content": self.content,
-            "created_at": self.created_at
+            "created_at": self.created_at,
         }
 
 

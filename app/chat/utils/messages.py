@@ -13,10 +13,3 @@ def get_messages(class_id):
         msgsArr.append(entry.serialize())
     return msgsArr
 
-@bp.route("/", methods=["POST"])
-def post_messages(created_by,class_id,content):
-    '''post messages based on the current window'''
-    message = Message(created_by = created_by, class_id = class_id, content = content)
-    db.session.add(message)
-    db.session.commit()
-    return message

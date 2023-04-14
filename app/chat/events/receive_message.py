@@ -4,7 +4,7 @@ from flask_socketio import emit
 
 from app import socketio
 from app.auth.utils import login_required_socket
-
+from chat_utils.messages import post_messages
 
 
 @socketio.on("receive_message", namespace="/chat")
@@ -19,5 +19,6 @@ def receive_message(message):
         room=room,
         broadcast=True,
     )
+    post_messages(current_user.name,room,message)
 
 

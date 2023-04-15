@@ -16,7 +16,7 @@ with app.app_context():
     Tag.query.delete()
     Class.query.delete()
 
-    cits3401 = Class(
+    cits3403 = Class(
         class_id="CITS3403",
         name="Agile Web Dev",
         links="http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline",
@@ -36,7 +36,7 @@ with app.app_context():
         name="Systems",
         links="http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline",
     )
-    classes = [cits3401, cits2401, cits1001, cits2002]
+    classes = [cits3403, cits2401, cits1001, cits2002]
     print("CLASSES", classes)
     db.session.add_all(classes)
 
@@ -50,11 +50,11 @@ with app.app_context():
     db.session.add_all([user, user2])
     db.session.commit()
 
-    user.class_ids.append(cits3401)
+    user.class_ids.append(cits3403)
     user.class_ids.append(cits2401)
     user.class_ids.append(cits1001)
     user.class_ids.append(cits2002)
-    user2.class_ids.append(cits3401)
+    user2.class_ids.append(cits3403)
     user2.class_ids.append(cits2401)
     db.session.commit()
 

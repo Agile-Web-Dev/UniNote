@@ -1,10 +1,8 @@
-from flask import make_response, request
-from flask_login import current_user, login_required, login_user
+from flask import make_response
+from flask_login import login_required
 
-from app import db
-from app.models import User, load_user
-
-from ...auth.routes import bp
+from app.auth.routes import bp
+from app.models import load_user
 
 
 @bp.route("/user", methods=["GET"])

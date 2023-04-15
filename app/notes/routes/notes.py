@@ -4,7 +4,7 @@ from app.models import Note
 from . import bp
 
 
-@bp.route("/", methods=["GET"])
+@bp.route("/<class_id>", methods=["GET"])
 def get_notes(class_id):
     """get notes based on the classID"""
     res = [

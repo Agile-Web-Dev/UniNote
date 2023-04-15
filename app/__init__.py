@@ -29,6 +29,14 @@ def create_app(config_class=Config):
 
     app.register_blueprint(auth_bp, url_prefix="/api/auth")
 
+    from app.notes.routes import bp as notes_bp
+
+    app.register_blueprint(notes_bp, url_prefix="/api/notes")
+
+    from app.classes.routes import bp as classes_bp
+
+    app.register_blueprint(classes_bp, url_prefix="/api/classes")
+
     from app.main.routes import bp as main_bp
 
     app.register_blueprint(main_bp)

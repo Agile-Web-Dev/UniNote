@@ -1,7 +1,7 @@
 from datetime import datetime
 from uuid import uuid4
 
-from flask_login import UserMixin
+from flask_login import UserMixin, current_user
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from app import db, login
@@ -46,9 +46,23 @@ class User(db.Model, TimeMixin, UserMixin):
     def get_id(self):
         return self.user_id
 
+    def serialize(self):
+        print()
+        return {
+            "email": self.email,
+            "user_id": self.user_id,
+            "name": self.name,
+            "class_ids": [_class.serialize_for_user() for _class in self.class_ids],
+        }
+
+    def serialize_for_classes(self):
+        return {"user_id": self.user_id}
+
 
 @login.user_loader
-def load_user(user_id):
+def load_user(user_id=None):
+    if user_id is None:
+        user_id = current_user.user_id
     return User.query.filter_by(user_id=user_id).first()
 
 
@@ -60,6 +74,17 @@ class Class(db.Model, TimeMixin):
     name = db.Column(db.String, nullable=False)
     links = db.Column(db.String)
 
+    def serialize(self):
+        return {
+            "class_id": self.class_id,
+            "user_ids": [User.serialize_for_classes() for User in self.user_ids],
+            "name": self.name,
+            "links": self.links,
+        }
+
+    def serialize_for_user(self):
+        return {"class_id": self.class_id, "name": self.name}
+
 
 class Message(db.Model, TimeMixin):
     __tablename__ = "message"
@@ -68,6 +93,16 @@ class Message(db.Model, TimeMixin):
     created_by = db.Column(db.ForeignKey("user.user_id"), nullable=False)
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
     content = db.Column(db.String)
+
+    def serialize(self):
+        return {
+            "message_id": self.message_id,
+            "created_by": self.created_by,
+            "class_id": self.class_id,
+            "content": self.content,
+            "created_at": self.created_at,
+            "updated_at": self.created_at,
+        }
 
 
 class Note(db.Model, TimeMixin):
@@ -80,6 +115,17 @@ class Note(db.Model, TimeMixin):
     content = db.Column(db.String, nullable=False)
     tag_names = db.relationship("Tag", secondary=note_tag, back_populates="note_ids")
 
+    def serialize(self):
+        return {
+            "note_id": self.note_id,
+            "created_by": self.created_by,
+            "class_id": self.class_id,
+            "title": self.title,
+            "content": self.content,
+            "created_at": self.created_at,
+            "updated_at": self.updated_at,
+        }
+
 
 class Tag(db.Model, TimeMixin):
     __tablename__ = "tag"
@@ -87,3 +133,12 @@ class Tag(db.Model, TimeMixin):
     name = db.Column(db.String, nullable=False, primary_key=True)
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
     note_ids = db.relationship("Note", secondary=note_tag, back_populates="tag_names")
+
+    def serialize(self):
+        return {
+            "name": self.name,
+            "class_id": self.class_id,
+            "note_ids": self.note_ids,
+            "created_at": self.created_at,
+            "updated_at": self.created_at,
+        }

@@ -32,6 +32,7 @@ def test_get_user(client, setup):
         "email": "hello@example.com",
         "name": "John Doe",
         "user_id": "123",
+        "class_ids": [],
     }
     assert response.status_code == 200
 

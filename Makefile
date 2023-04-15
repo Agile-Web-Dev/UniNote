@@ -10,3 +10,5 @@ run:
 	flask run
 test:
 	pytest
+seed:
+	python -m scripts.seed_db

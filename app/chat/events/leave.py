@@ -9,6 +9,6 @@ from app.auth.utils import login_required_socket
 def leave(message):
     """Sent by clients when they leave a room.
     A status message is broadcast to all people in the room."""
-    room = session.get("room")
-    leave_room(room)
+    room = session.get("class_id")
     emit("status", {"msg": session.get("name") + " has left the room."}, room=room)
+    leave_room(room)

@@ -11,7 +11,7 @@ from app.auth.utils import login_required_socket
 def receive_message(message):
     """Sent by a client when the user entered a new message.
     The message is sent to all people in the room."""
-    room = session.get("room")
+    room = session.get("class_id")
     emit(
         "receiveMessage",
         {"name": current_user.name, "msg": message["msg"]},

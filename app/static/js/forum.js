@@ -7,7 +7,7 @@ const noteData = [
 ];
 
 jQuery(() => {
-  const noteList = $("#note-list");
+  const noteList = $("#forum-note-list");
   noteList.html(noteData.map(NoteItem).join(""));
 
   $("#note-searchbar-form").on("submit", (e) => {
@@ -22,7 +22,7 @@ jQuery(() => {
     noteList.html(filteredNotes.map(NoteItem).join(""));
   });
 
-  $(".note-item").on("click", function () {
+  $(".forum-note-item").on("click", function () {
     $("#note-modal").modal("toggle");
     const title = $(this).data("bs-title");
     const content = $(this).data("bs-content");
@@ -35,7 +35,7 @@ jQuery(() => {
 const NoteItem = ({ title, content }) => {
   return `
     <article
-      class="note-item"
+      class="forum-note-item"
       data-bs-toggle="modal"
       data-bs-target="#note-modal"
       data-bs-title="${title}"

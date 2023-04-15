@@ -10,11 +10,12 @@
     <section class="col-2 side-wrapper h-100">
       {% include "components/sections/navbar.html" %}
     </section>
-    <section class="col-6 flex-column d-flex overflow-auto text-break h-100">
+    <section id="main-content"
+             class="col-6 flex-column d-flex overflow-auto text-break h-100">
       {% block content %}
       {% endblock content %}
     </section>
-    <section class="col-4 side-wrapper h-100">
+    <section id="note-bar" class="col-4 side-wrapper h-100">
       {% include "components/sections/notesbar.html" %}
     </section>
   </div>

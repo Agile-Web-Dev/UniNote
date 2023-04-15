@@ -1,4 +1,4 @@
-.note-item {
+.forum-note-item {
   aspect-ratio: 1 / 1;
   max-width: 100%;
   background: var(--app-grey-300);
@@ -8,12 +8,12 @@
   cursor: pointer;
 }
 
-.note-item:hover {
+.forum-note-item:hover {
   background: var(--app-grey-400);
   transition: 0.25s;
 }
 
-#note-list {
+#forum-note-list {
   height: fit-content;
   overflow-y: scroll;
   display: grid;

@@ -68,4 +68,12 @@ todo:
 
 - [ ] create strings for visual representation of data
 
+## Seeding
+
+- To seed the database run
+
+```sh
+python -m scripts.seed_db
+```
+
 ## Contributions

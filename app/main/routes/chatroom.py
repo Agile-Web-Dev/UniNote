@@ -1,8 +1,11 @@
 from flask import render_template, session
 from flask_login import login_required
+
 from app import db
-from . import bp
 from app.auth.utils import in_class
+
+from . import bp
+
 
 @bp.route("/<class_id>/chatroom", methods=["GET"])
 @login_required

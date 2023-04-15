@@ -4,7 +4,8 @@ from http import HTTPStatus
 from flask import abort, redirect, request, url_for
 from flask_login import current_user
 from flask_socketio import disconnect
-from app import login, db
+
+from app import db, login
 
 
 @login.unauthorized_handler

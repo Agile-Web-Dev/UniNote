@@ -1,9 +1,8 @@
 from flask import make_response
 from flask_login import login_required
 
-from app.models import load_user
-
 from app.auth.routes import bp
+from app.models import load_user
 
 
 @bp.route("/user", methods=["GET"])

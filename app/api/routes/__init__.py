@@ -2,4 +2,4 @@ from flask import Blueprint
 
 bp = Blueprint("api", __name__)
 
-from . import ping
+from . import ping, user

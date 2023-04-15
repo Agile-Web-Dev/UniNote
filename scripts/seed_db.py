@@ -1,6 +1,7 @@
-from app import create_app, db
-from app.models import User, Note, Class, Tag, Message
 from sqlalchemy.orm import load_only
+
+from app import create_app, db
+from app.models import Class, Message, Note, Tag, User
 
 app = create_app()
 
@@ -17,56 +18,80 @@ with app.app_context():
     Class.query.delete()
     Message.query.delete()
 
-    cits3401 = Class(class_id = "CITS3403", name = "Agile Web Dev", 
-    links = "http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline")
-    cits2401 = Class(class_id = "CITS2401", name = "Python", links = "http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline")
-    classes = [cits3401,cits2401]
+    cits3403 = Class(
+        class_id="CITS3403",
+        name="Agile Web Dev",
+        links="http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline",
+    )
+    cits2401 = Class(
+        class_id="CITS2401",
+        name="Python",
+        links="http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline",
+    )
+    cits1001 = Class(
+        class_id="CITS1001",
+        name="Java",
+        links="http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline",
+    )
+    cits2002 = Class(
+        class_id="CITS2002",
+        name="Systems",
+        links="http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline",
+    )
+    classes = [cits3403, cits2401, cits1001, cits2002]
     print("CLASSES", classes)
     db.session.add_all(classes)
 
-    user = User(email="testes@test.com", user_id="23030303", name="Test", role="student")
+    user = User(email="a@a.com", user_id="23030303", name="Test", role="student")
 
     user2 = User(email="not@test.com", user_id="12312312", name="danny", role="student")
     user.set_password("123")
     user2.set_password("123")
-    db.session.add_all([user,user2])
+    db.session.add_all([user, user2])
     db.session.commit()
 
-    user.class_ids.append(cits3401)
-    user2.class_ids.append(cits3401)
+    user.class_ids.append(cits3403)
     user.class_ids.append(cits2401)
+    user.class_ids.append(cits1001)
+    user.class_ids.append(cits2002)
+    user2.class_ids.append(cits3403)
     user2.class_ids.append(cits2401)
     db.session.commit()
 
-
-
-    print("users TEST", user.get_id, user.class_ids, user2)
+    print("users TEST", user.get_id(), user.class_ids, user2)
 
     notes = [
-    Note(note_id = 202, created_by = 123, class_id = "CITS3403",title = "My Mom",content = "my mommy is cool and the best."),
-    Note(note_id = 203, created_by = 123, class_id = "CITS3403",title = "Random thoughts",content = "Finished her are its honoured drawings nor. Pretty see mutual thrown all not edward ten. Particular an boisterous up he reasonably frequently. Several any had enjoyed shewing studied two. Up intention remainder sportsmen behaviour ye happiness. Few again any alone style added abode ask. Nay projecting unpleasing boisterous eat discovered solicitude. Own six moments produce elderly pasture far arrival. Hold our year they ten upon. Gentleman contained so intention sweetness in on resolving."),
-    Note(note_id = 204, created_by = 123, class_id = "CITS3403",title = "Suicidal thoughts",content = "吉安而來 玉，不題 父親回衙 汗流如雨 冒認收了. 後竊聽 在一處 己轉身. 玉，不題 矣 曰： 父親回衙 去 」 冒認收了 吉安而來 汗流如雨 關雎. 關雎 覽 事 耳 去 」 意 冒認收了 出 吉安而來 汗流如雨 父親回衙 玉，不題. 此是後話 也懊悔不了 出 饒爾去罷」 ，愈聽愈惱 去 矣 意 關雎. 第十一回 己轉身 在一處 分得意 樂而不淫. 意 事 ，可 耳 出 去 曰： 關雎. 覽 矣 父親回衙 誨 冒認收了 」 去 吉安而來 出 玉，不題 汗流如雨. 覽 去 曰： 意 事 誨 ，可. 」 意 誨 去 出. ﻿白圭志 第十一回 在一處 危德至. 玉，不題 關雎 父親回衙 ，可 汗流如雨 冒認收了 去 意 吉安而來. 關雎 」 去 矣. 事 曰： 去 誨 矣 關雎. 汗流如雨 覽 冒認收了 事 吉安而來 玉，不題 去 父親回衙 意. 在一處 第十一回 建章曰： ﻿白圭志 不稱讚. 貢院 第五回 第二回. ，愈聽愈惱 饒爾去罷」 也懊悔不了 此是後話. 誨 」 關雎 出. 事 去 覽 」 意 誨. 誨 覽 事 耳 ，可 去 」 意. 誨 關雎 意 事 覽 」 曰：. 事 誨 」 關雎 出 ，可 去. .")
+        Note(
+            note_id=202,
+            created_by=123,
+            class_id="CITS3403",
+            title="My Mom",
+            content="my mommy is cool and the best.",
+        ),
+        Note(
+            note_id=203,
+            created_by=123,
+            class_id="CITS3403",
+            title="Random thoughts",
+            content="Finished her are its honoured drawings nor. Pretty see mutual thrown all not edward ten. Particular an boisterous up he reasonably frequently. Several any had enjoyed shewing studied two. Up intention remainder sportsmen behaviour ye happiness. Few again any alone style added abode ask. Nay projecting unpleasing boisterous eat discovered solicitude. Own six moments produce elderly pasture far arrival. Hold our year they ten upon. Gentleman contained so intention sweetness in on resolving.",
+        ),
+        Note(
+            note_id=204,
+            created_by=123,
+            class_id="CITS3403",
+            title="Suicidal thoughts",
+            content="吉安而來 玉，不題 父親回衙 汗流如雨 冒認收了. 後竊聽 在一處 己轉身. 玉，不題 矣 曰： 父親回衙 去 」 冒認收了 吉安而來 汗流如雨 關雎. 關雎 覽 事 耳 去 」 意 冒認收了 出 吉安而來 汗流如雨 父親回衙 玉，不題. 此是後話 也懊悔不了 出 饒爾去罷」 ，愈聽愈惱 去 矣 意 關雎. 第十一回 己轉身 在一處 分得意 樂而不淫. 意 事 ，可 耳 出 去 曰： 關雎. 覽 矣 父親回衙 誨 冒認收了 」 去 吉安而來 出 玉，不題 汗流如雨. 覽 去 曰： 意 事 誨 ，可. 」 意 誨 去 出. ﻿白圭志 第十一回 在一處 危德至. 玉，不題 關雎 父親回衙 ，可 汗流如雨 冒認收了 去 意 吉安而來. 關雎 」 去 矣. 事 曰： 去 誨 矣 關雎. 汗流如雨 覽 冒認收了 事 吉安而來 玉，不題 去 父親回衙 意. 在一處 第十一回 建章曰： ﻿白圭志 不稱讚. 貢院 第五回 第二回. ，愈聽愈惱 饒爾去罷」 也懊悔不了 此是後話. 誨 」 關雎 出. 事 去 覽 」 意 誨. 誨 覽 事 耳 ，可 去 」 意. 誨 關雎 意 事 覽 」 曰：. 事 誨 」 關雎 出 ，可 去. .",
+        ),
     ]
 
     tags = [
-        Tag(name = "Javascript Lecture", class_id = "CITS3403"),
-        Tag(name = "HTML Lecture", class_id = "CITS3403"),
-        Tag(name = "API Lecture", class_id = "CITS3403")
+        Tag(name="Javascript Lecture", class_id="CITS3403"),
+        Tag(name="HTML Lecture", class_id="CITS3403"),
+        Tag(name="API Lecture", class_id="CITS3403"),
     ]
 
-    messages = [
-        Message(message_id = 101, created_by = "Dan", class_id = "CITS3403", content = "hey wassup guys"),
-        Message(message_id = 102, created_by = "Bob", class_id = "CITS3403", content = "Hai"),
-        Message(message_id = 103, created_by = "John", class_id = "CITS3403", content = "Sup")
-    ]
-
-
- 
-
-    db.session.add_all(messages)    
     db.session.add_all(notes)
     db.session.add_all(tags)
     db.session.commit()
 
     print("Db has been populated")
-

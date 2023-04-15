@@ -1,7 +1,7 @@
 from datetime import datetime
 from uuid import uuid4
 
-from flask_login import UserMixin
+from flask_login import UserMixin, current_user
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from app import db, login
@@ -52,7 +52,7 @@ class User(db.Model, TimeMixin, UserMixin):
             "email": self.email,
             "user_id": self.user_id,
             "name": self.name,
-            "Class_ids": [Class.serialize_for_user() for Class in self.class_ids],
+            "class_ids": [_class.serialize_for_user() for _class in self.class_ids],
         }
 
     def serialize_for_classes(self):
@@ -60,7 +60,9 @@ class User(db.Model, TimeMixin, UserMixin):
 
 
 @login.user_loader
-def load_user(user_id):
+def load_user(user_id=None):
+    if user_id is None:
+        user_id = current_user.user_id
     return User.query.filter_by(user_id=user_id).first()
 
 

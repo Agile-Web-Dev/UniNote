@@ -6,6 +6,7 @@ body {
 #auth-container > form {
   background-color: var(--app-grey-600);
 }
+
 #alert {
   white-space: pre;
   text-align: left;

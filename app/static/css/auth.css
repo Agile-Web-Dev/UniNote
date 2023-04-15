@@ -1,0 +1,12 @@
+body {
+  background-color: var(--app-accent-dark);
+  color: var(--app-grey-0); 
+}
+
+#auth-container > form {
+  background-color: var(--app-grey-600);
+}
+#alert {
+  white-space: pre;
+  text-align: left;
+}

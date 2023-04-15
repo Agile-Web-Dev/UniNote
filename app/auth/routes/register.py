@@ -1,3 +1,4 @@
+import re
 from flask import make_response, request
 from flask_login import login_user
 
@@ -26,6 +27,13 @@ def register():
 
     if user_id == "" or email == "" or password == "" or name == "":
         return make_response({"msg": "Missing fields"}, 400)
+
+    email_regex = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+    if not re.match(email_regex, email):
+        return make_response({"msg": "Invalid email"}, 400)
+
+    if len(password) < 8:
+        return make_response({"msg": "Password must be at least 8 characters"}, 400)
 
     user = User.query.filter((User.user_id == user_id) | (User.email == email)).first()
     if user is not None:

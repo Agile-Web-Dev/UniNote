@@ -13,7 +13,7 @@
   transition: 0.25s;
 }
 
-#note-list {
+#notes-list {
   height: fit-content;
   overflow-y: scroll;
   display: grid;
@@ -50,6 +50,6 @@
   line-height: 0;
 }
 
-.forum-container {
+.notes-container {
   background: var(--app-grey-600);
 }

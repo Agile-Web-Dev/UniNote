@@ -3,7 +3,7 @@ from flask import render_template
 from . import bp
 
 
-@bp.route("/forum", methods=["GET"])
+@bp.route("/<class_id>/notes", methods=["GET"])
 def forum():
     return render_template(
         "forum.html",

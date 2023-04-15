@@ -37,7 +37,7 @@ def create_app(config_class=Config):
 
     app.register_blueprint(classes_bp, url_prefix="/api/classes")
 
-    from app.main.routes import bp as main_bp
+    from app.Main.routes import bp as main_bp
 
     app.register_blueprint(main_bp)
 

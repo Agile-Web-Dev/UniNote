@@ -1,6 +1,7 @@
-from app import create_app, db
-from app.models import User, Note, Class, Tag, Message
 from sqlalchemy.orm import load_only
+
+from app import create_app, db
+from app.models import Class, Message, Note, Tag, User
 
 app = create_app()
 
@@ -41,9 +42,7 @@ with app.app_context():
     print("CLASSES", classes)
     db.session.add_all(classes)
 
-    user = User(
-        email="a@a.com", user_id="23030303", name="Test", role="student"
-    )
+    user = User(email="a@a.com", user_id="23030303", name="Test", role="student")
 
     user2 = User(email="not@test.com", user_id="12312312", name="danny", role="student")
     user.set_password("123")

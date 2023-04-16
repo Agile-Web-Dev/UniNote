@@ -19,8 +19,5 @@ def receive_message(message):
         room=room,
         broadcast=True,
     )
-    msg = Message(created_by = current_user.name, class_id = room, content = message)
-    db.session.add(msg)
-    db.session.commit()
 
 

@@ -1,13 +1,3 @@
-.nav-item-container {
-  background: var(--app-grey-800);
-  width: 5rem;
-  height: 5rem;
-}
-
-.nav-item-image {
-  font-size: 3rem;
-}
-
 #chat-container {
   white-space: pre-wrap;
   display: flex;
@@ -31,7 +21,7 @@
   resize: none;
   height: 45.6px;
   max-height: 200px;
-  background: var(--app-grey-200);
+  background: var(--app-grey-300);
 }
 
 #chatbox-action-group {

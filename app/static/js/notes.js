@@ -7,13 +7,13 @@ const noteData = [
 ];
 
 jQuery(() => {
-  const noteList = $("#note-list");
+  const noteList = $("#notes-list");
   noteList.html(noteData.map(NoteItem).join(""));
 
-  $("#note-searchbar-form").on("submit", (e) => {
+  $("#notes-searchbar-form").on("submit", (e) => {
     e.preventDefault();
 
-    const searchQuery = $("#note-searchbar").val();
+    const searchQuery = $("#notes-searchbar").val();
     const filteredNotes = noteData.filter(
       (note) =>
         note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -23,12 +23,12 @@ jQuery(() => {
   });
 
   $(".note-item").on("click", function () {
-    $("#note-modal").modal("toggle");
+    $("#notes-modal").modal("toggle");
     const title = $(this).data("bs-title");
     const content = $(this).data("bs-content");
 
-    $("#note-modal-title").text(title);
-    $("#note-modal-content").text(content);
+    $("#notes-modal-title").text(title);
+    $("#notes-modal-content").text(content);
   });
 });
 
@@ -37,7 +37,7 @@ const NoteItem = ({ title, content }) => {
     <article
       class="note-item"
       data-bs-toggle="modal"
-      data-bs-target="#note-modal"
+      data-bs-target="#notes-modal"
       data-bs-title="${title}"
       data-bs-content="${content}"
     >

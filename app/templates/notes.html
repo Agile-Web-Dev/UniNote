@@ -1,12 +1,12 @@
 {% extends "layouts/base.html" %}
 {% block content %}
-  {% include "components/forum/forumcontainer.html" %}
+  {% include "components/notes/notescontainer.html" %}
 {% endblock content %}
 {% block style %}
   <link rel="stylesheet"
         type="text/css"
-        href="{{ url_for('static', filename='css/forum.css') }}"/>
+        href="{{ url_for('static', filename='css/notes.css') }}"/>
 {% endblock style %}
 {% block script %}
-  <script src="{{ url_for('static', filename='js/forum.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/notes.js') }}"></script>
 {% endblock script %}

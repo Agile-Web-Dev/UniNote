@@ -3,21 +3,11 @@
     <h1 class="unselectable">UniNote</h1>
   </div>
   <ul class="d-flex col-10 h-100 m-0 p-0 sortable-list">
+  {% for header in topbar_items %}
     <li class="header-tab item">
-      <a class="header-tab-link unselectable" href="{{ url_for('api.ping') }}">CITS3403</a>
+      <a class="header-tab-link unselectable" href="{{ url_for('api.ping')}}">{{ header.class_id }}</a>
       <img width="32" height="32" alt="{{ nav_item }}" src={{ url_for('static', filename='assets/x.svg') }} class="header-tab-close unselectable" />
     </li>
-    <li class="header-tab item">
-      <a class="header-tab-link unselectable" href="{{ url_for('api.ping') }}">CITS2401</a>
-      <img width="32" height="32" alt="{{ nav_item }}" src={{ url_for('static', filename='assets/x.svg') }} class="header-tab-close unselectable" />
-    </li>
-    <li class="header-tab item">
-      <a class="header-tab-link unselectable" href="{{ url_for('api.ping') }}">CITS1003</a>
-      <img width="32" height="32" alt="{{ nav_item }}" src={{ url_for('static', filename='assets/x.svg') }} class="header-tab-close unselectable" />
-    </li>
-    <li class="header-tab item">
-      <a class="header-tab-link unselectable" href="{{ url_for('api.ping') }}">CITS1234</a>
-      <img width="32" height="32" alt="{{ nav_item }}" src={{ url_for('static', filename='assets/x.svg') }} class="header-tab-close unselectable" />
-    </li>
+  {% endfor %}
   </ul>
 </header>

@@ -1,12 +1,10 @@
-from flask_login import login_required
 from flask import current_app as app
+# from flask_login import login_required
 
-from app.models import load_user
+# from app.models import load_user
 
-@login_required
 @app.context_processor
-def inject_userClass():
-    user = load_user()
-    topbar_items=user
-    return topbar_items
-    
+def inject_user_class():
+    # user = load_user()
+    # topbar_items = user.class_ids
+    return 

@@ -1,13 +1,15 @@
+{% block header %}
 <header class="header-container">
   <div class="col-2 header-logo-container">
     <h1 class="unselectable">UniNote</h1>
   </div>
   <ul class="d-flex col-10 h-100 m-0 p-0 sortable-list">
   {% for header in topbar_items %}
-    <li class="header-tab item">
-      <a class="header-tab-link unselectable" href="{{ url_for('api.ping')}}">{{ header.class_id }}</a>
-      <img width="32" height="32" alt="{{ nav_item }}" src={{ url_for('static', filename='assets/x.svg') }} class="header-tab-close unselectable" />
+    <li class="header-tab-item">
+      <a class="header-tab-link unselectable" href="{{ url_for('main.chatroom', class_id=header.class_id) }}">{{ header.class_id }}</a>
     </li>
   {% endfor %}
   </ul>
 </header>
+{% endblock header %}
+

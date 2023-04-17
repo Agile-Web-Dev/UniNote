@@ -1,8 +1,6 @@
 {% extends "layouts/index.html" %}
-{% block header %}
-  {% include
-  "components/sections/topbar.html" %}
-{% endblock header %}
+{% include "components/sections/topbar.html" %}
+
 {% block main %}
   <div class="row flex-grow-1 overflow-auto">
     <section class="col-2 h-100 overflow-auto side-wrapper">
@@ -17,3 +15,7 @@
     </section>
   </div class="row">
 {% endblock main %}
+
+{% block common_script %}
+  <script src="{{ url_for('static', filename='js/topbar.js') }}"></script>
+{% endblock common_script %}

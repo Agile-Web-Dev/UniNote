@@ -1,5 +1,7 @@
 from flask import current_app as app
+
 from app.models import load_user
+
 
 @app.context_processor
 def inject_user_class():

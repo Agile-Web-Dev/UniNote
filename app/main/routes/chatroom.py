@@ -5,8 +5,8 @@ from app import db
 from app.auth.utils import in_class
 from app.models import load_user
 
-from . import bp
-from . import topbar
+from . import bp, topbar
+
 
 @bp.route("/<class_id>/chatroom", methods=["GET"])
 @login_required

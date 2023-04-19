@@ -133,3 +133,8 @@ html {
 .sidebar-icon:hover {
   color: var(--app-grey-200);
 }
+
+#content-wrapper {
+  color: white;
+  background: var(--app-grey-600);
+}

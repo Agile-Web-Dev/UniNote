@@ -19,6 +19,8 @@ def receive_message(message):
         room=room,
         broadcast=True,
     )
-    msg = Message(created_by=current_user.name, class_id=room, content=message.get("msg"))
+    msg = Message(
+        created_by=current_user.name, class_id=room, content=message.get("msg")
+    )
     db.session.add(msg)
     db.session.commit()

@@ -1,15 +1,14 @@
 from flask import render_template, session
 from flask_login import login_required
-from app.models import Message
 
 from app import db
 from app.auth.utils import in_class
-from app.models import load_user
+from app.libs.filters import format_datetime
+from app.libs.processors import topbar
+from app.models import Message, load_user
 
 from . import bp
 
-from app.libs.processors import topbar
-from app.libs.filters import format_datetime
 
 @bp.route("/<class_id>/chatroom", methods=["GET"])
 @login_required
@@ -21,7 +20,7 @@ def chatroom(class_id):
         "chatroom.html",
         title="Chatroom",
         nav_items=["Chat", "Notes", "Labs", "Project", "Exam"],
-        messages = messages
+        messages=messages
         # topbar_items=topbar_items
         # add chat messages here
     )

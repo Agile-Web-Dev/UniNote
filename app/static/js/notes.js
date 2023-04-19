@@ -23,12 +23,12 @@ jQuery(async () => {
   });
 
   $(".note-item").on("click", function () {
-    $("#notes-modal").modal("toggle");
     const title = $(this).data("bs-title");
     const content = $(this).data("bs-content");
-
-    $("#notes-modal-title").text(title);
-    $("#notes-modal-content").text(content);
+    var myModal = $('#notes-modal');
+    myModal.find('.modal-title').text(title);
+    myModal.find('.modal-body').html(content);
+    myModal.modal('show');
   });
 });
 

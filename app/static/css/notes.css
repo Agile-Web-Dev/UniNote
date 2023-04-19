@@ -56,3 +56,7 @@
 .notes-container {
   background: var(--app-grey-600);
 }
+
+.modal-content{
+  background: var(--app-grey-600);
+}

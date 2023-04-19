@@ -16,7 +16,7 @@ def join(message):
 
     emit(
         "join",
-        {"msg": current_user.name + " has entered the room."},
+        {"name": current_user.name},
         room=room,
         broadcast=True,
     )

@@ -1,3 +1,4 @@
+import { resizeChatbox } from "../index.js";
 import { connect } from "./connect.js";
 import { join } from "./join.js";
 import { receiveMessage } from "./receiveMessage.js";
@@ -9,13 +10,17 @@ export const setupSocketIO = () => {
   socket = io.connect(`${document.location.host}/chat`);
   socket.on("connect", connect);
   socket.on("join", join);
-  socket.on("receiveMessage", receiveMessage);    
+  socket.on("receiveMessage", receiveMessage);
 
   $("#chatbox").on("keypress", (e) => {
-    const message = $("#chatbox").val().trim();
-    if (e.key === "Enter" && message.length > 0) {
-      sendMessage(message);
-      $("#chatbox").val("");
+    const message = $("#chatbox").val()
+    if (e.key === "Enter" && !e.shiftKey) {
+      if (message.trim().length > 0) {
+        sendMessage(message);
+        $("#chatbox").val("");
+      }
+      e.preventDefault();
+      resizeChatbox(e)
     }
   });
 };

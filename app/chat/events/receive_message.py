@@ -15,10 +15,12 @@ def receive_message(message):
     room = session.get("class_id")
     emit(
         "receiveMessage",
-        {"msg": current_user.name + ": " + message.get("msg")},
+        {"name": current_user.name, "msg": message["msg"]},
         room=room,
         broadcast=True,
     )
-    msg = Message(created_by=current_user.name, class_id=room, content=message.get("msg"))
+    msg = Message(
+        created_by=current_user.name, class_id=room, content=message.get("msg")
+    )
     db.session.add(msg)
     db.session.commit()

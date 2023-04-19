@@ -120,6 +120,10 @@
   color: var(--app-grey-0);
 }
 
+#note-header:disabled {
+  background-color: var(--app-grey-700);
+}
+
 .note-container > textarea {
   background: transparent;
   color: var(--app-grey-0);
@@ -139,4 +143,8 @@
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.note-container > textarea:disabled {
+  background-color: var(--app-grey-700);
 }

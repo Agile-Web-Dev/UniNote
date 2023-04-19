@@ -6,6 +6,7 @@ const noteData = [
   { title: "Note 5", content: "This is note 5" },
 ];
 
+// Notes page
 jQuery(() => {
   const noteList = $("#notes-list");
   noteList.html(noteData.map(NoteItem).join(""));
@@ -46,45 +47,30 @@ const NoteItem = ({ title, content }) => {
     </article>
   `;
 };
-// Note updating
-jQuery(() => {
-  let autosaveInterval = localStorage.getItem("autosaveInterval");
-
-  if (!autosaveInterval) {
-    autosaveInterval = 3000;
-    localStorage.setItem("autosaveInterval", autosaveInterval);
-  }
-
-  autosave("#notes-content", autosaveInterval);
-  autosave("#note-header", autosaveInterval);
-});
-
-const autosave = (element, autosaveInterval) => {
-  let saveTimeout = null;
-
-  let oldValue = "";
-  $(element).on("change keyup paste", function () {
-    const currentValue = $(this).val();
-    if (!oldValue || currentValue == oldValue) {
-      oldValue = currentValue;
-      return;
-    } // prevent multiple simultaneous triggers
-
-    clearTimeout(saveTimeout); // don't save if user is still typing
-    saveTimeout = setTimeout(saveNote, autosaveInterval);
-  });
-};
-
-const saveNote = async () => {
-  // update note in db
-  console.log("Note saved");
-  return Promise.resolve();
-};
 
 // Note menu actions
 jQuery(() => {
   const noteMenuBtn = $("#note-menu-button");
   const noteMenuPopover = $("#note-menu");
+  const noteHeader = $("#note-header");
+  const noteContent = $("#note-content");
+
+  const postNote = async () => {
+    // todo update note in db
+    noteHeader.prop("disabled", true);
+    noteContent.prop("disabled", true);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    noteHeader.prop("disabled", false);
+    noteContent.prop("disabled", false);
+    console.log("Note posted");
+  };
+
+  const clearNote = () => {
+    noteHeader.val("");
+    noteContent.val("");
+    console.log("Note cleared");
+  };
+
   Popper.createPopper(noteMenuBtn[0], noteMenuPopover[0], {
     placement: "bottom-start",
   });
@@ -106,21 +92,20 @@ jQuery(() => {
   $(".note-menu-item").on("click", function () {
     const action = $(this).data("action");
     switch (action) {
-      case "create":
-        createNote();
-      case "delete":
-        deleteNote();
+      case "post":
+        postNote();
         break;
-      case "share":
-        shareNote(); // share note to forum
+      case "discard":
+        clearNote();
         break;
       default:
         break;
     }
+    noteMenuPopover.removeClass("shown");
   });
 
-  $("#note-close-button").on("click", () => {
-    $("#note-bar").css("display", "none");
-    $("#main-content").addClass("col-10").removeClass("col-6");
+  $("#note-share-button").on("click", async () => {
+    await postNote();
+    clearNote();
   });
 });

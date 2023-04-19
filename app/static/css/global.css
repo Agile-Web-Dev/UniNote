@@ -127,6 +127,7 @@ html {
   cursor: pointer;
   background: none;
   border: none;
+  min-height: 32px;
 }
 
 .sidebar-icon:hover {

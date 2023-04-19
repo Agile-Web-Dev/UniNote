@@ -8,12 +8,6 @@ from app.models import Note
 @pytest.fixture
 def setup(app):
     Note.query.delete()
-    db.session.commit()
-
-    yield app
-
-    Note.query.delete()
-    db.session.commit()
 
     notes = [
         Note(
@@ -42,8 +36,13 @@ def setup(app):
     db.session.add_all(notes)
     db.session.commit()
 
+    yield app
 
-def test_get_notes(client):
+    Note.query.delete()
+    db.session.commit()
+
+
+def test_get_notes(client, setup):
     response = client.get("/api/notes/CITS3403")
     assert response.status_code == 200
     notes = response.json

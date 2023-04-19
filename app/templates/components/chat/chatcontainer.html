@@ -1,2 +1,6 @@
 <div id="chat-container" class="flex-fill">
+    {% for message in messages %}
+    <p>{{ message.created_by }} : {{ message.content }}</p>
+    <p>{{ message.created_at | format_datetime }}</p>
+    {% endfor %}
 </div>

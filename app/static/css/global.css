@@ -32,6 +32,10 @@ body {
   scrollbar-color: var(--app-grey-800) var(--app-grey-0);
 }
 
+a{
+  text-decoration: none;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 2px;
@@ -161,6 +165,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 0.75rem;
+}
+.header-tab-item:last-of-type{
+  margin-left: auto;
+  text-align: center;
 }
 
 .header-tab-item:hover {

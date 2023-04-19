@@ -3,7 +3,6 @@ from flask_login import login_required
 
 from app import db
 from app.auth.utils import in_class
-
 from app.classes.routes.classes import get_class_users
 
 from . import bp
@@ -19,5 +18,5 @@ def chatroom(class_id):
         "chatroom.html",
         title="Chatroom",
         nav_items=["Chat", "Notes", "Labs", "Project", "Exam"],
-        header_items=header_items
+        header_items=header_items,
     )

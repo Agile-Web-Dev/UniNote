@@ -12,4 +12,3 @@ def get_messages(class_id):
     for entry in msgs:
         msgsArr.append(entry.serialize())
     return msgsArr
-

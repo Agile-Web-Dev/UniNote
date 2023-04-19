@@ -110,6 +110,7 @@ hang-closing = True
 ignore =
     E133,
     E203,
+    E501
     W503,
     F401,
     F811,

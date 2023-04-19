@@ -6,20 +6,20 @@ const noteData = [
   { title: "Note 5", content: "This is note 5" },
 ];
 
-jQuery(() => {
+jQuery(async () => {
+  const currentPath = window.location.pathname;
+  const className = currentPath.split("/")
+  const response = await fetch("/api/notes/" + className[1].toUpperCase());
+  const data = await response.json();
   const noteList = $("#notes-list");
-  noteList.html(noteData.map(NoteItem).join(""));
-
+  noteList.html(data.map(NoteItem).join(""));
   $("#notes-searchbar-form").on("submit", (e) => {
     e.preventDefault();
 
     const searchQuery = $("#notes-searchbar").val();
-    const filteredNotes = noteData.filter(
-      (note) =>
-        note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        note.content.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    noteList.html(filteredNotes.map(NoteItem).join(""));
+    const results = data.filter(note => note.title.toLowerCase().includes(searchQuery.toLowerCase()) || note.content.toLowerCase().includes(searchQuery.toLowerCase()));
+    console.log(results)
+    noteList.html(results.map(NoteItem).join(""));
   });
 
   $(".note-item").on("click", function () {
@@ -31,6 +31,8 @@ jQuery(() => {
     $("#notes-modal-content").text(content);
   });
 });
+
+
 
 const NoteItem = ({ title, content }) => {
   return `

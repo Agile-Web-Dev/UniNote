@@ -91,14 +91,11 @@ with app.app_context():
     ]
 
     messages = [
-        Message(created_by = "Dan", class_id = "CITS3403", content = "hey wassup guys"),
-        Message(created_by = "Bob", class_id = "CITS3403", content = "Hai"),
-        Message(created_by = "John", class_id = "CITS3403", content = "Sup")
+        Message(created_by="Dan", class_id="CITS3403", content="hey wassup guys"),
+        Message(created_by="Bob", class_id="CITS3403", content="Hai"),
+        Message(created_by="John", class_id="CITS3403", content="Sup")
     ]
-
-
  
-
     db.session.add_all(messages)    
     db.session.add_all(notes)
     db.session.add_all(tags)

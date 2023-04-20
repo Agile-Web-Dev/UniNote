@@ -66,6 +66,8 @@ class User(db.Model, TimeMixin, UserMixin):
 @login.user_loader
 def load_user(user_id=None):
     if user_id is None:
+        if not current_user.is_authenticated:
+            return None
         user_id = current_user.user_id
     return User.query.filter_by(user_id=user_id).first()
 

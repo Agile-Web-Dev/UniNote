@@ -18,12 +18,11 @@ def chatroom(class_id):
     session["class_id"] = class_id
     header_items = get_class_info(class_id)
     messages = Message.query.filter(Message.class_id == class_id)
+
     return render_template(
         "chatroom.html",
         title="Chatroom",
         nav_items=["Chat", "Notes", "Labs", "Project", "Exam"],
         header_items=header_items,
-        messages=messages
-        # topbar_items=topbar_items
-        # add chat messages here
+        messages=messages,
     )

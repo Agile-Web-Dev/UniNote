@@ -4,9 +4,9 @@
     <ul class="nav-container p-0">
       {% for nav_item in nav_items %}
         <li class="nav-item-container">
-          <div class="nav-item-icon-wrapper">
-            <i class="bi bi-pencil-square nav-item-icon"></i>
-          </div>
+          <a href="{{ nav_item['url'] }}" class="nav-item-icon-wrapper">
+            <i class="bi nav-item-icon {{ nav_item['icon'] or 'bi-link' }}"></i>
+          </a>
           <a href="{{ nav_item['url'] }}" class="nav-item-title">{{ nav_item["name"] }}</a>
         </li>
       {% endfor %}

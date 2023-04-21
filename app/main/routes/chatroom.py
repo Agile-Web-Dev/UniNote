@@ -7,6 +7,7 @@ from app.classes.routes.classes import get_class_info
 from app.classes.routes.links import get_class_links
 from app.libs.filters import format_datetime
 from app.libs.processors import topbar
+from app.main.utils import get_default_links
 from app.models import Class, Message, load_user
 
 from . import bp
@@ -19,14 +20,7 @@ def chatroom(class_id):
     session["class_id"] = class_id
     messages = Message.query.filter(Message.class_id == class_id)
 
-    nav_items = [
-        {
-            "name": "Chat",
-            "icon": "bi-chat-left-dots-fill",
-            "url": f"/{class_id}/chatroom",
-        },
-        {"name": "Notes", "icon": "bi-pencil-square", "url": f"/{class_id}/notes"},
-    ] + get_class_links(class_id)
+    nav_items = get_default_links(class_id) + get_class_links(class_id)
 
     return render_template(
         "chatroom.html",

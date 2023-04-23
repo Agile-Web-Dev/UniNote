@@ -5,7 +5,7 @@ from . import bp
 
 
 @bp.route("/<class_id>", methods=["GET"])
-def get_messages(class_id):
+def getMessages(class_id):
     """get messages based on the current class"""
     msgsArr = []
     msgs = db.session.query(Message).filter(Message.class_id == class_id)

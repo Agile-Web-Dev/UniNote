@@ -1,5 +1,5 @@
 const noteData = [
-  { title: "Note 1", content: "This is note 1" },
+  { title: "<h1>Note 1</h1>", content: "This is note 1" },
   { title: "Note 2", content: "This is note 2" },
   { title: "Note 3", content: "This is note 3" },
   { title: "Note 4", content: "This is note 4" },
@@ -10,6 +10,16 @@ const noteData = [
 jQuery(() => {
   const noteList = $("#notes-list");
   noteList.html(noteData.map(NoteItem).join(""));
+
+  $(".note-item").each(function () {
+    const note = $(this);
+    const title = note.data("bs-title");
+    const content = note.data("bs-content");
+    note
+      .html("")
+      .append($("<h4></h4>").text(title))
+      .append($("<p></p>").text(content));
+  });
 
   $("#notes-searchbar-form").on("submit", (e) => {
     e.preventDefault();
@@ -42,8 +52,7 @@ const NoteItem = ({ title, content }) => {
       data-bs-title="${title}"
       data-bs-content="${content}"
     >
-      <h4>${title}</h4>
-      <p>${content}</p>
+      No XSS attack for you
     </article>
   `;
 };

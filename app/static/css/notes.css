@@ -130,6 +130,7 @@
   border: none;
   border-radius: 0.5rem;
   transition: 0.25s;
+  resize: none;
 }
 
 .note-container > textarea:hover {

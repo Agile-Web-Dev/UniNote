@@ -14,7 +14,7 @@
 }
 
 #notes-list {
-  height: fit-content;
+  height: 100%;
   overflow-y: scroll;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -22,6 +22,7 @@
   margin-left: 1.5rem;
   margin-right: 0.75rem;
   padding-right: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .searchbar-container {

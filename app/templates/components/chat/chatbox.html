@@ -1,9 +1,12 @@
-<div class="sticky-bottom flex-row d-flex">
-  <input id="chatbox"
-         type="text"
-         class="form-control"
-         placeholder="Send message"/>
-  <button id="emoji-picker-button">Emoji icon</button>
+<div id="chatbox-container" class="sticky-bottom flex-row d-flex z-0">
+  <div id="chatbox-inner" class="d-flex flex-row flex-grow-1">
+    <textarea id="chatbox"
+              type="text"
+              class="flex-grow-1 rounded"
+              placeholder="Send message"></textarea>
+    <div id="chatbox-action-group">
+      <div id="emoji-picker-button">🤓</div>
+    </div>
+  </div>
 </div>
-
 <div id="emoji-picker"></div>

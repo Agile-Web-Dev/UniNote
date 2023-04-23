@@ -15,13 +15,13 @@ def register():
     Register a new student.
     Endpoint: /api/auth/register
     POST JSON data:
-    - user_id
+    - userId
     - email
     - password
     - name
     """
     data = request.get_json()
-    user_id = data.get("user_id", "")
+    user_id = data.get("userId", "")
     email = data.get("email", "")
     password = data.get("password", "")
     name = data.get("name", "")

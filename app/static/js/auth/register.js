@@ -36,14 +36,14 @@ const registerFormHandler = async (event) => {
     $("#submit").html(
       '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...'
     );
-  
+    
     try {
       await $.ajax({
         type: "POST",
         dataType: "json",
-        url: "/api/auth/login",
+        url: "/api/auth/register",
         contentType: "application/json",
-        data: JSON.stringify({ username, password, remember }),
+        data: JSON.stringify({ userId: studentNumber, name, email, password }),
       });
     } catch (err) {
       // We only need to show Register button again if the request failed
@@ -56,6 +56,28 @@ const registerFormHandler = async (event) => {
       $("#alert").removeClass("d-none");
       return;
     }
+
+    try {
+      await $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "/api/auth/login",
+        contentType: "application/json",
+        data: JSON.stringify({ username: studentNumber, password }),
+      });
+    } catch (err) {
+      console.log(err);
+      // We only need to show Register button again if the request failed
+      $("#submit").text("Register");
+      if (err.responseJSON.msg) {
+        $("#alert").text(err.responseJSON.msg);
+      } else {
+        $("#alert").text("Unexpected error. Please try again later.");
+      }
+      $("#alert").removeClass("d-none");
+      return;
+    }
+
     document.location.replace("/");
   };
   

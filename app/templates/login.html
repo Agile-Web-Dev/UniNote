@@ -1,6 +1,7 @@
 {% extends "layouts/auth.html" %}
 {% block form %}
-  <form class="rounded p-3" onSubmit="loginFormHandler(event)">
+  <form class="rounded p-3 d-flex flex-column"
+        onSubmit="loginFormHandler(event)">
     <div class="col-md-12 text-center mb-5">
       <div class="alert alert-danger d-flex align-items-center d-none pt-3"
            role="alert"
@@ -25,13 +26,12 @@
              placeholder="Enter Password"
              required/>
     </div>
-    <div class="form-group form-check mb-3">
+    <div class="form-group form-check mb-4">
       <input type="checkbox" class="form-check-input" id="remember" />
       <label class="form-check-label" for="remember">Remember me</label>
     </div>
-    <div class="d-grid gap-2">
-      <button type="submit" class="btn btn-primary btn-block" id="submit">Login</button>
-    </div>
+    <button type="submit" class="btn btn-primary gap-2 mb-2 w-100" id="submit">Login</button>
+    <a href={{ url_for('main.register') }} class="align-self-end text-decoration-none">Register an account</a>
   </form>
 {% endblock form %}
 {% block style %}

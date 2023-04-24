@@ -1,6 +1,6 @@
 body {
   background-color: var(--app-accent-dark);
-  color: var(--app-grey-0); 
+  color: var(--app-grey-0);
 }
 
 #auth-container > form {

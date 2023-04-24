@@ -41,21 +41,6 @@ body {
   cursor: pointer;
 }
 
-button {
-  border: none!important;
-  background-color: var(--app-accent-light)!important;
-}
-
-button:focus, button:active {
-  box-shadow: none!important;
-  filter: brightness(85%)!important;
-
-}
-
-button:hover {
-  filter: brightness(95%);
-}
-
 input {
   color: white!important;
   border-color: var(--app-grey-300)!important;

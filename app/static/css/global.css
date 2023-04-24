@@ -19,10 +19,12 @@ body {
   --app-grey-0: white;
   --app-grey-50: #d9d9d9;
   --app-grey-100: #aaaaaa;
+  --app-grey-200: #8c8c8c;
   --app-grey-300: #676666;
   --app-grey-400: #5c5c5c;
   --app-grey-500: #59626c;
   --app-grey-600: #414040;
+  --app-grey-700: #2e2e2e;
   --app-grey-800: #201f1f;
   --app-grey-900: black;
 }
@@ -30,6 +32,13 @@ body {
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--app-grey-800) var(--app-grey-0);
+}
+
+.button-reset {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 /* width */
@@ -76,7 +85,6 @@ body {
 }
 
 .side-wrapper {
-  height: 100%;
   background: var(--app-grey-800);
 }
 
@@ -115,12 +123,21 @@ body {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   background: var(--app-grey-600);
+  color: transparent;
 }
 
 .sidebar-icon {
   font-size: 32px;
   color: var(--app-grey-100);
   line-height: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  min-height: 32px;
+}
+
+.sidebar-icon:hover {
+  color: var(--app-grey-200);
 }
 
 .unselectable {

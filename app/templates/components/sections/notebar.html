@@ -1,0 +1,33 @@
+{% extends "components/sections/sidebar.html" %}
+{% block sidebarcontent %}
+  <div class="pt-2 pb-2 h-100">
+    <div class="note-container">
+      <input id="note-header"
+             type="text"
+             class="fs-1 ps-2 pe-2 mb-1 form-control-lg"
+             placeholder="Note Title"/>
+      <div class="note-line mb-4"></div>
+      <textarea id="note-content"
+                class="form-control-plaintext ps-2 pe-2 fs-5 overflow-y-auto overflow-x-hidden h-100"
+                placeholder="Start typing here"></textarea>
+    </div>
+  </div>
+{% endblock sidebarcontent %}
+{% block pre %}
+  <div class="d-position-relative">
+    <button type="button"
+            id="note-menu-button"
+            class="bi bi-three-dots sidebar-icon"></button>
+    <menu id="note-menu" class="d-position-absolute">
+      <li class="note-menu-item" data-action="post">
+        <button type="button" class="button-reset text-white">Post Note</button>
+      </li>
+      <li class="note-menu-item" data-action="discard">
+        <button type="button" class="button-reset text-white">Discard Note</button>
+      </li>
+    </menu>
+  </div>
+{% endblock pre %}
+{% block post %}
+  <button id="note-share-button" class="bi bi-upload sidebar-icon"></button>
+{% endblock post %}

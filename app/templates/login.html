@@ -1,50 +1,44 @@
-{% extends "layouts/index.html" %}
-{% block main %}
-  <div class="row vh-100">
-    <div class="col-lg-4 col-md-7 col-sm-10 mx-auto my-auto">
-      <form class="border rounded p-3" onSubmit="loginFormHandler(event)">
-        <div class="col-md-12 text-center mb-5">
-          <div class="alert alert-danger d-flex align-items-center d-none pt-3"
-               role="alert"
-               id="alert-login">
-            <div>Placeholder</div>
-          </div>
-          <h1>UniNote Login</h1>
-        </div>
-        <div class="form-group mb-3">
-          <label for="username">Email / User ID</label>
-          <input type="username"
-                 class="form-control"
-                 id="username"
-                 placeholder="Enter Email or User ID"
-                 required/>
-        </div>
-        <div class="form-group mb-3">
-          <label for="password">Password</label>
-          <input type="password"
-                 class="form-control"
-                 id="password"
-                 placeholder="Enter Password"
-                 required/>
-        </div>
-        <div class="form-group form-check mb-3">
-          <input type="checkbox" class="form-check-input" id="remember" />
-          <label class="form-check-label" for="remember">Remember me</label>
-        </div>
-        <div class="d-grid gap-2">
-          <button type="submit" class="btn btn-primary btn-block" id="submit">Login</button>
-        </div>
-      </form>
+{% extends "layouts/auth.html" %}
+{% block form %}
+  <form class="rounded p-3 d-flex flex-column"
+        onSubmit="loginFormHandler(event)">
+    <div class="col-md-12 text-center mb-5">
+      <div class="alert alert-danger d-flex align-items-center d-none pt-3"
+           role="alert"
+           id="alert">
+        <div>Placeholder</div>
+      </div>
+      <h1>UniNote Login</h1>
     </div>
-  </div>
-{% endblock main %}
+    <div class="form-group mb-3">
+      <label for="username">Email / User ID</label>
+      <input type="username"
+             class="form-control"
+             id="username"
+             placeholder="Enter Email or User ID"
+             required/>
+    </div>
+    <div class="form-group mb-3">
+      <label for="password">Password</label>
+      <input type="password"
+             class="form-control"
+             id="password"
+             placeholder="Enter Password"
+             required/>
+    </div>
+    <div class="form-group form-check mb-4">
+      <input type="checkbox" class="form-check-input" id="remember" />
+      <label class="form-check-label" for="remember">Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-primary gap-2 mb-2 w-100" id="submit">Login</button>
+    <a href={{ url_for('main.register') }} class="align-self-end text-decoration-none">Register an account</a>
+  </form>
+{% endblock form %}
 {% block style %}
   <link rel="stylesheet"
         type="text/css"
-        href="{{ url_for('static', filename='css/login.css') }}"/>
+        href="{{ url_for('static', filename='css/auth.css') }}"/>
 {% endblock style %}
-
 {% block script %}
-  <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/auth/login.js') }}"></script>
 {% endblock script %}
-

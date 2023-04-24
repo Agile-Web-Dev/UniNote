@@ -41,6 +41,18 @@ body {
   cursor: pointer;
 }
 
+input {
+  color: white!important;
+  border-color: var(--app-grey-300)!important;
+  background-color: var(--app-grey-300)!important;
+
+}
+
+input:focus, input:active {
+  border-color: var(--app-grey-100)!important;
+  box-shadow: none!important;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -70,18 +82,18 @@ body {
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--app-grey-100);
+  color: var(--app-grey-100)!important;
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: var(--app-grey-100);
+  color: var(--app-grey-100)!important;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: var(--app-grey-100);
+  color: var(--app-grey-100)!important;
 }
 
 .side-wrapper {

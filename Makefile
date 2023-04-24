@@ -9,6 +9,6 @@ install:
 run:
 	flask run
 test:
-	pytest
+	pytest -W ignore
 seed:
 	python -m scripts.seed_db

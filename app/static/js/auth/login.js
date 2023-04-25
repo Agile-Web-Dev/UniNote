@@ -33,7 +33,7 @@ const loginFormHandler = async (event) => {
     } catch (err) {
       // We only need to show Login button again if the request failed
       $("#submit").text("Login");
-      if (err.responseJSON.msg) {
+      if (err.responseJSON) {
         $("#alert").text(err.responseJSON.msg);
       } else {
         $("#alert").text("Unexpected error. Please try again later.");

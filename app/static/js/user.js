@@ -36,10 +36,10 @@ export const getAvatar = async (name) => {
   
   if (!avatar) {
     cacheAvatar(name);
-    return $(`<img class="avatar" src="${url}" />`);
+    return url
   }
 
   const avatarImage = URL.createObjectURL(await avatar.blob());
 
-  return $(`<img class="avatar" src="${avatarImage}"/>`);
+  return avatarImage
 };

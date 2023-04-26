@@ -2,14 +2,87 @@
   white-space: pre-wrap;
   display: flex;
   flex-direction: column-reverse;
+  padding: 0;
 }
 
 #chatbox-container {
   background: var(--app-grey-600);
 }
+#form-outline{
+  width:30%;
+  margin-left: auto;
+  padding-right: 10px;
+}
 
-#chatbox-inner {
-  margin: 20px 0;
+#chatbox-searchbar-box{
+  background: var(--app-grey-800);
+  border: none;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 7px 0;
+}
+#search-chat-input{
+  background: var(--app-grey-400);
+  height: 35px;
+  float: right;
+  transition-property: width;
+  transition-duration: .25s;
+}
+
+#search-chat-input:focus{
+  background: var(--app-grey-600);
+  width: 700px;
+  color: white;
+}
+#search-icon{
+  color: var(--app-grey-200);
+  height: 20px;
+  width: 20px;
+}
+#search-icon:hover{
+  color: var(--app-grey-600);
+}
+
+#search-button{
+  width: 20x;
+  height: 30px;
+  overflow-y: scroll;
+  border:none;
+  margin-right: 5px;
+  background-color: transparent;
+}
+
+#search-results{
+  background: var(--app-grey-800);
+  border: none;
+  height: 56px;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+  border-top: 1px solid var(--app-grey-600);
+}
+
+#search-results-box{
+  margin-left: auto;
+}
+
+#result-text{
+  margin-left: 4px;
+}
+
+#search-results-box button{
+  height: 40px;
+  color: var(--app-grey-200);
+  background-color: transparent;
+  border: none;
+  margin-right: 2px;
+}
+
+#search-button-image:focus{
+  color: var(--app-grey-600);
 }
 
 #chatbox {

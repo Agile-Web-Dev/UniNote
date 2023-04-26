@@ -273,4 +273,5 @@ a {
 #content-wrapper {
   color: white;
   background: var(--app-grey-600);
+  padding: 0;
 }

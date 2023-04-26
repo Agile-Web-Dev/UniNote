@@ -78,3 +78,8 @@ def test_post_notes(client, setup):
     assert data["class_id"] == request_body["classId"]
     assert data["title"] == request_body["title"]
     assert data["content"] == request_body["content"]
+
+    assert (
+        db.session.query(Note).filter(Note.note_id == data["note_id"]).first()
+        is not None
+    )

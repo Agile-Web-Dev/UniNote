@@ -18,3 +18,6 @@
 </header>
 {% endblock header %}
 
+{% block common_script %}
+  <script src="{{ url_for('static', filename='js/auth/logout.js') }}"></script>
+{% endblock common_script %}

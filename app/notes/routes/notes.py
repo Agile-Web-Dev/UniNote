@@ -7,11 +7,11 @@ from . import bp
 @bp.route("/<class_id>", methods=["GET"])
 def get_notes(class_id):
     """get notes based on the classID"""
-    resArr = []
+    res_arr = []
     res = db.session.query(Note).filter(Note.class_id == class_id)
     for entry in res:
-        resArr.append(entry.serialize())
-    return resArr
+        res_arr.append(entry.serialize())
+    return res_arr
 
 
 # when user saves their notes

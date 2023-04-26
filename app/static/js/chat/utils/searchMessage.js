@@ -24,7 +24,7 @@ const getUserMessages = () => {
         // created_by:
         content: messageEl.textContent.trim(),
       };
-      return userMessages;
+      return userMessage;
     });
   
     console.log(userMessages)

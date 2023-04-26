@@ -1,7 +1,7 @@
 <div id="chat-container" class="flex-fill overflow-y-auto">
     <div id="chat-scroll-window" class="d-flex flex-column">
         {% for message in messages %}
-            <p>{{ message.created_by }} : {{ message.content }}</p>
+            <p id="message-{{ message.message_id }}">{{ message.created_by }} : {{ message.content }}</p>
             <p>{{ message.created_at | format_datetime }}</p>
         {% endfor %}
     </div>

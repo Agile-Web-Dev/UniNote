@@ -13,14 +13,15 @@ def receive_message(message):
     """Sent by a client when the user entered a new message.
     The message is sent to all people in the room."""
     room = session.get("class_id")
-    emit(
-        "receiveMessage",
-        {"name": current_user.name, "msg": message["msg"]},
-        room=room,
-        broadcast=True,
-    )
     msg = Message(
         created_by=current_user.name, class_id=room, content=message.get("msg")
     )
     db.session.add(msg)
     db.session.commit()
+    
+    emit(
+        "receiveMessage",
+        {"name": current_user.name, "msg": message["msg"], "msgId": msg.message_id},
+        room=room,
+        broadcast=True,
+    )

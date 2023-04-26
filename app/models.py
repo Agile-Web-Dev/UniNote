@@ -113,7 +113,9 @@ class Message(db.Model, TimeMixin):
 class Note(db.Model, TimeMixin):
     __tablename__ = "note"
 
-    note_id = db.Column(db.String, primary_key=True, nullable=False, default=uuid4)
+    note_id = db.Column(
+        db.String, primary_key=True, nullable=False, default=generate_uuid
+    )
     created_by = db.Column(db.ForeignKey("user.user_id"), nullable=False)
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
     title = db.Column(db.String, nullable=False)

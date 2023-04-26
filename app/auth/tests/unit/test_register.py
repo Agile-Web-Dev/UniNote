@@ -18,7 +18,7 @@ def setup(app):
 
 def test_register(client, setup):
     data = {
-        "user_id": "123",
+        "userId": "123",
         "name": "John Doe",
         "email": "hello@example.com",
         "password": "password",
@@ -30,7 +30,7 @@ def test_register(client, setup):
 
 
 def test_missing_fields(client, setup):
-    data = {"user_id": "123", "name": "John Doe", "password": "password"}
+    data = {"userId": "123", "name": "John Doe", "password": "password"}
     response = client.post("/api/auth/register", json=data)
 
     assert response.status_code == 400
@@ -38,7 +38,7 @@ def test_missing_fields(client, setup):
 
 def test_duplicate(client, setup):
     data = {
-        "user_id": "123",
+        "userId": "123",
         "name": "John Doe",
         "email": "hello@example.com",
         "password": "password",

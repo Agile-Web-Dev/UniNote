@@ -1,20 +1,17 @@
 {% block header %}
-<header class="header-container">
   <div class="col-2 header-logo-container">
-  <a href="{{ url_for ('main.dashboard') }}"> 
-      <h1 class="unselectable">UniNote</h1>
-   </a>
+    <h1 class="unselectable">UniNote</h1>
   </div>
   <ul class="d-flex col-10 h-100 m-0 p-0 sortable-list">
-  {% for header in topbar_items %}
-    <li class="header-tab-item {{ 'active' if active_class == header.class_id }}">
-      <a class="header-tab-link unselectable" href="{{ url_for('main.chatroom', class_id=header.class_id) }}">{{ header.class_id }}</a>
-    </li>
-  {% endfor %}
-  <li class="header-tab-item">
-    <a class="header-tab-link unselectable" href="#">Logout</a>
-  </li>
+    {% for header in topbar_items %}
+      <li class="header-tab-item {{ 'active' if active_class == header.class_id }}">
+        <a class="header-tab-link unselectable"
+           href="{{ url_for('main.chatroom', class_id=header.class_id) }}">{{ header.class_id }}</a>
+      </li>
+    {% endfor %}
   </ul>
-</header>
+  <button class="logout-btn">Logout</button>
 {% endblock header %}
-
+{% block common_script %}
+  <script src="{{ url_for('static', filename='js/auth/logout.js') }}"></script>
+{% endblock common_script %}

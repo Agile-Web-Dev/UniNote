@@ -2,8 +2,9 @@ from flask import session
 from flask_login import current_user
 from flask_socketio import emit
 
-from app import socketio
+from app import db, socketio
 from app.auth.utils import login_required_socket
+from app.models import Message
 
 
 @socketio.on("receive_message", namespace="/chat")
@@ -18,3 +19,8 @@ def receive_message(message):
         room=room,
         broadcast=True,
     )
+    msg = Message(
+        created_by=current_user.name, class_id=room, content=message.get("msg")
+    )
+    db.session.add(msg)
+    db.session.commit()

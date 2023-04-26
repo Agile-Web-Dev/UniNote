@@ -6,6 +6,9 @@
   border-radius: 1rem;
   color: white;
   cursor: pointer;
+  overflow-y: scroll;
+  padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+  box-sizing: content-box;
 }
 
 .note-item:hover {
@@ -54,6 +57,11 @@
 .notes-container {
   background: var(--app-grey-600);
 }
+
+.modal-content {
+  background: var(--app-grey-600);
+}
+
 .note-container {
   display: flex;
   flex-direction: column;

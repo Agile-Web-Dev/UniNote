@@ -15,6 +15,7 @@ socketio = SocketIO()
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
+    app.app_context().push()
 
     db.init_app(app)
     migrate.init_app(app, db)
@@ -37,7 +38,7 @@ def create_app(config_class=Config):
 
     app.register_blueprint(classes_bp, url_prefix="/api/classes")
 
-    from app.chat.routes import bp as messages_bp
+    from app.chat.utils import bp as messages_bp
 
     app.register_blueprint(messages_bp, url_prefix="/api/messages")
 

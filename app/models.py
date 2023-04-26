@@ -7,6 +7,10 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from app import db, login
 
 
+def generate_uuid():
+    return str(uuid4())
+
+
 class TimeMixin(object):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow)
@@ -69,7 +73,9 @@ def load_user(user_id=None):
 class Class(db.Model, TimeMixin):
     __tablename__ = "class"
 
-    class_id = db.Column(db.String, primary_key=True, nullable=False, default=uuid4)
+    class_id = db.Column(
+        db.String, primary_key=True, nullable=False, default=generate_uuid
+    )
     user_ids = db.relationship("User", secondary=user_class, back_populates="class_ids")
     name = db.Column(db.String, nullable=False)
     links = db.Column(db.String)
@@ -89,7 +95,9 @@ class Class(db.Model, TimeMixin):
 class Message(db.Model, TimeMixin):
     __tablename__ = "message"
 
-    message_id = db.Column(db.String, primary_key=True, nullable=False, default=uuid4)
+    message_id = db.Column(
+        db.String, primary_key=True, nullable=False, default=generate_uuid
+    )
     created_by = db.Column(db.ForeignKey("user.user_id"), nullable=False)
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
     content = db.Column(db.String)

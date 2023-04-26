@@ -34,6 +34,10 @@ body {
   scrollbar-color: var(--app-grey-800) var(--app-grey-0);
 }
 
+a {
+  text-decoration: none;
+}
+
 .button-reset {
   background: none;
   border: none;
@@ -170,7 +174,7 @@ body {
   vertical-align: middle;
 }
 
-.header-tab {
+.header-tab-item {
   display: flex;
   border-right: 2px solid var(--app-grey-200);
   width: 12rem;
@@ -179,8 +183,12 @@ body {
   align-items: center;
   padding: 0 0.75rem;
 }
+.header-tab-item:last-of-type {
+  margin-left: auto;
+  text-align: center;
+}
 
-.header-tab:hover {
+.header-tab-item:hover {
   background-color: var(--app-accent-highlight);
 }
 
@@ -191,11 +199,8 @@ body {
   cursor: pointer;
 }
 
-.header-tab-close {
-  color: var(--app-grey-0);
-  font-size: x-large;
-  cursor: pointer;
-  margin: -0.5rem;
+.active {
+  background-color: var(--app-accent-highlight);
 }
 
 .unselectable {
@@ -228,7 +233,7 @@ body {
   vertical-align: middle;
 }
 
-.header-tab {
+.header-tab-item {
   display: flex;
   border-right: 2px solid var(--app-grey-200);
   width: 12rem;
@@ -237,8 +242,12 @@ body {
   align-items: center;
   padding: 0 0.75rem;
 }
+.header-tab-item:last-of-type {
+  margin-left: auto;
+  text-align: center;
+}
 
-.header-tab:hover {
+.header-tab-item:hover {
   background-color: var(--app-accent-highlight);
 }
 
@@ -249,11 +258,8 @@ body {
   cursor: pointer;
 }
 
-.header-tab-close {
-  color: var(--app-grey-0);
-  font-size: x-large;
-  cursor: pointer;
-  margin: -0.5rem;
+.active {
+  background-color: var(--app-accent-highlight);
 }
 
 #content-wrapper {

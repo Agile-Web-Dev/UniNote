@@ -45,16 +45,16 @@ a {
   cursor: pointer;
 }
 
-input {
-  color: white !important;
-  border-color: var(--app-grey-300) !important;
-  background-color: var(--app-grey-300) !important;
+.form-control {
+  color: white;
+  border-color: var(--app-grey-300);
+  background-color: var(--app-grey-300);
 }
 
-input:focus,
-input:active {
-  border-color: var(--app-grey-100) !important;
-  box-shadow: none !important;
+.form-control:focus,
+.form-control:active {
+  border-color: var(--app-grey-100);
+  box-shadow: none;
 }
 
 /* width */

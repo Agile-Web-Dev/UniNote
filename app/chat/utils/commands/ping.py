@@ -1,5 +1,6 @@
 from . import Base
 
+
 class Ping(Base):
-    def executor(room):
+    def executor(room, args):
         return "pong!"

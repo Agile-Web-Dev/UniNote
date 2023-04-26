@@ -1,4 +1,4 @@
-class Base():
+class Base:
     commands = {}
 
     def __init_subclass__(self):

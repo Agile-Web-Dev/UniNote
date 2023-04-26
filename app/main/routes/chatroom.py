@@ -12,7 +12,6 @@ from . import bp
 @login_required
 @in_class
 def chatroom(class_id):
-    session["class_id"] = class_id
     header_items = get_class_info(class_id)
     return render_template(
         "chatroom.html",

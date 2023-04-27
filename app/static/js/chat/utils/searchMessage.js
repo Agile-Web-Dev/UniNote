@@ -17,15 +17,17 @@ const getMessages = () => {
 
 const getUserMessages = () => {
     const userItems = document.getElementsByClassName("sender");
+    console.log(userItems)
 
     const userMessages = Array.from(userItems).map((messageEl) => {
-      const userMessage = {
-        id: messageEl.id,
-        // created_by:
-        content: messageEl.textContent.trim(),
-      };
-      return userMessage;
-    });
+        const messageContentEl = messageEl.querySelector(".message-item");
+        const messageId = messageContentEl.id;
+        const userMessage = {
+          created_by: messageEl.textContent.trim().split("\n")[0],
+          id: messageId
+        };
+        return userMessage;
+      });
   
     console.log(userMessages)
     return userMessages;
@@ -42,8 +44,6 @@ searchInput.addEventListener("keyup", function (event) {
     searchOption.value === "Content:"
   ) {
     const messages = getMessages()
-    const userMessages = getUserMessages();
-    console.log(userMessages)
     const searchQuery = searchInput.value.trim();
     for (let i = messages.length - 1; i >= 0; i--) {
       const message = messages[i];
@@ -65,13 +65,14 @@ searchInput.addEventListener("keyup", function (event) {
     searchOption.value == "From:"
   ) {
     const searchQuery = searchInput.value.trim();
+    const userMessage = getUserMessages();
 
-    for (let i = messages.length - 1; i >= 0; i--) {
-      const message = messages[i];
+    for (let i = userMessage.length - 1; i >= 0; i--) {
+      const user = userMessage[i];
       if (
-        message.created_by.toLowerCase().includes(searchQuery.toLowerCase())
+        user.created_by.toLowerCase().includes(searchQuery.toLowerCase())
       ) {
-        searchResults.push(message);
+        searchResults.push(user);
       }
     }
     searchInput.value = "";

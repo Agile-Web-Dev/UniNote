@@ -45,16 +45,16 @@ a {
   cursor: pointer;
 }
 
-input {
-  color: white!important;
-  border-color: var(--app-grey-300)!important;
-  background-color: var(--app-grey-300)!important;
-
+.form-control {
+  color: white;
+  border-color: var(--app-grey-300);
+  background-color: var(--app-grey-300);
 }
 
-input:focus, input:active {
-  border-color: var(--app-grey-100)!important;
-  box-shadow: none!important;
+.form-control:focus,
+.form-control:active {
+  border-color: var(--app-grey-100);
+  box-shadow: none;
 }
 
 /* width */
@@ -86,18 +86,18 @@ input:focus, input:active {
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--app-grey-100)!important;
+  color: var(--app-grey-100) !important;
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: var(--app-grey-100)!important;
+  color: var(--app-grey-100) !important;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: var(--app-grey-100)!important;
+  color: var(--app-grey-100) !important;
 }
 
 .side-wrapper {
@@ -163,14 +163,6 @@ input:focus, input:active {
   user-select: none; /* Standard */
 }
 
-.header-container {
-  background-color: var(--app-accent-dark);
-  display: flex;
-  align-items: center;
-  text-align: center;
-  height: 3rem;
-}
-
 .header-logo-container {
   background-color: var(--app-accent-light);
   height: 100%;
@@ -194,10 +186,6 @@ input:focus, input:active {
   justify-content: space-between;
   align-items: center;
   padding: 0 0.75rem;
-}
-.header-tab-item:last-of-type {
-  margin-left: auto;
-  text-align: center;
 }
 
 .header-tab-item:hover {
@@ -227,7 +215,7 @@ input:focus, input:active {
   display: flex;
   align-items: center;
   text-align: center;
-  height: 3rem;
+  min-height: 65px;
 }
 
 .header-logo-container {
@@ -253,14 +241,22 @@ input:focus, input:active {
   justify-content: space-between;
   align-items: center;
   padding: 0 0.75rem;
-}
-.header-tab-item:last-of-type {
-  margin-left: auto;
-  text-align: center;
+  padding-left: 2rem;
 }
 
-.header-tab-item:hover {
-  background-color: var(--app-accent-highlight);
+.logout-btn {
+  border-radius: 15px;
+  position: absolute;
+  border: none;
+  background-color: blueviolet;
+  padding: 0.7rem 1.2rem;
+  color: #ffff;
+  right: 2rem;
+  left: auto;
+}
+
+.logout-btn:hover {
+  background-color: #461d67;
 }
 
 .header-tab-link {

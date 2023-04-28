@@ -35,9 +35,7 @@ def receive_message(message):
             room=room,
             broadcast=True,
         )
-        msg = Message(
-            created_by="UniNote Bot", class_id=room, content=bot_res
-        )
+        msg = Message(created_by="UniNote Bot", class_id=room, content=bot_res)
         db.session.add(msg)
 
     db.session.commit()

@@ -2,9 +2,10 @@ from flask import session
 from flask_login import current_user
 from flask_socketio import emit
 
-from app import socketio
+from app import db, socketio
 from app.auth.utils import login_required_socket
 from app.chat.utils import command_handler
+from app.models import Message
 
 
 @socketio.on("receive_message", namespace="/chat")
@@ -21,11 +22,22 @@ def receive_message(message):
         broadcast=True,
     )
 
+    msg = Message(
+        created_by=current_user.name, class_id=room, content=message.get("msg")
+    )
+    db.session.add(msg)
+
     if message["intent"] == "command":
-        msg = command_handler(message["msg"], room)
+        bot_res = command_handler(message["msg"], room)
         emit(
             "receiveMessage",
-            {"name": "UniNote Bot", "msg": msg, "isBot": True},
+            {"name": "UniNote Bot", "msg": bot_res, "isBot": True},
             room=room,
             broadcast=True,
         )
+        msg = Message(
+            created_by="UniNote Bot", class_id=room, content=bot_res
+        )
+        db.session.add(msg)
+
+    db.session.commit()

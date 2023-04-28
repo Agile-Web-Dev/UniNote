@@ -108,6 +108,7 @@ hang-closing = True
 
 # Specify a list of codes to ignore.
 ignore =
+    E405
     E133,
     E203,
     E501

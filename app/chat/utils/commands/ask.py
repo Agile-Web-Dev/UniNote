@@ -1,5 +1,5 @@
 from ..openai import get_index
-from . import Base
+from .base import Base
 
 
 class Ask(Base):

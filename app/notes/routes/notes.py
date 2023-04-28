@@ -1,4 +1,5 @@
 from app import db
+from app.libs.processors import topbar
 from app.models import Note
 
 from . import bp

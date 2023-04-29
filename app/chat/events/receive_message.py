@@ -2,7 +2,7 @@ from flask import session
 from flask_login import current_user
 from flask_socketio import emit
 
-from app import socketio
+from app import db, socketio
 from app.auth.utils import login_required_socket
 
 

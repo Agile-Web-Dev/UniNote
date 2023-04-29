@@ -66,6 +66,8 @@ class User(db.Model, TimeMixin, UserMixin):
 @login.user_loader
 def load_user(user_id=None):
     if user_id is None:
+        if not current_user.is_authenticated:
+            return None
         user_id = current_user.user_id
     return User.query.filter_by(user_id=user_id).first()
 
@@ -78,14 +80,14 @@ class Class(db.Model, TimeMixin):
     )
     user_ids = db.relationship("User", secondary=user_class, back_populates="class_ids")
     name = db.Column(db.String, nullable=False)
-    links = db.Column(db.String)
+    links = db.relationship("Link")
 
     def serialize(self):
         return {
             "class_id": self.class_id,
             "user_ids": [User.serialize_for_classes() for User in self.user_ids],
             "name": self.name,
-            "links": self.links,
+            "links": [Link.serialize() for Link in self.links],
         }
 
     def serialize_for_user(self):
@@ -147,3 +149,17 @@ class Tag(db.Model, TimeMixin):
             "created_at": self.created_at,
             "updated_at": self.created_at,
         }
+
+
+class Link(db.Model, TimeMixin):
+    __tablename__ = "link"
+
+    link_id = db.Column(
+        db.String, primary_key=True, nullable=False, default=generate_uuid
+    )
+    class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
+    name = db.Column(db.String, nullable=False)
+    url = db.Column(db.String, nullable=False)
+
+    def serialize(self):
+        return {"link_id": self.link_id, "name": self.name, "url": self.url}

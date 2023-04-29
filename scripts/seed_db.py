@@ -1,7 +1,7 @@
 from sqlalchemy.orm import load_only
 
 from app import create_app, db
-from app.models import Class, Message, Note, Tag, User
+from app.models import Class, Link, Message, Note, Tag, User
 
 app = create_app()
 
@@ -16,31 +16,38 @@ with app.app_context():
     Note.query.delete()
     Tag.query.delete()
     Class.query.delete()
+    Link.query.delete()
     Message.query.delete()
+
+    class_links = [
+        Link(name="LMS", url="http://teaching.csse.uwa.edu.au/units/CITS3403/"),
+        Link(name="CSSE Site", url="http://teaching.csse.uwa.edu.au/units/CITS3403/"),
+    ]
 
     cits3403 = Class(
         class_id="CITS3403",
         name="Agile Web Dev",
-        links="http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline",
+        links=class_links,
     )
     cits2401 = Class(
         class_id="CITS2401",
         name="Python",
-        links="http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline",
+        links=class_links,
     )
     cits1001 = Class(
         class_id="CITS1001",
         name="Java",
-        links="http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline",
+        links=class_links,
     )
     cits2002 = Class(
         class_id="CITS2002",
         name="Systems",
-        links="http://teaching.csse.uwa.edu.au/units/CITS3403/ https://lms.uwa.edu.au/ultra/courses/_79138_1/cl/outline",
+        links=class_links,
     )
     classes = [cits3403, cits2401, cits1001, cits2002]
-    print("CLASSES", classes)
+    db.session.add_all(class_links)
     db.session.add_all(classes)
+    print("CLASSES", classes)
 
     user = User(email="a@a.com", user_id="23030303", name="Test", role="student")
 
@@ -96,7 +103,7 @@ with app.app_context():
         Message(created_by="John", class_id="CITS3403", content="Sup"),
     ]
 
-    db.session.add_all(messages)  
+    db.session.add_all(messages)
     db.session.add_all(notes)
     db.session.add_all(tags)
     db.session.commit()

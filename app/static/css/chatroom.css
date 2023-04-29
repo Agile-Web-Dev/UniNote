@@ -8,10 +8,6 @@
   background: var(--app-grey-600);
 }
 
-#chatbox-inner {
-  margin: 20px 0;
-}
-
 #chatbox {
   color: white;
   overflow: overlay;

@@ -136,6 +136,10 @@ input:active {
   color: black;
 }
 
+.nav-item-title {
+  color: white;
+  text-align: center;
+}
 .sidebar-line {
   height: 2px;
   margin-left: 0.5rem;
@@ -193,7 +197,7 @@ input:active {
 }
 
 .logout-btn {
-  border-radius: 15px;
+  border-radius: 8px;
   border: none;
   background-color: blueviolet;
   padding: 0.7rem 1.2rem;
@@ -247,6 +251,8 @@ input:active {
   #note-bar {
     display: none;
   }
+
+
 }
 
 @media (max-width: 991.98px) {
@@ -264,5 +270,9 @@ input:active {
 
   .header-logo-container h1 {
     font-size: 1.7rem;
+  }
+
+  .nav-item-icon {
+    font-size: 48px;
   }
 }

@@ -12,7 +12,7 @@
       </li>
     {% endfor %}
   </ul>
-  <button class="logout-btn">Logout</button>
+  <button class="logout-btn" onclick="logoutHandler()">Logout</button>
 {% endblock header %}
 {% block common_script %}
   <script src="{{ url_for('static', filename='js/auth/logout.js') }}"></script>

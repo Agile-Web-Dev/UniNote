@@ -18,7 +18,6 @@ def receive_message(message):
     )
     db.session.add(msg)
     db.session.commit()
-    
     emit(
         "receiveMessage",
         {"name": current_user.name, "msg": message["msg"], "msgId": msg.message_id},

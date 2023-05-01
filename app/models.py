@@ -106,6 +106,7 @@ class Message(db.Model, TimeMixin):
 
     def serialize(self):
         return {
+            "message_id": self.message_id,
             "created_by": self.created_by,
             "content": self.content,
             "created_at": self.created_at,

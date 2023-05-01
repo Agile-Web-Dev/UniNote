@@ -1,7 +1,5 @@
 const getMessages = () => {
   const messageItems = document.getElementsByClassName("message-item");
-
-
   const messages = Array.from(messageItems).map((messageEl) => {
     const message = {
       id: messageEl.id,
@@ -11,14 +9,11 @@ const getMessages = () => {
     return message;
   });
 
-  console.log(messages)
   return messages;
 };
 
 const getUserMessages = () => {
     const userItems = document.getElementsByClassName("sender");
-    console.log(userItems)
-
     const userMessages = Array.from(userItems).map((messageEl) => {
         const messageContentEl = messageEl.querySelector(".message-item");
         const messageId = messageContentEl.id;
@@ -29,15 +24,15 @@ const getUserMessages = () => {
         return userMessage;
       });
   
-    console.log(userMessages)
     return userMessages;
   };
 
 let index = 0;
-const searchResults = [];
+let searchResults = [];
 const searchInput = document.getElementById("search-chat-input");
 const searchOption = document.getElementById("form-select");
 searchInput.addEventListener("keyup", function (event) {
+searchResults = [];
   if (
     event.key === "Enter" &&
     searchInput.value.trim() !== "" &&
@@ -66,7 +61,6 @@ searchInput.addEventListener("keyup", function (event) {
   ) {
     const searchQuery = searchInput.value.trim();
     const userMessage = getUserMessages();
-
     for (let i = userMessage.length - 1; i >= 0; i--) {
       const user = userMessage[i];
       if (
@@ -122,4 +116,5 @@ buttonClose.addEventListener("click", function () {
   clearSearchHighlights(curr);
   const searchResultBar = document.getElementById("search-results");
   searchResultBar.style.display = "none";
+  searchResults = [];
 });

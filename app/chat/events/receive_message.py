@@ -4,6 +4,7 @@ from flask_socketio import emit
 
 from app import db, socketio
 from app.auth.utils import login_required_socket
+from app.models import Message
 
 
 @socketio.on("receive_message", namespace="/chat")

@@ -6,8 +6,11 @@ const noteData = [
   { title: "Note 5", content: "This is note 5" },
 ];
 
-// Notes page
-jQuery(() => {
+jQuery(async () => {
+  const currentPath = window.location.pathname;
+  const className = currentPath.split("/")
+  const response = await fetch("/api/notes/" + className[1].toUpperCase());
+  const data = await response.json();
   const noteList = $("#notes-list");
   noteList.html(noteData.map(NoteItem).join(""));
 
@@ -25,23 +28,22 @@ jQuery(() => {
     e.preventDefault();
 
     const searchQuery = $("#notes-searchbar").val();
-    const filteredNotes = noteData.filter(
-      (note) =>
-        note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        note.content.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    noteList.html(filteredNotes.map(NoteItem).join(""));
+    const results = data.filter(note => note.title.toLowerCase().includes(searchQuery.toLowerCase()) || note.content.toLowerCase().includes(searchQuery.toLowerCase()));
+    console.log(results)
+    noteList.html(results.map(NoteItem).join(""));
   });
 
   $(".note-item").on("click", function () {
-    $("#notes-modal").modal("toggle");
     const title = $(this).data("bs-title");
     const content = $(this).data("bs-content");
-
-    $("#notes-modal-title").text(title);
-    $("#notes-modal-content").text(content);
+    var myModal = $('#notes-modal');
+    myModal.find('.modal-title').text(title);
+    myModal.find('.modal-body').html(content);
+    myModal.modal('show');
   });
 });
+
+
 
 const NoteItem = ({ title, content }) => {
   return `

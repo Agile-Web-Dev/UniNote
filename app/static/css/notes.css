@@ -113,7 +113,7 @@
 #note-header {
   color: var(--app-grey-0);
   transition: 0.25s;
-  }
+}
 
 #note-header:focus {
   background-color: var(--app-grey-700) !important;
@@ -139,7 +139,8 @@
   background-color: var(--app-grey-700) !important;
 }
 
-.note-container > textarea:focus, .note-container > textarea:active {
+.note-container > textarea:focus,
+.note-container > textarea:active {
   background-color: var(--app-grey-700) !important;
   box-shadow: 0 0 0 0.1rem var(--app-grey-100) !important;
 }
@@ -148,6 +149,6 @@
   background-color: var(--app-grey-700);
 }
 
-.modal-content{
+.modal-content {
   background: var(--app-grey-600);
 }

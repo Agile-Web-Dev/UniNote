@@ -17,7 +17,6 @@ from . import bp
 @login_required
 @in_class
 def chatroom(class_id):
-    session["class_id"] = class_id
     messages = Message.query.filter(Message.class_id == class_id)
 
     nav_items = get_default_links(class_id) + get_class_links(class_id)

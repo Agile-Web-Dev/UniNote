@@ -23,4 +23,13 @@ export const setupSocketIO = () => {
       resizeChatbox(e)
     }
   });
+
+  $("#send-button").on("click", () => {
+    const message = $("#chatbox").val()
+    if (message.trim().length > 0) {
+      sendMessage(message);
+      $("#chatbox").val("");
+    }
+    resizeChatbox()
+  })
 };

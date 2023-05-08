@@ -6,7 +6,6 @@
   border-radius: 1rem;
   color: white;
   cursor: pointer;
-  overflow-y: scroll;
   padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
   box-sizing: content-box;
 }

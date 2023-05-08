@@ -32,6 +32,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-bottom: 40px!important;
   background: var(--app-grey-300);
   border-radius: 9999px;
   padding: 0 1em;
@@ -56,6 +57,10 @@
 .searchbar-container > i {
   color: var(--app-grey-100);
   line-height: 0;
+}
+
+#notes-searchbar {
+  padding-left: 0;
 }
 
 .notes-container {

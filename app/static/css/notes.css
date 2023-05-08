@@ -116,6 +116,7 @@
 
 #note-header {
   color: var(--app-grey-0);
+  background: var(--app-grey-600) !important;
   transition: 0.25s;
 }
 
@@ -132,7 +133,7 @@
 }
 
 .note-container > textarea {
-  background-color: var(--app-grey-400) !important;
+  background-color: var(--app-grey-600) !important;
   color: var(--app-grey-0);
   border-radius: 0.5rem;
   transition: 0.25s;

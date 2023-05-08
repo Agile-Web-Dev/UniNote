@@ -19,7 +19,7 @@ def get_user():
 
 @bp.route("/user/class", methods=["POST"])
 @login_required
-def add_class(classID):
+def add_class(classId):
     """
     Add a new class to the user's list of classes.
     Endpoint: /api/user
@@ -28,5 +28,6 @@ def add_class(classID):
     if user is None:
         return make_response({"msg": "User not found"}, 404)
     
-    user.class_ids.append("test")
+    user.class_ids.append(classId)
+    user.save()
     return make_response(user.serialize(), 200)

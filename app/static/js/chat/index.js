@@ -25,6 +25,9 @@ const setup = () => {
       const beforeCursor = chatbox.val().substring(0, cursor);
       const afterCursor = chatbox.val().substring(cursor);
       chatbox.val(`${beforeCursor}${emoji.native}${afterCursor}`);
+      chatbox.prop("selectionStart", cursor + 2);
+      chatbox.prop("selectionEnd", cursor + 2);
+      chatbox.focus();
       emojiPopover.toggleClass("shown");
       emojiBtn.toggleClass("active-action");
     },

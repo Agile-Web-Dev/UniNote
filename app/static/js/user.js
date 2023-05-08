@@ -33,12 +33,13 @@ export const getAvatar = async (name) => {
   const url = `https://ui-avatars.com/api/?name=${name}&background=${color}&rounded=true`;
 
   const avatar = await cache.match(url);
-  const avatarImage = URL.createObjectURL(await avatar.blob());
-
+  
   if (!avatar) {
     cacheAvatar(name);
-    return $(`<img class="avatar" src=${url} />`);
+    return url
   }
 
-  return $(`<img class="avatar" src="${avatarImage}"/>`);
+  const avatarImage = URL.createObjectURL(await avatar.blob());
+
+  return avatarImage
 };

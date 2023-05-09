@@ -6,7 +6,6 @@
   border-radius: 1rem;
   color: white;
   cursor: pointer;
-  overflow-y: scroll;
   padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
   box-sizing: content-box;
 }
@@ -25,7 +24,7 @@
   margin-left: 1.5rem;
   margin-right: 0.75rem;
   padding-right: 0.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .searchbar-container {
@@ -33,25 +32,35 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem;
-  background: var(--app-grey-50);
+  margin-bottom: 40px!important;
+  background: var(--app-grey-300);
   border-radius: 9999px;
+  padding: 0 1em;
+}
+
+.searchbar-container:focus-within {
+  box-shadow: 0 0 0 0.1rem var(--app-grey-100) !important;
 }
 
 .searchbar-container input {
   width: 100%;
   border: none;
-  border-radius: 9999px;
+  padding: 0.5em;
   background: transparent;
   outline: none;
-  margin-left: 1rem;
-  margin-right: 1rem;
+}
+
+.searchbar-container input:focus {
+  box-shadow: none !important;
 }
 
 .searchbar-container > i {
   color: var(--app-grey-100);
-  margin-right: 1rem;
   line-height: 0;
+}
+
+#notes-searchbar {
+  padding-left: 0;
 }
 
 .notes-container {
@@ -106,22 +115,17 @@
 }
 
 #note-header {
-  background-color: transparent;
   color: var(--app-grey-0);
-  border: none;
+  background: var(--app-grey-600) !important;
   transition: 0.25s;
 }
 
 #note-header:focus {
-  background-color: var(--app-grey-700);
-  border-color: #86b7fe;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  background-color: var(--app-grey-700) !important;
 }
 
 #note-header:hover {
-  background-color: var(--app-grey-700);
-  color: var(--app-grey-0);
+  background-color: var(--app-grey-700) !important;
 }
 
 #note-header:disabled {
@@ -129,31 +133,27 @@
 }
 
 .note-container > textarea {
-  background: transparent;
+  background-color: var(--app-grey-600) !important;
   color: var(--app-grey-0);
-  border: none;
   border-radius: 0.5rem;
   transition: 0.25s;
   resize: none;
 }
 
 .note-container > textarea:hover {
-  background-color: var(--app-grey-700);
-  color: var(--app-grey-0);
+  background-color: var(--app-grey-700) !important;
 }
 
-.note-container > textarea:focus {
-  background-color: var(--app-grey-700);
-  color: var(--app-grey-0);
-  border-color: #86b7fe;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+.note-container > textarea:focus,
+.note-container > textarea:active {
+  background-color: var(--app-grey-700) !important;
+  box-shadow: 0 0 0 0.1rem var(--app-grey-100) !important;
 }
 
 .note-container > textarea:disabled {
   background-color: var(--app-grey-700);
 }
 
-.modal-content{
+.modal-content {
   background: var(--app-grey-600);
 }

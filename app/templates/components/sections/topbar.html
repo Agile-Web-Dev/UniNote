@@ -1,8 +1,10 @@
 {% block header %}
-  <div class="col-2 header-logo-container">
-    <h1 class="unselectable">UniNote</h1>
+  <div class="col h-100 header-logo-container unselectable">
+    <a href="{{ url_for('main.dashboard') }}">
+      <h1>UniNote</h1>
+    </a>
   </div>
-  <ul class="d-flex col-10 h-100 m-0 p-0 sortable-list">
+  <ul class="d-flex col h-100 m-0 p-0 sortable-list overflow-x-auto">
     {% for header in topbar_items %}
       <li class="header-tab-item {{ 'active' if active_class == header.class_id }}">
         <a class="header-tab-link unselectable"
@@ -10,7 +12,7 @@
       </li>
     {% endfor %}
   </ul>
-  <button class="logout-btn">Logout</button>
+  <button class="logout-btn" onclick="logoutHandler()">Logout</button>
 {% endblock header %}
 {% block common_script %}
   <script src="{{ url_for('static', filename='js/auth/logout.js') }}"></script>

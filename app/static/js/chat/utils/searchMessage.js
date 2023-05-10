@@ -38,6 +38,7 @@ searchResults = [];
     searchInput.value.trim() !== "" &&
     searchOption.value === "Content:"
   ) {
+    clearAllHighlights();
     const messages = getMessages()
     const searchQuery = searchInput.value.trim();
     for (let i = messages.length - 1; i >= 0; i--) {
@@ -59,6 +60,7 @@ searchResults = [];
     searchInput.value.trim() !== "" &&
     searchOption.value == "From:"
   ) {
+    clearAllHighlights();
     const searchQuery = searchInput.value.trim();
     const userMessage = getUserMessages();
     for (let i = userMessage.length - 1; i >= 0; i--) {
@@ -83,6 +85,13 @@ const scrollToMessage = (messageId) => {
   messageEl.scrollIntoView();
   messageEl.style.backgroundColor = "var(--app-grey-800)";
 };
+
+const clearAllHighlights = () => {
+    const allMessages = document.getElementsByClassName("message-item");
+    Array.from(allMessages).forEach((message) => {
+        message.style.background = "transparent";
+    });
+}
 
 const clearSearchHighlights = (current) => {
   if (current) {

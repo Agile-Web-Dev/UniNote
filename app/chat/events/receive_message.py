@@ -4,6 +4,7 @@ from flask_socketio import emit
 
 from app import db, socketio
 from app.auth.utils import login_required_socket
+from app.chat.utils import command_handler
 from app.models import Message
 
 
@@ -18,9 +19,30 @@ def receive_message(message):
     )
     db.session.add(msg)
     db.session.commit()
+
     emit(
         "receiveMessage",
-        {"name": current_user.name, "msg": message["msg"], "msgId": msg.message_id},
+        msg.serialize(),
         room=room,
         broadcast=True,
     )
+
+    msg = Message(
+        created_by=current_user.name, class_id=room, content=message.get("msg")
+    )
+    db.session.add(msg)
+
+    if message["intent"] == "command":
+        bot_res = command_handler(message["msg"], room)
+
+        msg = Message(created_by="UniNote Bot", class_id=room, content=bot_res)
+        db.session.add(msg)
+        db.session.commit()
+        serialised_message = msg.serialize()
+        serialised_message["isBot"] = True
+        emit(
+            "receiveMessage",
+            serialised_message,
+            room=room,
+            broadcast=True,
+        )

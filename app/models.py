@@ -51,7 +51,6 @@ class User(db.Model, TimeMixin, UserMixin):
         return self.user_id
 
     def serialize(self):
-        print()
         return {
             "email": self.email,
             "user_id": self.user_id,
@@ -109,7 +108,7 @@ class Message(db.Model, TimeMixin):
             "message_id": self.message_id,
             "created_by": self.created_by,
             "content": self.content,
-            "created_at": self.created_at,
+            "created_at": self.created_at.strftime("%m/%d/%Y, %H:%M:%S"),
         }
 
 
@@ -130,8 +129,8 @@ class Note(db.Model, TimeMixin):
             "class_id": self.class_id,
             "title": self.title,
             "content": self.content,
-            "created_at": self.created_at,
-            "updated_at": self.updated_at,
+            "created_at": self.created_at.strftime("%m/%d/%Y, %H:%M:%S"),
+            "updated_at": self.updated_at.strftime("%m/%d/%Y, %H:%M:%S"),
         }
 
 
@@ -147,8 +146,8 @@ class Tag(db.Model, TimeMixin):
             "name": self.name,
             "class_id": self.class_id,
             "note_ids": self.note_ids,
-            "created_at": self.created_at,
-            "updated_at": self.created_at,
+            "created_at": self.created_at.strftime("%m/%d/%Y, %H:%M:%S"),
+            "updated_at": self.created_at.strftime("%m/%d/%Y, %H:%M:%S"),
         }
 
 

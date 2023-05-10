@@ -1,24 +1,34 @@
 import { setupSocketIO } from "./events/index.js";
 
 // resize chatbox upwards
-export const resizeChatbox = (e) => {
-  $(e.target).css("height", "30px");
-  $(e.target).height(e.target.scrollHeight - 20);
+export const resizeChatbox = () => {
+  const chatbox = $("#chatbox");
+  chatbox.css("height", "0");
+  chatbox.height(chatbox[0].scrollHeight - 20);
 };
 
-$("#chatbox").on("input", (e) => {
-  resizeChatbox(e);
+$("#chatbox").on("input", () => {
+  resizeChatbox();
+});
+
+$(window).on("resize", () => {
+  resizeChatbox();
 });
 
 const setup = () => {
   const pickerOptions = {
     theme: "dark",
     onEmojiSelect: (emoji) => {
-      const cursor = $("#chatbox").prop("selectionStart");
-      const beforeCursor = $("#chatbox").val().substring(0, cursor);
-      const afterCursor = $("#chatbox").val().substring(cursor);
-      $("#chatbox").val(`${beforeCursor}${emoji.native}${afterCursor}`);
+      const chatbox = $("#chatbox");
+      const cursor = chatbox.prop("selectionStart");
+      const beforeCursor = chatbox.val().substring(0, cursor);
+      const afterCursor = chatbox.val().substring(cursor);
+      chatbox.val(`${beforeCursor}${emoji.native}${afterCursor}`);
+      chatbox.prop("selectionStart", cursor + 2);
+      chatbox.prop("selectionEnd", cursor + 2);
+      chatbox.focus();
       emojiPopover.toggleClass("shown");
+      emojiBtn.toggleClass("active-action");
     },
   };
 
@@ -41,6 +51,7 @@ const setup = () => {
 
   $("#emoji-picker-button").on("click", () => {
     emojiPopover.toggleClass("shown");
+    emojiBtn.toggleClass("active-action");
   });
 
   $(document).on("click", (e) => {
@@ -50,11 +61,13 @@ const setup = () => {
       emojiPopover.has(e.target).length === 0
     ) {
       emojiPopover.removeClass("shown");
+      emojiBtn.removeClass("active-action");
     }
   });
 };
 
 $(() => {
+  resizeChatbox();
   setup();
   setupSocketIO();
 });

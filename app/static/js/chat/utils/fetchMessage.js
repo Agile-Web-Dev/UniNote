@@ -1,8 +1,10 @@
 import { getAvatar } from "../../user.js";
-
+import { receiveMessage } from "../events/receiveMessage.js";
 const messageHtml = `
 <div class="message d-flex gap-3">
-  <div class="avatar-holder"></div>
+  <div class="avatar-holder">
+    <img class="avatar" preload src="/static/images/placeholder_avatar.png"/>
+  </div>
   <div class="d-flex flex-column sender">
     <p class="name fw-bold mb-1"></p>
     <div class="message-content"></div>
@@ -14,9 +16,9 @@ jQuery(async () => {
     const classCode = currentPath.split("/");
     const response = await fetch("/api/messages/" + classCode[1]);
     const data = await response.json();
-    data.forEach((message) => {
-      displayMessage(message);
-    });
+    for (const message of data) {
+      await receiveMessage(message);
+    }
 });
 
 let lastParentMessage;

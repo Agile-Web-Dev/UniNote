@@ -1,4 +1,4 @@
-<section class="notes-container d-flex gap-4 flex-column h-100">
+<section class="notes-container d-flex flex-column h-100">
   {% include "components/notes/searchbar.html" %}
   <div id="notes-list"></div>
   <div id="notes-modal"
@@ -11,10 +11,6 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="notes-modal-title">Note title</h5>
-          <button type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"></button>
         </div>
         <div class="modal-body" id="notes-modal-content">Note content</div>
         <div class="modal-footer">

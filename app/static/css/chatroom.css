@@ -103,7 +103,7 @@ select{
   overflow: overlay;
   outline: none;
   padding: 10px;
-  padding-right: 55px;
+  padding-right: 80px;
   resize: none;
   height: 45.6px;
   max-height: 200px;
@@ -118,15 +118,23 @@ select{
   align-items: center;
 }
 
+.action {
+  font-size: x-large;
+  cursor: pointer;
+  color: var(--app-grey-100);
+}
+
+.action:hover {
+  color: var(--app-grey-50);
+}
+
+.active-action {
+  color: var(--app-grey-50);
+}
+
 #emoji-picker:not(.shown) {
   display: none;
 }
-
-#emoji-picker-button {
-  font-size: x-large;
-  cursor: pointer;
-}
-
 
 .avatar {
   width: 3rem;

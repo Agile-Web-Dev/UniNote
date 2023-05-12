@@ -84,6 +84,7 @@ jQuery(async() => {
         }),
       });
     console.log("Note posted");
+    //IMPT Need to fix this (xss attack thingy @DYLAN)
     const newNote = NoteItem({title: noteHeader.val(), content: noteContent.val()});
     $("#notes-list").append(newNote);
     clearNote();

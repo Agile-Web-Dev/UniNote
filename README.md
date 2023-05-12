@@ -9,6 +9,7 @@
   - [Development](#development)
   - [Tests](#tests)
   - [Database](#database)
+  - [Seeding](#seeding)
   - [Contributions](#contributions)
 
 ## Team Members
@@ -36,7 +37,7 @@ Sample text.
 1. Copy `.env.example` to `.env` and modify the values.
 2. create a virtual environment with `python3 -m venv env`.
 3. Source the virtual environment with `source env/bin/activate`
-   1. or `.\env\Scripts\activate.bat`) on Windows Command Prompt
+   1. or `.\env\Scripts\activate.bat` on Windows Command Prompt
    2. or `.\env\Scripts\Activate.ps1` on Windows Powershell.
 4. Install the dependencies with `pip install -r requirements.txt`.
    1. You may need to install `python-dotenv` outside the virtual environment.

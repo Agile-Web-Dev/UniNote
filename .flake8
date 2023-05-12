@@ -108,6 +108,8 @@ hang-closing = True
 
 # Specify a list of codes to ignore.
 ignore =
+    F403,
+    F405
     E133,
     E203,
     E501

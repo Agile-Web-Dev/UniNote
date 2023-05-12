@@ -48,7 +48,7 @@ const registerFormHandler = async (event) => {
     } catch (err) {
       // We only need to show Register button again if the request failed
       $("#submit").text("Register");
-      if (err.responseJSON.msg) {
+      if (err.responseJSON) {
         $("#alert").text(err.responseJSON.msg);
       } else {
         $("#alert").text("Unexpected error. Please try again later.");

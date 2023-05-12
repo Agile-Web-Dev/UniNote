@@ -1,11 +1,11 @@
 import functools
 from http import HTTPStatus
 
-from flask import abort, redirect, request, url_for
+from flask import abort, redirect, request, session, url_for
 from flask_login import current_user
 from flask_socketio import disconnect
 
-from app import db, login
+from app import login
 
 
 @login.unauthorized_handler
@@ -31,6 +31,8 @@ def in_class(f):
         cids = [cid.class_id for cid in current_user.class_ids]
         if kwargs["class_id"] not in cids:
             abort(HTTPStatus.UNAUTHORIZED)
+
+        session["class_id"] = kwargs.get("class_id")
         return f(*args, **kwargs)
 
     return wrapped

@@ -22,7 +22,7 @@ def setup(app):
 class_id = "CIT3403"
 
 
-def test_get_class_info(client, setup):
+def test_get_class_links(client, setup):
     class_links = [
         Link(name="LMS", url="http://teaching.csse.uwa.edu.au/units/CITS3403/"),
         Link(name="CSSE Site", url="http://teaching.csse.uwa.edu.au/units/CITS3403/"),

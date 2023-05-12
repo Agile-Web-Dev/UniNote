@@ -17,9 +17,11 @@ def login():
 
     returns a header to set a session cookie
     """
-    username = request.get_json().get("username", "")
-    password = request.get_json().get("password", "")
-    remember = request.get_json().get("remember", False)
+    data = request.get_json()
+
+    username = data.get("username", "")
+    password = data.get("password", "")
+    remember = data.get("remember", False)
 
     if username == "" or password == "":
         return make_response({"msg": "Missing username or password"}, 400)

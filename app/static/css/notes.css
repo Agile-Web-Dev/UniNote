@@ -63,9 +63,10 @@
   padding-left: 0;
 }
 
-.notes-container {
+.modal-content {
   background: var(--app-grey-600);
 }
+
 .note-container {
   display: flex;
   flex-direction: column;
@@ -152,8 +153,4 @@
 
 .note-container > textarea:disabled {
   background-color: var(--app-grey-700);
-}
-
-.modal-content {
-  background: var(--app-grey-600);
 }

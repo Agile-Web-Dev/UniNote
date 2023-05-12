@@ -1,4 +1,3 @@
-from app import db
 from app.models import Class, Link
 
 from . import bp

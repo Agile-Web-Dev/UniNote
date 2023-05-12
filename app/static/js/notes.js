@@ -1,11 +1,4 @@
-const noteData = [
-  { title: "<h1>Note 1</h1>", content: "This is note 1" },
-  { title: "Note 2", content: "This is note 2" },
-  { title: "Note 3", content: "This is note 3" },
-  { title: "Note 4", content: "This is note 4" },
-  { title: "Note 5", content: "This is note 5" },
-];
-
+// Notes page
 jQuery(async () => {
   const currentPath = window.location.pathname;
   const className = currentPath.split("/")
@@ -28,22 +21,24 @@ jQuery(async () => {
     e.preventDefault();
 
     const searchQuery = $("#notes-searchbar").val();
-    const results = data.filter(note => note.title.toLowerCase().includes(searchQuery.toLowerCase()) || note.content.toLowerCase().includes(searchQuery.toLowerCase()));
-    console.log(results)
+    const results = data.filter(
+      (note) =>
+        note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        note.content.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    console.log(results);
     noteList.html(results.map(NoteItem).join(""));
   });
 
   $(".note-item").on("click", function () {
     const title = $(this).data("bs-title");
     const content = $(this).data("bs-content");
-    var myModal = $('#notes-modal');
-    myModal.find('.modal-title').text(title);
-    myModal.find('.modal-body').html(content);
-    myModal.modal('show');
+    var myModal = $("#notes-modal");
+    myModal.find(".modal-title").text(title);
+    myModal.find(".modal-body").html(content);
+    myModal.modal("show");
   });
 });
-
-
 
 const NoteItem = ({ title, content }) => {
   return `
@@ -60,17 +55,42 @@ const NoteItem = ({ title, content }) => {
 };
 
 // Note menu actions
-jQuery(() => {
+jQuery(async() => {
+  const currentPath = window.location.pathname;
+  const className = currentPath.split("/")
+  const fetchUser = await fetch("/api/user");
+  const userData = await fetchUser.json();
   const noteMenuBtn = $("#note-menu-button");
   const noteMenuPopover = $("#note-menu");
   const noteHeader = $("#note-header");
   const noteContent = $("#note-content");
+  console.log(userData.user_id);
+  console.log(className[1].toUpperCase());
 
   const postNote = async () => {
-    // todo update note in db
     noteHeader.prop("disabled", true);
     noteContent.prop("disabled", true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try{
+      await fetch("/api/notes", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          createdBy: userData.user_id,
+          classId: className[1].toUpperCase(),
+          title: noteHeader.val(),
+          content: noteContent.val(),
+        }),
+      });
+    console.log("Note posted");
+    const newNote = NoteItem({title: noteHeader.val(), content: noteContent.val()});
+    $("#notes-list").append(newNote);
+    clearNote();
+    }catch (exception){
+      console.log(exception);
+    } 
+
     noteHeader.prop("disabled", false);
     noteContent.prop("disabled", false);
     console.log("Note posted");

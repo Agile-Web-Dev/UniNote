@@ -1,13 +1,13 @@
 from flask import make_response
 from flask_login import login_required
 
-from app.auth.routes import bp
+from . import bp
 from app.models import load_user
 
 
 @bp.route("/user", methods=["GET"])
 @login_required
-def get_user():
+def user():
     """
     Returns the current user.
     Endpoint: /api/user

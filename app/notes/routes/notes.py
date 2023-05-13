@@ -1,9 +1,9 @@
 from flask import make_response, request
+from sqlalchemy import desc
 
 from app import db
 from app.libs.processors import topbar
 from app.models import Note
-from sqlalchemy import desc
 
 from . import bp
 

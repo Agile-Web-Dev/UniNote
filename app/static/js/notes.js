@@ -1,20 +1,26 @@
+const populateNote = (noteRef) => {
+  const note = $(noteRef);
+  const title = note.data("bs-title");
+  const content = note.data("bs-content");
+  note
+    .html("")
+    .append($("<h4></h4>").text(title))
+    .append($("<p></p>").text(content));
+
+  return note;
+};
+
 // Notes page
 jQuery(async () => {
   const currentPath = window.location.pathname;
-  const className = currentPath.split("/")
+  const className = currentPath.split("/");
   const response = await fetch("/api/notes/" + className[1].toUpperCase());
   const data = await response.json();
   const noteList = $("#notes-list");
   noteList.html(data.map(NoteItem).join(""));
 
   $(".note-item").each(function () {
-    const note = $(this);
-    const title = note.data("bs-title");
-    const content = note.data("bs-content");
-    note
-      .html("")
-      .append($("<h4></h4>").text(title))
-      .append($("<p></p>").text(content));
+    populateNote(this);
   });
 
   $("#notes-searchbar-form").on("submit", (e) => {
@@ -55,22 +61,20 @@ const NoteItem = ({ title, content }) => {
 };
 
 // Note menu actions
-jQuery(async() => {
+jQuery(async () => {
   const currentPath = window.location.pathname;
-  const className = currentPath.split("/")
+  const className = currentPath.split("/");
   const fetchUser = await fetch("/api/user");
   const userData = await fetchUser.json();
   const noteMenuBtn = $("#note-menu-button");
   const noteMenuPopover = $("#note-menu");
   const noteHeader = $("#note-header");
   const noteContent = $("#note-content");
-  console.log(userData.user_id);
-  console.log(className[1].toUpperCase());
 
   const postNote = async () => {
     noteHeader.prop("disabled", true);
     noteContent.prop("disabled", true);
-    try{
+    try {
       await fetch("/api/notes", {
         method: "POST",
         headers: {
@@ -83,14 +87,17 @@ jQuery(async() => {
           content: noteContent.val(),
         }),
       });
-    console.log("Note posted");
-    //IMPT Need to fix this (xss attack thingy @DYLAN)
-    const newNote = NoteItem({title: noteHeader.val(), content: noteContent.val()});
-    $("#notes-list").append(newNote);
-    clearNote();
-    }catch (exception){
-      console.log(exception);
-    } 
+
+      const newNote = NoteItem({
+        title: noteHeader.val(),
+        content: noteContent.val(),
+      });
+
+      $("#notes-list").prepend(populateNote(newNote));
+      clearNote();
+    } catch (error) {
+      console.error(error);
+    }
 
     noteHeader.prop("disabled", false);
     noteContent.prop("disabled", false);
@@ -100,7 +107,6 @@ jQuery(async() => {
   const clearNote = () => {
     noteHeader.val("");
     noteContent.val("");
-    console.log("Note cleared");
   };
 
   Popper.createPopper(noteMenuBtn[0], noteMenuPopover[0], {

@@ -3,6 +3,7 @@ from flask import make_response, request
 from app import db
 from app.libs.processors import topbar
 from app.models import Note
+from sqlalchemy import desc
 
 from . import bp
 
@@ -11,7 +12,11 @@ from . import bp
 def get_notes(class_id):
     """get notes based on the classID"""
     res_arr = []
-    res = db.session.query(Note).filter(Note.class_id == class_id)
+    res = (
+        db.session.query(Note)
+        .filter(Note.class_id == class_id)
+        .order_by(desc(Note.created_at))
+    )
     for entry in res:
         res_arr.append(entry.serialize())
     return res_arr

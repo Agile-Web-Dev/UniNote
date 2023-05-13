@@ -61,9 +61,11 @@ platformdirs==3.1.1
 pluggy==1.0.0
 pycodestyle==2.10.0
 pycparser==2.21
+pydantic==1.10.7
 pyflakes==3.0.1
 PySocks==1.7.1
 pytest==7.2.2
+python-dateutil==2.8.2
 pytest-unordered==0.5.2
 python-dotenv==1.0.0
 python-engineio==4.3.4

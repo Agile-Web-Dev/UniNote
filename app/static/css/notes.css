@@ -32,7 +32,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px!important;
+  margin-bottom: 40px !important;
   background: var(--app-grey-300);
   border-radius: 9999px;
   padding: 0 1em;
@@ -63,7 +63,7 @@
   padding-left: 0;
 }
 
-.modal-content {
+.notes-container {
   background: var(--app-grey-600);
 }
 
@@ -153,4 +153,8 @@
 
 .note-container > textarea:disabled {
   background-color: var(--app-grey-700);
+}
+
+.modal-content {
+  background: var(--app-grey-600);
 }

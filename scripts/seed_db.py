@@ -69,21 +69,18 @@ with app.app_context():
 
     notes = [
         Note(
-            note_id=202,
             created_by=123,
             class_id="CITS3403",
             title="My Mom",
             content="my mommy is cool and the best.",
         ),
         Note(
-            note_id=203,
             created_by=123,
             class_id="CITS3403",
             title="Random thoughts",
             content="Finished her are its honoured drawings nor. Pretty see mutual thrown all not edward ten. Particular an boisterous up he reasonably frequently. Several any had enjoyed shewing studied two. Up intention remainder sportsmen behaviour ye happiness. Few again any alone style added abode ask. Nay projecting unpleasing boisterous eat discovered solicitude. Own six moments produce elderly pasture far arrival. Hold our year they ten upon. Gentleman contained so intention sweetness in on resolving.",
         ),
         Note(
-            note_id=204,
             created_by=123,
             class_id="CITS3403",
             title="Suicidal thoughts",

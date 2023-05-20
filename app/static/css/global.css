@@ -234,6 +234,32 @@ input:active {
   padding: 0;
 }
 
+#drawer-button-container-left,
+#drawer-button-container-right {
+  display: none;
+  position: absolute;
+  background: none;
+  padding: 0;
+  width: fit-content;
+  top: 50%;
+}
+
+#drawer-button-container-right {
+  right: 0;
+}
+
+.drawer-button {
+  position: relative;
+  background: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  aspect-ratio: 1/1;
+  border-radius: 9999px;
+  font-size: 32px;
+  color: var(--app-grey-100);
+}
+
 #nav-bar,
 .header-logo-container {
   max-width: 250px;
@@ -246,19 +272,28 @@ input:active {
 }
 
 @media (max-width: 575.98px) {
-  #nav-bar,
-  .logout-btn {
-    display: none;
+  #drawer-button-container-left {
+    display: inline-block;
   }
 
-  #note-bar {
+  /* handled in app/static/js/app.js */
+
+  /* #nav-bar {
     display: none;
-  }
+  } */
+
+  /* #note-bar {
+    display: none;
+  } */
 }
 
 @media (max-width: 991.98px) {
   #note-bar {
     display: none;
+  }
+
+  #drawer-button-container-right {
+    display: inline-block;
   }
 }
 

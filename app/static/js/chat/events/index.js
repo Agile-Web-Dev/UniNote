@@ -16,7 +16,9 @@ export const setupSocketIO = () => {
     const message = $("#chatbox").val()
     if (e.key === "Enter" && !e.shiftKey) {
       if (message.trim().length > 0) {
-        sendMessage(message);
+        const isCommand = message.startsWith("/");
+        const intent = isCommand ? "command" : "message";
+        sendMessage(message, intent);
         $("#chatbox").val("");
       }
       e.preventDefault();

@@ -1,3 +1,5 @@
+from flask import make_response, request
+
 from app import db
 from app.libs.processors import topbar
 from app.models import Note
@@ -16,10 +18,24 @@ def get_notes(class_id):
 
 
 # when user saves their notes
-@bp.route("/", methods=["POST"])
-def post_notes(createdBy, classId, title, content):
+@bp.route("", methods=["POST"])
+def post_notes():
     """upload notes based on the classID into database"""
-    note = Note(created_by=createdBy, class_id=classId, title=title, content=content)
+
+    data = request.get_json()
+
+    created_by = data.get("createdBy", "")
+    class_id = data.get("classId", "")
+    title = data.get("title", "")
+    content = data.get("content", "")
+
+    note = Note(created_by=created_by, class_id=class_id, title=title, content=content)
     db.session.add(note)
     db.session.commit()
-    return note
+
+    result = note.serialize()
+
+    if not isinstance(result, dict):
+        return make_response({"msg": "Internal server error"}, 500)
+
+    return make_response(result, 201)

@@ -17,6 +17,7 @@ body {
   --app-accent-highlight: #461d67;
   --app-accent-light: #522886;
   --app-accent-dark: #231336;
+  --app-accent-link: #bf7bff;
   --app-grey-0: white;
   --app-grey-50: #d9d9d9;
   --app-grey-100: #aaaaaa;
@@ -140,6 +141,7 @@ input:active {
   color: white;
   text-align: center;
 }
+
 .sidebar-line {
   height: 2px;
   margin-left: 0.5rem;
@@ -229,6 +231,7 @@ input:active {
 #content-wrapper {
   color: white;
   background: var(--app-grey-600);
+  padding: 0;
 }
 
 #nav-bar,
@@ -251,8 +254,6 @@ input:active {
   #note-bar {
     display: none;
   }
-
-
 }
 
 @media (max-width: 991.98px) {

@@ -1,4 +1,9 @@
 {% extends "layouts/index.html" %}
+{% block header %}
+  <header class="header-dashboard d-flex align-items-center justify-content-end">
+    <button class="logout-btn" onclick="logoutHandler()">Logout</button>
+  </header>
+{% endblock header %}
 {% block main %}
   <div class="container">
     <div class="row">
@@ -16,14 +21,13 @@
       {% endfor %}
     </div>
     <div class="row">
-      <div class="accordion"
+      <div class="accordion">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseOne">
-              >
               Accordion Item #1
             </button>
           </h2>
@@ -46,9 +50,13 @@
         </div>
       </div>
     </div>
-  {% endblock main %}
-  {% block style %}
-    <link rel="stylesheet"
-          type="text/css"
-          href="{{ url_for('static', filename='css/dashboard.css') }}"/>
-  {% endblock style %}
+  </div>
+{% endblock main %}
+{% block style %}
+  <link rel="stylesheet"
+        type="text/css"
+        href="{{ url_for('static', filename='css/dashboard.css') }}"/>
+{% endblock style %}
+{% block script %}
+  <script src="{{ url_for('static', filename='js/auth/logout.js') }}"></script>
+{% endblock script %}

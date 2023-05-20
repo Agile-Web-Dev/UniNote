@@ -4,6 +4,10 @@ body {
 
 }
 
+.header-dashboard {
+  min-height: 65px;
+}
+
 .class-cell {
     color: var(--app-grey-0);
     background: var(--app-grey-600);

@@ -51,7 +51,6 @@ class User(db.Model, TimeMixin, UserMixin):
         return self.user_id
 
     def serialize(self):
-        print()
         return {
             "email": self.email,
             "user_id": self.user_id,
@@ -106,16 +105,19 @@ class Message(db.Model, TimeMixin):
 
     def serialize(self):
         return {
+            "message_id": self.message_id,
             "created_by": self.created_by,
             "content": self.content,
-            "created_at": self.created_at,
+            "created_at": self.created_at.strftime("%m/%d/%Y, %H:%M:%S"),
         }
 
 
 class Note(db.Model, TimeMixin):
     __tablename__ = "note"
 
-    note_id = db.Column(db.String, primary_key=True, nullable=False, default=uuid4)
+    note_id = db.Column(
+        db.String, primary_key=True, nullable=False, default=generate_uuid
+    )
     created_by = db.Column(db.ForeignKey("user.user_id"), nullable=False)
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
     title = db.Column(db.String, nullable=False)
@@ -129,8 +131,8 @@ class Note(db.Model, TimeMixin):
             "class_id": self.class_id,
             "title": self.title,
             "content": self.content,
-            "created_at": self.created_at,
-            "updated_at": self.updated_at,
+            "created_at": self.created_at.strftime("%m/%d/%Y, %H:%M:%S"),
+            "updated_at": self.updated_at.strftime("%m/%d/%Y, %H:%M:%S"),
         }
 
 
@@ -146,8 +148,8 @@ class Tag(db.Model, TimeMixin):
             "name": self.name,
             "class_id": self.class_id,
             "note_ids": self.note_ids,
-            "created_at": self.created_at,
-            "updated_at": self.created_at,
+            "created_at": self.created_at.strftime("%m/%d/%Y, %H:%M:%S"),
+            "updated_at": self.created_at.strftime("%m/%d/%Y, %H:%M:%S"),
         }
 
 

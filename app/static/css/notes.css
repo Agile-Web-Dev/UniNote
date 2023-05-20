@@ -6,7 +6,6 @@
   border-radius: 1rem;
   color: white;
   cursor: pointer;
-  overflow-y: scroll;
   padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
   box-sizing: content-box;
 }
@@ -33,6 +32,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-bottom: 40px !important;
   background: var(--app-grey-300);
   border-radius: 9999px;
   padding: 0 1em;
@@ -57,6 +57,10 @@
 .searchbar-container > i {
   color: var(--app-grey-100);
   line-height: 0;
+}
+
+#notes-searchbar {
+  padding-left: 0;
 }
 
 .notes-container {
@@ -112,8 +116,9 @@
 
 #note-header {
   color: var(--app-grey-0);
+  background: var(--app-grey-600) !important;
   transition: 0.25s;
-  }
+}
 
 #note-header:focus {
   background-color: var(--app-grey-700) !important;
@@ -128,7 +133,7 @@
 }
 
 .note-container > textarea {
-  background-color: var(--app-grey-400) !important;
+  background-color: var(--app-grey-600) !important;
   color: var(--app-grey-0);
   border-radius: 0.5rem;
   transition: 0.25s;
@@ -139,7 +144,8 @@
   background-color: var(--app-grey-700) !important;
 }
 
-.note-container > textarea:focus, .note-container > textarea:active {
+.note-container > textarea:focus,
+.note-container > textarea:active {
   background-color: var(--app-grey-700) !important;
   box-shadow: 0 0 0 0.1rem var(--app-grey-100) !important;
 }
@@ -148,6 +154,6 @@
   background-color: var(--app-grey-700);
 }
 
-.modal-content{
+.modal-content {
   background: var(--app-grey-600);
 }

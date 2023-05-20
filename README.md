@@ -53,7 +53,7 @@ On UNIX like systems:
 Otherwise:
 
 - Linting is done with `flake8 app app.py config.py app/models.py migrations/env.py` and `djlint app`.
-- Formatting is done with `isort app app.py config.py app/models.py migrations/env.py` and `black app app.py config.py app/models.py migrations/env.py`.
+- Formatting is done with `isort --profile black app app.py config.py app/models.py migrations/env.py` and `black app app.py config.py app/models.py migrations/env.py`.
 
 ## Tests
 

@@ -45,7 +45,7 @@ jobs:
         run: |
           flake8 app app.py config.py app/models.py migrations/env.py
           black app app.py config.py app/models.py migrations/env.py --check --diff
-          isort app app.py config.py app/models.py migrations/env.py --check
+          isort --profile black app app.py config.py app/models.py migrations/env.py --check
 
       - name: Run Migrations 🕊️
         run: |

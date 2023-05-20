@@ -20,7 +20,10 @@ def create_app(config_class=Config):
     db.init_app(app)
     migrate.init_app(app, db)
     login.init_app(app)
-    socketio.init_app(app)
+    socketio.init_app(
+        app,
+        async_mode="threading",  # needed for socketio to not complain with pytest
+    )
 
     from app.api.routes import bp as api_bp
 
@@ -45,6 +48,10 @@ def create_app(config_class=Config):
     from app.main.routes import bp as main_bp
 
     app.register_blueprint(main_bp)
+
+    @socketio.on_error_default  # handles all namespaces without an explicit error handler
+    def default_error_handler(e):
+        print(e)
 
     return app
 

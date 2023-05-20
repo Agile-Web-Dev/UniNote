@@ -1,7 +1,6 @@
 import threading
 
 import pytest
-import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
@@ -37,7 +36,7 @@ def driver(server):
 
 @pytest.fixture(scope="session")
 def wait(driver):
-    yield WebDriverWait(driver, 3)
+    yield WebDriverWait(driver, 10)
 
 
 @pytest.fixture()

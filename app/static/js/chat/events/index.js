@@ -6,6 +6,16 @@ import { sendMessage } from "./sendMessage.js";
 
 export let socket;
 
+const handleSend = (message) => {
+  if (message.trim().length > 0) {
+    const isCommand = message.startsWith("/");
+    const intent = isCommand ? "command" : "message";
+    sendMessage(message, intent);
+    $("#chatbox").val("");
+    resizeChatbox();
+  }
+};
+
 export const setupSocketIO = () => {
   socket = io.connect(`${document.location.host}/chat`);
   socket.on("connect", connect);
@@ -13,25 +23,15 @@ export const setupSocketIO = () => {
   socket.on("receiveMessage", receiveMessage);
 
   $("#chatbox").on("keypress", (e) => {
-    const message = $("#chatbox").val()
+    const message = $("#chatbox").val();
     if (e.key === "Enter" && !e.shiftKey) {
-      if (message.trim().length > 0) {
-        const isCommand = message.startsWith("/");
-        const intent = isCommand ? "command" : "message";
-        sendMessage(message, intent);
-        $("#chatbox").val("");
-      }
       e.preventDefault();
-      resizeChatbox(e)
+      handleSend(message);
     }
   });
 
   $("#send-button").on("click", () => {
-    const message = $("#chatbox").val()
-    if (message.trim().length > 0) {
-      sendMessage(message);
-      $("#chatbox").val("");
-    }
-    resizeChatbox()
-  })
+    const message = $("#chatbox").val();
+    handleSend(message);
+  });
 };

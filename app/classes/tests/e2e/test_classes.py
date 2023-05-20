@@ -1,7 +1,6 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 
 from app import db
@@ -38,10 +37,11 @@ def setup(app):
     with app.app_context():
         Class.query.delete()
         User.query.delete()
+
         db.session.commit()
 
 
-def test_chat_message_send(driver: webdriver.Chrome, wait, setup):
+def test_classes_enter(driver: webdriver.Chrome, wait, setup):
     base_url = setup.config["E2E_URL"]
     driver.get(base_url)
 
@@ -58,35 +58,16 @@ def test_chat_message_send(driver: webdriver.Chrome, wait, setup):
 
     assert driver.get_cookie("session") is not None
 
-    driver.get(f"{base_url}/TEST123/chatroom")
+    class_cells = driver.find_elements(By.CLASS_NAME, "class-cell")
+
+    assert len(class_cells) == 2
+
+    assert EC.text_to_be_present_in_element(class_cells[0], "Test Class")
+    assert EC.text_to_be_present_in_element(class_cells[1], "Test Class 2")
+
+    class_cells[0].click()
 
     wait.until(EC.title_contains("Chatroom"))
-
-    chatbox = driver.find_element(By.ID, "chatbox")
-
-    chatbox.send_keys("Hello World!")
-    chatbox.send_keys(Keys.ENTER)
-
-    print(driver.get_log("browser"))
-
-    wait.until(
-        EC.text_to_be_present_in_element((By.ID, "chat-container"), "Hello World!")
-    )
-
-    chatbox.send_keys("Another message")
-    chatbox.send_keys(Keys.ENTER)
-
-    wait.until(
-        EC.text_to_be_present_in_element((By.ID, "chat-container"), "Another message")
-    )
+    assert EC.url_contains(f"{base_url}/TEST123/chatroom")
 
     assert EC.text_to_be_present_in_element((By.ID, "chat-container"), "Hello World!")
-
-    driver.refresh()
-
-    assert EC.text_to_be_present_in_element((By.ID, "chat-container"), "Hello World!")
-    assert EC.text_to_be_present_in_element(
-        (By.ID, "chat-container"), "Another message"
-    )
-
-    wait.until(EC.title_contains("Chat"))

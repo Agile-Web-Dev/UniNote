@@ -1,5 +1,3 @@
-from sqlalchemy.orm import load_only
-
 from app import create_app, db
 from app.models import Class, Link, Message, Note, Tag, User
 

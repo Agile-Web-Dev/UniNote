@@ -19,7 +19,7 @@ button:hover {
 }
 
 .auth-link {
-  color: blueviolet;
+  color: var(--app-accent-link);
 }
 
 .auth-link:hover {

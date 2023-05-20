@@ -122,7 +122,6 @@ class Note(db.Model, TimeMixin):
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
     title = db.Column(db.String, nullable=False)
     content = db.Column(db.String, nullable=False)
-    tag_names = db.relationship("Tag", secondary=note_tag, back_populates="note_ids")
 
     def serialize(self):
         return {
@@ -133,23 +132,6 @@ class Note(db.Model, TimeMixin):
             "content": self.content,
             "created_at": self.created_at.strftime("%m/%d/%Y, %H:%M:%S"),
             "updated_at": self.updated_at.strftime("%m/%d/%Y, %H:%M:%S"),
-        }
-
-
-class Tag(db.Model, TimeMixin):
-    __tablename__ = "tag"
-
-    name = db.Column(db.String, nullable=False, primary_key=True)
-    class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
-    note_ids = db.relationship("Note", secondary=note_tag, back_populates="tag_names")
-
-    def serialize(self):
-        return {
-            "name": self.name,
-            "class_id": self.class_id,
-            "note_ids": self.note_ids,
-            "created_at": self.created_at.strftime("%m/%d/%Y, %H:%M:%S"),
-            "updated_at": self.created_at.strftime("%m/%d/%Y, %H:%M:%S"),
         }
 
 

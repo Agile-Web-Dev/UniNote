@@ -35,9 +35,7 @@ searchInput.on("keyup", function (event) {
   if (searchInput.val().trim() === "") return;
 
   searchResults = [];
-  if (
-    searchOption.val() === "Content:"
-  ) {
+  if (searchOption.val() === "Content:") {
     clearAllHighlights();
     const messages = getMessages();
     const searchQuery = searchInput.val().trim();
@@ -51,15 +49,16 @@ searchInput.on("keyup", function (event) {
     const searchResultBar = $("#search-results");
     searchResultBar.css("display", "flex");
     const resultString = $("#result-string");
+
     resultString.text(
       `found ${searchResults.length} results for "${searchQuery}"`
     );
-    scrollToMessage(searchResults[index].id);
+    if (searchResults.length !== 0) {
+      scrollToMessage(searchResults[index].id);
+    }
   }
 
-  if (
-    searchOption.val() == "From:"
-  ) {
+  if (searchOption.val() == "From:") {
     clearAllHighlights();
     const searchQuery = searchInput.val().trim();
     const userMessage = getUserMessages();
@@ -101,6 +100,7 @@ const clearSearchHighlights = (current) => {
 
 const buttonNext = $("#iterate-up");
 buttonNext.on("click", function () {
+  if (searchResults.length === 0) return;
   const curr = $("#" + searchResults[index].id)[0];
   if (index + 1 < searchResults.length) {
     index = index + 1;
@@ -111,6 +111,7 @@ buttonNext.on("click", function () {
 
 const buttonPrev = $("#iterate-down");
 buttonPrev.on("click", function () {
+  if (searchResults.length === 0) return;
   const curr = $("#" + searchResults[index].id)[0];
   if (index - 1 >= 0) {
     index--;
@@ -121,8 +122,10 @@ buttonPrev.on("click", function () {
 
 const buttonClose = $("#close-search-results");
 buttonClose.on("click", function () {
-  const curr = $("#" + searchResults[index].id)[0];
-  clearSearchHighlights(curr);
+  if (searchResults.length !== 0) {
+    const curr = $("#" + searchResults[index].id)[0];
+    clearSearchHighlights(curr);
+  }
   const searchResultBar = $("#search-results");
   searchResultBar.css("display", "none");
   searchResults = [];

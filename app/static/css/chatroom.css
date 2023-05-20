@@ -104,7 +104,10 @@ select {
   color: var(--app-grey-200);
   background-color: transparent;
   border: none;
-  margin-right: 2px;
+}
+
+.search-button-image {
+  font-size: 20px;
 }
 
 .search-button-image:focus {

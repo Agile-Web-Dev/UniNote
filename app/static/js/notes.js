@@ -143,6 +143,7 @@ jQuery(async () => {
   });
 
   $("#note-share-button").on("click", async () => {
+    if (noteHeader.val() === "" || noteContent.val() === "") return;
     await postNote();
     clearNote();
   });

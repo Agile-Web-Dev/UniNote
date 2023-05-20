@@ -32,12 +32,11 @@ let searchResults = [];
 const searchInput = document.getElementById("search-chat-input");
 const searchOption = document.getElementById("form-select");
 searchInput.addEventListener("keyup", function (event) {
+  if (event.key !== "Enter") return;
+  if (searchInput.value.trim() === "") return;
+
   searchResults = [];
-  if (
-    event.key === "Enter" &&
-    searchInput.value.trim() !== "" &&
-    searchOption.value === "Content:"
-  ) {
+  if (searchOption.value === "Content:") {
     clearAllHighlights();
     const messages = getMessages();
     const searchQuery = searchInput.value.trim();
@@ -55,11 +54,7 @@ searchInput.addEventListener("keyup", function (event) {
     scrollToMessage(searchResults[index].id);
   }
 
-  if (
-    event.key === "Enter" &&
-    searchInput.value.trim() !== "" &&
-    searchOption.value == "From:"
-  ) {
+  if (searchOption.value == "From:") {
     clearAllHighlights();
     const searchQuery = searchInput.value.trim();
     const userMessage = getUserMessages();

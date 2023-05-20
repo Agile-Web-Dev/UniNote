@@ -50,17 +50,28 @@ select {
   color: white;
 }
 
+#form-select {
+  transition: 0.25s;
+}
+
+#form-select:focus {
+  box-shadow: 0 0 0 0.1rem var(--app-grey-100) !important;
+  border: none;
+  outline: none;
+}
+
+
 #result-string {
   color: white;
   padding-left: 5px;
 }
 
 #search-icon {
-  color: var(--app-grey-200);
+  color: var(--app-grey-100);
 }
 
 #search-icon:hover {
-  color: var(--app-grey-600);
+  color: white;
 }
 
 #search-button {

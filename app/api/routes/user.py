@@ -24,11 +24,14 @@ def user():
 def add_class(classId):
     """
     Add a new class to the user's list of classes.
-    Endpoint: /api/user
+    Endpoint: /api/user/class
     """
     user = load_user()
     if user is None:
         return make_response({"msg": "User not found"}, 404)
+
+    if classId in user.class_ids:
+        return make_response({"msg": "Class already added"}, 400)
 
     user.class_ids.append(classId)
     user.save()

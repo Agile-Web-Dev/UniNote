@@ -1,7 +1,6 @@
 body {
   color: white;
   background-color: var(--app-accent-dark);
-
 }
 
 .header-dashboard {
@@ -19,3 +18,36 @@ body {
 .class-cell:hover {
   background: var(--app-grey-800);
 }
+
+.accordion-item {
+  background-color: var(--app-grey-400) !important;
+  outline: none;
+  border: none;
+}
+
+.accordion-button {
+  color: white !important;
+  box-shadow: none!important;
+  background-color: var(--app-grey-300) !important;
+}
+
+.accordion-button:focus {
+  color: white !important;
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  filter: invert(1);
+  color: white !important;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  filter: invert(1);
+  background: var(--bs-accordion-btn-icon) !important;
+}
+
+.accordion-collapse {
+  background-color: var(--app-grey-400) !important;
+}
+

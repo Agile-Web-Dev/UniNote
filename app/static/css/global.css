@@ -40,6 +40,25 @@ a {
   text-decoration: none;
 }
 
+.btn-primary {
+  border: none !important;
+  background-color: blueviolet!important;
+  color: #ffff;
+  border-radius: 8px;
+  border: none;
+  transition: 0.15s!important;
+}
+
+.btn-primary:active{
+  box-shadow: none !important;
+  filter: brightness(85%) !important;
+
+}
+
+.btn-primary:hover {
+  background-color: var(--app-accent-highlight)!important;
+}
+
 .button-reset {
   background: none;
   border: none;
@@ -220,17 +239,10 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .logout-btn {
-  border-radius: 8px;
-  border: none;
-  background-color: blueviolet;
   padding: 0.7rem 1.2rem;
-  color: #ffff;
   margin: 0 1.5rem;
 }
 
-.logout-btn:hover {
-  background-color: var(--app-accent-highlight);
-}
 
 .header-tab-link {
   display: flex;

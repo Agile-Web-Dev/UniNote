@@ -18,6 +18,14 @@ button:hover {
   filter: brightness(95%);
 }
 
+.auth-link {
+  color: var(--app-accent-link);
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
 #auth-container > form {
   background-color: var(--app-grey-600);
 }

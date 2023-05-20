@@ -4,7 +4,6 @@ import { setupSocketIO } from "./events/index.js";
 export const resizeChatbox = () => {
   const chatbox = $("#chatbox");
   chatbox.css("height", "0");
-  console.log(chatbox[0].scrollHeight);
   chatbox.height(chatbox[0].scrollHeight - 20);
 };
 

@@ -27,7 +27,7 @@ def setup(app):
 def test_get_user(client, setup):
     client.post("/api/auth/login", json={"username": "123", "password": "password"})
 
-    response = client.get("/api/auth/user")
+    response = client.get("/api/user")
     assert response.json == {
         "email": "hello@example.com",
         "name": "John Doe",
@@ -38,6 +38,6 @@ def test_get_user(client, setup):
 
 
 def test_get_user_unauthorised(client, setup):
-    response = client.get("/api/auth/user")
+    response = client.get("/api/user")
 
     assert response.status_code == 401

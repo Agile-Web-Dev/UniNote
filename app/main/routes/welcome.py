@@ -5,4 +5,4 @@ from . import bp
 
 @bp.route("/welcome")
 def welcome():
-    return render_template("homepage.html", title="Welcome")
+    return render_template("welcome.html", title="Welcome")

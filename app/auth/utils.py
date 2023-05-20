@@ -11,7 +11,7 @@ from app import login
 @login.unauthorized_handler
 def login_required():
     if request.blueprint == "main":
-        return redirect(url_for("main.login"))
+        return redirect(url_for("main.welcome"))
     abort(HTTPStatus.UNAUTHORIZED)
 
 

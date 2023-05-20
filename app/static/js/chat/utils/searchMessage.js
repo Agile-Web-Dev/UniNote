@@ -13,33 +13,33 @@ const getMessages = () => {
 };
 
 const getUserMessages = () => {
-    const userItems = document.getElementsByClassName("sender");
-    const userMessages = Array.from(userItems).map((messageEl) => {
-        const messageContentEl = messageEl.querySelector(".message-item");
-        const messageId = messageContentEl.id;
-        const userMessage = {
-          created_by: messageEl.textContent.trim().split("\n")[0],
-          id: messageId
-        };
-        return userMessage;
-      });
-  
-    return userMessages;
-  };
+  const userItems = document.getElementsByClassName("sender");
+  const userMessages = Array.from(userItems).map((messageEl) => {
+    const messageContentEl = messageEl.querySelector(".message-item");
+    const messageId = messageContentEl.id;
+    const userMessage = {
+      created_by: messageEl.textContent.trim().split("\n")[0],
+      id: messageId,
+    };
+    return userMessage;
+  });
+
+  return userMessages;
+};
 
 let index = 0;
 let searchResults = [];
 const searchInput = document.getElementById("search-chat-input");
 const searchOption = document.getElementById("form-select");
 searchInput.addEventListener("keyup", function (event) {
-searchResults = [];
+  searchResults = [];
   if (
     event.key === "Enter" &&
     searchInput.value.trim() !== "" &&
     searchOption.value === "Content:"
   ) {
     clearAllHighlights();
-    const messages = getMessages()
+    const messages = getMessages();
     const searchQuery = searchInput.value.trim();
     for (let i = messages.length - 1; i >= 0; i--) {
       const message = messages[i];
@@ -65,9 +65,7 @@ searchResults = [];
     const userMessage = getUserMessages();
     for (let i = userMessage.length - 1; i >= 0; i--) {
       const user = userMessage[i];
-      if (
-        user.created_by.toLowerCase().includes(searchQuery.toLowerCase())
-      ) {
+      if (user.created_by.toLowerCase().includes(searchQuery.toLowerCase())) {
         searchResults.push(user);
       }
     }
@@ -87,11 +85,11 @@ const scrollToMessage = (messageId) => {
 };
 
 const clearAllHighlights = () => {
-    const allMessages = document.getElementsByClassName("message-item");
-    Array.from(allMessages).forEach((message) => {
-        message.style.background = "transparent";
-    });
-}
+  const allMessages = document.getElementsByClassName("message-item");
+  Array.from(allMessages).forEach((message) => {
+    message.style.background = "transparent";
+  });
+};
 
 const clearSearchHighlights = (current) => {
   if (current) {

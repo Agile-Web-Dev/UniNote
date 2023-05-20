@@ -3,18 +3,22 @@
   display: flex;
   flex-direction: column-reverse;
   padding: 0;
+  margin-left: 24px;
+  margin-right: 8px;
 }
 
 #chatbox-container {
   background: var(--app-grey-600);
 }
+
 #form-outline {
   width: 100%;
-  margin-left: auto;
-  padding-right: 10px;
+  margin: 0 15px;
 }
+
 select {
-  width: 13%;
+  padding: 6px 12px;
+  width: 120px;
   height: 35px;
   background-color: var(--app-grey-600);
   color: white;
@@ -26,42 +30,40 @@ select {
 #chatbox-searchbar-box {
   background: var(--app-grey-800);
   border: none;
-  height: 56px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 7px 0;
 }
+
 #search-chat-input {
   background: var(--app-grey-400);
   height: 35px;
-  width: 30%;
+  width: 200px;
   float: right;
   transition-property: width;
   transition-duration: 0.25s;
 }
+
 #search-chat-input:focus {
   background: var(--app-grey-600);
   width: 100%;
   color: white;
 }
+
 #result-string {
   color: white;
   padding-left: 5px;
 }
+
 #search-icon {
   color: var(--app-grey-200);
-  height: 20px;
-  width: 20px;
 }
+
 #search-icon:hover {
   color: var(--app-grey-600);
 }
 
 #search-button {
-  width: 20x;
-  height: 30px;
-  overflow-y: scroll;
   border: none;
   margin-right: 5px;
   background-color: transparent;
@@ -94,7 +96,7 @@ select {
   margin-right: 2px;
 }
 
-#search-button-image:focus {
+.search-button-image:focus {
   color: var(--app-grey-600);
 }
 

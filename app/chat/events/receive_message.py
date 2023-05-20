@@ -27,11 +27,6 @@ def receive_message(message):
         broadcast=True,
     )
 
-    msg = Message(
-        created_by=current_user.name, class_id=room, content=message.get("msg")
-    )
-    db.session.add(msg)
-
     if message["intent"] == "command":
         bot_res = command_handler(message["msg"], room)
 

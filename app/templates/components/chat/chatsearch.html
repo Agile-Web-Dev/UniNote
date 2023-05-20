@@ -1,22 +1,19 @@
 <div id="chatbox-searchbar-box">
-  <div id="form-outline">
-    <input type="search"
-           id="search-chat-input"
-           class="form-control"
-           placeholder="search conversation"/>
-  </input>
-</div>
-<select id="form-select">
-  <option value="From:">
-    From:
-  </option>
-  <option value="Content:" selected>
-    Content:
-  </option>
-</select>
-<button type="button" id="search-button">
-  <i class="bi bi-search" id="search-icon"></i>
-</button>
+  <input type="search"
+         id="search-chat-input"
+         class="form-control"
+         placeholder="Search conversation"/>
+  <select id="search-chat-filter" class="form-select">
+    <option value="From:">
+      From:
+    </option>
+    <option value="Content:" selected>
+      Content:
+    </option>
+  </select>
+  <button type="button" id="search-button">
+    <i class="bi bi-search" id="search-icon"></i>
+  </button>
 </div>
 <div id="search-results">
   <text id="result-text">Search results...</text>

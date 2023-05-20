@@ -29,7 +29,8 @@ const getUserMessages = () => {
 let index = 0;
 let searchResults = [];
 const searchInput = $("#search-chat-input");
-const searchOption = $("#form-select");
+const searchOption = $("#search-chat-filter");
+console.log(searchOption.val());
 searchInput.on("keyup", function (event) {
   searchResults = [];
   if (

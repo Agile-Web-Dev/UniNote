@@ -14,10 +14,15 @@ def receive_message(message):
     """Sent by a client when the user entered a new message.
     The message is sent to all people in the room."""
     room = session.get("class_id")
+    msg = Message(
+        created_by=current_user.name, class_id=room, content=message.get("msg")
+    )
+    db.session.add(msg)
+    db.session.commit()
 
     emit(
         "receiveMessage",
-        {"name": current_user.name, "msg": message["msg"], "isBot": False},
+        msg.serialize(),
         room=room,
         broadcast=True,
     )
@@ -29,13 +34,15 @@ def receive_message(message):
 
     if message["intent"] == "command":
         bot_res = command_handler(message["msg"], room)
+
+        msg = Message(created_by="UniNote Bot", class_id=room, content=bot_res)
+        db.session.add(msg)
+        db.session.commit()
+        serialised_message = msg.serialize()
+        serialised_message["isBot"] = True
         emit(
             "receiveMessage",
-            {"name": "UniNote Bot", "msg": bot_res, "isBot": True},
+            serialised_message,
             room=room,
             broadcast=True,
         )
-        msg = Message(created_by="UniNote Bot", class_id=room, content=bot_res)
-        db.session.add(msg)
-
-    db.session.commit()

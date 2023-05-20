@@ -1,4 +1,5 @@
 from flask import make_response, request
+from sqlalchemy import desc
 
 from app import db
 from app.libs.processors import topbar
@@ -11,7 +12,11 @@ from . import bp
 def get_notes(class_id):
     """get notes based on the classID"""
     res_arr = []
-    res = db.session.query(Note).filter(Note.class_id == class_id)
+    res = (
+        db.session.query(Note)
+        .filter(Note.class_id == class_id)
+        .order_by(desc(Note.created_at))
+    )
     for entry in res:
         res_arr.append(entry.serialize())
     return res_arr
@@ -34,6 +39,7 @@ def post_notes():
     db.session.commit()
 
     result = note.serialize()
+    print(result)
 
     if not isinstance(result, dict):
         return make_response({"msg": "Internal server error"}, 500)

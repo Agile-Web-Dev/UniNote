@@ -31,14 +31,12 @@ export const getAvatar = async (name) => {
   const cache = await caches.open(CACHE_NAME);
   const color = nameToColor(name);
   const url = `https://ui-avatars.com/api/?name=${name}&background=${color}&rounded=true`;
-
   const avatar = await cache.match(url);
   
   if (!avatar) {
     cacheAvatar(name);
     return url
   }
-
   const avatarImage = URL.createObjectURL(await avatar.blob());
 
   return avatarImage

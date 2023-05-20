@@ -66,6 +66,7 @@
 .notes-container {
   background: var(--app-grey-600);
 }
+
 .note-container {
   display: flex;
   flex-direction: column;

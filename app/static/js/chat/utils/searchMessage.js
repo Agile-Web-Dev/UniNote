@@ -31,12 +31,11 @@ let searchResults = [];
 const searchInput = $("#search-chat-input");
 const searchOption = $("#form-select");
 searchInput.on("keyup", function (event) {
+  if (event.key !== "Enter") return;
+  if (searchInput.val().trim() === "") return;
+
   searchResults = [];
-  if (
-    event.key === "Enter" &&
-    searchInput.val().trim() !== "" &&
-    searchOption.val() === "Content:"
-  ) {
+  if (searchOption.val() === "Content:") {
     clearAllHighlights();
     const messages = getMessages();
     const searchQuery = searchInput.val().trim();
@@ -50,17 +49,16 @@ searchInput.on("keyup", function (event) {
     const searchResultBar = $("#search-results");
     searchResultBar.css("display", "flex");
     const resultString = $("#result-string");
+
     resultString.text(
       `found ${searchResults.length} results for "${searchQuery}"`
     );
-    scrollToMessage(searchResults[index].id);
+    if (searchResults.length !== 0) {
+      scrollToMessage(searchResults[index].id);
+    }
   }
 
-  if (
-    event.key === "Enter" &&
-    searchInput.val().trim() !== "" &&
-    searchOption.val() == "From:"
-  ) {
+  if (searchOption.val() == "From:") {
     clearAllHighlights();
     const searchQuery = searchInput.val().trim();
     const userMessage = getUserMessages();
@@ -84,7 +82,7 @@ searchInput.on("keyup", function (event) {
 const scrollToMessage = (messageId) => {
   const messageEl = $("#" + messageId);
   messageEl[0].scrollIntoView();
-  messageEl.css("background-color", "var(--app-grey-800)");
+  messageEl.css("background-color", "var(--app-grey-500)");
 };
 
 const clearAllHighlights = () => {
@@ -102,6 +100,7 @@ const clearSearchHighlights = (current) => {
 
 const buttonNext = $("#iterate-up");
 buttonNext.on("click", function () {
+  if (searchResults.length === 0) return;
   const curr = $("#" + searchResults[index].id)[0];
   if (index + 1 < searchResults.length) {
     index = index + 1;
@@ -112,6 +111,7 @@ buttonNext.on("click", function () {
 
 const buttonPrev = $("#iterate-down");
 buttonPrev.on("click", function () {
+  if (searchResults.length === 0) return;
   const curr = $("#" + searchResults[index].id)[0];
   if (index - 1 >= 0) {
     index--;
@@ -122,8 +122,10 @@ buttonPrev.on("click", function () {
 
 const buttonClose = $("#close-search-results");
 buttonClose.on("click", function () {
-  const curr = $("#" + searchResults[index].id)[0];
-  clearSearchHighlights(curr);
+  if (searchResults.length !== 0) {
+    const curr = $("#" + searchResults[index].id)[0];
+    clearSearchHighlights(curr);
+  }
   const searchResultBar = $("#search-results");
   searchResultBar.css("display", "none");
   searchResults = [];

@@ -22,10 +22,8 @@
     <title>{{ title }} - UniNote</title>
   </head>
   <body class="d-flex flex-column vh-100">
-    <header class="header-container">
-      {% block header %}
-      {% endblock header %}
-    </header>
+    {% block header %}
+    {% endblock header %}
     <main class="h-100 container-fluid overflow-auto">
       {% block main %}
       {% endblock main %}

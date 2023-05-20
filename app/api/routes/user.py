@@ -1,8 +1,9 @@
 from flask import make_response, request
 from flask_login import login_required
 
-from app.models import Class, load_user
 from app import db
+from app.models import Class, load_user
+
 from . import bp
 
 
@@ -18,6 +19,7 @@ def user():
         return make_response({"msg": "User not found"}, 404)
     return make_response(user.serialize(), 200)
 
+
 @bp.route("/user/class", methods=["GET"])
 @login_required
 def get_classes():
@@ -29,6 +31,7 @@ def get_classes():
     if user is None:
         return make_response({"msg": "User not found"}, 404)
     return make_response({"classes": [c.serialize() for c in user.class_ids]}, 200)
+
 
 @bp.route("/user/class", methods=["POST"])
 @login_required

@@ -122,7 +122,6 @@ class Note(db.Model, TimeMixin):
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
     title = db.Column(db.String, nullable=False)
     content = db.Column(db.String, nullable=False)
-    tag_names = db.relationship("Tag", secondary=note_tag, back_populates="note_ids")
 
     def serialize(self):
         return {

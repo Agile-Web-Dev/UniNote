@@ -1,8 +1,9 @@
 from flask import render_template
 from flask_login import login_required
 
-from app.models import load_user, Class
 from app import db
+from app.models import Class, load_user
+
 from . import bp
 
 
@@ -16,5 +17,8 @@ def dashboard():
     unenrolled_classes = Class.query.filter(~Class.class_id.in_(enrolled_classes)).all()
     print(unenrolled_classes)
     return render_template(
-        "dashboard.html", title="Dashboard", enrolled_classes=user.class_ids, unenrolled_classes=unenrolled_classes
+        "dashboard.html",
+        title="Dashboard",
+        enrolled_classes=user.class_ids,
+        unenrolled_classes=unenrolled_classes,
     )

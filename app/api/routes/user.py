@@ -18,6 +18,7 @@ def user():
         return make_response({"msg": "User not found"}, 404)
     return make_response(user.serialize(), 200)
 
+
 @bp.route("/user/class", methods=["POST"])
 @login_required
 def add_class(classId):
@@ -28,7 +29,7 @@ def add_class(classId):
     user = load_user()
     if user is None:
         return make_response({"msg": "User not found"}, 404)
-    
+
     user.class_ids.append(classId)
     user.save()
     return make_response(user.serialize(), 200)

@@ -1,10 +1,9 @@
 const getMessages = () => {
-  const messageItems = document.getElementsByClassName("message-item");
-  const messages = Array.from(messageItems).map((messageEl) => {
+  const messageItems = $(".message-item");
+  const messages = messageItems.toArray().map((messageEl) => {
     const message = {
       id: messageEl.id,
-      // created_by:
-      content: messageEl.textContent.trim(),
+      content: $(messageEl).text().trim(),
     };
     return message;
   });
@@ -13,12 +12,12 @@ const getMessages = () => {
 };
 
 const getUserMessages = () => {
-  const userItems = document.getElementsByClassName("sender");
-  const userMessages = Array.from(userItems).map((messageEl) => {
-    const messageContentEl = messageEl.querySelector(".message-item");
-    const messageId = messageContentEl.id;
+  const userItems = $(".sender");
+  const userMessages = userItems.toArray().map((messageEl) => {
+    const messageContentEl = $(messageEl).find(".message-item");
+    const messageId = messageContentEl.attr("id");
     const userMessage = {
-      created_by: messageEl.textContent.trim().split("\n")[0],
+      created_by: $(messageEl).text().trim().split("\n")[0],
       id: messageId,
     };
     return userMessage;
@@ -29,34 +28,40 @@ const getUserMessages = () => {
 
 let index = 0;
 let searchResults = [];
-const searchInput = document.getElementById("search-chat-input");
-const searchOption = document.getElementById("form-select");
-searchInput.addEventListener("keyup", function (event) {
+const searchInput = $("#search-chat-input");
+const searchOption = $("#form-select");
+searchInput.on("keyup", function (event) {
   if (event.key !== "Enter") return;
-  if (searchInput.value.trim() === "") return;
+  if (searchInput.val().trim() === "") return;
 
   searchResults = [];
-  if (searchOption.value === "Content:") {
+  if (
+    searchOption.val() === "Content:"
+  ) {
     clearAllHighlights();
     const messages = getMessages();
-    const searchQuery = searchInput.value.trim();
+    const searchQuery = searchInput.val().trim();
     for (let i = messages.length - 1; i >= 0; i--) {
       const message = messages[i];
       if (message.content.toLowerCase().includes(searchQuery.toLowerCase())) {
         searchResults.push(message);
       }
     }
-    searchInput.value = "";
-    const searchResultBar = document.getElementById("search-results");
-    searchResultBar.style.display = "flex";
-    const resultString = document.getElementById("result-string");
-    resultString.textContent = `found ${searchResults.length} results for "${searchQuery}"`;
+    searchInput.val("");
+    const searchResultBar = $("#search-results");
+    searchResultBar.css("display", "flex");
+    const resultString = $("#result-string");
+    resultString.text(
+      `found ${searchResults.length} results for "${searchQuery}"`
+    );
     scrollToMessage(searchResults[index].id);
   }
 
-  if (searchOption.value == "From:") {
+  if (
+    searchOption.val() == "From:"
+  ) {
     clearAllHighlights();
-    const searchQuery = searchInput.value.trim();
+    const searchQuery = searchInput.val().trim();
     const userMessage = getUserMessages();
     for (let i = userMessage.length - 1; i >= 0; i--) {
       const user = userMessage[i];
@@ -64,37 +69,39 @@ searchInput.addEventListener("keyup", function (event) {
         searchResults.push(user);
       }
     }
-    searchInput.value = "";
-    const searchResultBar = document.getElementById("search-results");
-    searchResultBar.style.display = "flex";
-    const resultString = document.getElementById("result-string");
-    resultString.textContent = `found ${searchResults.length} results for "${searchQuery}"`;
+    searchInput.val("");
+    const searchResultBar = $("#search-results");
+    searchResultBar.css("display", "flex");
+    const resultString = $("#result-string");
+    resultString.text(
+      `found ${searchResults.length} results for "${searchQuery}"`
+    );
     scrollToMessage(searchResults[index].id);
   }
 });
 
 const scrollToMessage = (messageId) => {
-  const messageEl = document.getElementById(messageId);
-  messageEl.scrollIntoView();
-  messageEl.style.backgroundColor = "var(--app-grey-800)";
+  const messageEl = $("#" + messageId);
+  messageEl[0].scrollIntoView();
+  messageEl.css("background-color", "var(--app-grey-800)");
 };
 
 const clearAllHighlights = () => {
-  const allMessages = document.getElementsByClassName("message-item");
-  Array.from(allMessages).forEach((message) => {
-    message.style.background = "transparent";
+  const allMessages = $(".message-item");
+  allMessages.each((index, message) => {
+    $(message).css("background", "transparent");
   });
 };
 
 const clearSearchHighlights = (current) => {
   if (current) {
-    current.style.background = "transparent";
+    $(current).css("background", "transparent");
   }
 };
 
-const buttonNext = document.getElementById("iterate-up");
-buttonNext.addEventListener("click", function () {
-  const curr = document.getElementById(searchResults[index].id);
+const buttonNext = $("#iterate-up");
+buttonNext.on("click", function () {
+  const curr = $("#" + searchResults[index].id)[0];
   if (index + 1 < searchResults.length) {
     index = index + 1;
     clearSearchHighlights(curr);
@@ -102,9 +109,9 @@ buttonNext.addEventListener("click", function () {
   }
 });
 
-const buttonPrev = document.getElementById("iterate-down");
-buttonPrev.addEventListener("click", function () {
-  const curr = document.getElementById(searchResults[index].id);
+const buttonPrev = $("#iterate-down");
+buttonPrev.on("click", function () {
+  const curr = $("#" + searchResults[index].id)[0];
   if (index - 1 >= 0) {
     index--;
     clearSearchHighlights(curr);
@@ -112,11 +119,11 @@ buttonPrev.addEventListener("click", function () {
   }
 });
 
-const buttonClose = document.getElementById("close-search-results");
-buttonClose.addEventListener("click", function () {
-  const curr = document.getElementById(searchResults[index].id);
+const buttonClose = $("#close-search-results");
+buttonClose.on("click", function () {
+  const curr = $("#" + searchResults[index].id)[0];
   clearSearchHighlights(curr);
-  const searchResultBar = document.getElementById("search-results");
-  searchResultBar.style.display = "none";
+  const searchResultBar = $("#search-results");
+  searchResultBar.css("display", "none");
   searchResults = [];
 });

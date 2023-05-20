@@ -12,13 +12,13 @@ const messageHtml = `
 </div>`;
 
 jQuery(async () => {
-    const currentPath = window.location.pathname;
-    const classCode = currentPath.split("/");
-    const response = await fetch("/api/messages/" + classCode[1]);
-    const data = await response.json();
-    for (const message of data) {
-      await receiveMessage(message);
-    }
+  const currentPath = window.location.pathname;
+  const classCode = currentPath.split("/");
+  const response = await fetch("/api/messages/" + classCode[1]);
+  const data = await response.json();
+  for (const message of data) {
+    await receiveMessage(message);
+  }
 });
 
 let lastParentMessage;
@@ -31,20 +31,24 @@ export const displayMessage = async (data) => {
       .children("div.avatar-holder")
       .append(await getAvatar(data.created_by));
 
-    $(".sender").attr("id", "sender-"+data.created_by);
+    $(".sender").attr("id", "sender-" + data.created_by);
 
     messageElement.children("div").children(".name").text(data.created_by);
     const messageContainer = messageElement
       .children("div")
       .children(".message-content");
-    $(`<p class="message-item mb-0" id="message-${data.message_id}"></p>`).text(data.content).appendTo(messageContainer);
+    $(`<p class="message-item mb-0" id="message-${data.message_id}"></p>`)
+      .text(data.content)
+      .appendTo(messageContainer);
     lastParentMessage = messageElement;
   } else {
     const messageContainer = lastParentMessage
       .children("div")
       .children(".message-content");
     $("<b></b>").appendTo(messageContainer);
-    $(`<p class="message-item mb-0" id="message-${data.message_id}"></p>`).text(data.content).appendTo(messageContainer);
+    $(`<p class="message-item mb-0" id="message-${data.message_id}"></p>`)
+      .text(data.content)
+      .appendTo(messageContainer);
   }
   lastAuthor = data.created_by;
 };

@@ -10,7 +10,6 @@ const messageHtml = `
   </div>
 </div>`;
 
-
 let lastParentMessage;
 let lastAuthor = "";
 
@@ -26,20 +25,24 @@ export const receiveMessage = async (message) => {
     avatar.on("load", () => {
       messageElement.removeClass("d-none");
     });
-    $(".sender").attr("id", "sender-"+message.created_by);
+    $(".sender").attr("id", "sender-" + message.created_by);
     messageElement.children("div").children(".name").text(message.created_by);
     const messageContainer = messageElement
       .children("div")
       .children(".message-content");
-      $(`<p class="message-item mb-0" id="message-${message.message_id}"></p>`).text(message.content).appendTo(messageContainer);
+    $(`<p class="message-item mb-0" id="message-${message.message_id}"></p>`)
+      .text(message.content)
+      .appendTo(messageContainer);
 
     messageElement.appendTo("#chat-scroll-window");
   } else {
-    $(".sender").attr("id", "sender-"+message.created_by);
+    $(".sender").attr("id", "sender-" + message.created_by);
     const messageContainer = lastParentMessage
       .children("div")
       .children(".message-content");
     $("<b></b>").appendTo(messageContainer);
-    $(`<p class="message-item mb-0" id="message-${message.message_id}"></p>`).text(message.content).appendTo(messageContainer);
+    $(`<p class="message-item mb-0" id="message-${message.message_id}"></p>`)
+      .text(message.content)
+      .appendTo(messageContainer);
   }
 };

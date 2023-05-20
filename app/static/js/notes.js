@@ -5,7 +5,7 @@ jQuery(async () => {
   const response = await fetch("/api/notes/" + className[1].toUpperCase());
   const data = await response.json();
   const noteList = $("#notes-list");
-  noteList.html(noteData.map(NoteItem).join(""));
+  noteList.html(data.map(NoteItem).join(""));
 
   $(".note-item").each(function () {
     const note = $(this);

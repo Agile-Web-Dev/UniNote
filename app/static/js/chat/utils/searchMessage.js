@@ -83,7 +83,7 @@ searchInput.on("keyup", function (event) {
 const scrollToMessage = (messageId) => {
   const messageEl = $("#" + messageId);
   messageEl[0].scrollIntoView();
-  messageEl.css("background-color", "var(--app-grey-800)");
+  messageEl.css("background-color", "var(--app-grey-500)");
 };
 
 const clearAllHighlights = () => {

@@ -3,7 +3,7 @@ import { receiveMessage } from "../events/receiveMessage.js";
 const messageHtml = `
 <div class="message d-flex gap-3">
   <div class="avatar-holder">
-    <img class="avatar" preload src="/static/images/placeholder_avatar.png"/>
+    <img class="avatar" preload src="/static/assets/placeholder_avatar.png"/>
   </div>
   <div class="d-flex flex-column sender">
     <p class="name fw-bold mb-1"></p>

@@ -3,7 +3,7 @@ import { getAvatar } from "../../user.js";
 const messageHtml = `
 <div class="message d-flex gap-3 mb-3 d-none">
   <div class="avatar-holder d-flex">
-    <img class="avatar" preload src="/static/images/placeholder_avatar.png"/></div>
+    <img class="avatar" preload src="/static/assets/placeholder_avatar.png"/></div>
   <div class="d-flex flex-column sender">
     <p class="name fw-bold mb-1"></p>
     <div class="message-content"></div>

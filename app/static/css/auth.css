@@ -4,14 +4,14 @@ body {
 }
 
 button {
-  border: none!important;
-  background-color: var(--app-accent-light)!important;
+  border: none !important;
+  background-color: var(--app-accent-light) !important;
 }
 
-button:focus, button:active {
-  box-shadow: none!important;
-  filter: brightness(85%)!important;
-
+button:focus,
+button:active {
+  box-shadow: none !important;
+  filter: brightness(85%) !important;
 }
 
 button:hover {

@@ -3,11 +3,10 @@ from sqlalchemy import desc
 
 from app import db
 from app.chat.utils import openai
-from app.libs.processors import topbar
 from app.models import Note
 
 from . import bp
-
+from flask import current_app
 
 @bp.route("/<class_id>", methods=["GET"])
 def get_notes(class_id):
@@ -41,7 +40,8 @@ def post_notes():
 
     result = note.serialize()
 
-    openai.add_document(session["class_id"], (title + "\n\n" + content))
+    if not current_app.config["TESTING"]:
+        openai.add_document(session["class_id"], title + "\n\n" + content)
 
     if not isinstance(result, dict):
         return make_response({"msg": "Internal server error"}, 500)

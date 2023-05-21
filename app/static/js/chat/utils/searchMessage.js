@@ -48,8 +48,9 @@ const clearSearchHighlights = (current) => {
 const searchMessages = () => {
   if (searchInput.val().trim() === "") return;
 
+  index = 0;
   searchResults = [];
-  const searchOption = $("#form-select");
+  const searchOption = $("#search-chat-filter");
 
   if (searchOption.val() === "Content:") {
     clearAllHighlights();
@@ -104,9 +105,9 @@ searchInput.on("keyup", function (event) {
   if (event.key !== "Enter") return;
   searchMessages();
 });
+
 const searchButton = $("#search-button");
 searchButton.on("click", searchMessages);
-
 
 const buttonNext = $("#iterate-up");
 buttonNext.on("click", function () {

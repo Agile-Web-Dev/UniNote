@@ -27,7 +27,7 @@ def setup(server):
             name="Jane Doe",
             email="hello@example.com",
             role="student",
-            # class_ids=classes, # add this when classes are filtered by user
+            # class_ids=classes,
         )
 
         user.set_password("password")

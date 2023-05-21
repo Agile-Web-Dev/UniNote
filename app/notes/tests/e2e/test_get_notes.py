@@ -25,7 +25,6 @@ def setup(server):
             name="Jane Doe",
             email="hello@example.com",
             role="student",
-            # class_ids=classes, # add this when classes are filtered by user
         )
 
         notes = [
@@ -91,7 +90,7 @@ def test_get_notes(driver: webdriver.Chrome, wait, setup):
 
     assert len(note_items) == 2
 
-    assert note_items[0].find_element(By.TAG_NAME, "h4").text == "My Mom"
-    assert note_items[0].find_element(By.TAG_NAME, "p").text == "Test content 0"
-    assert note_items[1].find_element(By.TAG_NAME, "h4").text == "Random thoughts"
-    assert note_items[1].find_element(By.TAG_NAME, "p").text == "Test content"
+    assert note_items[0].find_element(By.TAG_NAME, "h4").text == "Random thoughts"
+    assert note_items[0].find_element(By.TAG_NAME, "p").text == "Test content"
+    assert note_items[1].find_element(By.TAG_NAME, "h4").text == "My Mom"
+    assert note_items[1].find_element(By.TAG_NAME, "p").text == "Test content 0"

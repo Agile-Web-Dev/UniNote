@@ -12,20 +12,14 @@ def generate_uuid():
 
 
 class TimeMixin(object):
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    updated_at = db.Column(db.DateTime, default=datetime.utcnow)
+    created_at = db.Column(db.DateTime, default=datetime.now)
+    updated_at = db.Column(db.DateTime, default=datetime.now)
 
 
 user_class = db.Table(
     "user_class",
     db.Column("user_id", db.ForeignKey("user.user_id"), primary_key=True),
     db.Column("class_id", db.ForeignKey("class.class_id"), primary_key=True),
-)
-
-note_tag = db.Table(
-    "note_tag",
-    db.Column("note_id", db.ForeignKey("note.note_id"), primary_key=True),
-    db.Column("tag_name", db.ForeignKey("tag.name"), primary_key=True),
 )
 
 
@@ -100,15 +94,17 @@ class Message(db.Model, TimeMixin):
         db.String, primary_key=True, nullable=False, default=generate_uuid
     )
     created_by = db.Column(db.ForeignKey("user.user_id"), nullable=False)
+    is_bot = db.Column(db.Boolean, default=False)
     class_id = db.Column(db.ForeignKey("class.class_id"), nullable=False)
-    content = db.Column(db.String)
+    content = db.Column(db.String, nullable=False)
 
     def serialize(self):
         return {
             "message_id": self.message_id,
             "created_by": self.created_by,
+            "is_bot": self.is_bot,
             "content": self.content,
-            "created_at": self.created_at.strftime("%m/%d/%Y, %H:%M:%S"),
+            "created_at": self.created_at.strftime("%Y-%m-%d %H:%M:%S.%f"),
         }
 
 
@@ -130,8 +126,8 @@ class Note(db.Model, TimeMixin):
             "class_id": self.class_id,
             "title": self.title,
             "content": self.content,
-            "created_at": self.created_at.strftime("%m/%d/%Y, %H:%M:%S"),
-            "updated_at": self.updated_at.strftime("%m/%d/%Y, %H:%M:%S"),
+            "created_at": self.created_at.strftime("%Y-%m-%d %H:%M:%S.%f"),
+            "updated_at": self.updated_at.strftime("%Y-%m-%d %H:%M:%S.%f"),
         }
 
 

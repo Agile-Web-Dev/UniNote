@@ -32,11 +32,10 @@ jQuery(async () => {
         note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         note.content.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    console.log(results);
     noteList.html(results.map(NoteItem).join(""));
   });
 
-  $(".note-item").on("click", function () {
+  noteList.on("click", ".note-item", function () {
     const title = $(this).data("bs-title");
     const content = $(this).data("bs-content");
     var myModal = $("#notes-modal");
@@ -101,7 +100,6 @@ jQuery(async () => {
 
     noteHeader.prop("disabled", false);
     noteContent.prop("disabled", false);
-    console.log("Note posted");
   };
 
   const clearNote = () => {

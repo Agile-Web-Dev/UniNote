@@ -1,7 +1,8 @@
-from flask import make_response, request
+from flask import make_response, request, session
 from sqlalchemy import desc
 
 from app import db
+from app.chat.utils import openai
 from app.libs.processors import topbar
 from app.models import Note
 
@@ -39,7 +40,8 @@ def post_notes():
     db.session.commit()
 
     result = note.serialize()
-    print(result)
+    
+    openai.add_document(session["class_id"], (title+"\n\n"+content))
 
     if not isinstance(result, dict):
         return make_response({"msg": "Internal server error"}, 500)

@@ -1,30 +1,52 @@
 import os
 
-from flask import g
-from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader
+from llama_index import (
+    Document,
+    GPTVectorStoreIndex,
+    StorageContext,
+    load_index_from_storage,
+)
 
 
-def build_index(room):
-    index_path = f"data/index_{room}.json"
+class OpenAI:
+    def __init__(self):
+        self.indices = {}
+    
+    def add_document(self, room, context):
+        index_path = f"data/index/{room}"
 
-    documents = SimpleDirectoryReader(f"data/{room}").load_data()
-    index = GPTSimpleVectorIndex.from_documents(documents)
-    index.save_to_disk(index_path)
+        index = self.get_index(room)
+        doc = Document(context)
+        index.insert(doc)
+        
+        self.indices["room"] = index
+        index.storage_context.persist(persist_dir=index_path)
 
-    return index
+    def build_index(self, room):
+        index_path = f"data/index/{room}"
+        initial_context = "Initial Context"
+        doc = Document(initial_context)
 
+        index = GPTVectorStoreIndex([])
+        index.insert(doc)
+        index.storage_context.persist(persist_dir=index_path)
 
-def load_index(room):
-    print("read")
-    index_path = f"data/index_{room}.json"
-    if os.path.exists(index_path):
-        index = GPTSimpleVectorIndex.load_from_disk(index_path)
-    else:
-        index = build_index(room)
-    return index
+        return index
 
+    def load_index(self, room):
+        print("read")
+        index_path = f"data/index/{room}"
+        if os.path.exists(index_path):
+            storage_context = StorageContext.from_defaults(persist_dir=index_path)
+            index = load_index_from_storage(storage_context)
+            return index
 
-def get_index(room):
-    if "index" not in g:
-        g.index = load_index(room)
-    return g.index
+        index = self.build_index(room)
+        return index
+
+    def get_index(self, room):
+        if room not in self.indices:
+            self.indices["room"] = self.load_index(room)
+        return self.indices["room"]
+
+openai = OpenAI()

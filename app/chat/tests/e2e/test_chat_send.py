@@ -1,3 +1,4 @@
+import time
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -77,6 +78,8 @@ def test_chat_send(driver: webdriver.Chrome, wait, setup):
     wait.until(
         EC.text_to_be_present_in_element((By.ID, "chat-container"), "Another message")
     )
+
+    time.sleep(0.5)
 
     assert EC.text_to_be_present_in_element((By.ID, "chat-container"), "Hello World!")
 

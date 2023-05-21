@@ -39,10 +39,12 @@ def driver(server):
     with webdriver.Chrome(options=chrome_options) as driver:
         yield driver
 
+    driver.quit()
+
 
 @pytest.fixture()
 def wait(driver):
-    yield WebDriverWait(driver, 60)
+    yield WebDriverWait(driver, 10)
 
 
 @pytest.fixture()

@@ -4,16 +4,16 @@
 {% endblock header %}
 {% block main %}
   <div class="row overflow-auto h-100">
-    <section id="nav-bar" class="col side-wrapper h-100">
+    <div id="nav-bar" class="col side-wrapper h-100">
       {% include "components/sections/navbar.html" %}
-    </section>
-    <section id="content-wrapper"
+    </div>
+    <div id="content-wrapper"
              class="col flex-grow-1 flex-column d-flex overflow-auto text-break h-100">
       {% block content %}
       {% endblock content %}
-    </section>
-    <section id="note-bar" class="col side-wrapper h-100">
+    </div>
+    <div id="note-bar" class="col side-wrapper h-100">
       {% include "components/sections/notebar.html" %}
-    </section>
+    </div>
   </div>
 {% endblock main %}

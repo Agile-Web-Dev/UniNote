@@ -1,5 +1,6 @@
 import { receiveMessage } from "../events/receiveMessage.js";
 
+//Fetching messages from the server using API
 jQuery(async () => {
   const currentPath = window.location.pathname;
   const classCode = currentPath.split("/");

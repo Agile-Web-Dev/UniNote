@@ -11,6 +11,11 @@ from . import bp
 @bp.route("/dashboard", methods=["GET"])
 @login_required
 def dashboard():
+    """
+    get user's enrolled classes
+    endpoint: /dashboard
+    renders dahboard template
+    """
     user = load_user()
     # get classes that the user is not in
     enrolled_classes = [u.class_id for u in user.class_ids]

@@ -2,6 +2,9 @@ from .commands import *
 
 
 def command_handler(msg, room):
+    """
+    handeling chatGPT commands
+    """
     msg = msg[1:].lower().split(" ", 1)
     command = msg[0]
     if len(msg) != 1:

@@ -26,15 +26,31 @@ const getUserMessages = () => {
   return userMessages;
 };
 
-let index = 0;
-let searchResults = [];
-const searchInput = $("#search-chat-input");
-const searchOption = $("#form-select");
-searchInput.on("keyup", function (event) {
-  if (event.key !== "Enter") return;
+const scrollToMessage = (messageId) => {
+  const messageEl = $("#" + messageId);
+  messageEl[0].scrollIntoView();
+  messageEl.css("background-color", "var(--app-grey-500)");
+};
+
+const clearAllHighlights = () => {
+  const allMessages = $(".message-item");
+  allMessages.each((index, message) => {
+    $(message).css("background", "transparent");
+  });
+};
+
+const clearSearchHighlights = (current) => {
+  if (current) {
+    $(current).css("background", "transparent");
+  }
+};
+
+const searchMessages = () => {
   if (searchInput.val().trim() === "") return;
 
   searchResults = [];
+  const searchOption = $("#form-select");
+
   if (searchOption.val() === "Content:") {
     clearAllHighlights();
     const messages = getMessages();
@@ -77,26 +93,20 @@ searchInput.on("keyup", function (event) {
     );
     scrollToMessage(searchResults[index].id);
   }
+};
+
+// Event listeners
+let index = 0;
+let searchResults = [];
+
+const searchInput = $("#search-chat-input");
+searchInput.on("keyup", function (event) {
+  if (event.key !== "Enter") return;
+  searchMessages();
 });
+const searchButton = $("#search-button");
+searchButton.on("click", searchMessages);
 
-const scrollToMessage = (messageId) => {
-  const messageEl = $("#" + messageId);
-  messageEl[0].scrollIntoView();
-  messageEl.css("background-color", "var(--app-grey-500)");
-};
-
-const clearAllHighlights = () => {
-  const allMessages = $(".message-item");
-  allMessages.each((index, message) => {
-    $(message).css("background", "transparent");
-  });
-};
-
-const clearSearchHighlights = (current) => {
-  if (current) {
-    $(current).css("background", "transparent");
-  }
-};
 
 const buttonNext = $("#iterate-up");
 buttonNext.on("click", function () {

@@ -93,7 +93,6 @@ jQuery(async () => {
       });
 
       $("#notes-list").prepend(populateNote(newNote));
-      notearr.push(newNote);
       clearNote();
     } catch (error) {
       console.error(error);

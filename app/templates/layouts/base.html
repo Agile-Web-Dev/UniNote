@@ -3,27 +3,17 @@
   {% include "components/sections/topbar.html" %}
 {% endblock header %}
 {% block main %}
-  <div class="row overflow-auto h-100">
-    <section id="nav-bar" class="col side-wrapper h-100">
+  <div class="d-flex flex-row overflow-auto h-100">
+    <section id="nav-bar" class="side-wrapper h-100 p-2">
       {% include "components/sections/navbar.html" %}
     </section>
-    <span id="drawer-button-container-left">
-      <button class="drawer-button">
-        <i class="bi bi-caret-right-fill"></i>
-      </button>
-    </span>
     <section id="content-wrapper"
-             class="col flex-grow-1 flex-column d-flex overflow-auto text-break h-100">
+             class="flex-grow-1 flex-column d-flex overflow-auto text-break h-100">
       {% block content %}
       {% endblock content %}
     </section>
-    <section id="note-bar" class="col side-wrapper h-100">
+    <section id="note-bar" class="side-wrapper h-100 p-2">
       {% include "components/sections/notebar.html" %}
     </section>
-    <span id="drawer-button-container-right">
-      <button class="drawer-button">
-        <i class="bi bi-caret-left-fill"></i>
-      </button>
-    </span>
   </div>
 {% endblock main %}

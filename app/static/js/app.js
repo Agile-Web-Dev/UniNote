@@ -8,65 +8,50 @@ jQuery(() => {
 
     if (parentId.includes("left")) {
       leftOpen = !leftOpen;
-      $("#nav-bar").toggleClass("d-none");
 
       if (leftOpen) {
+        $("#nav-bar").css({ "min-width": "120px", "max-width": "120px" });
         $(this).css("transform", "rotate(180deg)");
-        $(this).css("left", "120px");
+        $(this).css("left", "114px");
       } else {
+        $("#nav-bar").css({ "min-width": "0", "max-width": "0" });
         $(this).css("transform", "rotate(0deg)");
-        $(this).css("left", "0px");
+        $(this).css("left", "-2px");
       }
     } else if (parentId.includes("right")) {
       rightOpen = !rightOpen;
-      $("#note-bar").toggleClass("d-none");
 
       if (rightOpen) {
+        $("#note-bar").css({ "min-width": "300px", "max-width": "300px" });
         $(this).css("transform", "rotate(180deg)");
-        $(this).css("right", "400px");
+        $(this).css("right", "294px");
       } else {
+        $("#note-bar").css({ "min-width": "0", "max-width": "0" });
         $(this).css("transform", "rotate(0deg)");
-        $(this).css("right", "0px");
+        $(this).css("right", "0");
       }
     }
   });
 
   handleMediaChange();
-  handleNoteMediaChange();
 });
 
-const sidebarQuery = window.matchMedia("(max-width: 575.98px)");
+const sidebarQuery = window.matchMedia("(max-width: 849.98px)");
 
 const handleMediaChange = () => {
   if (sidebarQuery.matches) {
     leftOpen = false;
     rightOpen = false;
-    $("#nav-bar").addClass("d-none");
-    $("#note-bar").addClass("d-none");
+    $("#nav-bar").css({ "min-width": "0", "max-width": "0" });
+    $("#note-bar").css({ "min-width": "0", "max-width": "0" });
   } else {
     leftOpen = true;
     rightOpen = true;
-    $("#nav-bar").removeClass("d-none");
-    $("#note-bar").removeClass("d-none");
+    $("#nav-bar").css({ "min-width": "250px", "max-width": "250px" });
+    $("#note-bar").css({ "min-width": "400px", "max-width": "400px" });
   }
 };
 
 sidebarQuery.addEventListener("change", () => {
   handleMediaChange();
-});
-
-const notebarQuery = window.matchMedia("(max-width: 991.98px)");
-
-const handleNoteMediaChange = () => {
-  if (notebarQuery.matches) {
-    rightOpen = false;
-    $("#note-bar").addClass("d-none");
-  } else {
-    rightOpen = true;
-    $("#note-bar").removeClass("d-none");
-  }
-};
-
-notebarQuery.addEventListener("change", () => {
-  handleNoteMediaChange();
 });

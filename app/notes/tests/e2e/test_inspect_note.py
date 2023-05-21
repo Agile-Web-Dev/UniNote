@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from app import db
 from app.libs.tests.fixtures import driver, server, wait
-from app.models import Class, Note, User
+from app.models import Class, Note, User, user_class
 
 
 @pytest.fixture
@@ -14,6 +14,8 @@ def setup(server):
         Class.query.delete()
         Note.query.delete()
         User.query.delete()
+        db.session.query(user_class).delete()
+        db.session.commit()
 
         classes = [
             Class(name="Test Class", class_id="TEST123"),
@@ -60,6 +62,7 @@ def setup(server):
         Class.query.delete()
         Note.query.delete()
         User.query.delete()
+        db.session.query(user_class).delete()
         db.session.commit()
 
 

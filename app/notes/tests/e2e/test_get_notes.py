@@ -1,18 +1,18 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 
 from app import db
 from app.libs.tests.fixtures import driver, server, wait
-from app.models import Class, User
+from app.models import Class, Note, User
 
 
 @pytest.fixture
 def setup(server):
     with server.app_context():
         Class.query.delete()
+        Note.query.delete()
         User.query.delete()
 
         classes = [
@@ -28,8 +28,30 @@ def setup(server):
             # class_ids=classes, # add this when classes are filtered by user
         )
 
+        notes = [
+            Note(
+                created_by="123",
+                class_id="TEST123",
+                title="My Mom",
+                content="Test content 0",
+            ),
+            Note(
+                created_by="123",
+                class_id="TEST123",
+                title="Random thoughts",
+                content="Test content",
+            ),
+            Note(
+                created_by="123",
+                class_id="TEST456",
+                title="asdsag",
+                content="What is this?",
+            ),
+        ]
+
         user.set_password("password")
         db.session.add_all(classes)
+        db.session.add_all(notes)
         db.session.add(user)
         db.session.commit()
 
@@ -37,12 +59,14 @@ def setup(server):
 
     with server.app_context():
         Class.query.delete()
+        Note.query.delete()
         User.query.delete()
         db.session.commit()
 
 
-def test_chat_message_send(driver: webdriver.Chrome, wait, setup):
+def test_get_notes(driver: webdriver.Chrome, wait, setup):
     base_url = setup.config["E2E_URL"]
+    driver.set_window_size(1920, 1080)
     driver.get(f"{base_url}/login")
 
     username = driver.find_element(By.ID, "username")
@@ -58,33 +82,16 @@ def test_chat_message_send(driver: webdriver.Chrome, wait, setup):
 
     assert driver.get_cookie("session") is not None
 
-    driver.get(f"{base_url}/TEST123/chatroom")
+    driver.get(f"{base_url}/TEST123/notes")
 
-    wait.until(EC.title_contains("Chatroom"))
+    wait.until(EC.title_contains("Note Forum"))
+    wait.until(EC.presence_of_element_located((By.CLASS_NAME, "note-item")))
 
-    chatbox = driver.find_element(By.ID, "chatbox")
+    note_items = driver.find_elements(By.CLASS_NAME, "note-item")
 
-    chatbox.send_keys("Hello World!")
-    chatbox.send_keys(Keys.ENTER)
+    assert len(note_items) == 2
 
-    wait.until(
-        EC.text_to_be_present_in_element((By.ID, "chat-container"), "Hello World!")
-    )
-
-    chatbox.send_keys("Another message")
-    chatbox.send_keys(Keys.ENTER)
-
-    wait.until(
-        EC.text_to_be_present_in_element((By.ID, "chat-container"), "Another message")
-    )
-
-    assert EC.text_to_be_present_in_element((By.ID, "chat-container"), "Hello World!")
-
-    driver.refresh()
-
-    assert EC.text_to_be_present_in_element((By.ID, "chat-container"), "Hello World!")
-    assert EC.text_to_be_present_in_element(
-        (By.ID, "chat-container"), "Another message"
-    )
-
-    wait.until(EC.title_contains("Chat"))
+    assert note_items[0].find_element(By.TAG_NAME, "h4").text == "My Mom"
+    assert note_items[0].find_element(By.TAG_NAME, "p").text == "Test content 0"
+    assert note_items[1].find_element(By.TAG_NAME, "h4").text == "Random thoughts"
+    assert note_items[1].find_element(By.TAG_NAME, "p").text == "Test content"

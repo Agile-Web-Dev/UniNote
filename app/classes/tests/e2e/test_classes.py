@@ -43,7 +43,7 @@ def setup(server):
 
 def test_classes_enter(driver: webdriver.Chrome, wait, setup):
     base_url = setup.config["E2E_URL"]
-    driver.get(base_url)
+    driver.get(f"{base_url}/login")
 
     username = driver.find_element(By.ID, "username")
     username.send_keys("123")

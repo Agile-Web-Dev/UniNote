@@ -6,6 +6,10 @@ from . import bp
 
 @bp.route("/login", methods=["GET"])
 def login():
+    """
+    renders login template
+    endpoint: /login
+    """
     if current_user.is_authenticated:
         return redirect(url_for("main.dashboard"))
     return render_template("login.html", title="Login")

@@ -1,5 +1,6 @@
 import { getAvatar } from "../../user.js";
 
+//formatting datetime
 const units = {
   year: 24 * 60 * 60 * 1000 * 365,
   month: (24 * 60 * 60 * 1000 * 365) / 12,
@@ -11,6 +12,7 @@ const units = {
 
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
+//creating message html base
 const messageHtml = `
 <div class="message d-flex d-none gap-3">
   <div class="avatar-holder d-flex">
@@ -25,11 +27,12 @@ const messageHtml = `
   </div>
 </div>`;
 
+//format the timestamp on the message
 const formatTimestamp = (timestamp) => {
   const datetime = new Date(timestamp);
   const now = new Date();
 
-  const timeDiff = datetime-now;
+  const timeDiff = datetime - now;
 
   let formattedDatetime = "";
   if (timeDiff < 24 * 60 * 60 * 1000) {
@@ -52,6 +55,7 @@ const formatTimestamp = (timestamp) => {
 let lastParentMessage;
 let lastAuthor = "";
 
+//rendering all messages recieved from the server
 export const receiveMessage = async (message) => {
   if (lastAuthor !== message.created_by) {
     lastAuthor = message.created_by;

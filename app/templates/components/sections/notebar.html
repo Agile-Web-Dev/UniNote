@@ -13,21 +13,6 @@
     </div>
   </div>
 {% endblock sidebarcontent %}
-{% block pre %}
-  <div class="d-position-relative">
-    <button type="button"
-            id="note-menu-button"
-            class="bi bi-three-dots sidebar-icon"></button>
-    <menu id="note-menu" class="d-position-absolute">
-      <li class="note-menu-item" data-action="post">
-        <button type="button" class="button-reset text-white">Post Note</button>
-      </li>
-      <li class="note-menu-item" data-action="discard">
-        <button type="button" class="button-reset text-white">Discard Note</button>
-      </li>
-    </menu>
-  </div>
-{% endblock pre %}
 {% block post %}
   <button id="note-share-button" class="bi bi-upload sidebar-icon"></button>
 {% endblock post %}

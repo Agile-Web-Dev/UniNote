@@ -103,11 +103,6 @@ jQuery(async () => {
     noteContent.prop("disabled", false);
   };
 
-  const clearNote = () => {
-    noteHeader.val("");
-    noteContent.val("");
-  };
-
   Popper.createPopper(noteMenuBtn[0], noteMenuPopover[0], {
     placement: "bottom-start",
   });
@@ -124,21 +119,6 @@ jQuery(async () => {
     ) {
       noteMenuPopover.removeClass("shown");
     }
-  });
-
-  $(".note-menu-item").on("click", function () {
-    const action = $(this).data("action");
-    switch (action) {
-      case "post":
-        postNote();
-        break;
-      case "discard":
-        clearNote();
-        break;
-      default:
-        break;
-    }
-    noteMenuPopover.removeClass("shown");
   });
 
   $("#note-share-button").on("click", async () => {

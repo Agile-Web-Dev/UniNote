@@ -1,3 +1,4 @@
+//get individual messages that are already in the chat
 const getMessages = () => {
   const messageItems = $(".message-item");
   const messages = messageItems.toArray().map((messageEl) => {
@@ -11,6 +12,7 @@ const getMessages = () => {
   return messages;
 };
 
+//get all messages from all specific users
 const getUserMessages = () => {
   const userItems = $(".sender");
   const userMessages = userItems.toArray().map((messageEl) => {
@@ -26,25 +28,29 @@ const getUserMessages = () => {
   return userMessages;
 };
 
+//auto scroll to the message that is being searched and highlight
 const scrollToMessage = (messageId) => {
   const messageEl = $("#" + messageId);
   messageEl[0].scrollIntoView();
   messageEl.css("background-color", "var(--app-grey-500)");
 };
 
+//clearing all highlights if exists
 const clearAllHighlights = () => {
   const allMessages = $(".message-item");
-  allMessages.each((index, message) => {
+  allMessages.each((message) => {
     $(message).css("background", "transparent");
   });
 };
 
+//clear the current highlighted message
 const clearSearchHighlights = (current) => {
   if (current) {
     $(current).css("background", "transparent");
   }
 };
 
+//searching for message based on query from the search bar
 const searchMessages = () => {
   if (searchInput.val().trim() === "") return;
 
@@ -52,6 +58,7 @@ const searchMessages = () => {
   searchResults = [];
   const searchOption = $("#search-chat-filter");
 
+  //search based on content
   if (searchOption.val() === "Content:") {
     clearAllHighlights();
     const messages = getMessages();
@@ -75,6 +82,7 @@ const searchMessages = () => {
     }
   }
 
+  //search based on user
   if (searchOption.val() == "From:") {
     clearAllHighlights();
     const searchQuery = searchInput.val().trim();
@@ -109,6 +117,7 @@ searchInput.on("keyup", function (event) {
 const searchButton = $("#search-button");
 searchButton.on("click", searchMessages);
 
+//next query in the search results
 const buttonNext = $("#iterate-up");
 buttonNext.on("click", function () {
   if (searchResults.length === 0) return;
@@ -120,6 +129,7 @@ buttonNext.on("click", function () {
   }
 });
 
+//previous query in the search results
 const buttonPrev = $("#iterate-down");
 buttonPrev.on("click", function () {
   if (searchResults.length === 0) return;
@@ -131,6 +141,7 @@ buttonPrev.on("click", function () {
   }
 });
 
+//quit search function
 const buttonClose = $("#close-search-results");
 buttonClose.on("click", function () {
   if (searchResults.length !== 0) {

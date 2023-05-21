@@ -1,3 +1,4 @@
+//render notes list
 const populateNote = (noteRef) => {
   const note = $(noteRef);
   const title = note.data("bs-title");
@@ -10,7 +11,7 @@ const populateNote = (noteRef) => {
   return note;
 };
 
-// Notes page
+// pulling notes from API and Rendering them
 jQuery(async () => {
   const currentPath = window.location.pathname;
   const className = currentPath.split("/");

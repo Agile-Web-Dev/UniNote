@@ -10,6 +10,7 @@ from app.libs.processors import topbar
 from app.main.utils import get_default_links
 from app.models import Class, Message, load_user
 
+
 from . import bp
 
 
@@ -17,6 +18,11 @@ from . import bp
 @login_required
 @in_class
 def chatroom(class_id):
+    """
+    fetch messages from the database based on the class_id
+    endpoint: /class/<class_id>/chatroom
+    returns and renders messages and nav items
+    """
     messages = Message.query.filter(Message.class_id == class_id)
 
     nav_items = get_default_links(class_id) + get_class_links(class_id)

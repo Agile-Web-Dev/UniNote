@@ -6,7 +6,11 @@ from . import bp
 
 @bp.route("/<class_id>", methods=["GET"])
 def get_messages(class_id):
-    """get messages based on the current class"""
+    """
+    get messages based on the current class
+    endpoint: /api/class/<class_id>/messages
+    serializes messages into json
+    """
     msg_arr = []
     msgs = db.session.query(Message).filter(Message.class_id == class_id)
     for entry in msgs:

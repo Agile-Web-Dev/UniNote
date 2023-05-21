@@ -32,7 +32,6 @@ jQuery(async () => {
         note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         note.content.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    console.log(results);
     noteList.html(results.map(NoteItem).join(""));
   });
 
@@ -102,7 +101,6 @@ jQuery(async () => {
 
     noteHeader.prop("disabled", false);
     noteContent.prop("disabled", false);
-    console.log("Note posted");
   };
 
   const clearNote = () => {

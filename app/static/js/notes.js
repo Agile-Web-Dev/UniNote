@@ -1,3 +1,15 @@
+const populateNote = (noteRef) => {
+  const note = $(noteRef);
+  const title = note.data("bs-title");
+  const content = note.data("bs-content");
+  note
+    .html("")
+    .append($("<h4></h4>").text(title))
+    .append($("<p></p>").text(content));
+
+  return note;
+};
+
 // Notes page
 jQuery(async () => {
   const currentPath = window.location.pathname;
@@ -8,13 +20,7 @@ jQuery(async () => {
   noteList.html(data.map(NoteItem).join(""));
 
   $(".note-item").each(function () {
-    const note = $(this);
-    const title = note.data("bs-title");
-    const content = note.data("bs-content");
-    note
-      .html("")
-      .append($("<h4></h4>").text(title))
-      .append($("<p></p>").text(content));
+    populateNote(this);
   });
 
   $("#notes-searchbar-form").on("submit", (e) => {
@@ -26,11 +32,10 @@ jQuery(async () => {
         note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         note.content.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    console.log(results);
     noteList.html(results.map(NoteItem).join(""));
   });
 
-  $(".note-item").on("click", function () {
+  noteList.on("click", ".note-item", function () {
     const title = $(this).data("bs-title");
     const content = $(this).data("bs-content");
     var myModal = $("#notes-modal");
@@ -49,32 +54,58 @@ const NoteItem = ({ title, content }) => {
       data-bs-title="${title}"
       data-bs-content="${content}"
     >
-      No XSS attack for you
+    ${content}
     </article>
   `;
 };
 
 // Note menu actions
-jQuery(() => {
+jQuery(async () => {
+  const currentPath = window.location.pathname;
+  const className = currentPath.split("/");
+  const fetchUser = await fetch("/api/user");
+  const userData = await fetchUser.json();
   const noteMenuBtn = $("#note-menu-button");
   const noteMenuPopover = $("#note-menu");
   const noteHeader = $("#note-header");
   const noteContent = $("#note-content");
 
   const postNote = async () => {
-    // todo update note in db
     noteHeader.prop("disabled", true);
     noteContent.prop("disabled", true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      await fetch("/api/notes", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          createdBy: userData.user_id,
+          classId: className[1].toUpperCase(),
+          title: noteHeader.val(),
+          content: noteContent.val(),
+        }),
+      });
+
+      const newNote = NoteItem({
+        title: noteHeader.val(),
+        content: noteContent.val(),
+      });
+
+      $("#notes-list").prepend(populateNote(newNote));
+      notearr.push(newNote);
+      clearNote();
+    } catch (error) {
+      console.error(error);
+    }
+
     noteHeader.prop("disabled", false);
     noteContent.prop("disabled", false);
-    console.log("Note posted");
   };
 
   const clearNote = () => {
     noteHeader.val("");
     noteContent.val("");
-    console.log("Note cleared");
   };
 
   Popper.createPopper(noteMenuBtn[0], noteMenuPopover[0], {
@@ -111,6 +142,7 @@ jQuery(() => {
   });
 
   $("#note-share-button").on("click", async () => {
+    if (noteHeader.val() === "" || noteContent.val() === "") return;
     await postNote();
     clearNote();
   });

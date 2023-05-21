@@ -1,6 +1,6 @@
 {% extends "layouts/auth.html" %}
 {% block form %}
-  <form class="rounded p-3 d-flex flex-column"
+  <form class="rounded p-3 d-flex flex-column m-4"
         onSubmit="loginFormHandler(event)">
     <div class="col-md-12 text-center mb-5">
       <div class="alert alert-danger d-flex align-items-center d-none pt-3"
@@ -30,7 +30,7 @@
       <input type="checkbox" class="form-check-input" id="remember" />
       <label class="form-check-label" for="remember">Remember me</label>
     </div>
-    <button type="submit" class="btn btn-primary gap-2 mb-2 w-100" id="submit">Login</button>
+    <button type="submit" class="btn btn-primary mb-2 w-100" id="submit">Login</button>
     <a href={{ url_for('main.register') }} class="align-self-end auth-link">Register an account</a>
   </form>
 {% endblock form %}

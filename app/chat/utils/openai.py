@@ -15,7 +15,6 @@ def build_index(room):
 
 
 def load_index(room):
-    print("read")
     index_path = f"data/index_{room}.json"
     if os.path.exists(index_path):
         index = GPTSimpleVectorIndex.load_from_disk(index_path)

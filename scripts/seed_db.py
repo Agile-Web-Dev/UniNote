@@ -1,7 +1,5 @@
-from sqlalchemy.orm import load_only
-
 from app import create_app, db
-from app.models import Class, Link, Message, Note, Tag, User
+from app.models import Class, Link, Message, Note, User
 
 app = create_app()
 
@@ -14,7 +12,6 @@ app.config.update(
 with app.app_context():
     User.query.delete()
     Note.query.delete()
-    Tag.query.delete()
     Class.query.delete()
     Link.query.delete()
     Message.query.delete()
@@ -88,12 +85,6 @@ with app.app_context():
         ),
     ]
 
-    tags = [
-        Tag(name="Javascript Lecture", class_id="CITS3403"),
-        Tag(name="HTML Lecture", class_id="CITS3403"),
-        Tag(name="API Lecture", class_id="CITS3403"),
-    ]
-
     messages = [
         Message(created_by="Dan", class_id="CITS3403", content="hey wassup guys"),
         Message(created_by="Bob", class_id="CITS3403", content="Hai"),
@@ -102,7 +93,6 @@ with app.app_context():
 
     db.session.add_all(messages)
     db.session.add_all(notes)
-    db.session.add_all(tags)
     db.session.commit()
 
     print("Db has been populated")

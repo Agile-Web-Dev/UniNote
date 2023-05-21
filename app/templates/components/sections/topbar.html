@@ -5,7 +5,7 @@
         <h1>UniNote</h1>
       </a>
     </div>
-    <ul class="d-flex col h-100 m-0 p-0 sortable-list overflow-x-auto">
+    <ul class="d-flex col h-100 m-0 p-0 overflow-x-auto">
       {% for header in topbar_items %}
         <li class="header-tab-item {{ 'active' if active_class == header.class_id }}">
           <a class="header-tab-link unselectable"
@@ -13,7 +13,7 @@
         </li>
       {% endfor %}
     </ul>
-    <button class="logout-btn" onclick="logoutHandler()">Logout</button>
+    <button class="btn btn-primary logout-btn" onclick="logoutHandler()">Logout</button>
   </header>
 {% endblock header %}
 {% block common_script %}

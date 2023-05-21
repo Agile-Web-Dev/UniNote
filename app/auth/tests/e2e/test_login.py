@@ -1,17 +1,16 @@
 import pytest
-from flask import url_for
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 from app import db
-from app.libs.tests.fixtures import app, driver, server, wait
+from app.libs.tests.fixtures import driver, server, wait
 from app.models import User
 
 
 @pytest.fixture
-def setup(app):
-    with app.app_context():
+def setup(server):
+    with server.app_context():
         User.query.delete()
 
         user = User(
@@ -21,9 +20,9 @@ def setup(app):
         db.session.add(user)
         db.session.commit()
 
-    yield app
+    yield server
 
-    with app.app_context():
+    with server.app_context():
         User.query.delete()
         db.session.commit()
 

@@ -17,16 +17,21 @@ def app():
         yield app
 
 
-@pytest.fixture(scope="session")
+# * these fixtures cannot be scoped for socketio to work
+@pytest.fixture()
 def server():
     app = create_app()
-    app.config.update({"TESTING": True})
+    # * this must be disabled for the server to emit socket events
+    # app.config.update({"TESTING": False})
     t = threading.Thread(target=app.run, kwargs={"port": "5000", "use_reloader": False})
     t.daemon = True
     t.start()
 
+    with app.app_context():
+        yield app
 
-@pytest.fixture(scope="session")
+
+@pytest.fixture()
 def driver(server):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -34,9 +39,9 @@ def driver(server):
         yield driver
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture()
 def wait(driver):
-    yield WebDriverWait(driver, 10)
+    yield WebDriverWait(driver, 5)
 
 
 @pytest.fixture()

@@ -5,13 +5,13 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 
 from app import db
-from app.libs.tests.fixtures import app, driver, server, wait
+from app.libs.tests.fixtures import driver, server, wait
 from app.models import Class, User
 
 
 @pytest.fixture
-def setup(app):
-    with app.app_context():
+def setup(server):
+    with server.app_context():
         Class.query.delete()
         User.query.delete()
 
@@ -33,9 +33,9 @@ def setup(app):
         db.session.add(user)
         db.session.commit()
 
-    yield app
+    yield server
 
-    with app.app_context():
+    with server.app_context():
         Class.query.delete()
         User.query.delete()
         db.session.commit()
@@ -66,8 +66,6 @@ def test_chat_message_send(driver: webdriver.Chrome, wait, setup):
 
     chatbox.send_keys("Hello World!")
     chatbox.send_keys(Keys.ENTER)
-
-    print(driver.get_log("browser"))
 
     wait.until(
         EC.text_to_be_present_in_element((By.ID, "chat-container"), "Hello World!")

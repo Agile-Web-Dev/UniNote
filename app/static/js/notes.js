@@ -123,7 +123,9 @@ jQuery(async () => {
 
   $("#note-share-button").on("click", async () => {
     if (noteHeader.val() === "" || noteContent.val() === "") return;
+    $(this).prop("disabled", true);
     await postNote();
+    $(this).prop("disabled", false);
     clearNote();
   });
 });

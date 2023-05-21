@@ -12,7 +12,7 @@ login = LoginManager()
 socketio = SocketIO()
 
 
-def create_app(config_class=Config):
+def create_app(config_class=Config, socketio_async_mode=None):
     app = Flask(__name__)
     app.config.from_object(config_class)
     app.app_context().push()
@@ -20,7 +20,7 @@ def create_app(config_class=Config):
     db.init_app(app)
     migrate.init_app(app, db)
     login.init_app(app)
-    socketio.init_app(app)
+    socketio.init_app(app, async_mode=socketio_async_mode)
 
     from app.api.routes import bp as api_bp
 

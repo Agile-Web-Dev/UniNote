@@ -13,6 +13,7 @@ from app.models import Message
 def receive_message(message):
     """Sent by a client when the user entered a new message.
     The message is sent to all people in the room."""
+
     room = session.get("class_id")
     msg = Message(
         created_by=current_user.name, class_id=room, content=message.get("msg")

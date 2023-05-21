@@ -47,7 +47,7 @@ jQuery(async () => {
 
 const NoteItem = ({ title, content }) => {
   return `
-    <article
+    <div
       class="note-item"
       data-bs-toggle="modal"
       data-bs-target="#notes-modal"
@@ -55,7 +55,7 @@ const NoteItem = ({ title, content }) => {
       data-bs-content="${content}"
     >
     ${content}
-    </article>
+    </div>
   `;
 };
 

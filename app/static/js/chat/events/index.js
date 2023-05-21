@@ -29,7 +29,9 @@ export const setupSocketIO = () => {
   $("#send-button").on("click", () => {
     const message = $("#chatbox").val()
     if (message.trim().length > 0) {
-      sendMessage(message);
+      const isCommand = message.startsWith("/");
+      const intent = isCommand ? "command" : "message";
+      sendMessage(message, intent);
       $("#chatbox").val("");
     }
     resizeChatbox()

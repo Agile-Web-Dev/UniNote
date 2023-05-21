@@ -16,7 +16,7 @@ jQuery(() => {
       } else {
         $("#nav-bar").css({ "min-width": "0", "max-width": "0" });
         $(this).css("transform", "rotate(0deg)");
-        $(this).css("left", "-2px");
+        $(this).css("left", "6px");
       }
     } else if (parentId.includes("right")) {
       rightOpen = !rightOpen;
@@ -28,7 +28,7 @@ jQuery(() => {
       } else {
         $("#note-bar").css({ "min-width": "0", "max-width": "0" });
         $(this).css("transform", "rotate(0deg)");
-        $(this).css("right", "0");
+        $(this).css("right", "6px");
       }
     }
   });
@@ -43,11 +43,13 @@ const handleMediaChange = () => {
     leftOpen = false;
     rightOpen = false;
     $("#nav-bar").css({ "min-width": "0", "max-width": "0" });
+    $(".header-logo-container").css("display", "none");
     $("#note-bar").css({ "min-width": "0", "max-width": "0" });
   } else {
     leftOpen = true;
     rightOpen = true;
     $("#nav-bar").css({ "min-width": "250px", "max-width": "250px" });
+    $(".header-logo-container").css("display", "");
     $("#note-bar").css({ "min-width": "400px", "max-width": "400px" });
   }
 };

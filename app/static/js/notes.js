@@ -1,3 +1,4 @@
+//render notes list
 const populateNote = (noteRef) => {
   const note = $(noteRef);
   const title = note.data("bs-title");
@@ -10,7 +11,7 @@ const populateNote = (noteRef) => {
   return note;
 };
 
-// Notes page
+// pulling notes from API and Rendering them
 jQuery(async () => {
   const currentPath = window.location.pathname;
   const className = currentPath.split("/");
@@ -47,7 +48,7 @@ jQuery(async () => {
 
 const NoteItem = ({ title, content }) => {
   return `
-    <article
+    <div
       class="note-item"
       data-bs-toggle="modal"
       data-bs-target="#notes-modal"
@@ -55,7 +56,7 @@ const NoteItem = ({ title, content }) => {
       data-bs-content="${content}"
     >
     ${content}
-    </article>
+    </div>
   `;
 };
 
@@ -102,11 +103,6 @@ jQuery(async () => {
     noteContent.prop("disabled", false);
   };
 
-  const clearNote = () => {
-    noteHeader.val("");
-    noteContent.val("");
-  };
-
   Popper.createPopper(noteMenuBtn[0], noteMenuPopover[0], {
     placement: "bottom-start",
   });
@@ -123,21 +119,6 @@ jQuery(async () => {
     ) {
       noteMenuPopover.removeClass("shown");
     }
-  });
-
-  $(".note-menu-item").on("click", function () {
-    const action = $(this).data("action");
-    switch (action) {
-      case "post":
-        postNote();
-        break;
-      case "discard":
-        clearNote();
-        break;
-      default:
-        break;
-    }
-    noteMenuPopover.removeClass("shown");
   });
 
   $("#note-share-button").on("click", async () => {

@@ -1,29 +1,27 @@
 {% extends "layouts/base.html" %}
 {% block content %}
-  {% include "components/chat/chatsearch.html" %}
-  {% include "components/chat/chatcontainer.html" %}
-  {% include
-  "components/chat/chatbox.html" %}
+        {% include "components/chat/chatsearch.html" %}
+        {% include "components/chat/chatcontainer.html" %}
+        {% include
+        "components/chat/chatbox.html" %}
 {% endblock content %}
 {% block style %}
-  <link rel="stylesheet"
-        type="text/css"
-        href="{{ url_for('static', filename='css/chatroom.css') }}"/>
-  <link rel="stylesheet"
-        type="text/css"
-        href="{{ url_for('static', filename='css/notes.css') }}"/>
+        <link rel="stylesheet"
+              type="text/css"
+              href="{{ url_for('static', filename='css/chatroom.css') }}"/>
+        <link rel="stylesheet"
+              type="text/css"
+              href="{{ url_for('static', filename='css/notes.css') }}"/>
 {% endblock style %}
 {% block script %}
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emoji-mart@5.5.2/dist/browser.min.js"></script>
-  <script type="module"
-          src="{{ url_for('static', filename='js/chat/index.js') }}"></script>
-  <script type="module" src="{{ url_for('static', filename='js/notes.js') }}"></script>
-  <script type="module"
-          src="{{ url_for('static', filename='js/sortable.js') }}"></script>
-  <script type="module"
-          src="{{ url_for('static', filename='js/chat/utils/fetchMessage.js') }}"></script>
-  <script type="module"
-          src="{{ url_for('static', filename='js/chat/utils/searchMessage.js') }}"></script>
-  <script type="module" src="{{ url_for('static', filename='js/app.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/emoji-mart@5.5.2/dist/browser.min.js"></script>
+        <script type="module"
+                src="{{ url_for('static', filename='js/chat/index.js') }}"></script>
+        <script type="module" src="{{ url_for('static', filename='js/app.js') }}"></script>
+        <script type="module" src="{{ url_for('static', filename='js/notes.js') }}"></script>
+        <script type="module"
+                src="{{ url_for('static', filename='js/chat/utils/fetchMessage.js') }}"></script>
+        <script type="module"
+                src="{{ url_for('static', filename='js/chat/utils/searchMessage.js') }}"></script>
 {% endblock script %}

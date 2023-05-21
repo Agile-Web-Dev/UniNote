@@ -55,7 +55,7 @@ const NoteItem = ({ title, content }) => {
       data-bs-title="${title}"
       data-bs-content="${content}"
     >
-      No XSS attack for you
+    ${content}
     </article>
   `;
 };
@@ -143,6 +143,7 @@ jQuery(async () => {
   });
 
   $("#note-share-button").on("click", async () => {
+    if (noteHeader.val() === "" || noteContent.val() === "") return;
     await postNote();
     clearNote();
   });

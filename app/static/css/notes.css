@@ -6,7 +6,8 @@
   border-radius: 1rem;
   color: white;
   cursor: pointer;
-  padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+  padding-right: 17px;
+  /* Increase/decrease this value for cross-browser compatibility */
   box-sizing: content-box;
 }
 
@@ -36,6 +37,7 @@
   background: var(--app-grey-300);
   border-radius: 9999px;
   padding: 0 1em;
+  transition: 0.25s;
 }
 
 .searchbar-container:focus-within {
@@ -54,7 +56,7 @@
   box-shadow: none !important;
 }
 
-.searchbar-container > i {
+.searchbar-container>i {
   color: var(--app-grey-100);
   line-height: 0;
 }
@@ -82,27 +84,26 @@
   background: var(--app-grey-500);
   margin: 0;
   border-radius: 8px;
-  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
-    drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
 }
 
-#note-menu > .note-menu-item {
+#note-menu>.note-menu-item {
   color: var(--app-grey-0);
   padding: 0.5rem;
   cursor: pointer;
 }
 
-#note-menu > .note-menu-item:first-child {
+#note-menu>.note-menu-item:first-child {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 
-#note-menu > .note-menu-item:last-child {
+#note-menu>.note-menu-item:last-child {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 
-#note-menu > .note-menu-item:hover {
+#note-menu>.note-menu-item:hover {
   background: var(--app-grey-700);
 }
 
@@ -110,7 +111,7 @@
   display: none;
 }
 
-.note-container > .note-line {
+.note-container>.note-line {
   height: 2px;
   background: var(--app-grey-100);
 }
@@ -118,22 +119,15 @@
 #note-header {
   color: var(--app-grey-0);
   background: var(--app-grey-600) !important;
-  transition: 0.25s;
 }
 
-#note-header:focus {
-  background-color: var(--app-grey-700) !important;
-}
-
-#note-header:hover {
-  background-color: var(--app-grey-700) !important;
-}
-
+#note-header:focus,
+#note-header:hover,
 #note-header:disabled {
-  background-color: var(--app-grey-700);
+  background-color: var(--app-grey-700) !important;
 }
 
-.note-container > textarea {
+.note-container>textarea {
   background-color: var(--app-grey-600) !important;
   color: var(--app-grey-0);
   border-radius: 0.5rem;
@@ -141,17 +135,17 @@
   resize: none;
 }
 
-.note-container > textarea:hover {
+.note-container>textarea:hover {
   background-color: var(--app-grey-700) !important;
 }
 
-.note-container > textarea:focus,
-.note-container > textarea:active {
+.note-container>textarea:focus,
+.note-container>textarea:active {
   background-color: var(--app-grey-700) !important;
   box-shadow: 0 0 0 0.1rem var(--app-grey-100) !important;
 }
 
-.note-container > textarea:disabled {
+.note-container>textarea:disabled {
   background-color: var(--app-grey-700);
 }
 

@@ -22,12 +22,6 @@ user_class = db.Table(
     db.Column("class_id", db.ForeignKey("class.class_id"), primary_key=True),
 )
 
-note_tag = db.Table(
-    "note_tag",
-    db.Column("note_id", db.ForeignKey("note.note_id"), primary_key=True),
-    db.Column("tag_name", db.ForeignKey("tag.name"), primary_key=True),
-)
-
 
 class User(db.Model, TimeMixin, UserMixin):
     __tablename__ = "user"

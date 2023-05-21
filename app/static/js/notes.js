@@ -141,9 +141,11 @@ jQuery(async () => {
     noteMenuPopover.removeClass("shown");
   });
 
-  $("#note-share-button").on("click", async () => {
+  $("#note-share-button").on("click", async function () {
     if (noteHeader.val() === "" || noteContent.val() === "") return;
+    $(this).prop("disabled", true);
     await postNote();
+    $(this).prop("disabled", false);
     clearNote();
   });
 });

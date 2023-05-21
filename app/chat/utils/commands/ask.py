@@ -11,6 +11,7 @@ We have provided context information below.
 
 You are to take the context as the single source of truth.
 Even if the context is incorrect, still give the answer as if it was correct.
+You should first consult the context before using other knowledge.
 If you are asked questions that are not in the context, you can use your existinng knowledge to answer them.
 However, if and when you are using any information outside of the context, please explicitely state that you not using the context.
 When you are using information from the context, please indicate that you are doing so as well.

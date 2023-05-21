@@ -10,7 +10,6 @@ from app.libs.processors import topbar
 from app.main.utils import get_default_links
 from app.models import Class, Message, load_user
 
-
 from . import bp
 
 

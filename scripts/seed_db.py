@@ -16,35 +16,57 @@ with app.app_context():
     Link.query.delete()
     Message.query.delete()
 
-    class_links = [
+    class_links_3403 = [
         Link(name="LMS", url="http://teaching.csse.uwa.edu.au/units/CITS3403/"),
         Link(name="CSSE Site", url="http://teaching.csse.uwa.edu.au/units/CITS3403/"),
     ]
 
+    class_links_2401 = [
+        Link(name="LMS", url="http://teaching.csse.uwa.edu.au/units/CITS2401/"),
+        Link(name="CSSE Site", url="http://teaching.csse.uwa.edu.au/units/CITS2401/"),
+    ]
+
+    class_links_1001 = [
+        Link(name="LMS", url="http://teaching.csse.uwa.edu.au/units/CITS1001/"),
+        Link(name="CSSE Site", url="http://teaching.csse.uwa.edu.au/units/CITS1001/"),
+    ]
+
+    class_links_2002 = [
+        Link(name="LMS", url="http://teaching.csse.uwa.edu.au/units/CITS2002/"),
+        Link(name="CSSE Site", url="http://teaching.csse.uwa.edu.au/units/CITS2002/"),
+    ]
+
+    db.session.add_all(class_links_3403)
     cits3403 = Class(
         class_id="CITS3403",
         name="Agile Web Dev",
-        links=class_links,
+        links=class_links_3403,
     )
+    db.session.add(cits3403)
+
+    db.session.add_all(class_links_2401)
     cits2401 = Class(
         class_id="CITS2401",
         name="Python",
-        links=class_links,
+        links=class_links_2401,
     )
+    db.session.add(cits2401)
+
+    db.session.add_all(class_links_1001)
     cits1001 = Class(
         class_id="CITS1001",
         name="Java",
-        links=class_links,
+        links=class_links_1001,
     )
+    db.session.add(cits1001)
+
+    db.session.add_all(class_links_2002)
     cits2002 = Class(
         class_id="CITS2002",
         name="Systems",
-        links=class_links,
+        links=class_links_2002,
     )
-    classes = [cits3403, cits2401, cits1001, cits2002]
-    db.session.add_all(class_links)
-    db.session.add_all(classes)
-    print("CLASSES", classes)
+    db.session.add(cits2002)
 
     user = User(email="a@a.com", user_id="23030303", name="Test", role="student")
 
@@ -61,8 +83,6 @@ with app.app_context():
     user2.class_ids.append(cits3403)
     user2.class_ids.append(cits2401)
     db.session.commit()
-
-    print("users TEST", user.get_id(), user.class_ids, user2)
 
     notes = [
         Note(
@@ -94,5 +114,3 @@ with app.app_context():
     db.session.add_all(messages)
     db.session.add_all(notes)
     db.session.commit()
-
-    print("Db has been populated")

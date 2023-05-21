@@ -1,4 +1,4 @@
-from flask import make_response, request, session
+from flask import current_app, make_response, request, session
 from sqlalchemy import desc
 
 from app import db
@@ -6,7 +6,7 @@ from app.chat.utils import openai
 from app.models import Note
 
 from . import bp
-from flask import current_app
+
 
 @bp.route("/<class_id>", methods=["GET"])
 def get_notes(class_id):

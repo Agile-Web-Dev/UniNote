@@ -1,8 +1,9 @@
 from llama_index import QuestionAnswerPrompt
+
 from ..openai import openai
 from .base import Base
 
-QA_PROMPT_TMPL = '''
+QA_PROMPT_TMPL = """
 We have provided context information below.
 
 ---------------------
@@ -20,7 +21,8 @@ Do not use the word "context" when referring to the context. Instead, use the wo
 Again, you must indicate in every response whether you are using the context or not.
 End your answer with "(Using notes)" or "(Not using notes)".
 Given these instructions, please answer the following question: "{query_str}"
-'''
+"""
+
 
 class Ask(Base):
     def executor(room, args):
@@ -29,9 +31,7 @@ class Ask(Base):
 
         index = openai.get_index(room)
         QA_PROMPT = QuestionAnswerPrompt(QA_PROMPT_TMPL)
-        query_engine = index.as_query_engine(
-            text_qa_template=QA_PROMPT
-        )
+        query_engine = index.as_query_engine(text_qa_template=QA_PROMPT)
         response = query_engine.query(args)
         clean_response = response.response.strip()
         return clean_response

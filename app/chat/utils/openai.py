@@ -11,14 +11,14 @@ from llama_index import (
 class OpenAI:
     def __init__(self):
         self.indices = {}
-    
+
     def add_document(self, room, context):
         index_path = f"data/index/{room}"
 
         index = self.get_index(room)
         doc = Document(context)
         index.insert(doc)
-        
+
         self.indices["room"] = index
         index.storage_context.persist(persist_dir=index_path)
 
@@ -48,5 +48,6 @@ class OpenAI:
         if room not in self.indices:
             self.indices["room"] = self.load_index(room)
         return self.indices["room"]
+
 
 openai = OpenAI()

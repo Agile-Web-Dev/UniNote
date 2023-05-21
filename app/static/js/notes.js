@@ -36,7 +36,7 @@ jQuery(async () => {
     noteList.html(results.map(NoteItem).join(""));
   });
 
-  $(".note-item").on("click", function () {
+  noteList.on("click", ".note-item", function () {
     const title = $(this).data("bs-title");
     const content = $(this).data("bs-content");
     var myModal = $("#notes-modal");
@@ -94,6 +94,7 @@ jQuery(async () => {
       });
 
       $("#notes-list").prepend(populateNote(newNote));
+      notearr.push(newNote);
       clearNote();
     } catch (error) {
       console.error(error);

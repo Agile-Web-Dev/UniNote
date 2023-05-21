@@ -1,27 +1,23 @@
 {% extends "layouts/index.html" %}
 {% block main %}
-    <div class="container">
-        <div class="container" id="study-image">
-            <div class="row" class="info">
-                <div class="info-block">
-                    <h1>Welcome</h1>
-                    <p class="header">to UniNote</p>
-                    <p class="content">
-                        Introducing UniNote, The best place for class discussions and note taking. We encourage students to work together and collaborate among themselves.
-                        We know that keeping grasps of certain concepts can be difficult, so we have created a platform where students can ask questions and get answers from other students as well as tutors.
-                        Be yourself and be creative. Learn from others and teach others. We are all here to learn and grow together. Tutors and lecturers will be in the chatroom as well so feel free to ask them questions.
-                        We hope that you enjoy our platform and make it easier for you to learn and grow.
-                    </p>
-                    <a href="{{ url_for('main.login') }}">
-                        <button class="btn btn-primary" class="getStarted-btn">Get Started</button>
-                    </a>
-                </div>
-            </div>
-            <img src="../static/images/welcomeImage.png"
-                 alt="study image"
-                 width="630"
-                 height="450"/>
+    <div class="container d-flex p-4 h-100">
+            <div class="info-block">
+                <h1>Welcome</h1>
+                <p class="header">to UniNote</p>
+                <p class="content">
+                    Introducing UniNote, The best place for class discussions and note taking. We encourage students to work together and collaborate among themselves.
+                    We know that keeping grasps of certain concepts can be difficult, so we have created a platform where students can ask questions and get answers from other students as well as tutors.
+                    Be yourself and be creative. Learn from others and teach others. We are all here to learn and grow together. Tutors and lecturers will be in the chatroom as well so feel free to ask them questions.
+                    We hope that you enjoy our platform and make it easier for you to learn and grow.
+                </p>
+                <a href="{{ url_for('main.login') }}">
+                    <button class="btn btn-primary" class="getStarted-btn">Get Started</button>
+                </a>
         </div>
+        <img src="../static/images/welcomeImage.png"
+             alt="study image"
+             width="630"
+             height="450"/>
     </div>
 {% endblock main %}
 {% block style %}

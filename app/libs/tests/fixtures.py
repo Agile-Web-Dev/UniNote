@@ -34,7 +34,7 @@ def server():
 @pytest.fixture()
 def driver(server):
     chrome_options = Options()
-    # chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-web-security")
     with webdriver.Chrome(options=chrome_options) as driver:
         yield driver

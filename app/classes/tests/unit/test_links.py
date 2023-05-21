@@ -3,8 +3,8 @@ from pytest_unordered import unordered
 
 from app import db
 from app.libs.tests.fixtures import app, client
-from app.models import Class, Link
 from app.libs.tests.utils import ignored_keys, remove_keys
+from app.models import Class, Link
 
 
 @pytest.fixture

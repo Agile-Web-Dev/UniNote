@@ -10,12 +10,19 @@ from app import login
 
 @login.unauthorized_handler
 def login_required():
+    """
+    redirect to welcome page if user is not authenticated
+    """
     if request.blueprint == "main":
         return redirect(url_for("main.welcome"))
     abort(HTTPStatus.UNAUTHORIZED)
 
 
 def login_required_socket(f):
+    """
+    disconnect socket if user is not authenticated
+    """
+
     @functools.wraps(f)
     def wrapped(*args, **kwargs):
         if not current_user.is_authenticated:
@@ -26,6 +33,10 @@ def login_required_socket(f):
 
 
 def in_class(f):
+    """
+    check if user is in class
+    """
+
     @functools.wraps(f)
     def wrapped(*args, **kwargs):
         cids = [cid.class_id for cid in current_user.class_ids]

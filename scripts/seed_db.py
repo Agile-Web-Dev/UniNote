@@ -44,7 +44,6 @@ with app.app_context():
     classes = [cits3403, cits2401, cits1001, cits2002]
     db.session.add_all(class_links)
     db.session.add_all(classes)
-    print("CLASSES", classes)
 
     user = User(email="a@a.com", user_id="23030303", name="Test", role="student")
 
@@ -94,5 +93,3 @@ with app.app_context():
     db.session.add_all(messages)
     db.session.add_all(notes)
     db.session.commit()
-
-    print("Db has been populated")

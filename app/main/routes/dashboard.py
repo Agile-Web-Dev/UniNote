@@ -15,7 +15,7 @@ def dashboard():
     # get classes that the user is not in
     enrolled_classes = [u.class_id for u in user.class_ids]
     unenrolled_classes = Class.query.filter(~Class.class_id.in_(enrolled_classes)).all()
-    print(unenrolled_classes)
+
     return render_template(
         "dashboard.html",
         title="Dashboard",

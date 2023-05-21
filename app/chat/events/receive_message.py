@@ -30,11 +30,12 @@ def receive_message(message):
     if message["intent"] == "command":
         bot_res = command_handler(message["msg"], room)
 
-        msg = Message(created_by="UniNote Bot", class_id=room, content=bot_res)
+        msg = Message(
+            created_by="UniNote Bot", class_id=room, content=bot_res, is_bot=True
+        )
         db.session.add(msg)
         db.session.commit()
         serialised_message = msg.serialize()
-        serialised_message["isBot"] = True
         emit(
             "receiveMessage",
             serialised_message,

@@ -85,5 +85,5 @@ body {
 }
 
 .accordion-body {
-  height: 232px;
+  min-height: 232px;
 }

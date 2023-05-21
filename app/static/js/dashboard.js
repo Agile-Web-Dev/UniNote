@@ -1,3 +1,11 @@
+const enrolledHtml = `
+<div class="g-4 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center text-center align-self-center">
+  <a class="class-cell d-flex flex-column justify-content-center rounded p-2 text-decoration-none">
+    <h3></h3>
+    <p class="m-0"></p>
+  </a>
+</div>`
+
 const addClassEl = $(".add-class");
 
 addClassEl.on("click", async (e) => {
@@ -29,21 +37,17 @@ addClassEl.on("click", async (e) => {
     return;
   }
 
-  console.log(ancestor);
   ancestor.remove();
 
   const enrolledClassesEl = $("#enrolled-classes");
   enrolledClassesEl.empty();
   console.log(enrolledClasses.classes);
   for (const enrolledClass of enrolledClasses.classes) {
-    const newClassEl = $(`
-<div class="g-4 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center text-center align-self-center">
-  <a class="class-cell d-flex flex-column justify-content-center rounded p-2 text-decoration-none"
-    href="/${enrolledClass.class_id}/chatroom">
-    <h3>${enrolledClass.name}</h3>
-    <p class="m-0">${enrolledClass.class_id}</p>
-  </a>
-</div>`);
+    const newClassEl = $(enrolledHtml);
+    newClassEl.find("a").attr("href", `/${enrolledClass.class_id}/chatroom`);
+    newClassEl.find("h3").text(enrolledClass.name);
+    newClassEl.find("p").text(enrolledClass.class_id);
+
     enrolledClassesEl.append(newClassEl);
   }
 });

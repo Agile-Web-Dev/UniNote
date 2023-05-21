@@ -25,7 +25,6 @@ def setup(server):
             name="Jane Doe",
             email="hello@example.com",
             role="student",
-            # class_ids=classes, # add this when classes are filtered by user
         )
 
         notes = [
@@ -93,8 +92,12 @@ def test_inspect_note(driver: webdriver.Chrome, wait, setup):
 
     note_items[0].click()
 
-    wait.until(EC.text_to_be_present_in_element((By.ID, "notes-modal-title"), "My Mom"))
+    wait.until(
+        EC.text_to_be_present_in_element(
+            (By.ID, "notes-modal-title"), "Random thoughts"
+        )
+    )
 
-    assert driver.find_element(By.ID, "notes-modal-title").text == "My Mom"
+    assert driver.find_element(By.ID, "notes-modal-title").text == "Random thoughts"
 
-    assert driver.find_element(By.ID, "notes-modal-content").text == "Test content 0"
+    assert driver.find_element(By.ID, "notes-modal-content").text == "Test content"

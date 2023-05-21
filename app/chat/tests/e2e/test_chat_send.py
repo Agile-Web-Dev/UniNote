@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from app import db
 from app.libs.tests.fixtures import driver, server, wait
-from app.models import Class, User
+from app.models import Class, Message, User
 
 
 @pytest.fixture
@@ -16,6 +16,7 @@ def setup(server):
     with server.app_context():
         Class.query.delete()
         User.query.delete()
+        Message.query.delete()
 
         classes = [
             Class(name="Test Class", class_id="TEST123"),
@@ -27,7 +28,6 @@ def setup(server):
             name="Jane Doe",
             email="hello@example.com",
             role="student",
-            # class_ids=classes, # add this when classes are filtered by user
         )
 
         user.set_password("password")

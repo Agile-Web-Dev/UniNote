@@ -290,17 +290,20 @@ input[type="search"]::-webkit-search-cancel-button {
   border-radius: 9999px;
   font-size: 32px;
   color: var(--app-grey-100);
+  transition: transform 0.1s linear;
 }
 
 #nav-bar,
 .header-logo-container {
   max-width: 250px;
   min-width: 250px;
+  z-index: 5;
 }
 
 #note-bar {
   max-width: 400px;
   min-width: 400px;
+  z-index: 5;
 }
 
 @media (max-width: 575.98px) {
@@ -308,20 +311,15 @@ input[type="search"]::-webkit-search-cancel-button {
     display: inline-block;
   }
 
-  /* handled in app/static/js/app.js */
-
-  /* #nav-bar {
-    display: none;
-  } */
-
-  /* #note-bar {
-    display: none;
-  } */
+  #nav-bar {
+    position: absolute;
+  }
 }
 
 @media (max-width: 991.98px) {
   #note-bar {
-    display: none;
+    position: absolute;
+    right: 0;
   }
 
   #drawer-button-container-right {

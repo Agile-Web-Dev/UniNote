@@ -92,7 +92,11 @@ def test_inspect_note(driver: webdriver.Chrome, wait, setup):
 
     note_items[0].click()
 
-    wait.until(EC.text_to_be_present_in_element((By.ID, "notes-modal-title"), "Random thoughts"))
+    wait.until(
+        EC.text_to_be_present_in_element(
+            (By.ID, "notes-modal-title"), "Random thoughts"
+        )
+    )
 
     assert driver.find_element(By.ID, "notes-modal-title").text == "Random thoughts"
 

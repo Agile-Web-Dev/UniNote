@@ -15,6 +15,7 @@ $(window).on("resize", () => {
   resizeChatbox();
 });
 
+//setting up emoji picker on the chat bar
 const setup = () => {
   const pickerOptions = {
     theme: "dark",

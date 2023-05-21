@@ -25,7 +25,10 @@ def get_notes(class_id):
 # when user saves their notes
 @bp.route("", methods=["POST"])
 def post_notes():
-    """upload notes based on the classID into database"""
+    """
+    upload notes based on the classID into database
+    endpoint: /api/class/notes
+    """
 
     data = request.get_json()
 

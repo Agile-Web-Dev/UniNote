@@ -1,4 +1,4 @@
-"""empty message
+"""is bot nullable
 
 Revision ID: e57c98f6e82b
 Revises: cb16188a22d0

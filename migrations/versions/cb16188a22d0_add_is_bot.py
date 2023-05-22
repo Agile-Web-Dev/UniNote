@@ -1,4 +1,4 @@
-"""empty message
+"""add is_bot
 
 Revision ID: cb16188a22d0
 Revises: a5af8e414344

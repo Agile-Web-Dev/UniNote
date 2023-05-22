@@ -1,4 +1,4 @@
-"""empty message
+"""delete tags
 
 Revision ID: a5af8e414344
 Revises: 75a27385585d

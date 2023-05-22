@@ -116,14 +116,13 @@
   background: var(--app-grey-100);
 }
 
-#note-header {
-  color: var(--app-grey-0);
+#note-header, #note-content {
   background: var(--app-grey-600) !important;
 }
 
-#note-header:focus,
-#note-header:hover,
-#note-header:disabled {
+#note-header:focus, #note-content:focus,
+#note-header:hover, #note-content:hover,
+#note-header:disabled, #note-content:disabled {
   background-color: var(--app-grey-700) !important;
 }
 

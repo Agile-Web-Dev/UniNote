@@ -5,7 +5,6 @@ from app import db
 from app.auth.utils import in_class
 from app.classes.routes.classes import get_class_info
 from app.classes.routes.links import get_class_links
-from app.libs.filters import format_datetime
 from app.libs.processors import topbar
 from app.main.utils import get_default_links
 from app.models import Class, Message, load_user

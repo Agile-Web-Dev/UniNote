@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from uuid import uuid4
 
 from flask_login import UserMixin, current_user
@@ -12,6 +12,8 @@ def generate_uuid():
 
 
 class TimeMixin(object):
+    tzinfo = timezone(timedelta(hours=8))
+
     created_at = db.Column(db.DateTime, default=datetime.now)
     updated_at = db.Column(db.DateTime, default=datetime.now)
 

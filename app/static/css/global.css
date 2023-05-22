@@ -42,21 +42,20 @@ a {
 
 .btn-primary {
   border: none !important;
-  background-color: blueviolet!important;
+  background-color: blueviolet !important;
   color: #ffff;
   border-radius: 8px;
   border: none;
-  transition: 0.15s!important;
+  transition: 0.15s !important;
 }
 
-.btn-primary:active{
+.btn-primary:active {
   box-shadow: none !important;
   filter: brightness(85%) !important;
-
 }
 
 .btn-primary:hover {
-  background-color: var(--app-accent-highlight)!important;
+  background-color: var(--app-accent-highlight) !important;
 }
 
 .button-reset {
@@ -88,7 +87,8 @@ input[type="search"]::-webkit-search-cancel-button {
   filter: invert(1);
   transform: scale(1.7);
   border-radius: 50%;
-  background: url(https://icons.getbootstrap.com/assets/icons/x.svg) no-repeat 50% 50%;
+  background: url(https://icons.getbootstrap.com/assets/icons/x.svg) no-repeat
+    50% 50%;
 }
 
 /* width */
@@ -229,6 +229,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .header-logo-container h1 {
   color: var(--app-grey-0);
   margin: 0;
+  font-size: 42px;
 }
 
 .header-tab-item {
@@ -242,7 +243,6 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 0.7rem 1.2rem;
   margin: 0 1.5rem;
 }
-
 
 .header-tab-link {
   display: flex;
@@ -267,48 +267,83 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 0;
 }
 
+#drawer-button-container-left,
+#drawer-button-container-right {
+  display: none;
+  position: absolute;
+  background: none;
+  padding: 0;
+  width: fit-content;
+  top: 50%;
+}
+
+#drawer-button-container-left {
+  left: 6px;
+}
+
+#drawer-button-container-right {
+  right: 6px;
+}
+
+.drawer-button {
+  position: relative;
+  background: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  aspect-ratio: 1/1;
+  border-radius: 9999px;
+  font-size: 32px;
+  color: var(--app-grey-100);
+  transition: all 0.1s linear;
+  z-index: 99;
+}
+
 #nav-bar,
 .header-logo-container {
   max-width: 250px;
   min-width: 250px;
+  z-index: 5;
 }
 
+#nav-bar,
 #note-bar {
-  max-width: 400px;
-  min-width: 400px;
+  transition: max-width 0.1s linear;
 }
 
-@media (max-width: 575.98px) {
+/* must change this breakpoint in app.js aswell */
+@media (max-width: 999.98px) {
+  #drawer-button-container-left,
+  #drawer-button-container-right {
+    display: inline-block;
+    position: absolute;
+  }
+
+  .header-logo-container {
+    min-width: 120px;
+    max-width: 120px;
+  }
 
   #nav-bar,
-  .logout-btn {
-    display: none;
+  #note-bar {
+    position: absolute;
+    max-height: calc(100% - 65px);
   }
 
   #note-bar {
-    display: none;
-  }
-}
-
-@media (max-width: 991.98px) {
-  #note-bar {
-    display: none;
+    right: 0;
   }
 }
 
 @media (max-width: 1199.98px) {
-
   #nav-bar,
   .header-logo-container {
-    max-width: 120px;
-    min-width: 120px;
+    min-width: 250px;
+    max-width: 250px;
   }
 
-  .header-logo-container h1 {
-    font-size: 1.7rem;
-  }
-
-  .nav-item-icon {
-    font-size: 48px;
+  #note-bar {
+    min-width: 400px;
+    max-width: 400px;
   }
 }

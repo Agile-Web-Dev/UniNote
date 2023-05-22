@@ -5,13 +5,17 @@
       {% for nav_item in nav_items %}
         <li class="nav-item-container">
           <a href="{{ nav_item['url'] }}"
-             class="nav-item-icon-wrapper"
-             target="_blank">
+             class="nav-item-icon-wrapper">
             <i class="bi nav-item-icon {{ nav_item['icon'] or 'bi-link' }}"></i>
           </a>
-          <a href="{{ nav_item['url'] }}" target="_blank" class="nav-item-title">{{ nav_item["name"] }}</a>
+          <a href="{{ nav_item['url'] }}" class="nav-item-title">{{ nav_item["name"] }}</a>
         </li>
       {% endfor %}
     </ul>
   </nav>
+  <span id="drawer-button-container-left">
+    <button class="drawer-button">
+      <i class="bi bi-caret-right-fill"></i>
+    </button>
+  </span>
 {% endblock sidebarcontent %}

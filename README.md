@@ -25,6 +25,10 @@
 
 ## Project Overview
 
+UniNote is a chatroom that connects students, tutors and lecturers in a shared working space.
+This application hopes to encourage collaboration between students through chatrooms and shared notes.
+Additionally students are able to accelerate their learning by asking questions and discuss class topics with an integrated GPT bot. The bot is able to answer questions and provide summarised solutions based on the shared notes forum. This is packaged in an all-in-one platform that provides quick and easy access to everything a student needs in one place.
+
 ### Architecture
 
 This project uses a mix of client-side and server-side rendering via Jinja2 templates. Of course we try to use server-side rendering as much as possible to reduce load times and achieve a faster First Contentful Paint. However, we made some exceptions for the sake of a better development experience. In particular, the chatroom pages are rendered client-side with javascript making API calls to fetch all the message data. This is because the logic to render the messages are written in javascript and it would violate the Don't Repeat Yourself (DRY) principle to rewrite the logic in python.

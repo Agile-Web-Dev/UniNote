@@ -27,7 +27,7 @@
 
 UniNote is a chatroom that connects students, tutors and lecturers in a shared working space.
 This application hopes to encourage collaboration between students through chatrooms and shared notes.
-Additionally students are able to accelerate their learning by asking questions and discuss class topics with an integrated GPT bot. The bot is able to answer questions and provide summarised solutions based on the shared notes forum. All of this is packaged in an all-in-one platform that provides quick and easy access to everything a student needs in one place.
+Additionally students are able to accelerate their learning by asking questions and discuss class topics with an integrated GPT bot. The bot is able to answer questions and provide summarised solutions based on the shared notes forum. This is packaged in an all-in-one platform that provides quick and easy access to everything a student needs in one place.
 
 ### Architecture
 

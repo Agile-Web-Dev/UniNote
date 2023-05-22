@@ -109,6 +109,7 @@
 #chatbox {
   color: white;
   overflow: auto;
+  border: none;
   outline: none;
   padding: 10px;
   padding-right: 80px;

@@ -16,7 +16,7 @@ const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 const messageHtml = `
 <div class="message d-flex d-none gap-3">
   <div class="avatar-holder d-flex">
-    <img class="avatar" preload src="/static/images/placeholder_avatar.png"/></div>
+    <img class="avatar" preload src="/static/assets/placeholder_avatar.png"/></div>
   <div class="d-flex flex-column sender">
     <p class="d-flex mb-1">
       <span class="name fw-bold"></span>

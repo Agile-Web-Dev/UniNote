@@ -12,10 +12,12 @@ def generate_uuid():
 
 
 class TimeMixin(object):
-    tzinfo = timezone(timedelta(hours=8))
-
-    created_at = db.Column(db.DateTime, default=datetime.now(tzinfo))
-    updated_at = db.Column(db.DateTime, default=datetime.now(tzinfo))
+    created_at = db.Column(
+        db.DateTime, default=lambda: datetime.now(timezone(timedelta(hours=8)))
+    )
+    updated_at = db.Column(
+        db.DateTime, default=lambda: datetime.now(timezone(timedelta(hours=8)))
+    )
 
 
 user_class = db.Table(

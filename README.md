@@ -33,7 +33,7 @@ Additionally students are able to accelerate their learning by asking questions 
 
 This project uses a mix of client-side and server-side rendering via Jinja2 templates. Of course we try to use server-side rendering as much as possible to reduce load times and achieve a faster First Contentful Paint. However, we made some exceptions for the sake of a better development experience. In particular, the chatroom pages are rendered client-side with javascript making API calls to fetch all the message data. This is because the logic to render the messages are written in javascript and it would violate the Don't Repeat Yourself (DRY) principle to rewrite the logic in python.
 
-The backend architecture closely resembles that of Django, where each feature is organised into an app. The motivation behind this design choice is to improve the modularity of the codebase and to make it easier to maintain and extend. It allows tests to be written for each feature in a more isolated fashion and again, improved modularity.
+The backend architecture closely resembles that of Django, where each feature is organised into an app. The motivation behind this design choice is to improve the modularity of the codebase and to make it easier to maintain and extend. It allows tests to be written for each feature in a more isolated fashion and again, improves modularity.
 
 All apps contain a `routes` folder which makes extensive use of flask blueprints to route everything together. All apps attempt to follow the RESTful API design pattern, with the exception of the `main` app which is used for serving the Jinja2 templates as well as some authentication endpoints which perform redirects that are not RESTful.
 
@@ -134,3 +134,5 @@ This project is deployed to [Railway](https://railway.app), an alternative to He
 The deplyment uses a Procfile to specify the commands to run during deployment. The production server is run using gunicorn, which servers both the Flask server and static files as well as bootstraps the socket.io worker with gevent-websocket.
 
 ## Contributions
+
+As our commit log is very large, we have included in a separate file called `commits.txt`. It can be viewed [here](commits.txt).

@@ -1,0 +1,3264 @@
+*   commit efd678d5fd0704dce921199ce8c201c184dda7b7 (HEAD -> main, origin/main)
+|\  Merge: 263c4d3 c738c61
+| | Author: Jack Sun <jsun1590@gmail.com>
+| | Date:   Mon May 22 11:38:43 2023 +0800
+| | 
+| |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP
+| | 
+| * commit c738c61ef35fb3191a622822a2e6b35f4f6e56a2
+| | Author: bobojeager <danishhilmann98@gmail.com>
+| | Date:   Mon May 22 11:33:26 2023 +0800
+| | 
+| |     added project overview
+| |   
+| *   commit 1d64e79068d03a00fdfb5d4a5819a062d75118f3
+| |\  Merge: 17a1bfb a9d8812
+| | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | Date:   Mon May 22 11:31:30 2023 +0800
+| | | 
+| | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP
+| | | 
+| * | commit 17a1bfb24c9ffa889f134e98336f5923a5811639
+| | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | Date:   Mon May 22 11:30:49 2023 +0800
+| | | 
+| | |     added project overview
+| | | 
+* | | commit 263c4d35f4a217c8e14c7b25f4c67fb92af25f99
+| |/  Author: Jack Sun <jsun1590@gmail.com>
+|/|   Date:   Mon May 22 11:38:21 2023 +0800
+| |   
+| |       fix timezone
+| | 
+* | commit a9d881212ac5d5400fa01665dc8c34b1f6bdaa8b
+| | Author: Jack Sun <jsun1590@gmail.com>
+| | Date:   Mon May 22 11:27:04 2023 +0800
+| | 
+| |     remove new tab
+| | 
+* | commit 26713af001a2b7de2a7f4cdbb72f4006eb7d164e
+| | Author: Jack Sun <jsun1590@gmail.com>
+| | Date:   Mon May 22 11:24:29 2023 +0800
+| | 
+| |     format
+| |   
+* |   commit f0e9489b25cbd23c80188848871385d35ce2c133
+|\ \  Merge: 07b53ab b3acfda
+| | | Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| | | Date:   Mon May 22 11:22:24 2023 +0800
+| | | 
+| | |     Merge pull request #44 from Agile-Web-Dev/migrations
+| | |     
+| | |     Migrations
+| | | 
+| * | commit b3acfda15e45107beb6603d451960adb8af2e035 (origin/migrations, migrations)
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Mon May 22 11:20:42 2023 +0800
+| | | 
+| | |     timezone fix
+| | | 
+| * | commit e6b72e36cbe4c508127d682bcdc841c4f4a625fc
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Mon May 22 11:16:45 2023 +0800
+| | | 
+| | |     update migrations
+| | |   
+* | |   commit 07b53abc80af8e4d0cf209be839e298ce4f40363
+|\ \ \  Merge: 705fdd3 079261f
+| |_|/  Author: Dylan To <19729435+dct0@users.noreply.github.com>
+|/| |   Date:   Mon May 22 11:20:35 2023 +0800
+| | |   
+| | |       Merge pull request #41 from Agile-Web-Dev/mobile-sidebar
+| | |       
+| | |       Mobile sidebar
+| | | 
+| * | commit 079261f3bf02b1f0f24810b74c59b92beb5c0a67
+| | | Author: Dylan To <dylan.to@hotmail.com>
+| | | Date:   Mon May 22 11:19:38 2023 +0800
+| | | 
+| | |     Increase breakpoint, remove header responsiveness
+| | |   
+| * |   commit 99478317b54ceffcfcc3b3983cfde53baf324df2 (origin/mobile-sidebar, mobile-sidebar)
+| |\ \  Merge: d890814 756d82d
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Mon May 22 10:03:34 2023 +0800
+| | | | 
+| | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into mobile-sidebar
+| | | |   
+| * | |   commit d89081476c33af833d1d40aef974a814f6757960
+| |\ \ \  Merge: a920a97 8c9d032
+| | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | Date:   Mon May 22 09:36:28 2023 +0800
+| | | | | 
+| | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into mobile-sidebar
+| | | | |   
+| * | | |   commit a920a97b09bbe0e829f5e2307fbac4612770a368
+| |\ \ \ \  Merge: 354b826 9a37641
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Mon May 22 01:47:49 2023 +0800
+| | | | | | 
+| | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into mobile-sidebar
+| | | | | |   
+| * | | | |   commit 354b826d2e6f214e97c97afcb9b3ec21fe403d9e
+| |\ \ \ \ \  Merge: 8116e54 9d7ca7d
+| | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | Date:   Mon May 22 00:54:25 2023 +0800
+| | | | | | | 
+| | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into mobile-sidebar
+| | | | | | | 
+| * | | | | | commit 8116e54cf972ff5370dd0914ec013a1833c68d0f
+| | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | Date:   Mon May 22 00:48:26 2023 +0800
+| | | | | | | 
+| | | | | | |     FIx sttyling
+| | | | | | |   
+| * | | | | |   commit e07c41332839a60db03279d5deaa218cb77701aa
+| |\ \ \ \ \ \  Merge: 9c649a5 ebcca65
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Mon May 22 00:48:19 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into mobile-sidebar
+| | | | | | | | 
+| * | | | | | | commit 9c649a5f1e27da6da254ac2e3d3c0f2f2a619913
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Mon May 22 00:38:43 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Sidebar drawers
+| | | | | | | | 
+| * | | | | | | commit 7115aa525f7657619b8870c81be4850ad3203745
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Sun May 21 21:54:06 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Fix notebar responsiveness
+| | | | | | | | 
+| * | | | | | | commit 49c7e9970f35a43e735d2e0841d96b4a75277d88
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Sun May 21 21:16:44 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Increase e2e timeout
+| | | | | | | |   
+| * | | | | | |   commit 21c94feabc37d7d0718a3ebc3a29d171a935f136
+| |\ \ \ \ \ \ \  Merge: 338d1e2 48274f3
+| | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | Date:   Sun May 21 21:14:12 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into mobile-sidebar
+| | | | | | | | |   
+| * | | | | | | |   commit 338d1e2f9847a324c03d08ad6bab6e1a91cf831e
+| |\ \ \ \ \ \ \ \  Merge: 5257be5 3920b71
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Sun May 21 17:03:48 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into mobile-sidebar
+| | | | | | | | | | 
+| * | | | | | | | | commit 5257be50e5761ad2035518966dadbe68f9804dcf
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Sun May 21 01:08:49 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Working left-drawer
+| | | | | | | | | | 
+* | | | | | | | | | commit 705fdd35d55945a0bdfe16fdf427f8cf20e19967
+| |_|_|_|_|_|_|_|/  Author: bobojeager <danishhilmann98@gmail.com>
+|/| | | | | | | |   Date:   Mon May 22 11:08:36 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       open in new tab
+| | | | | | | | |   
+* | | | | | | | |   commit fd17ca9192d94f7ff3f1ddf43f9ab4adfac2f24a
+|\ \ \ \ \ \ \ \ \  Merge: 756d82d 33ff2af
+| |_|_|_|_|_|_|_|/  Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+|/| | | | | | | |   Date:   Mon May 22 10:55:45 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge pull request #43 from Agile-Web-Dev/documentation
+| | | | | | | | |       
+| | | | | | | | |       Documentation
+| | | | | | | | | 
+| * | | | | | | | commit 33ff2af475a963bcc01f55ef9b113a63939fbd98 (origin/documentation, documentation)
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Mon May 22 10:52:39 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     disabled styling
+| | | | | | | | | 
+| * | | | | | | | commit bdcff993150b03f4bdd81bc75ccb434ec56cb443
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Mon May 22 10:49:19 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     fix notes search
+| | | | | | | | | 
+| * | | | | | | | commit be5a305d74d6102d429cff4f96daf0cd063cca21
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Mon May 22 10:26:49 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     openai hotfix
+| | | | | | | | |   
+| * | | | | | | |   commit bf4cac85cfe7510bbc5c81878b111e345330877c
+| |\ \ \ \ \ \ \ \  Merge: 46ca74d 756d82d
+| |/ / / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | | |   Date:   Mon May 22 10:04:31 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into documentation
+| | | | | | | | | 
+* | | | | | | | | commit 756d82dd74bd5c45a23ef4c583217630e2ca26bb
+| |_|_|_|_|_|_|/  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | |   Date:   Mon May 22 10:02:17 2023 +0800
+| | | | | | | |   
+| | | | | | | |       search hotfix
+| | | | | | | | 
+* | | | | | | | commit 8c9d032f71d565dc1d8286c27160f5aa166ebec6
+| |_|_|_|_|_|/  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | |   Date:   Mon May 22 09:35:04 2023 +0800
+| | | | | | |   
+| | | | | | |       openai hotfix
+| | | | | | |   
+* | | | | | |   commit 9a37641fd431900cc6463c12d70bbbce12b8fa2d
+|\ \ \ \ \ \ \  Merge: a9f9127 7810084
+| | | | | | | | Author: Dylan To <19729435+dct0@users.noreply.github.com>
+| | | | | | | | Date:   Mon May 22 01:47:05 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Merge pull request #37 from Agile-Web-Dev/more-e2e-selenium
+| | | | | | | |     
+| | | | | | | |     More e2e selenium
+| | | | | | | |   
+| * | | | | | |   commit 78100842ec92deb18a481da763c4582ff2489091 (origin/more-e2e-selenium, more-e2e-selenium)
+| |\ \ \ \ \ \ \  Merge: b711c63 e47718b
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Mon May 22 01:44:31 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Merge branch 'more-e2e-selenium' of https://github.com/Agile-Web-Dev/AGWP into more-e2e-selenium
+| | | | | | | | | 
+| | * | | | | | | commit e47718baf14f2a3a2c04b8ac2c3818e5041db6a1
+| | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | Date:   Mon May 22 01:27:35 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Try quit driver
+| | | | | | | | |   
+| * | | | | | | |   commit b711c634c48465fd1d6cca35de90cc9cda9580b4
+| |\ \ \ \ \ \ \ \  Merge: 62fd7c2 a9f9127
+| |/ / / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | | |   Date:   Mon May 22 01:44:15 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into more-e2e-selenium
+| | | | | | | | | 
+| * | | | | | | | commit 62fd7c2d5679174351ada5f77f0f34b6ec31f805
+| |/ / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | |   Date:   Mon May 22 01:43:49 2023 +0800
+| | | | | | | |   
+| | | | | | | |       fix tests
+| | | | | | | | 
+| * | | | | | | commit f5d8b23525b44315ef2a0b4352c4018b1f360128
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Mon May 22 00:58:50 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Headless
+| | | | | | | |   
+| * | | | | | |   commit e28c6acf0debb3f2c81b0b0d70d3e10fa5516039
+| |\ \ \ \ \ \ \  Merge: 1e6c2e4 9d7ca7d
+| | | |_|_|_|_|/  Author: Dylan To <dylan.to@hotmail.com>
+| | |/| | | | |   Date:   Mon May 22 00:53:41 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into more-e2e-selenium
+| | | | | | | | 
+| * | | | | | | commit 1e6c2e4019b4e165a88fb6d7e0888eb9fe804a15
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Mon May 22 00:50:55 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Fix image path
+| | | | | | | |   
+| * | | | | | |   commit b410db867e5230c3555445d910a95841fcb0075b
+| |\ \ \ \ \ \ \  Merge: da6306e fa3c9e9
+| | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | Date:   Mon May 22 00:50:42 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Merge branch 'more-e2e-selenium' of https://github.com/Agile-Web-Dev/AGWP into more-e2e-selenium
+| | | | | | | | | 
+| | * | | | | | | commit fa3c9e9e1556fb4e6744d8168b9bdd8bea3be511
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Mon May 22 00:04:50 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     formatting
+| | | | | | | | | 
+| | * | | | | | | commit 2619fe5e4bd00b79bda90c420dfc6c5b3c1f827d
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sun May 21 22:55:14 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     fix most tests
+| | | | | | | | |   
+| * | | | | | | |   commit da6306ef8d676d60d07da4b1db14861572da6239
+| |\ \ \ \ \ \ \ \  Merge: f2f65e7 ebcca65
+| | |/ / / / / / /  Author: Dylan To <dylan.to@hotmail.com>
+| |/| | | | | | /   Date:   Mon May 22 00:50:31 2023 +0800
+| | | |_|_|_|_|/    
+| | |/| | | | |         Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into more-e2e-selenium
+| | | | | | | | 
+| * | | | | | | commit f2f65e72d05c8e423203f407640fa16b0bb6843e
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Sun May 21 21:17:10 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Increase e2e timeout
+| | | | | | | | 
+| * | | | | | | commit 56e2334869a912ea271fa45fafe44a9db518ab32
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Sun May 21 21:12:25 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Fix imports
+| | | | | | | | 
+| * | | | | | | commit 50f229183f7bf05490c7968500a4e36dd3dd1bbc
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Sun May 21 21:09:15 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Prevent race condition?
+| | | | | | | | 
+| * | | | | | | commit ecd08a124d7c8dfd97c3d227736d97591b6e53c9
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Sun May 21 21:03:33 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Add chat_search test
+| | | | | | | | 
+| * | | | | | | commit b325e2dbdd3f31ff95232e2d15d7c7f868964a84
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Sun May 21 20:40:24 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Fix tests + more note e2e tests
+| | | | | | | | 
+| * | | | | | | commit a7a029a9567307607b26bb39d879df707a265ad9
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Sun May 21 20:01:02 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Fix image path
+| | | | | | | | 
+| * | | | | | | commit d96a9ef11e042850f1b001ef54d21631a2b766e8
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Sun May 21 20:00:57 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Add note test
+| | | | | | | |   
+| * | | | | | |   commit 064034e31f2eff99264a69b2cdf042fd87145051
+| |\ \ \ \ \ \ \  Merge: fd33112 48274f3
+| | | |_|_|_|_|/  Author: Dylan To <dylan.to@hotmail.com>
+| | |/| | | | |   Date:   Sun May 21 18:54:18 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into more-e2e-selenium
+| | | | | | | | 
+| * | | | | | | commit fd3311295df898ba3062e631133151242b52945e
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Sun May 21 18:09:59 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Pass remaining tests + disable web security
+| | | | | | | | 
+| * | | | | | | commit 4f37edf3c09eb36fd9f0c6a541079d84ecaa978a
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Sun May 21 17:59:30 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Fix selenium testing with socketio
+| | | | | | | | 
+| * | | | | | | commit 351d62e2b2df9a3d61d1dca864182cae963e0d5c
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Sat May 20 23:25:29 2023 +0800
+| | | | | | | | 
+| | | | | | | |     I have no idea why this doesn't work
+| | | | | | | | 
+| * | | | | | | commit 5230837f794f3b5f8cbab2a47f2c93724528e17c
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Sat May 20 20:19:44 2023 +0800
+| | | | | | | | 
+| | | | | | | |     A broken login_as function
+| | | | | | | | 
+| | | | | * | | commit 46ca74d6cd06fb6ca5877aca07649367e5eb24a9
+| | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | Date:   Mon May 22 01:23:08 2023 +0800
+| | | | | | | | 
+| | | | | | | |     update docs
+| | | | | | | |   
+| | | | | * | |   commit f2f40a835ae0b5afd2a8e8fb55c872bbb9d354a1
+| | | | | |\ \ \  Merge: c7df10e a9f9127
+| |_|_|_|_|/ / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | |   Date:   Mon May 22 01:01:40 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into documentation
+| | | | | | | |   
+* | | | | | | |   commit a9f91279c2625faf2119ef3d0b57fbc28c2195f2
+|\ \ \ \ \ \ \ \  Merge: 53e23ae 9d7ca7d
+| | |_|_|/ / / /  Author: bobojeager <danishhilmann98@gmail.com>
+| |/| | | | | |   Date:   Mon May 22 00:57:05 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP
+| | | | | | | |   
+| * | | | | | |   commit 9d7ca7d1d0d0598d72a98e74e32369ae0f63941e
+| |\ \ \ \ \ \ \  Merge: ebcca65 881e9e8
+| | |_|_|/ / / /  Author: Danish Hilmann <107915472+BoboJeager@users.noreply.github.com>
+| |/| | | | | |   Date:   Mon May 22 00:52:13 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge pull request #42 from Agile-Web-Dev/delete-redundant-functionality
+| | | | | | | |       
+| | | | | | | |       Delete redundant functionality
+| | | | | | | |   
+| | * | | | | |   commit 881e9e8403448fca264a79b25a8cec97b023c2b0 (origin/delete-redundant-functionality)
+| | |\ \ \ \ \ \  Merge: 5a6a03a 0e4267d
+| | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | Date:   Mon May 22 00:48:35 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Merge branch 'add_comments' of https://github.com/Agile-Web-Dev/AGWP into delete-redundant-functionality
+| | | | | | | | | 
+| | | * | | | | | commit 0e4267d80b0f84c88942181455664e154f33985f (origin/add_comments)
+| | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | Date:   Mon May 22 00:46:18 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     fixed linting
+| | | | | | | | | 
+| | * | | | | | | commit 5a6a03a5c5ec5c6d5126606350bd23729c35b3f8
+| | |/ / / / / /  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | |   Date:   Mon May 22 00:43:38 2023 +0800
+| | | | | | | |   
+| | | | | | | |       deleted menu for redundancy
+| | | | | | | | 
+| | * | | | | | commit 3413615690d8a1a28133f00aeb2e448333aaa87c
+| | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | Date:   Mon May 22 00:36:35 2023 +0800
+| | | | | | | | 
+| | | | | | | |     added comments to utils in auth
+| | | | | | | | 
+| | * | | | | | commit 30357ca52ca757093c23ba3d39024add841ae6b4
+| | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | Date:   Mon May 22 00:35:11 2023 +0800
+| | | | | | | | 
+| | | | | | | |     add comments to code
+| | | | | | | |   
+| * | | | | | |   commit ebcca654bed264f631327ca2f17af4f95a35c4f8
+| |\ \ \ \ \ \ \  Merge: d8597a6 ed3bfe7
+| | | | | | | | | Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| | | | | | | | | Date:   Mon May 22 00:01:24 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Merge pull request #39 from Agile-Web-Dev/w3
+| | | | | | | | |     
+| | | | | | | | |     w3 compliance
+| | | | | | | | | 
+| | * | | | | | | commit ed3bfe772dba9eaf7bde81858d9078a5fe32883c (origin/w3, w3)
+| |/ / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | |   Date:   Mon May 22 00:00:48 2023 +0800
+| | | | | | | |   
+| | | | | | | |       w3 compliance
+| | | | | | | | 
+* | | | | | | | commit 53e23ae5a3f84e2acaaca06f51542e9d462f27e9
+| |/ / / / / /  Author: bobojeager <danishhilmann98@gmail.com>
+|/| | | | | |   Date:   Mon May 22 00:56:59 2023 +0800
+| | | | | | |   
+| | | | | | |       delete invisible button
+| | | | | | | 
+| | | | * | | commit c7df10e125aa48f594e45065cdab71596ebade22
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Mon May 22 00:59:47 2023 +0800
+| | | | | | | 
+| | | | | | |     fix tests
+| | | | | | | 
+| | | | * | | commit a7f03556dc6e79ef4172135415b32525b656cfb7
+| | |_|/ / /  Author: Jack Sun <jsun1590@gmail.com>
+| |/| | | |   Date:   Mon May 22 00:58:52 2023 +0800
+| | | | | |   
+| | | | | |       refactor + docs
+| | | | | | 
+| * | | | | commit d8597a608d07088583cc858befdb23e41f0841e1
+|/ / / / /  Author: Jack Sun <jsun1590@gmail.com>
+| | | | |   Date:   Sun May 21 23:24:40 2023 +0800
+| | | | |   
+| | | | |       welcome styling
+| | | | |   
+* | | | |   commit 6ec9435fe0c6fc927ba3778296a9e75074f6fa85
+|\ \ \ \ \  Merge: bfd1acf 5f7f743
+| | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | Date:   Sun May 21 23:04:18 2023 +0800
+| | | | | | 
+| | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP
+| | | | | |   
+| * | | | |   commit 5f7f7433da4e45a41611ee1fda8a8478de26cff4
+| |\ \ \ \ \  Merge: 178ef2d dd7381c
+| | | | | | | Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| | | | | | | Date:   Sun May 21 22:55:41 2023 +0800
+| | | | | | | 
+| | | | | | |     Merge pull request #38 from Agile-Web-Dev/bot-v3
+| | | | | | |     
+| | | | | | |     Bot v3
+| | | | | | | 
+| | * | | | | commit dd7381c237901d75863086fb941860eb0802950b (origin/bot-v3, bot-v3)
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Sun May 21 21:59:37 2023 +0800
+| | | | | | | 
+| | | | | | |     update requirements
+| | | | | | | 
+| | * | | | | commit ad6390cbcb47cf7c4330a725ad1f7a695584a45c
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Sun May 21 21:57:27 2023 +0800
+| | | | | | | 
+| | | | | | |     format
+| | | | | | | 
+| | * | | | | commit 0cfde2521b27b9d1788e26fc6eaeb648b1362ac8
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Sun May 21 21:57:04 2023 +0800
+| | | | | | | 
+| | | | | | |     fix test
+| | | | | | | 
+| | * | | | | commit e077823c6d0ddab45f2eb434924bee94b434cdd0
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Sun May 21 21:45:59 2023 +0800
+| | | | | | | 
+| | | | | | |     format
+| | | | | | |   
+| | * | | | |   commit f88e028c630b68686dc28cd7db7699ddd16b4b2c
+| | |\ \ \ \ \  Merge: 259112c 178ef2d
+| | |/ / / / /  Author: Jack Sun <jsun1590@gmail.com>
+| |/| | | | |   Date:   Sun May 21 21:44:44 2023 +0800
+| | | | | | |   
+| | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into bot-v3
+| | | | | | | 
+| | * | | | | commit 259112ced4595b33e9d7389362ef0234c1982931
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Sun May 21 21:43:45 2023 +0800
+| | | | | | | 
+| | | | | | |     fix context
+| | | | | | | 
+| | * | | | | commit 8ac6b4add6cae514650947546eaf1e2370e69c74
+| | | |_|_|/  Author: Jack Sun <jsun1590@gmail.com>
+| | |/| | |   Date:   Sun May 21 21:37:08 2023 +0800
+| | | | | |   
+| | | | | |       add chatgpt notes
+| | | | | | 
+* | | | | | commit bfd1acfb1d59e9a7b132f031351507d18bed1f75
+|/ / / / /  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | |   Date:   Sun May 21 23:03:58 2023 +0800
+| | | | |   
+| | | | |       change button text to white
+| | | | | 
+* | | | | commit 178ef2d80a918b9d9824990fa6209836cb307305
+| |_|/ /  Author: bobojeager <danishhilmann98@gmail.com>
+|/| | |   Date:   Sun May 21 21:32:56 2023 +0800
+| | | |   
+| | | |       delete redundant code
+| | | |   
+* | | |   commit 48274f3a5d73bc324af7f2ad9dff00c4c0489f94
+|\ \ \ \  Merge: 8f7075a 6f0239a
+| | | | | Author: Danish Hilmann <107915472+BoboJeager@users.noreply.github.com>
+| | | | | Date:   Sun May 21 17:58:57 2023 +0800
+| | | | | 
+| | | | |     Merge pull request #35 from Agile-Web-Dev/link-bugfix
+| | | | |     
+| | | | |     Link bugfix
+| | | | | 
+| * | | | commit 6f0239af9d350cb5b626c8609bd2ed65c0e092ff
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Sun May 21 17:48:10 2023 +0800
+| | | | | 
+| | | | |     fixing links
+| | | | | 
+* | | | | commit 8f7075a95803d1bae918089d0ab73cdc682a8751
+|\| | | | Merge: 3920b71 39017b5
+| |/ / /  Author: Danish Hilmann <107915472+BoboJeager@users.noreply.github.com>
+|/| | |   Date:   Sun May 21 17:58:37 2023 +0800
+| | | |   
+| | | |       Merge pull request #36 from Agile-Web-Dev/removing-todoandPrint
+| | | |       
+| | | |       Removing todoand print
+| | | | 
+| * | | commit 39017b59f0394bd94f647a0fcb16834318130015
+| | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | Date:   Sun May 21 17:10:58 2023 +0800
+| | | | 
+| | | |     removed all instance of print/todos
+| | | |   
+| * | |   commit 90f4ee27666f16cf4716c143adaf9c732846b844
+| |\ \ \  Merge: 4433ed3 3920b71
+| |/ / /  Author: bobojeager <danishhilmann98@gmail.com>
+|/| | |   Date:   Sun May 21 16:54:14 2023 +0800
+| | | |   
+| | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into homepage-responsiveness
+| | | |   
+* | | |   commit 3920b71742e5b0dae9699a791f2a0030530d222f
+|\ \ \ \  Merge: 0fdd51e 8b6599c
+| | | | | Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| | | | | Date:   Sun May 21 16:51:31 2023 +0800
+| | | | | 
+| | | | |     Merge pull request #34 from Agile-Web-Dev/chatbot-v2
+| | | | |     
+| | | | |     WIP chatbot improvements
+| | | | | 
+| * | | | commit 8b6599cbe2540999181fcf217f39c480fdb3c419 (origin/chatbot-v2, chatbot-v2)
+| | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | Date:   Sun May 21 16:47:15 2023 +0800
+| | | | | 
+| | | | |     timestamp
+| | | | |   
+| * | | |   commit bda25f84accda82490b501b517407a3cbc1fe6e5
+| |\ \ \ \  Merge: ce69430 0fdd51e
+| |/ / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | |   Date:   Sun May 21 15:47:21 2023 +0800
+| | | | |   
+| | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into chatbot-v2
+| | | | |   
+* | | | |   commit 0fdd51ec56ca766aac9cba45722cbe12e0ac3132
+|\ \ \ \ \  Merge: 53eb956 1708a66
+| | | | | | Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| | | | | | Date:   Sun May 21 15:47:11 2023 +0800
+| | | | | | 
+| | | | | |     Merge pull request #33 from Agile-Web-Dev/refactor-searchbar-styling
+| | | | | |     
+| | | | | |     Refactor searchbar stylings
+| | | | | | 
+| | * | | | commit ce694309e83e19e39f558bd98aaa38d4bc106fbf
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sun May 21 15:45:13 2023 +0800
+| | | | | | 
+| | | | | |     fix search
+| | | | | |   
+| | * | | |   commit 763b25d11535a01b39b594cd55b81730ae2af57e
+| | |\ \ \ \  Merge: bbc6147 1708a66
+| | |/ / / /  Author: Jack Sun <jsun1590@gmail.com>
+| |/| | | |   Date:   Sun May 21 15:14:13 2023 +0800
+| | | | | |   
+| | | | | |       Merge branch 'refactor-searchbar-styling' of https://github.com/Agile-Web-Dev/AGWP into chatbot-v2
+| | | | | | 
+| * | | | | commit 1708a66c1bd8a16f619cfae123c807c84461fe8f (origin/refactor-searchbar-styling)
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Sun May 21 01:07:39 2023 -0500
+| | | | | | 
+| | | | | |     Align action group
+| | | | | | 
+| * | | | | commit e67dfb85eb0aad8d5ec0f06d5115925441300457
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Sun May 21 01:04:40 2023 -0500
+| | | | | | 
+| | | | | |     Fix chatbox margin
+| | | | | |   
+| * | | | |   commit 0a4f08ecd180fa6acdf67ae14c41611377d075c8
+| |\ \ \ \ \  Merge: 680ffb0 53eb956
+| |/ / / / /  Author: Dylan To <dylan.to@hotmail.com>
+|/| | | | |   Date:   Sun May 21 01:03:30 2023 -0500
+| | | | | |   
+| | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into refactor-searchbar-styling
+| | | | | | 
+| * | | | | commit 680ffb07e32bb57295539b5db6dcb3370df34317
+| | |_|/ /  Author: Dylan To <dylan.to@hotmail.com>
+| |/| | |   Date:   Sat May 20 23:59:02 2023 +0800
+| | | | |   
+| | | | |       Refactor searchbar stylings
+| | | | | 
+| | * | | commit bbc6147f1abc8e142abf453b8e97961931adaa64
+| | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | Date:   Sun May 21 15:06:49 2023 +0800
+| | | | | 
+| | | | |     fix search button
+| | | | | 
+| | * | | commit 879188f0f1d3c5f77f30078ceba32a41aff32881 (refactor-searchbar-styling)
+| | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | Date:   Sun May 21 14:50:58 2023 +0800
+| | | | | 
+| | | | |     style chatroom
+| | | | | 
+| | * | | commit e1cf1997253c586ee802f838af2839d8755beea9
+| | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | Date:   Sun May 21 14:32:19 2023 +0800
+| | | | | 
+| | | | |     responsive auth pages
+| | | | | 
+| | * | | commit da5702c95967579c0addfbc904e065c68625f7e2
+| |/ / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | |   Date:   Sun May 21 14:20:04 2023 +0800
+| | | |   
+| | | |       responsive dashboard
+| | | | 
+* | | | commit 53eb956fcd0e2923b0fc92bcce021c8b2901051d
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Sun May 21 13:27:33 2023 +0800
+| | | | 
+| | | |     hotfix remove sortable
+| | | | 
+* | | | commit a62178517408069379aeedc244347336173062ea
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Sun May 21 13:20:40 2023 +0800
+| | | | 
+| | | |     tags removal hotfix
+| | | | 
+* | | | commit df042cc8d6c7e6e0d7a86bc1e09d900e83e7c86e (origin/select-classes, select-classes)
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Sun May 21 01:39:08 2023 +0800
+| | | | 
+| | | |     format
+| | | |   
+* | | |   commit 6d92197779666b372bca1453ad938c596ea87b89
+|\ \ \ \  Merge: 9c94725 4c4376e
+| | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | Date:   Sun May 21 01:38:31 2023 +0800
+| | | | | 
+| | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into select-classes
+| | | | |   
+| * | | |   commit 4c4376ed62dc9c655900b60067c25754020afdc7
+| |\ \ \ \  Merge: c6c6a99 890e9e9
+| | | | | | Author: Danish Hilmann <107915472+BoboJeager@users.noreply.github.com>
+| | | | | | Date:   Sun May 21 00:26:55 2023 +0800
+| | | | | | 
+| | | | | |     Merge pull request #32 from Agile-Web-Dev/remove-tags
+| | | | | |     
+| | | | | |     Remove tags
+| | | | | | 
+* | | | | | commit 9c94725f5867df47a5e950cec9f759d355b009d1
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sun May 21 01:38:23 2023 +0800
+| | | | | | 
+| | | | | |     add classes
+| | | | | | 
+* | | | | | commit dbf13393bae3bde297d9ddd3a8bf3ed517907599
+|\| | | | | Merge: 4872948 c6c6a99
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sun May 21 00:10:16 2023 +0800
+| | | | | | 
+| | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into select-classes
+| | | | | | 
+* | | | | | commit 4872948ae287577632dcbb61762cfef07bc775f9 (homepag)
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 23:49:54 2023 +0800
+| | | | | | 
+| | | | | |     styling
+| | | | | | 
+* | | | | | commit 7cfcddbb4b42d6505fb52a22f6d754013ede3a2c
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 21:55:23 2023 +0800
+| | | | | | 
+| | | | | |     format
+| | | | | |   
+* | | | | |   commit 5f7174a8af973a016a598e7b3a76e4f1dece7202
+|\ \ \ \ \ \  Merge: 574df53 94d6445
+| | |_|_|_|/  Author: Jack Sun <jsun1590@gmail.com>
+| |/| | | |   Date:   Sat May 20 21:53:01 2023 +0800
+| | | | | |   
+| | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into select-classes
+| | | | | | 
+* | | | | | commit 574df531bda1df493b9dabe5cceb97616c8e8554
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 20:47:54 2023 +0800
+| | | | | | 
+| | | | | |     fix styling
+| | | | | |   
+* | | | | |   commit 1e70ede18e79fd33c5e3a602565638ee7471aa86
+|\ \ \ \ \ \  Merge: ee6772f 3e09410
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Sat May 20 20:36:10 2023 +0800
+| | | | | | | 
+| | | | | | |     Merge branch 'improve-chatbot' of https://github.com/Agile-Web-Dev/AGWP into select-classes
+| | | | | | |   
+* | | | | | |   commit ee6772f68765c1e010744c18efc33df7cc2aa721
+|\ \ \ \ \ \ \  Merge: 81355ba b9578b7
+| | |_|_|_|/ /  Author: Jack Sun <jsun1590@gmail.com>
+| |/| | | | |   Date:   Sat May 20 20:34:58 2023 +0800
+| | | | | | |   
+| | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into select-classes
+| | | | | | | 
+* | | | | | | commit 81355bae53b87260e037e5e9e0a073ebd0ab7194
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Mon May 8 11:24:01 2023 +0800
+| | | | | | | 
+| | | | | | |     add class to user endpoint
+| | | | | | | 
+* | | | | | | commit 711c8a10079518a821cef9ea022b2b8f53df46b8
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Sun May 7 20:42:32 2023 +0800
+| | | | | | | 
+| | | | | | |     add accordion for unenrolled classes
+| | | | | | | 
+| | | | | | * commit 4433ed3971e314ce196a6351aeccefab3a273b6d (origin/homepage-responsiveness)
+| | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | Date:   Sun May 21 16:48:36 2023 +0800
+| | | | | | | 
+| | | | | | |     responsive
+| | | | | | | 
+| | | | | | * commit 256c10500d74cdd890a3d5e045642ce9bf3fcdcc (origin/Fix-noteDisplay)
+| | | | | |/  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | |   Date:   Sun May 21 15:56:10 2023 +0800
+| | | | | |   
+| | | | | |       fixed bug where modal doesnt read current note
+| | | | | | 
+| | | | | * commit 890e9e93e9a11350c72dd3e49c81146a514a7571
+| | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | Date:   Sun May 21 00:16:44 2023 +0800
+| | | | | | 
+| | | | | |     removed reference to tags
+| | | | | |   
+| | | | | *   commit e260151ecfe85373ef50bfbf2e6f099b2f5108e1
+| | | | | |\  Merge: cf8bf46 c6c6a99
+| | | | | |/  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | |/|   Date:   Sun May 21 00:10:26 2023 +0800
+| | | | | |   
+| | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into remove-tags
+| | | | | | 
+| | | | * | commit c6c6a99025eb6ce4e32ff5e4b39ea37f076fdfd8
+| | | |/| | Merge: 94d6445 6981a14
+| | | | | | Author: Danish Hilmann <107915472+BoboJeager@users.noreply.github.com>
+| | | | | | Date:   Sun May 21 00:10:04 2023 +0800
+| | | | | | 
+| | | | | |     Merge pull request #31 from Agile-Web-Dev/homepage
+| | | | | |     
+| | | | | |     Homepage
+| | | | | | 
+| | | | * | commit 6981a1473f78328ef59c0d2b1b9d4a6d57983593 (origin/homepage, homepage)
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sun May 21 00:05:52 2023 +0800
+| | | | | | 
+| | | | | |     fix test
+| | | | | | 
+| | | | * | commit 218629aa830dd9716d0d23b7f8b98f2bcbc26731
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 23:59:26 2023 +0800
+| | | | | | 
+| | | | | |     update ci for black
+| | | | | | 
+| | | | * | commit 751485d0599d20498a563f8c3a31ad3f2294c50e
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 23:55:56 2023 +0800
+| | | | | | 
+| | | | | |     update lint instructions
+| | | | | | 
+| | | | * | commit 4074eddb650b66cc51a2903584e7513bda781fb0
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 23:55:14 2023 +0800
+| | | | | | 
+| | | | | |     update makefile
+| | | | | | 
+| | | | * | commit 1b3a77a0b84921b90d291c89905ec02787f0a1b7
+| | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | Date:   Sat May 20 23:46:44 2023 +0800
+| | | | | | 
+| | | | | |     linting and formatting
+| | | | | | 
+| | | | | * commit cf8bf4629ccf811f7ab740fd7619dc78cc3cf003 (origin/remove-tags)
+| | | | |/  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | |   Date:   Sat May 20 23:41:32 2023 +0800
+| | | | |   
+| | | | |       removed tags from db
+| | | | | 
+| | | | * commit 947430b4f58b62fe0e58a62bcf250dbdc60b07ad
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Sat May 20 23:36:12 2023 +0800
+| | | | | 
+| | | | |     merged with main and changed name of homepage
+| | | | |   
+| | | | *   commit 411e4a90e1b681e2944765c7b6ca985a06e0262a
+| | | | |\  Merge: f3a2067 94d6445
+| | | | |/  Author: bobojeager <danishhilmann98@gmail.com>
+| | | |/|   Date:   Sat May 20 23:33:39 2023 +0800
+| | | | |   
+| | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into homepage
+| | | | | 
+| | | | * commit f3a2067fc171d0c63a9f4a10266844d4de363378
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Sat May 20 23:33:10 2023 +0800
+| | | | | 
+| | | | |     finished Homepage,styling and writing
+| | | | |   
+| | | | | * commit 8e2a568091831f15aae6f6e8b8d39fe008bce4b7 (origin/improve-chatbot, improve-chatbot)
+| | | |_|/| Merge: 3e09410 94d6445
+| | |/| |/  Author: Jack Sun <jsun1590@gmail.com>
+| | | |/|   Date:   Sat May 20 21:53:52 2023 +0800
+| | | | |   
+| | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into improve-chatbot
+| | | | | 
+| | | * | commit 94d6445cfa2191a97f65938afe6b4f19d5cde2a0
+| | |/| | Merge: b9578b7 e8fd921
+| |/| | | Author: Danish Hilmann <107915472+BoboJeager@users.noreply.github.com>
+| | | | | Date:   Sat May 20 21:51:15 2023 +0800
+| | | | | 
+| | | | |     Merge pull request #27 from Agile-Web-Dev/Post_Note
+| | | | |     
+| | | | |     Fix Post note
+| | | | | 
+| | | * | commit e8fd9210a4d3d5a34b6e07bb65f4a161ed3afafb (origin/Post_Note, Post_Note)
+| | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | Date:   Sat May 20 21:49:49 2023 +0800
+| | | | | 
+| | | | |     format
+| | | | | 
+| | | * | commit c4b80ee888deb37b32b5d33b767627b0dd8f296b
+| | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | Date:   Sat May 20 21:47:47 2023 +0800
+| | | | | 
+| | | | |     update env
+| | | | |   
+| * | | |   commit b9578b7147a0031197930f45f3413b0bc3cae0b6
+| |\ \ \ \  Merge: 026bae0 2c4295c
+| | | | | | Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| | | | | | Date:   Sat May 20 15:17:59 2023 +0800
+| | | | | | 
+| | | | | |     Merge pull request #28 from Agile-Web-Dev/more-styling
+| | | | | |     
+| | | | | |     auth and header styling
+| | | | | | 
+| | * | | | commit 2c4295c324d3681d3d96323c49c0bd3f7390389a (origin/more-styling, more-styling)
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 14:08:56 2023 +0800
+| | | | | | 
+| | | | | |     change link color
+| | | | | | 
+| | * | | | commit f81df21b57f705452e192c1c79a5b21a7417d169
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 13:44:33 2023 +0800
+| | | | | | 
+| | | | | |     link styling
+| | | | | | 
+| | * | | | commit 66c48115a5f7b8435a39329194ad358c04d3f43d
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 13:38:49 2023 +0800
+| | | | | | 
+| | | | | |     navbar styling
+| | | | | | 
+| | | * | | commit 3e0941009375ccf0e1ad3c5293a99db71ecb1ee9
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 18:41:41 2023 +0800
+| | | | | | 
+| | | | | |     fix search js
+| | | | | | 
+| | | * | | commit ca080def02ee4fd32fa1eb6674ebd07f1a5bf3fa
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 17:20:10 2023 +0800
+| | | | | | 
+| | | | | |     search styling
+| | | | | | 
+| | | * | | commit aeb602ec0a219d4ad583023d45d0b3e1263730f9
+| | | |\| | Merge: 00255a1 69a81e9
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 17:13:45 2023 +0800
+| | | | | | 
+| | | | | |     Merge branch 'Post_Note' of https://github.com/Agile-Web-Dev/AGWP into improve-chatbot
+| | | | | |   
+| | | | * |   commit 69a81e9b5268226e614c527b52b3353e6eb3a312
+| | | | |\ \  Merge: 6b2613a 026bae0
+| | |_|_|/ /  Author: bobojeager <danishhilmann98@gmail.com>
+| |/| | | |   Date:   Sat May 20 14:35:21 2023 +0800
+| | | | | |   
+| | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into Post_Note
+| | | | | |   
+| * | | | |   commit 026bae00dd63adc2862e59483274bd6c8d052f6c
+| |\ \ \ \ \  Merge: be8343c 81e016f
+| | |/ / / /  Author: Danish Hilmann <107915472+BoboJeager@users.noreply.github.com>
+| |/| | | |   Date:   Sat May 20 14:34:49 2023 +0800
+| | | | | |   
+| | | | | |       Merge pull request #26 from Agile-Web-Dev/Chatroom-searchbar
+| | | | | |       
+| | | | | |       Chatroom searchbar
+| | | | | |   
+| | * | | |   commit 81e016f1c992c1584801197fbc653feb05c95a86 (origin/Chatroom-searchbar)
+| | |\ \ \ \  Merge: 97a145b bc90826
+| | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | Date:   Thu May 18 22:31:42 2023 +0800
+| | | | | | | 
+| | | | | | |     added review changes
+| | | | | | | 
+| | | * | | | commit bc90826a61bba1b3d349ff88e501278678e00b43
+| | | | | | | Author: Dylan To <dylan@genvis.co>
+| | | | | | | Date:   Sat May 13 14:36:48 2023 +0800
+| | | | | | | 
+| | | | | | |     Autoformatting
+| | | | | | | 
+| | * | | | | commit 97a145b9ae3ad01b37dc7712bc8a80a1fa6759a8
+| | |/ / / /  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | |   Date:   Thu May 18 22:30:35 2023 +0800
+| | | | | |   
+| | | | | |       added review changes
+| | | | | | 
+| | | * | | commit 00255a1fc3ecbe51bf3bb727fd00b643fa202f3a
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 17:02:38 2023 +0800
+| | | | | | 
+| | | | | |     notes fix
+| | | | | | 
+| | | * | | commit d6abd9efc7c8280019cfb5183c46da7dbc9817aa
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 16:59:34 2023 +0800
+| | | | | | 
+| | | | | |     fix search logic
+| | | | | | 
+| | | * | | commit 985f85ce893918682d9e6705116db094e4bc1f52
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Sat May 20 16:26:57 2023 +0800
+| | | | | | 
+| | | | | |     layout styling
+| | | | | | 
+| | | * | | commit 688b98fe750809945f0ceedeeb72a2651e157e98
+| | |/| | | Merge: be8343c 6b2613a
+| |/| |/ /  Author: Jack Sun <jsun1590@gmail.com>
+| | | | |   Date:   Sat May 20 13:45:50 2023 +0800
+| | | | |   
+| | | | |       Merge branch 'Post_Note' of https://github.com/Agile-Web-Dev/AGWP into improve-chatbot
+| | | | | 
+| | | * | commit 6b2613a6ac7499c545c337fd31cf15083345cdf0
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Sat May 13 11:46:23 2023 +0800
+| | | | | 
+| | | | |     Fix test_user
+| | | | | 
+| | | * | commit b19b9bbf38af09381b2b53033847b2efabd6d836
+| | | |\| Merge: b7d501f ffae105
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Sat May 13 11:20:30 2023 +0800
+| | | | | 
+| | | | |     Merge branch 'api-tests' of https://github.com/Agile-Web-Dev/AGWP into Post_Note
+| | | | | 
+| | | * | commit b7d501f8be1174aea578eaec1b26d82cb7341850
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Sat May 13 11:15:49 2023 +0800
+| | | | | 
+| | | | |     Format
+| | | | | 
+| | | * | commit 078fbb403415d102fe7bc637ecc374f4669a51c5
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Sat May 13 11:11:16 2023 +0800
+| | | | | 
+| | | | |     Fix post note and order notes by created_at
+| | | | | 
+| | | * | commit 0d13aaf9f46faf2bed2c003e054f76955bc47f51
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Fri May 12 17:03:30 2023 +0800
+| | | | | 
+| | | | |     DYLAN PLS FIX(XSS SCRIPTING BLOCKING ME)
+| | | | | 
+| | | * | commit 7c5cae12eb3ada59a7c5648c3bc50b944e716604
+| | |/| | Merge: 9e9e8c9 3953a61
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Fri May 12 17:01:53 2023 +0800
+| | | | | 
+| | | | |     fixed Post Notes check append
+| | | | | 
+| | * | | commit 9e9e8c9825dff2737e906140c879821a7d490e2e
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Fri May 12 13:12:40 2023 +0800
+| | | | | 
+| | | | |     fixed bug @Note.DB not pulling from db
+| | | | | 
+| | * | | commit 3f90be3afe3de9077e92d3b20bc7228b7e011de6
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Wed May 10 20:59:44 2023 +0800
+| | | | | 
+| | | | |     fixed padding issue in base(content wrapper)
+| | | | |   
+| | * | |   commit 42a520f7b390cb7692619253e42cd02920a6d79e
+| | |\ \ \  Merge: 15487e4 fe0aad2
+| | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | Date:   Wed May 10 20:46:52 2023 +0800
+| | | | | | 
+| | | | | |     merged main and fixed merger error
+| | | | | | 
+| | * | | | commit 15487e4561bd91f986407845e7a291cf0b650d6e
+| | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | Date:   Mon May 1 18:25:50 2023 +0800
+| | | | | | 
+| | | | | |     deleted console message
+| | | | | |   
+| | * | | |   commit c4c97b0a231a0ffebdea4f769ad272b0511e96c4
+| | |\ \ \ \  Merge: 457d25c 9d39ed5
+| | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | Date:   Mon May 1 17:00:05 2023 +0800
+| | | | | | | 
+| | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into Chatroom-searchbar
+| | | | | | | 
+| | * | | | | commit 457d25c78af59d22ec7347380fe84c792376be0d
+| | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | Date:   Mon May 1 16:59:41 2023 +0800
+| | | | | | | 
+| | | | | | |     added the formatting of message
+| | | | | | | 
+| | * | | | | commit 7ea2552aaf9456f6f1735f1b78cfd24ba2b09ef8
+| | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | Date:   Thu Apr 27 17:07:50 2023 +0800
+| | | | | | | 
+| | | | | | |     fixed scroll to search for users
+| | | | | | | 
+| | * | | | | commit 0190670f5c18114429bb66d09014b4f1c35f1fd8
+| | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | Date:   Wed Apr 26 23:32:22 2023 +0800
+| | | | | | | 
+| | | | | | |     fixed getting user
+| | | | | | | 
+| | * | | | | commit 5c937c9fbf8ec27d1176dce14a37c1e2849fdb64
+| | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | Date:   Wed Apr 26 23:29:50 2023 +0800
+| | | | | | | 
+| | | | | | |     reworked message search
+| | | | | | | 
+| | * | | | | commit adee384f3f244b35bad5c0c4d59dba0d1aa111c2
+| | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | Date:   Wed Apr 26 21:49:00 2023 +0800
+| | | | | | | 
+| | | | | | |     functionality
+| | | | | | | 
+| | * | | | | commit e0fb19223f7f45d98fbf474af99ab24aee0ca13b
+| | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | Date:   Wed Apr 26 17:37:08 2023 +0800
+| | | | | | | 
+| | | | | | |     searchbar ui
+| | | | | | |   
+| * | | | | |   commit be8343cc021316449a34556155720f192c255914
+| |\ \ \ \ \ \  Merge: fe0aad2 ffae105
+| | |_|_|/ / /  Author: Dylan To <19729435+dct0@users.noreply.github.com>
+| |/| | | | /   Date:   Mon May 15 00:44:40 2023 +0800
+| | | |_|_|/    
+| | |/| | |         Merge pull request #21 from Agile-Web-Dev/api-tests
+| | | | | |         
+| | | | | |         API Unit Tests Part 1/2
+| | | | | | 
+| | * | | | commit ffae10510e6c4c26715f5f7c7a266ba7e75ec892 (origin/api-tests-2)
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Fri May 12 16:22:04 2023 +0800
+| | | | | | 
+| | | | | |     Format
+| | | | | |   
+| | * | | |   commit 9c3ba64d70008eb39a8dd7c3b6ecb2be28a9fbc3
+| | |\ \ \ \  Merge: f9fbca7 fe0aad2
+| | |/ / / /  Author: Dylan To <dylan.to@hotmail.com>
+| |/| | | |   Date:   Fri May 12 16:18:17 2023 +0800
+| | | | | |   
+| | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into api-tests
+| | | | | |   
+| * | | | |   commit fe0aad211bf4b6edfb21014dbcd882ec79b2985b
+| |\ \ \ \ \  Merge: d1f5608 cba0a2f
+| | | | | | | Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| | | | | | | Date:   Tue May 9 19:12:17 2023 +0800
+| | | | | | | 
+| | | | | | |     Merge pull request #25 from Agile-Web-Dev/styling
+| | | | | | |     
+| | | | | | |     responsive layout styles
+| | | | | | | 
+| | * | | | | commit cba0a2f57bc6cbd1f2f2f2505c30518c57d4b60b (origin/styling, styling)
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Mon May 8 14:01:52 2023 +0800
+| | | | | | | 
+| | | | | | |     fix notes bar bg colors
+| | | | | | | 
+| | * | | | | commit c6350a67da31362c1d198c8bfee322ef952463ed
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Mon May 8 13:55:08 2023 +0800
+| | | | | | | 
+| | | | | | |     fix notes search bar spacing
+| | | | | | | 
+| | * | | | | commit 819d95b25ca1dd18a7bf230b2f1d1fcfeee960a7
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Mon May 8 11:41:14 2023 +0800
+| | | | | | | 
+| | | | | | |     fix broken notes container
+| | | | | | | 
+| | * | | | | commit b03f97b23e7958d5e57fdbdb73a597b2e7f5da1b
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Mon May 8 11:37:21 2023 +0800
+| | | | | | | 
+| | | | | | |     global css nl
+| | | | | | |   
+| | * | | | |   commit e9d5b905c3cb3e3e8f7650ecea1c3cbc5a8439a6
+| | |\ \ \ \ \  Merge: 4cf9311 690adf7
+| | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | Date:   Mon May 8 11:26:32 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Merge branch 'styling' of https://github.com/Agile-Web-Dev/AGWP into styling
+| | | | | | | | 
+| | | * | | | | commit 690adf78baf84df92c7776f140d5857332266346
+| |_|/ / / / /  Author: Dylan To <dylan.to@hotmail.com>
+|/| | | | | |   Date:   Sun May 7 19:34:10 2023 +0800
+| | | | | | |   
+| | | | | | |       Auto-format
+| | | | | | | 
+| | * | | | | commit 4cf93116c9e5b9d1cc12160478da95edaeb7dd7b
+| |/| | | | | Merge: 024ce48 d1f5608
+|/|/ / / / /  Author: Jack Sun <jsun1590@gmail.com>
+| | | | | |   Date:   Mon May 8 11:26:27 2023 +0800
+| | | | | |   
+| | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into styling
+| | | | | |   
+| * | | | |   commit d1f56089e2fe19007af1964622a9f6db15a79ba5
+| |\ \ \ \ \  Merge: 7429b0f 0516292
+| | | | | | | Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| | | | | | | Date:   Sun May 7 20:40:27 2023 +0800
+| | | | | | | 
+| | | | | | |     Merge pull request #22 from Agile-Web-Dev/chatbot
+| | | | | | |     
+| | | | | | |     Chatbot
+| | | | | | |   
+| | * | | | |   commit 0516292a12aa727a92420112fa424a4f478b6e4c (origin/chatbot, chatbot)
+| | |\ \ \ \ \  Merge: 3e2bbaf 7429b0f
+| | |/ / / / /  Author: Jack Sun <jsun1590@gmail.com>
+| |/| | | | |   Date:   Sun May 7 15:28:05 2023 +0800
+| | | | | | |   
+| | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into chatbot
+| | | | | | |   
+| | * | | | |   commit 3e2bbafb71d5c9e7d44589992c8713d9afebdc69
+| | |\ \ \ \ \  Merge: 94f2f70 9d39ed5
+| | | | |_|/ /  Author: Jack Sun <jsun1590@gmail.com>
+| | | |/| | |   Date:   Fri Apr 28 21:20:40 2023 +0800
+| | | | | | |   
+| | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into chatbot
+| | | | | | | 
+| | * | | | | commit 94f2f70e8af12693b448240f2224d50242c259f4
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Fri Apr 28 16:18:11 2023 +0800
+| | | | | | | 
+| | | | | | |     fix imports
+| | | | | | | 
+| | * | | | | commit 617a9c061d5accade7d227b8791cf08103ced6ab
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Fri Apr 28 16:14:33 2023 +0800
+| | | | | | | 
+| | | | | | |     update import order
+| | | | | | | 
+| | * | | | | commit f43f1a9ad62cb9869ff0d662baf5c01c8429e07a
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Fri Apr 28 16:10:48 2023 +0800
+| | | | | | | 
+| | | | | | |     update requirements
+| | | | | | | 
+| | * | | | | commit 66490e26471b8968d7fe88fd8b548617f5f61bf8
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Fri Apr 28 16:08:04 2023 +0800
+| | | | | | | 
+| | | | | | |     flake8 linting rules update
+| | | | | | | 
+| | * | | | | commit 271a90d7c4925deb633f0b5751b0f2957b7f5d6a
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Fri Apr 28 16:06:03 2023 +0800
+| | | | | | | 
+| | | | | | |     flake8 linting rules update
+| | | | | | | 
+| | * | | | | commit 35ac2fa4c9b25ec572f3eb1cc80419d09688c31b
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Fri Apr 28 15:46:46 2023 +0800
+| | | | | | | 
+| | | | | | |     formatting
+| | | | | | |   
+| | * | | | |   commit af7455088932033988c204e56532fe86024c69cf
+| | |\ \ \ \ \  Merge: cfe93bc 04715eb
+| | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | Date:   Fri Apr 28 15:46:30 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into chatbot
+| | | | | | | | 
+| | * | | | | | commit cfe93bce7b9c2ba031145b41f8a22e2427bd027e
+| | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | Date:   Fri Apr 28 15:36:48 2023 +0800
+| | | | | | | | 
+| | | | | | | |     import additionl commands
+| | | | | | | |   
+| | * | | | | |   commit fec5792c2409d515ca51f54820349c771e88ff8a
+| | |\ \ \ \ \ \  Merge: bee3592 31957d1
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Fri Apr 28 15:36:19 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into chatbot
+| | | | | | | | | 
+| | * | | | | | | commit bee3592d2e35a63259928350ea01147344421b7f
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Fri Apr 28 15:28:06 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     formatting
+| | | | | | | | | 
+| | * | | | | | | commit 7c6fa67cd1085c19e256bef79b4b615e44601841
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Wed Apr 26 22:12:25 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     add chatgpt
+| | | | | | | | |   
+| | * | | | | | |   commit 218ec9cbcbb47d94350473519cc7ea43d9d45d33
+| | |\ \ \ \ \ \ \  Merge: 5fc6198 a719156
+| | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | Date:   Wed Apr 26 21:00:06 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into chatbot
+| | | | | | | | | | 
+| | * | | | | | | | commit 5fc61982096429954a951dfc267ef31649cac939
+| | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | Date:   Tue Apr 25 15:51:15 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     fix avatar flicker
+| | | | | | | | | | 
+| | * | | | | | | | commit 33419c483cdf3ca801e0b1c945555f84997a8eea (registration-test)
+| | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | Date:   Tue Apr 25 14:01:38 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     fix avatar cache
+| | | | | | | | | |   
+| | * | | | | | | |   commit 9626264f76655ebf3b722febd07e814071d6dc5c
+| | |\ \ \ \ \ \ \ \  Merge: 313917a ed757d5
+| | | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | | Date:   Tue Apr 25 12:32:29 2023 +0800
+| | | | | | | | | | | 
+| | | | | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into chatbot
+| | | | | | | | | | | 
+| | * | | | | | | | | commit 313917a66cb354a781b806e315ace0e2659d3b4f
+| | | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | | Date:   Tue Apr 25 02:29:23 2023 +0800
+| | | | | | | | | | | 
+| | | | | | | | | | |     command handler
+| | | | | | | | | | | 
+* | | | | | | | | | | commit 024ce48e6f82f80e0cb584f2e77a41d07dcc80c9
+| | | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | | Date:   Sun May 7 18:32:50 2023 +0800
+| | | | | | | | | | | 
+| | | | | | | | | | |     send message button functionality
+| | | | | | | | | | | 
+* | | | | | | | | | | commit c9ac8e5c91d1ca47d775628f92d2a0062eceb3a0
+| | | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | | Date:   Sun May 7 18:21:43 2023 +0800
+| | | | | | | | | | | 
+| | | | | | | | | | |     style chat action group
+| | | | | | | | | | | 
+* | | | | | | | | | | commit b5f9a20d71551b7f406e4636e4e36df06631d972
+|\| | | | | | | | | | Merge: 9cdc7ac 7429b0f
+| | | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | | Date:   Sun May 7 15:32:19 2023 +0800
+| | | | | | | | | | | 
+| | | | | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into styling
+| | | | | | | | | | |   
+| * | | | | | | | | |   commit 7429b0fe7033a576f86c4086ee3427c795cf1140
+| |\ \ \ \ \ \ \ \ \ \  Merge: 9d39ed5 296b4a3
+| | |_|_|_|_|_|/ / / /  Author: Danish Hilmann <107915472+BoboJeager@users.noreply.github.com>
+| |/| | | | | | | | |   Date:   Tue May 2 17:19:32 2023 +0800
+| | | | | | | | | | |   
+| | | | | | | | | | |       Merge pull request #20 from Agile-Web-Dev/notes_with_db
+| | | | | | | | | | |       
+| | | | | | | | | | |       Notes with db
+| | | | | | | | | | | 
+| | * | | | | | | | | commit 296b4a36aebba12e5c511a9f0131695ebfdcd589
+| | | | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | | | Date:   Tue May 2 17:13:56 2023 +0800
+| | | | | | | | | | | 
+| | | | | | | | | | |      fixed error in linting
+| | | | | | | | | | |   
+| | * | | | | | | | |   commit 2d2d446549b0e28ec8b424d2edeb71bb648ce24c
+| | |\ \ \ \ \ \ \ \ \  Merge: 09294d0 9d39ed5
+| | |/ / / / / / / / /  Author: bobojeager <danishhilmann98@gmail.com>
+| |/| | | | | | | | |   Date:   Sat Apr 29 19:36:49 2023 +0800
+| | | | | | | | | | |   
+| | | | | | | | | | |       merged with main
+| | | | | | | | | | |   
+| | * | | | | | | | |   commit 09294d00cd58d7e77ceee64b41615cf9d2e1ab92 (origin/notes_with_db, notes_with_db)
+| | |\ \ \ \ \ \ \ \ \  Merge: 9c796d9 a719156
+| | | | |_|/ / / / / /  Author: bobojeager <danishhilmann98@gmail.com>
+| | | |/| | | | | | |   Date:   Wed Apr 26 21:54:14 2023 +0800
+| | | | | | | | | | |   
+| | | | | | | | | | |       merge with main
+| | | | | | | | | | | 
+* | | | | | | | | | | commit 9cdc7ac67447ead8b50c08275557b66e94ac1f33
+| | | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | | Date:   Sun Apr 30 00:19:03 2023 +0800
+| | | | | | | | | | | 
+| | | | | | | | | | |     chatbox styling, responsive sidebars
+| | | | | | | | | | | 
+* | | | | | | | | | | commit ee27c08022435240d6b7e336d70e0bcdf6a2bad8
+|/ / / / / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | |   Date:   Sat Apr 29 22:53:29 2023 +0800
+| | | | | | | | | |   
+| | | | | | | | | |       responsive layout styles
+| | | | | | | | | | 
+* | | | | | | | | | commit 9d39ed58a6fb3185f3d4b73b912989ffd6ac031c (stylin)
+| |_|_|_|_|/ / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | | |   Date:   Fri Apr 28 21:20:07 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       fix missing import
+| | | | | | | | | 
+| | | | | | * | | commit f9fbca76c17465ecc94a334382b541d6be31be5c
+| | | | | | | |/  Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | |/|   Date:   Fri May 12 16:13:32 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Remove join warning
+| | | | | | | | 
+| | | | | | * | commit 3953a618d993a5f4cbe83abb670c28aaa32d2382 (origin/api-tests)
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Fri May 5 17:05:08 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Classes and links test
+| | | | | | | |   
+| | | | | | * |   commit a1280d0af1d100399bb885ee5a425e34d954823d
+| | | | | | |\ \  Merge: a641ece 04715eb
+| |_|_|_|_|_|/ /  Author: Dylan To <dylan.to@hotmail.com>
+|/| | | | | | |   Date:   Fri Apr 28 15:50:45 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into api-tests
+| | | | | | | |   
+* | | | | | | |   commit 04715eb80bddd50eb145f7e5b645baca75901e08 (chatroom-messages)
+|\ \ \ \ \ \ \ \  Merge: 31957d1 ff2569a
+| |_|_|_|_|/ / /  Author: Dylan To <19729435+dct0@users.noreply.github.com>
+|/| | | | | | |   Date:   Fri Apr 28 15:43:55 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge pull request #19 from Agile-Web-Dev/navbar_with_db
+| | | | | | | |       
+| | | | | | | |       Navbar with DB
+| | | | | | | |   
+| * | | | | | |   commit ff2569a27b32c5e46e18749d88fd55e62c7d67d3 (origin/navbar_with_db, navbar_with_db)
+| |\ \ \ \ \ \ \  Merge: a43faf9 63f5919
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Fri Apr 28 15:37:38 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Merge branch 'navbar_with_db' of https://github.com/Agile-Web-Dev/AGWP into navbar_with_db
+| | | | | | | | |   
+| | * | | | | | |   commit 63f591900c30f76dbe4dfffccf79b2b160b79844
+| | |\ \ \ \ \ \ \  Merge: 934ede0 ff31084
+| | | | |_|_|_|_|/  Author: Dylan To <dylan.to@hotmail.com>
+| | | |/| | | | |   Date:   Wed Apr 26 12:13:22 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'topbar_with_db' of https://github.com/Agile-Web-Dev/AGWP into navbar_with_db
+| | | | | | | | |   
+| * | | | | | | |   commit a43faf9139a28a4b074afddaea0f214fb0369060
+| |\ \ \ \ \ \ \ \  Merge: 934ede0 31957d1
+| |/ / / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| / / / / / / /   Date:   Fri Apr 28 15:37:29 2023 +0800
+| |/ / / / / / /    
+| | | | | | | |         Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into navbar_with_db
+| | | | | | | |   
+* | | | | | | |   commit 31957d175aaf94eb8a8258a59fcd503f0886cc0b
+|\ \ \ \ \ \ \ \  Merge: a719156 ff31084
+| | |/ / / / / /  Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| |/| | / / / /   Date:   Fri Apr 28 15:26:45 2023 +0800
+| |_|_|/ / / /    
+|/| | | | | |         Merge pull request #18 from Agile-Web-Dev/topbar_with_db
+| | | | | | |         
+| | | | | | |         CITS-37 Topbar with db
+| | | | | | | 
+| * | | | | | commit ff310848c37273e4817a677b286753dbf894ac94 (origin/topbar_with_db)
+| | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | Date:   Wed Apr 26 12:11:41 2023 +0800
+| | | | | | | 
+| | | | | | |     Add missing imports
+| | | | | | | 
+| * | | | | | commit a079d5d046b1bd450c7d23fccf7315958c908607
+| | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | Date:   Wed Apr 26 12:09:08 2023 +0800
+| | | | | | | 
+| | | | | | |     Use less aggressive input styling override
+| | | | | | |   
+| * | | | | |   commit bb344b1646c9ea7accc0be42a83514db3a18b3f9
+| |\ \ \ \ \ \  Merge: 5d1dcbb a719156
+| |/ / / / / /  Author: Dylan To <dylan.to@hotmail.com>
+|/| | | | | |   Date:   Wed Apr 26 11:59:15 2023 +0800
+| | | | | | |   
+| | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into topbar_with_db
+| | | | | | | 
+| * | | | | | commit 5d1dcbb3b7bdfa42025e4f17c8fb22d2341ca971
+| | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | Date:   Fri Apr 21 16:11:16 2023 +0800
+| | | | | | | 
+| | | | | | |     changed topbar from li to button
+| | | | | | | 
+| | * | | | | commit 934ede0f2d1b4f4a34933ac841a69ae2b193a97a
+| | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | Date:   Fri Apr 21 17:15:26 2023 +0800
+| | | | | | | 
+| | | | | | |     Refactor link fetching
+| | | | | | | 
+| | * | | | | commit f1d6cda3c3afbb98746b0b615a9e763e743d2f9a
+| | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | Date:   Fri Apr 21 17:05:41 2023 +0800
+| | | | | | | 
+| | | | | | |     Dynamic navbar links
+| | | | | | | 
+| | * | | | | commit 82491f1e55e6ee7134e57f97ea26a170d1ce1972
+| |/ / / / /  Author: dct <dylan.to@hotmail.com>
+| | | | | |   Date:   Fri Apr 21 13:48:54 2023 +0800
+| | | | | |   
+| | | | | |       Probably add class links to template
+| | | | | | 
+| * | | | | commit 6c2d2e36397e26e76b7b16df40462468941506ed (topbar_with_db)
+| | | | | | Author: dct <dylan.to@hotmail.com>
+| | | | | | Date:   Fri Apr 21 13:13:39 2023 +0800
+| | | | | | 
+| | | | | |     Remove unused var
+| | | | | | 
+| * | | | | commit c9f9cdd5626623e1d49349099d9bebc9fbe813f4
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Thu Apr 20 17:04:02 2023 +0800
+| | | | | | 
+| | | | | |     Use header block for base
+| | | | | | 
+| * | | | | commit e0c91488650efc13980478e0a3311601b4e808e4
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Thu Apr 20 16:45:15 2023 +0800
+| | | | | | 
+| | | | | |     Prevent unauthenticated users from loading user
+| | | | | | 
+| * | | | | commit 10f23687858f65d25e5742c1a3d7f14fad53f348
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Thu Apr 20 16:44:45 2023 +0800
+| | | | | | 
+| | | | | |     Protect notes view
+| | | | | |   
+| * | | | |   commit 92825bbe0818382da9f9baa2a9c7588744ff11e3
+| |\ \ \ \ \  Merge: 8fbef16 8547996
+| | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | Date:   Thu Apr 20 13:56:00 2023 +0800
+| | | | | | | 
+| | | | | | |     Merge branch 'apis' of https://github.com/Agile-Web-Dev/AGWP into topbar_with_db
+| | | | | | |   
+| | | | | | *   commit a641ece98c9534bec53d8785779d2e7721cf10ec
+| | | | | | |\  Merge: fd75f80 a719156
+| |_|_|_|_|_|/  Author: Dylan To <dylan.to@hotmail.com>
+|/| | | | | |   Date:   Wed Apr 26 23:15:32 2023 +0800
+| | | | | | |   
+| | | | | | |       Merge branches 'api-tests' and 'main' of https://github.com/Agile-Web-Dev/AGWP into api-tests
+| | | | | | |   
+* | | | | | |   commit a7191561ea56010f116650c0efd5e1e3126ba0d8
+|\ \ \ \ \ \ \  Merge: ed757d5 baa9137
+| |_|_|_|_|/ /  Author: Danish Hilmann <107915472+BoboJeager@users.noreply.github.com>
+|/| | | | | |   Date:   Tue Apr 25 20:11:01 2023 +0800
+| | | | | | |   
+| | | | | | |       Merge pull request #14 from Agile-Web-Dev/apis
+| | | | | | |       
+| | | | | | |       CITS-26 CITS-27 Apis
+| | | | | | | 
+| * | | | | | commit baa9137dd0cec2a17b14e5e3df46d0ad0f9d18cf (origin/apis, apis)
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Mon Apr 24 19:25:08 2023 +0800
+| | | | | | | 
+| | | | | | |     convention changes
+| | | | | | |   
+| * | | | | |   commit 1eda731b164bb6e05aa3add09487956c071e617c
+| |\ \ \ \ \ \  Merge: c21b347 7a932ec
+| | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | Date:   Mon Apr 24 19:18:27 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Merge branch 'apis' of https://github.com/Agile-Web-Dev/AGWP into apis
+| | | | | | | |   
+| | * | | | | |   commit 7a932ecceb170a5c8ca44210e66d2731bccea8d1
+| | |\ \ \ \ \ \  Merge: ef83c98 8547996
+| | | | |/ / / /  Author: bobojeager <danishhilmann98@gmail.com>
+| | | |/| | | |   Date:   Mon Apr 24 03:52:02 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'apis' of https://github.com/Agile-Web-Dev/AGWP into apis
+| | | | | | | | 
+| | * | | | | | commit ef83c9811d2010f884e6baa83546256bcf736c65
+| | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | Date:   Mon Apr 24 03:51:52 2023 +0800
+| | | | | | | | 
+| | | | | | | |     pr changes
+| | | | | | | |   
+| * | | | | | |   commit c21b34783018e3c15fe69471a8ccf4406741b5e0
+| |\ \ \ \ \ \ \  Merge: 8547996 e0b5460
+| | |_|/ / / / /  Author: Jack Sun <jsun1590@gmail.com>
+| |/| | | | | |   Date:   Mon Apr 24 19:18:10 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into apis
+| | | | | | | | 
+* | | | | | | | commit ed757d595f6186b6b1ce6beac4e75dc1e127d5cb
+| | | | | | | | Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| | | | | | | | Date:   Tue Apr 25 12:29:10 2023 +0800
+| | | | | | | | 
+| | | | | | | |     seed database automatically
+| | | | | | | | 
+* | | | | | | | commit 547d9303053639b6892fddb45fb6834f7766722d
+| |_|_|_|_|/ /  Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+|/| | | | | |   Date:   Tue Apr 25 12:27:06 2023 +0800
+| | | | | | |   
+| | | | | | |       Delete script.txt
+| | | | | | |   
+* | | | | | |   commit f564ace7d7b278080c1b3983fe33cfd9e19f5569
+|\ \ \ \ \ \ \  Merge: 5999507 d94c135
+| | | | | | | | Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| | | | | | | | Date:   Mon Apr 24 23:35:40 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Merge pull request #16 from Agile-Web-Dev/registration-page
+| | | | | | | |     
+| | | | | | | |     CITS-36 Registration page
+| | | | | | | | 
+| * | | | | | | commit d94c1358721ff5d5eca007eacd76fdead500036b (origin/registration-page, registration-page)
+| | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | Date:   Mon Apr 24 23:35:02 2023 +0800
+| | | | | | | | 
+| | | | | | | |     localise button styling
+| | | | | | | |   
+| * | | | | | |   commit 70a7e6596c31b36a76788b4b7e059e0c61e9301e
+| |\ \ \ \ \ \ \  Merge: afcedbe 5999507
+| |/ / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | |   Date:   Mon Apr 24 23:33:53 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into registration-page
+| | | | | | | |   
+* | | | | | | |   commit 5999507cefb543eab666c31b8429f4cd9e93a32b
+|\ \ \ \ \ \ \ \  Merge: e0b5460 8dea4c8
+| |_|_|/ / / / /  Author: Dylan To <19729435+dct0@users.noreply.github.com>
+|/| | | | | | |   Date:   Mon Apr 24 20:24:15 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge pull request #17 from Agile-Web-Dev/frontend-header
+| | | | | | | |       
+| | | | | | | |       CITS-7 Frontend header
+| | | | | | | | 
+| | * | | | | | commit afcedbe2924c482700b1a6d8ea9cbd8f54682582
+| | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | Date:   Mon Apr 24 20:05:20 2023 +0800
+| | | | | | | | 
+| | | | | | | |     styling
+| | | | | | | |   
+| | * | | | | |   commit 82c9bdd9820ff2ec8ce7b47cb2c6752058bdae5f
+| | |\ \ \ \ \ \  Merge: 90d24ff e0b5460
+| |_|/ / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | |   Date:   Mon Apr 24 19:27:58 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into registration-page
+| | | | | | | | 
+| | * | | | | | commit 90d24ff5a1343def82251d5ef20a3737f70e02eb
+| | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | Date:   Sun Apr 23 12:46:01 2023 +0800
+| | | | | | | | 
+| | | | | | | |     fix routing, add lougout js to navbar, styling
+| | | | | | | |   
+| | * | | | | |   commit 131892442769a9084f49674ad7d145b85f188207
+| | |\ \ \ \ \ \  Merge: 5a7cdb0 4682501
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Fri Apr 21 14:15:50 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into registration-page
+| | | | | | | | | 
+| | * | | | | | | commit 5a7cdb0fc95b5051a728388db113fad3abdbb869
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sat Apr 15 23:58:58 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     format
+| | | | | | | | | 
+| | * | | | | | | commit 3812e01296f185b29ff5a355357218d901aa62cd
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sat Apr 15 17:40:43 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     fix js reference
+| | | | | | | | | 
+| | * | | | | | | commit 2058086cb1e86dd20a08f80bc27209544178b5c9
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sat Apr 15 17:20:56 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     routing and styling
+| | | | | | | | |   
+| | * | | | | | |   commit 876a275c574756e643cf32c07f5f7ba9256266c0
+| | |\ \ \ \ \ \ \  Merge: b3adf1b a04e6f9
+| | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | Date:   Sat Apr 15 15:15:47 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into registration-page
+| | | | | | | | | | 
+| | * | | | | | | | commit b3adf1b85aacab4687ab4d3701f13afffc434934
+| | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | Date:   Sat Apr 15 15:15:41 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     register page initial template
+| | | | | | | | | | 
+| | | | | | | | | * commit fd75f8093fb9e5dcb57f0f2f27205958d165b64c
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Wed Apr 26 23:11:54 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Test posted note is in db
+| | | | | | | | | | 
+| | | | | | | | | * commit 35d45fe34a560a9c34cb932e8fb0fd749d474fb8
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Wed Apr 26 23:07:22 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     POST GET Notes test
+| | | | | | | | | | 
+| | | | | | | | | * commit 2e07deff4cd4cb9c25d75796904c0251852ce652
+| | |_|_|_|_|_|_|/| Merge: 8dea4c8 9c796d9
+| |/| | | | | | |/  Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | |   Date:   Wed Apr 26 21:34:54 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'notes_with_db' of https://github.com/Agile-Web-Dev/AGWP into api-tests
+| | | | | | | | |   
+| * | | | | | | |   commit 8dea4c8a995184f79671a3afa3d9385f7b6b44c1 (origin/frontend-header)
+| |\ \ \ \ \ \ \ \  Merge: 9c05f08 e0b5460
+| |/ / / / / / / /  Author: Dylan To <dylan.to@hotmail.com>
+|/| | | | | | | |   Date:   Mon Apr 24 20:22:14 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into frontend-header
+| | | | | | | | |   
+* | | | | | | | |   commit e0b5460b691cdd045999b91c8ba218d196a80b37
+|\ \ \ \ \ \ \ \ \  Merge: 4682501 d30c3d7
+| |_|_|_|/ / / / /  Author: Dylan To <19729435+dct0@users.noreply.github.com>
+|/| | | | | | | |   Date:   Mon Apr 24 01:24:25 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge pull request #15 from Agile-Web-Dev/CITS-9-Notes
+| | | | | | | | |       
+| | | | | | | | |       CITS-9 Notes
+| | | | | | | | | 
+| * | | | | | | | commit d30c3d73945dbffff3252faaf2be05a76f372e12
+| | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | Date:   Sun Apr 23 22:10:46 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Pad bottom of notes
+| | | | | | | | | 
+| * | | | | | | | commit 4529b02bae70f59a5b742d0e2e9bc7f90a6b585c
+| | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | Date:   Sun Apr 23 22:08:29 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Note bar auto overflow
+| | | | | | | | | 
+| * | | | | | | | commit 06b9719197baac26b5e5be874d4c753435099f9c
+| | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | Date:   Sun Apr 23 22:08:13 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Prevent XSS attack
+| | | | | | | | |   
+| * | | | | | | |   commit 2ec9ed53d57ff4c6b58e86033136c4c208c74904 (origin/CITS-9-Notes, CITS-9-Notes)
+| |\ \ \ \ \ \ \ \  Merge: f43b12a 4682501
+| |/ / / / / / / /  Author: dct <dylan.to@hotmail.com>
+|/| | | | | | | |   Date:   Wed Apr 19 13:27:29 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into CITS-9-Notes
+| | | | | | | | | 
+| * | | | | | | | commit f43b12a8d73b920f99977f8b0df932bbc3962749
+| | | | | | | | | Author: dct <dylan.to@hotmail.com>
+| | | | | | | | | Date:   Wed Apr 19 11:38:30 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Note posting instead of saving
+| | | | | | | | |   
+| * | | | | | | |   commit b1de8800fb657218b98b86d7e1c2fc7f86c65a15
+| |\ \ \ \ \ \ \ \  Merge: 971ccfa f508932
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Sun Apr 16 14:34:56 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into CITS-9-Notes
+| | | | | | | | | | 
+| * | | | | | | | | commit 971ccfaf7e6694371554a40258aa971e08eb0eb6
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Sat Apr 15 19:13:04 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Fix container not extending to full height
+| | | | | | | | | | 
+| * | | | | | | | | commit 53cbf1df6b498f1239aa61abaf82f15a4ef2744f
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Sat Apr 15 19:08:56 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Tweak note title padding
+| | | | | | | | | | 
+| * | | | | | | | | commit 602a2f70f681d4c4b150b47d8779ab70280d3565
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Sat Apr 15 19:07:02 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Add note dummy functionality and ux flow
+| | | | | | | | | |   
+| * | | | | | | | |   commit 3ded3c2561dde552c86fc18f5653a704e945cb5e
+| |\ \ \ \ \ \ \ \ \  Merge: bd9a8a7 a04e6f9
+| | | |_|_|/ / / / /  Author: Dylan To <dylan.to@hotmail.com>
+| | |/| | | | | | |   Date:   Sat Apr 15 16:20:32 2023 +0800
+| | | | | | | | | |   
+| | | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into CITS-9-Notes
+| | | | | | | | | | 
+| * | | | | | | | | commit bd9a8a7d2e47f45dc6451ab1254bd0e76442cc29
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Wed Apr 12 23:49:45 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Add static notes bar
+| | | | | | | | | |   
+| | | | | | | | | | * commit a1ecf43e6d6e7d58aa4cf750a5a9755ac4e364c7 (refs/stash)
+| | | | | | | | | |/| Merge: 9c796d9 27b975c
+| | | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | | Date:   Fri Apr 28 21:36:49 2023 +0800
+| | | | | | | | | | | 
+| | | | | | | | | | |     WIP on notes_with_db: 9c796d9 fixed modal popup
+| | | | | | | | | | | 
+| | | | | | | | | | * commit 27b975c081779aae01ecbc879001cb4db30567d8
+| | | | | | | | | |/  Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | |   Date:   Fri Apr 28 21:36:49 2023 +0800
+| | | | | | | | | |   
+| | | | | | | | | |       index on notes_with_db: 9c796d9 fixed modal popup
+| | | | | | | | | | 
+| | | | | | | | | * commit 9c796d90004ade62adcc0f097062f46249e63fc6
+| | | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | | Date:   Wed Apr 19 15:39:31 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     fixed modal popup
+| | | | | | | | | | 
+| | | | | | | | | * commit ba87fa47e0dad025580b1ecefa300010a1931eee
+| | | | | | | | |/| Merge: 8fbef16 8547996
+| | | | | | | |_|/  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | |/| |   Date:   Wed Apr 19 15:13:51 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       used db notes and fixed search bar functionality
+| | | | | | | | |   
+| | | | | | * | |   commit 8547996884ce79c21a856d4d3737974480ee8f7e
+| | | | | | |\ \ \  Merge: 13f40d7 4682501
+| |_|_|_|_|_|/ / /  Author: dct <dylan.to@hotmail.com>
+|/| | | | | | / /   Date:   Wed Apr 19 13:27:59 2023 +0800
+| | | | | | |/ /    
+| | | | | | | |         Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into apis
+| | | | | | | | 
+| | | | | | * | commit 13f40d7aa9af678c2788ae9b5da903d4b96dffe8
+| | | | | | | | Author: dct <dylan.to@hotmail.com>
+| | | | | | | | Date:   Wed Apr 19 13:11:56 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Fix test
+| | | | | | | | 
+| | | | | | * | commit 5515055e835cac673988e2454fa69864dbd9a140
+| | | | | | | | Author: dct <dylan.to@hotmail.com>
+| | | | | | | | Date:   Wed Apr 19 12:24:03 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Disable line length rule
+| | | | | | | |   
+| | | | | | * |   commit 489dd4b96c9494c25fbdf5605951ef57214d83f6
+| | | | | | |\ \  Merge: a80d69d e91fb9e
+| | | | | | | | | Author: dct <dylan.to@hotmail.com>
+| | | | | | | | | Date:   Wed Apr 19 12:19:44 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Merge branch 'apis' of https://github.com/Agile-Web-Dev/AGWP into apis
+| | | | | | | | | 
+| | | | | | | * | commit e91fb9e914eb3909ba3ad31d8d11c08fb2384c69
+| | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | Date:   Wed Apr 19 12:14:52 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     linting
+| | | | | | | | |   
+| | | | | | | * |   commit 461074edda892399d531f1a2549273a018c6b52f
+| | | | | | | |\ \  Merge: 5f55ec2 25b40df
+| | | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | | Date:   Wed Apr 19 11:58:41 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Merge branch 'apis' of https://github.com/Agile-Web-Dev/AGWP into apis
+| | | | | | | | | | 
+| | | | | | | * | | commit 5f55ec2945a0ea37113b3f7da7629cb49eb0780e
+| | | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | | Date:   Wed Apr 19 11:58:20 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     linting
+| | | | | | | | | | 
+| | | | | | * | | | commit a80d69d6d910a736db2c93ca170a8240176113b2
+| | | | | | | |/ /  Author: dct <dylan.to@hotmail.com>
+| | | | | | |/| |   Date:   Wed Apr 19 12:18:12 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Fix notes route + test
+| | | | | | | | | 
+| | | | | | * | | commit 25b40df8998fb44a64b6822766e5b6f6b2fa1111
+| | | | | | |/ /  Author: dct <dylan.to@hotmail.com>
+| | | | | | | |   Date:   Wed Apr 19 11:42:55 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Pass ci
+| | | | | | | | 
+| | | | | | * | commit 28b0aa5119b734ee91f1df675e24d78cfedb79b4
+| | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | Date:   Wed Apr 19 10:55:41 2023 +0800
+| | | | | | | | 
+| | | | | | | |     linting
+| | | | | | | |   
+| | | | | | * |   commit 083be26cc0eeab0a3574cd3abaac43339cedf1d6
+| | | | | | |\ \  Merge: a8a777e f508932
+| | | | |_|_|/ /  Author: bobojeager <danishhilmann98@gmail.com>
+| | | |/| | | |   Date:   Wed Apr 19 10:42:31 2023 +0800
+| | | | | | | |   
+| | | | | | | |       merged with main
+| | | | | | | |   
+| | | | | | | *   commit 8fbef1664ca22ee4c2182af605183e8f25b68007
+| | | | | | | |\  Merge: 04dfcc1 5e11081
+| | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | Date:   Wed Apr 19 13:38:28 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Merge branch 'topbar_with_db' of https://github.com/Agile-Web-Dev/AGWP into topbar_with_db
+| | | | | | | | | 
+| | | | | | | | * commit 5e11081a3c0f0d4aa0f9cdcc03ee099df59bdb4e
+| | | | | | | | | Author: dct <dylan.to@hotmail.com>
+| | | | | | | | | Date:   Wed Apr 19 13:24:07 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Fix merge
+| | | | | | | | |   
+| | | | | | | | *   commit 5ddd0ad7b03e05f6cda4dd76fdc52a111a8886b8
+| | | | | | | | |\  Merge: bbdb894 9c05f08
+| | | | | |_|_|_|/  Author: dct <dylan.to@hotmail.com>
+| | | | |/| | | |   Date:   Wed Apr 19 13:23:03 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'frontend-header' of https://github.com/Agile-Web-Dev/AGWP into topbar_with_db
+| | | | | | | | |   
+| | | | * | | | |   commit 9c05f08ef40cea4bf36f4b38dc870907672ade51 (frontend-header)
+| | | | |\ \ \ \ \  Merge: 1dc3b13 4682501
+| |_|_|_|/ / / / /  Author: dct <dylan.to@hotmail.com>
+|/| | | | | | | |   Date:   Wed Apr 19 13:16:48 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into frontend-header
+| | | | | | | | |   
+| | | | | | | | *   commit bbdb8946b9b174471c0282fbd8d496fc6a85e0f9
+| | | | | | | | |\  Merge: e709cc3 4682501
+| |_|_|_|_|_|_|_|/  Author: dct <dylan.to@hotmail.com>
+|/| | | | | | | |   Date:   Wed Apr 19 13:22:01 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into topbar_with_db
+| | | | | | | | |   
+* | | | | | | | |   commit 468250132f34110f0c393888f36eaec0f7549183
+|\ \ \ \ \ \ \ \ \  Merge: f508932 bfaad79
+| |_|_|/ / / / / /  Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+|/| | | | | | | |   Date:   Wed Apr 19 13:14:11 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge pull request #12 from Agile-Web-Dev/chatroom-messages
+| | | | | | | | |       
+| | | | | | | | |       CITS-30 Chatroom messages
+| | | | | | | | | 
+| * | | | | | | | commit bfaad79ab2ea20da5d4de03ad151777b9345ed04 (origin/chatroom-messages)
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sun Apr 16 14:49:33 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     fix broken css
+| | | | | | | | |   
+| * | | | | | | |   commit 789c51b332c3b063f1b99692aca61c2256cd512e
+| |\ \ \ \ \ \ \ \  Merge: 2c8541d f508932
+| |/ / / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | | |   Date:   Sun Apr 16 14:04:15 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into chatroom-messages
+| | | | | | | | |   
+| * | | | | | | |   commit 2c8541d594e4a6e22ed2cfd785d1a95560719306
+| |\ \ \ \ \ \ \ \  Merge: 3807e94 a04e6f9
+| | | |/ / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+| | |/| | | | | |   Date:   Sun Apr 16 00:16:59 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into chatroom-messages
+| | | | | | | | | 
+| * | | | | | | | commit 3807e942273ade734e86690aaeaaee457618777f
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Fri Apr 14 15:30:20 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     auto scroll and styling fixes
+| | | | | | | | | 
+| * | | | | | | | commit 75c7207a71b98606ca1e282596dfe9289934ad91
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Thu Apr 13 00:54:59 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     style chatroom
+| | | | | | | | |   
+| * | | | | | | |   commit 8af379219ccc8c374af101f8519d2527de758936
+| |\ \ \ \ \ \ \ \  Merge: 6d0c996 e8a183e
+| | | |/ / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+| | |/| | | | | |   Date:   Wed Apr 12 21:08:59 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into chatroom-messages
+| | | | | | | | | 
+| * | | | | | | | commit 6d0c99637d3e3d705d161243a21b9e4f8080d113
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sun Apr 9 18:04:07 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     auto resize chatbox
+| | | | | | | | | 
+| * | | | | | | | commit f2784f0920163119c34382a04efc653cedc8605a
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sat Apr 8 22:46:54 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     break horizontal text
+| | | | | | | | | 
+| * | | | | | | | commit fa9a7ff4f16193eb1263a6eb07f5a2161433fa1c
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sat Apr 8 22:34:01 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     fix xss vuln
+| | | | | | | | | 
+| * | | | | | | | commit ce121a2ecf4d70ab800bbebbb40d9a7ab1fc85d6
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sat Apr 8 20:47:29 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     message css
+| | | | | | | | | 
+| * | | | | | | | commit 1b6a68a7d174cc9b0a58333de13f569af597c8ea
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sat Apr 8 18:42:18 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     avatar caching, message thread
+| | | | | | | | |   
+| * | | | | | | |   commit fec2fabe5fce3dfd3c6c69b7fe343d0b4529b7f2
+| |\ \ \ \ \ \ \ \  Merge: 924fa34 1aa2e28
+| | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | Date:   Fri Apr 7 23:49:09 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into chatroom-messages
+| | | | | | | | | |   
+| * | | | | | | | |   commit 924fa34ecf69fe45541580789b3bef802e6be50d
+| |\ \ \ \ \ \ \ \ \  Merge: f55f561 9caf931
+| | | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | | Date:   Fri Apr 7 22:56:24 2023 +0800
+| | | | | | | | | | | 
+| | | | | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into chatroom-messages
+| | | | | | | | | | | 
+| | | | | | | | | * | commit 04dfcc12cea40e25dcdadf27eb6f325b4a6e0110
+| | | | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | | | Date:   Wed Apr 19 13:38:11 2023 +0800
+| | | | | | | | | | | 
+| | | | | | | | | | |     fixed linting
+| | | | | | | | | | | 
+| | | | | | | | | * | commit c7b1f7a87bd5f40597340e3e258be870e9579b64
+| | | | | | | | | |/  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | |   Date:   Wed Apr 19 11:55:25 2023 +0800
+| | | | | | | | | |   
+| | | | | | | | | |       Co-authored-by: jsun1590 <jsun1590@users.noreply.github.com>
+| | | | | | | | | | 
+| | | | | | | | | * commit e709cc3e32415a5b9d0ebf11bb957f127aed7d77
+| | | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | | Date:   Wed Apr 19 10:38:03 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     added log out and routes
+| | | | | | | | | | 
+| | | | | | | | | * commit 37e712446e9c720e9a96d2127f4dd0bb5bc9954f
+| | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | Date:   Mon Apr 17 17:50:14 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     formatting
+| | | | | | | | | | 
+| | | | | | | | | * commit 82afaf90545cf884f8d98e1eba496aeb3de29c21
+| | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | Date:   Mon Apr 17 17:41:49 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     fix context
+| | | | | | | | | | 
+| | | | | | | | | * commit e676220872ab6bd085f1f14cc6cedccfedd362b5
+| | | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | | Date:   Mon Apr 17 16:55:06 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     need to fix context
+| | | | | | | | | | 
+| | | | | | | | | * commit 342b68bd127fdbb3cf7928a2f49b05a61f8fd7f0
+| | | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | | Date:   Sun Apr 16 20:44:06 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     front end header to be dynamic
+| | | | | | | | | | 
+| | | | | | | | | * commit 3a9183e4fc82d0f1e340e5afd0bbb4f7a5827029
+| | | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | | Date:   Sun Apr 16 20:36:38 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     merged with frontend-header
+| | | | | | | | | |   
+| | | | | | | | | *   commit eefca8c682068529e5b59b02cbf28a609635db04
+| | | | | | | | | |\  Merge: fdab158 1dc3b13
+| | | | | | | |_|_|/  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | |/| | |   Date:   Sun Apr 16 20:36:17 2023 +0800
+| | | | | | | | | |   
+| | | | | | | | | |       Merge branch 'frontend-header' of https://github.com/Agile-Web-Dev/AGWP into topbar_with_db
+| | | | | | | | | | 
+| | | | | | * | | | commit 1dc3b13e3ff1aa83da81b3a5c6facffd45d1de93
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Sun Apr 16 14:42:53 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Vertically center logo
+| | | | | | | | | |   
+| | | | | | * | | |   commit c18fa51570de286e9e48fdf4e585723d33d3dcac
+| | | | | | |\ \ \ \  Merge: eee2096 f508932
+| |_|_|_|_|_|/ / / /  Author: Dylan To <dylan.to@hotmail.com>
+|/| | | | | | | | |   Date:   Sun Apr 16 14:35:23 2023 +0800
+| | | | | | | | | |   
+| | | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into frontend-header
+| | | | | | | | | |   
+* | | | | | | | | |   commit f50893200ec345862639afad7b0bd46d76540df2
+|\ \ \ \ \ \ \ \ \ \  Merge: a04e6f9 7b7799f
+| |_|_|_|_|/ / / / /  Author: dct0 <19729435+dct0@users.noreply.github.com>
+|/| | | | | | | | |   Date:   Sun Apr 16 13:58:44 2023 +0800
+| | | | | | | | | |   
+| | | | | | | | | |       Merge pull request #10 from Agile-Web-Dev/forum
+| | | | | | | | | |       
+| | | | | | | | | |       CITS-17 Forum frontend and some backend
+| | | | | | | | | | 
+| * | | | | | | | | commit 7b7799f48d5bcb9c34e76fb6a1e1976c956386e5 (origin/forum, forum)
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Sun Apr 16 00:18:55 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Rename forum to notes
+| | | | | | | | | | 
+| * | | | | | | | | commit 9b9d3dd22443f0a6b44c957788b79978f15eb0d9
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Sat Apr 15 21:23:54 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Fix test
+| | | | | | | | | |   
+| * | | | | | | | |   commit 6ead5930014d0d329dfc2265fa47231b50d3e20b
+| |\ \ \ \ \ \ \ \ \  Merge: 8c97a81 a04e6f9
+| |/ / / / / / / / /  Author: Dylan To <dylan.to@hotmail.com>
+|/| | | | | | | | |   Date:   Sat Apr 15 21:20:05 2023 +0800
+| | | | | | | | | |   
+| | | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into forum
+| | | | | | | | | | 
+| * | | | | | | | | commit 8c97a811b67f3bc6744840f03341e626f11332ae
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Sat Apr 15 13:23:40 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Revert get notes route change
+| | | | | | | | | | 
+| * | | | | | | | | commit e3becc1f271d02905f55d24c96563ba4b4ae30b5
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Fri Apr 14 11:53:31 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Fix pr comments and disable test
+| | | | | | | | | | 
+| | | | | | | | | * commit fdab158c6d62edbb0f5efcaa72b78d042686d3c6
+| | | | | | | | |/| Merge: a8a777e eee2096
+| | | | | | | |_|/  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | |/| |   Date:   Sat Apr 15 22:32:11 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'frontend-header' of https://github.com/Agile-Web-Dev/AGWP into topbar_with_db
+| | | | | | | | |   
+| | | | | | * | |   commit eee20962b2417bb64fa3268f3fa9dc915f9e5c1e
+| | | | | | |\ \ \  Merge: c02b1b8 a04e6f9
+| |_|_|_|_|_|/ / /  Author: Dylan To <dylan.to@hotmail.com>
+|/| | | | | | | |   Date:   Sat Apr 15 21:27:35 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into frontend-header
+| | | | | | | | | 
+| | | | | | * | | commit c02b1b8960fdbb21968bc37c47f4d6de196f665e
+| | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | Date:   Thu Apr 6 21:59:01 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Add header and hardcoded tabs
+| | | | | | | | |   
+| | | | | | | | *   commit a8a777e78ed0c0e6632e3c07b2e93ad483fd1032
+| | | | | | | | |\  Merge: fc410c2 a04e6f9
+| |_|_|_|_|_|_|_|/  Author: bobojeager <danishhilmann98@gmail.com>
+|/| | | | | | | |   Date:   Sat Apr 15 21:36:31 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into apis
+| | | | | | | | |   
+* | | | | | | | |   commit a04e6f9a7e95dad37362c92214e8d1ef44626073
+|\ \ \ \ \ \ \ \ \  Merge: e8a183e 945e213
+| |_|_|_|_|/ / / /  Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+|/| | | | | | / /   Date:   Sat Apr 15 15:13:29 2023 +0800
+| | |_|_|_|_|/ /    
+| |/| | | | | |         Merge pull request #13 from Agile-Web-Dev/dashboard
+| | | | | | | |         
+| | | | | | | |         Dashboard page
+| | | | | | | | 
+| | | | | | | * commit fc410c281f5c50bb040ba01b924d1d73b0567600
+| | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | Date:   Sat Apr 15 16:47:10 2023 +0800
+| | | | | | | | 
+| | | | | | | |     adding user classes
+| | | | | | | | 
+| | | | | | | * commit 516e61b828d97773bfbad2a58c7c2f7e16687540
+| | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | Date:   Fri Apr 14 15:50:29 2023 +0800
+| | | | | | | | 
+| | | | | | | |     refactored
+| | | | | | | | 
+| | | | | | | * commit 5c81e16749b655a427f58cdc2dc0c956d77aa693
+| | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | Date:   Fri Apr 14 14:49:10 2023 +0800
+| | | | | | | | 
+| | | | | | | |     refactored the chat api and POST message after recieving
+| | | | | | | | 
+| | | | | | | * commit 43d8dafd2af9a937b9dc1abd484e8d6696308d35
+| | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | Date:   Fri Apr 14 13:03:49 2023 +0800
+| | | | | | | | 
+| | | | | | | |     notes test
+| | | | | | | | 
+| | | | | | | * commit 8bed0967ff1a8976b385aa1579c09571bf12ba57
+| | | |_|_|_|/  Author: bobojeager <danishhilmann98@gmail.com>
+| | |/| | | |   Date:   Thu Apr 13 14:57:54 2023 +0800
+| | | | | | |   
+| | | | | | |       fix default uuid
+| | | | | | |   
+| | * | | | |   commit 685477ba3de59a16b98822a25dbaca2747de232f
+| | |\ \ \ \ \  Merge: 28c51fb b65d915
+| | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | Date:   Thu Apr 13 12:48:54 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Merge branch 'forum' of https://github.com/Agile-Web-Dev/AGWP into forum
+| | | | | | | |   
+| | | * | | | |   commit b65d9157d114a72c151dcb525860c494bd899eea
+| | | |\ \ \ \ \  Merge: ab93e60 b06d278
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Wed Apr 12 19:11:30 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into forum
+| | | | | | | | | 
+| | | * | | | | | commit ab93e60e5d7a50d577de58106ad5ab4687f4c29a
+| | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | Date:   Mon Apr 10 22:04:41 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Pass test
+| | | | | | | | | 
+| | | * | | | | | commit 7c4fd68879678582a499dff1b26670985a4761fe
+| | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | Date:   Mon Apr 10 21:59:24 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Lint
+| | | | | | | | | 
+| | | * | | | | | commit 2ff4a42fc548dc0afe5a8916eae3f01ddfb87c68
+| | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | Date:   Mon Apr 10 21:56:46 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Use web font instead of img
+| | | | | | | | |   
+| | | * | | | | |   commit 358ebba54347f97038edf49ab5f763f9d4a09c73
+| | | |\ \ \ \ \ \  Merge: 07e982b 720e412
+| | | | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | | | Date:   Mon Apr 10 21:54:16 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     Merge branch 'frontend-navbar' of https://github.com/Agile-Web-Dev/AGWP into forum
+| | | | | | | | | | 
+| | * | | | | | | | commit 28c51fb956e975a9cdd28d663295861017233a38
+| | |/ / / / / / /  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | |   Date:   Thu Apr 13 12:48:01 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       added chat api
+| | | | | | | | |     
+| | | | | | | | | *   commit 33a76082d1ea9f084c25363c779173fce037bdfe (origin/dashboard)
+| | | | | | | | | |\  Merge: 9631cc7 945e213
+| | |_|_|_|_|_|_|_|/  Author: bobojeager <danishhilmann98@gmail.com>
+| |/| | | | | | | |   Date:   Sat Apr 15 21:23:51 2023 +0800
+| | | | | | | | | |   
+| | | | | | | | | |       Merge branch 'dashboard' of https://github.com/Agile-Web-Dev/AGWP into dashboard
+| | | | | | | | | | 
+| * | | | | | | | | commit 945e2139a48dbd30344c614ed53fdb0fda0039cc (dashboard)
+| | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | Date:   Sat Apr 15 13:18:23 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     formatting
+| | | | | | | | | | 
+| * | | | | | | | | commit 1178bf73debd23df01a162d2ae53e15d38e15554
+| | | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | | Date:   Sat Apr 15 13:15:36 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     fix class session auth
+| | | | | | | | | | 
+| | | | | | | | | * commit 9631cc7ff2387b10f2ec7b854522fabe48423694
+| | | | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | | | Date:   Sat Apr 15 21:23:45 2023 +0800
+| | | | | | | | | | 
+| | | | | | | | | |     changed forum routing
+| | | | | | | | | | 
+| | | | | | | | | * commit 1dd329e6907d76fb380e743a95ce8808add450b5
+| | |_|_|_|_|_|_|/  Author: bobojeager <danishhilmann98@gmail.com>
+| |/| | | | | | |   Date:   Sat Apr 15 21:22:58 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       change routing for forum to notes
+| | | | | | | | |   
+| * | | | | | | |   commit d3d44ac0afbdc6a15fe50e3c995fd46c9a733d1b
+| |\ \ \ \ \ \ \ \  Merge: 6f28864 e8a183e
+| |/ / / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | | |   Date:   Wed Apr 12 21:05:42 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into dashboard
+| | | | | | | | | 
+* | | | | | | | | commit e8a183e0e4786a4c4450ae43cb235f9ae550524e
+| |_|_|/ / / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | |   Date:   Wed Apr 12 21:05:01 2023 +0800
+| | | | | | | |   
+| | | | | | | |       emergency fix layout
+| | | | | | | | 
+| * | | | | | | commit 6f288643681ced4a905a322c4548e1af670e8e68
+| | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | Date:   Wed Apr 12 21:01:44 2023 +0800
+| | | | | | | | 
+| | | | | | | |     fix layout
+| | | | | | | |   
+| * | | | | | |   commit 4b01f133710a9691281c8deb05c3181c3a6c88f2
+| |\ \ \ \ \ \ \  Merge: b466f8f b06d278
+| |/ / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | |   Date:   Wed Apr 12 20:57:59 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into dashboard
+| | | | | | | |   
+* | | | | | | |   commit b06d27822c42d929c379c860d9e4a5cc2c000574
+|\ \ \ \ \ \ \ \  Merge: 24d26fc bb779b9
+| | | | | | | | | Author: dct0 <19729435+dct0@users.noreply.github.com>
+| | | | | | | | | Date:   Wed Apr 12 18:59:26 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Merge pull request #7 from Agile-Web-Dev/frontend-navbar
+| | | | | | | | |     
+| | | | | | | | |     CITS-15 Frontend navbar and base sidebar
+| | | | | | | | | 
+| * | | | | | | | commit bb779b9d2a945ce4b0392c81062dedd8470d472c (origin/frontend-navbar, frontend-navbar)
+| | |_|/ / / / /  Author: Jack Sun <jsun1590@gmail.com>
+| |/| | | | | |   Date:   Wed Apr 12 18:53:28 2023 +0800
+| | | | | | | |   
+| | | | | | | |       fix layout
+| | | | | | | | 
+| * | | | | | | commit 720e4120325b1667c548b5964a151a55dd51a514
+| | | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | | Date:   Mon Apr 10 21:46:37 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Use bootstrap webfont instead of svgs
+| | | | | | | |   
+| * | | | | | |   commit 7fcea790d83670b642fc81e7870a7be66e648855
+| |\ \ \ \ \ \ \  Merge: 49491bb 24d26fc
+| |/ / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | |   Date:   Sun Apr 9 00:20:41 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into frontend-navbar
+| | | | | | | |   
+| * | | | | | |   commit 49491bb4d1de5a5c485feb79a5b42f7ae14e4e5d
+| |\ \ \ \ \ \ \  Merge: 23efe99 d64d7cc
+| | | |_|_|_|_|/  Author: Dylan To <dylan.to@hotmail.com>
+| | |/| | | | |   Date:   Thu Apr 6 13:53:38 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'chatroom' of https://github.com/Agile-Web-Dev/AGWP into frontend-navbar
+| | | | | | | |   
+| * | | | | | |   commit 23efe99e2798fee04e1f313b1e68231d58887dd9
+| |\ \ \ \ \ \ \  Merge: 5e978e2 9caf931
+| | | |_|_|_|/ /  Author: Dylan To <dylan.to@hotmail.com>
+| | |/| | | | |   Date:   Thu Apr 6 13:52:14 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into frontend-navbar
+| | | | | | | | 
+| | | | * | | | commit b466f8fe40d1d4eb7fde008ccdfe9190e0f65484
+| | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | Date:   Mon Apr 10 16:11:06 2023 +0800
+| | | | | | | | 
+| | | | | | | |     fix test
+| | | | | | | | 
+| | | | * | | | commit 2ba2eb2db022e8f449d4a2918ffdcc57bcc75a25
+| | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | Date:   Mon Apr 10 16:09:14 2023 +0800
+| | | | | | | | 
+| | | | | | | |     formatting
+| | | | | | | | 
+| | | | * | | | commit 58c351e05a9b7a753b0fab68cb22690f54a617e6
+| | | | |/ / /  Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | |   Date:   Mon Apr 10 15:57:17 2023 +0800
+| | | | | | |   
+| | | | | | |       dashboard page and rooms
+| | | | | | | 
+| | | | * | | commit 07e982b1abed12b98955ae31a8fbb55eb219a87f
+| | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | Date:   Sun Apr 9 16:02:32 2023 +0800
+| | | | | | | 
+| | | | | | |     changed syntax to be more consistent
+| | | | | | |   
+| | | | * | |   commit 71b8f2727409379ab1141d303817934c0abc688a
+| | | | |\ \ \  Merge: 003a390 36e1f9b
+| | | | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | | | Date:   Sun Apr 9 15:44:21 2023 +0800
+| | | | | | | | 
+| | | | | | | |     Merge branch 'forum' of https://github.com/Agile-Web-Dev/AGWP into forum
+| | | | | | | | 
+| | | | | * | | commit 36e1f9b14eb5c66c571af251d9cb87651aafe891
+| | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | Date:   Sun Apr 9 14:31:55 2023 +0800
+| | | | | | | | 
+| | | | | | | |     formatting
+| | | | | | | |   
+| | | | | * | |   commit 41a945fcea90de953dcdd4855ef1f3416c6799fc
+| | | | | |\ \ \  Merge: 4c5b502 24d26fc
+| |_|_|_|_|/ / /  Author: Dylan To <dylan.to@hotmail.com>
+|/| | | | | | |   Date:   Sat Apr 8 22:50:03 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into forum
+| | | | | | | |   
+* | | | | | | |   commit 24d26fcad08f23c7efa9b698a97e6c97a1745072 (top-bar)
+|\ \ \ \ \ \ \ \  Merge: f72398b a0026f9
+| | | | | | | | | Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| | | | | | | | | Date:   Sat Apr 8 22:49:05 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     Merge pull request #8 from Agile-Web-Dev/e2e-selenium
+| | | | | | | | |     
+| | | | | | | | |     E2E Selenium
+| | | | | | | | |   
+| * | | | | | | |   commit a0026f9f6f1e5dc61597b949579164411ec11338 (origin/e2e-selenium, e2e-selenium)
+| |\ \ \ \ \ \ \ \  Merge: b6478c2 f72398b
+| |/ / / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | | |   Date:   Sat Apr 8 22:47:44 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into e2e-selenium
+| | | | | | | | |   
+* | | | | | | | |   commit f72398b5800b820c79401b2ace9eb7ad178b072c
+|\ \ \ \ \ \ \ \ \  Merge: 1aa2e28 d4d6504
+| |_|_|_|_|_|_|_|/  Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+|/| | | | | | | |   Date:   Sat Apr 8 22:46:37 2023 +0800
+| | | | | | | | |   
+| | | | | | | | |       Merge pull request #11 from Agile-Web-Dev/deployment
+| | | | | | | | |       
+| | | | | | | | |       Deployment
+| | | | | | | | | 
+| * | | | | | | | commit d4d65040aaaa2584e8af2a40b50b457cced534e0 (origin/deployment, deployment)
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sat Apr 8 21:50:52 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     gevent for socketio
+| | | | | | | | | 
+| * | | | | | | | commit eb62cc4a4dec31cfa31f40287ad460a3fc966e92
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sat Apr 8 21:27:16 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     fix migration command
+| | | | | | | | | 
+| * | | | | | | | commit ba164fcb8a11c1943e2063c0c518cad30eaffd27
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sat Apr 8 21:26:46 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     add migrations to Procfile
+| | | | | | | | | 
+| * | | | | | | | commit 329f588ef3bfbacc85946ddfb286da2aa5ccfaf8
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sat Apr 8 21:19:54 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     fix Procfile
+| | | | | | | | | 
+| * | | | | | | | commit 070df6cf034250bbc268a48c6291afe342d33318
+| | | | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | | | Date:   Sat Apr 8 21:16:24 2023 +0800
+| | | | | | | | | 
+| | | | | | | | |     deploy
+| | | | | | | | | 
+| * | | | | | | | commit b4926e996398f9418b9141736d1810ef3db27271
+|/ / / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | |   Date:   Sat Apr 8 21:13:29 2023 +0800
+| | | | | | | |   
+| | | | | | | |       gunicorn
+| | | | | | | |   
+| * | | | | | |   commit b6478c2d1dc52ff7328bab387795d00d284e9371
+| |\ \ \ \ \ \ \  Merge: a33a5ca 1aa2e28
+| |/ / / / / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | | | |   Date:   Fri Apr 7 23:39:56 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into e2e-selenium
+| | | | | | | |   
+* | | | | | | |   commit 1aa2e286ce7140925e7989806fcb935efcc4f329
+|\ \ \ \ \ \ \ \  Merge: 9caf931 574fffc
+| |_|_|/ / / / /  Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+|/| | | | | | |   Date:   Fri Apr 7 23:37:30 2023 +0800
+| | | | | | | |   
+| | | | | | | |       Merge pull request #9 from Agile-Web-Dev/chatroom
+| | | | | | | |       
+| | | | | | | |       CITS-16 Chatroom setup
+| | | | | | | | 
+| * | | | | | | commit 574fffc7ba4e39f6ab558a490c058995dfe3d71a (origin/chatroom, chatroom)
+| | |_|/ / / /  Author: Jack Sun <jsun1590@gmail.com>
+| |/| | | | |   Date:   Fri Apr 7 23:22:02 2023 +0800
+| | | | | | |   
+| | | | | | |       refactor create element to jquery
+| | | | | | |   
+| * | | | | |   commit d64d7cc7a64699da6bbe333e433c5babb7a23a08
+| |\ \ \ \ \ \  Merge: b484a5c 9caf931
+| |/ / / / / /  Author: Dylan To <dylan.to@hotmail.com>
+|/| | | | | |   Date:   Thu Apr 6 13:37:45 2023 +0800
+| | | | | | |   
+| | | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into chatroom
+| | | | | | | 
+| * | | | | | commit b484a5c809f88a90f8640e52eccd7d20d36c72b2
+| | |_|_|_|/  Author: Dylan To <dylan.to@hotmail.com>
+| |/| | | |   Date:   Thu Apr 6 13:36:33 2023 +0800
+| | | | | |   
+| | | | | |       Formatting
+| | | | | | 
+| * | | | | commit f55f561aff9b2642181cc9fbc1292c6659e72d5b
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Wed Apr 5 15:32:34 2023 +0800
+| | | | | | 
+| | | | | |     emoji picker styling
+| | | | | | 
+| * | | | | commit 58fa6c96474901dfa1f9c0ffb5a44c89e161971d
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Tue Apr 4 01:04:35 2023 +0800
+| | | | | | 
+| | | | | |     refactor socket
+| | | | | | 
+| | * | | | commit a33a5ca07996ddacc4dd8b2a9df89ea8aa36cd25
+| | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | Date:   Fri Apr 7 23:26:41 2023 +0800
+| | | | | | 
+| | | | | |     instructions for chromedriver
+| | | | | |   
+| | * | | |   commit 23afabbcb782fbde09454ca76cf51cbf8ccae67d
+| | |\ \ \ \  Merge: e6e9c3a 9caf931
+| |_|/ / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| | | | |   Date:   Fri Apr 7 23:23:34 2023 +0800
+| | | | | |   
+| | | | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into e2e-selenium
+| | | | | |   
+* | | | | |   commit 9caf93188a5b85daf3749b222c83610aacd1160e
+|\ \ \ \ \ \  Merge: d426c95 34de342
+| | | | | | | Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| | | | | | | Date:   Wed Apr 5 18:14:21 2023 +0800
+| | | | | | | 
+| | | | | | |     Merge pull request #6 from Agile-Web-Dev/frontend-auth
+| | | | | | |     
+| | | | | | |     Frontend auth
+| | | | | | | 
+| * | | | | | commit 34de3427aa5b9c4c003043dc014ea7d10d98f9d8 (origin/frontend-auth, frontend-auth)
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Sun Apr 2 22:36:18 2023 +0800
+| | | | | | | 
+| | | | | | |     add tests for get user
+| | | | | | | 
+| * | | | | | commit bdfb14d1c0d989fb78767cb12bcfc60a05eaeba7
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Sun Mar 26 22:09:51 2023 +0800
+| | | | | | | 
+| | | | | | |     remove duplicate default login view unauthorised requests
+| | | | | | | 
+| | | * | | | commit e6e9c3aed471482afe316f9b8900c6d37becd219
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Mon Apr 3 14:04:26 2023 +0800
+| | | | | | | 
+| | | | | | |     change ci naming
+| | | | | | | 
+| | | * | | | commit 19d4f9dce651a5e6c96b5376aa6c3ca618dd7671
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Mon Apr 3 13:55:29 2023 +0800
+| | | | | | | 
+| | | | | | |     add selenium requirement
+| | | | | | | 
+| | | * | | | commit 27d41d1b14f2c9ad62e7c70e43e0307d41e40dc0
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Mon Apr 3 13:53:57 2023 +0800
+| | | | | | | 
+| | | | | | |     fix action name
+| | | | | | | 
+| | | * | | | commit 2fa19700b1a4d9d1eb6f07c83f20c8031a2460ab
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Mon Apr 3 13:51:14 2023 +0800
+| | | | | | | 
+| | | | | | |     format and lint
+| | | | | | | 
+| | | * | | | commit eba54728b1ce025cc208aeff0eb88589f3bc9a07
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Mon Apr 3 13:49:30 2023 +0800
+| | | | | | | 
+| | | | | | |     add e2e tests to github ci
+| | | | | | | 
+| | | * | | | commit 5be81dd1d5e05cdac30dcab74ae72e8eb2d904ed
+| | | | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | | | Date:   Mon Apr 3 11:58:20 2023 +0800
+| | | | | | | 
+| | | | | | |     e2e test for login
+| | | | | | | 
+| | | * | | | commit ba6e8e8fa55670be085f5d50db08cfedc367cc9e
+| | |/ / / /  Author: Jack Sun <jsun1590@gmail.com>
+| | | | | |   Date:   Mon Apr 3 01:31:19 2023 +0800
+| | | | | |   
+| | | | | |       add selenium e2e
+| | | | | | 
+| | | | * | commit 003a390d0820367161294b373cde09de34bc7254
+| | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | Date:   Sun Apr 9 15:39:48 2023 +0800
+| | | | | | 
+| | | | | |     fixed some based on review comments
+| | | | | |   
+| | | | | | * commit 291260fb2708ba886771a39f99b9ee3dbc97ea6b (origin/users_in_class_api)
+| | | | | |/  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | |   Date:   Thu Apr 6 20:40:16 2023 +0800
+| | | | | |   
+| | | | | |       getting class user roles
+| | | | | | 
+| | | | | * commit 4c5b502aa806384edb774f68bad920128a3655c0
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Thu Apr 6 15:16:38 2023 +0800
+| | | | | | 
+| | | | | |     Format
+| | | | | | 
+| | | | | * commit c82c1123c1a05e6b3076b9613adb5faf368e03f3
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Thu Apr 6 15:09:55 2023 +0800
+| | | | | | 
+| | | | | |     Adjust note item max size
+| | | | | | 
+| | | | | * commit 1a13cf55450fa733ef09126e500bb4d599f613ce
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Thu Apr 6 14:56:58 2023 +0800
+| | | | | | 
+| | | | | |     Update colours
+| | | | | | 
+| | | | | * commit 4caa3ddb4c3a7473870a02b052aa236d89efa01c
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Thu Apr 6 14:55:18 2023 +0800
+| | | | | | 
+| | | | | |     Add hover events to note items
+| | | | | | 
+| | | | | * commit c4d3361588076ef73115c313a51b061c284d828f
+| | | | |/  Author: Dylan To <dylan.to@hotmail.com>
+| | | | |   Date:   Thu Apr 6 14:47:41 2023 +0800
+| | | | |   
+| | | | |       Add bootstrap modal
+| | | | |   
+| | | | *   commit c474ab0cf0bf926169ada51cd93c42f9490a22d1
+| | | | |\  Merge: f09ffee 743c665
+| | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | Date:   Tue Apr 4 22:29:01 2023 +0800
+| | | | | | 
+| | | | | |     Merge branch 'forum' of https://github.com/Agile-Web-Dev/AGWP into forum
+| | | | | | 
+| | | | | * commit 743c665293335316665e0ed3af2c46062a6b477b
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Mon Apr 3 22:50:18 2023 +0800
+| | | | | | 
+| | | | | |     Remove log
+| | | | | |   
+| | | | | *   commit 212914999d8f85e02975868fcc297446efad11a0
+| | | | | |\  Merge: 6a54198 dd5d97a
+| | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | Date:   Mon Apr 3 22:50:00 2023 +0800
+| | | | | | | 
+| | | | | | |     Merge branch 'forum' of https://github.com/Agile-Web-Dev/AGWP into forum
+| | | | | | | 
+| | | | | * | commit 6a5419810196a57333ec2ddf2c951325f435a601
+| | | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | | Date:   Mon Apr 3 22:49:57 2023 +0800
+| | | | | | | 
+| | | | | | |     Add basic note filter
+| | | | | | | 
+| | | | * | | commit f09ffeee43c4d7cc5bbf0f3c684cedab3b691b37
+| | | | | |/  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | |/|   Date:   Tue Apr 4 22:28:47 2023 +0800
+| | | | | |   
+| | | | | |       fixed database seeding
+| | | | | | 
+| | | | * | commit dd5d97a57f30725258f55fefba00d8b3a17ef503
+| | | | |\| Merge: 0e9749b b4314b4
+| | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | Date:   Mon Apr 3 22:40:07 2023 +0800
+| | | | | | 
+| | | | | |     Merge branch 'forum' of https://github.com/Agile-Web-Dev/AGWP into forum
+| | | | | | 
+| | | | | * commit b4314b4269abd151ab8b350e8d3bc043878bb749
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Mon Apr 3 22:36:25 2023 +0800
+| | | | | | 
+| | | | | |     Convert note items to templates
+| | | | | | 
+| | | | | * commit f0e657cd68a670abbac4fabfe40bbc93a4b35690
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Mon Apr 3 21:43:22 2023 +0800
+| | | | | | 
+| | | | | |     Add searchbar stylings
+| | | | | | 
+| | | | * | commit 0e9749bea29c2ede7e21e513bf2185f149ed12f3
+| | | | |/  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | |   Date:   Mon Apr 3 22:39:50 2023 +0800
+| | | | |   
+| | | | |       fixed serialization
+| | | | | 
+| | | | * commit 21e3ef8dec3fa9b3f7629bdd35fca072811426d6
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Mon Apr 3 21:28:14 2023 +0800
+| | | | | 
+| | | | |     serialisation
+| | | | |   
+| | | | *   commit 2e1f99bedb8e94cabb0d18018dc19d7bf63627dd
+| | | | |\  Merge: 4c41b3c b5106d8
+| | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | Date:   Mon Apr 3 21:15:45 2023 +0800
+| | | | | | 
+| | | | | |     meged api test
+| | | | | | 
+| | | | | * commit b5106d8119eae50f818837967fc45ff99f81ba5d
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Thu Mar 30 15:02:05 2023 +0800
+| | | | | | 
+| | | | | |     Add forum container and note items
+| | | | | | 
+| | | | * | commit 4c41b3c1a1e834660178d58786e3b50f613b1f83 (origin/note_api_test)
+| | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | Date:   Mon Apr 3 17:37:27 2023 +0800
+| | | | | | 
+| | | | | |     create test
+| | | | | | 
+| | | | * | commit f6f518fe487ebbb64f19536b7f88b8aef7109718 (note_api_test)
+| | | | |/  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | |   Date:   Mon Apr 3 17:16:41 2023 +0800
+| | | | |   
+| | | | |        adding test for notes api
+| | | | |   
+| | | | *   commit 0cee5a0734fed3c6bb5f5cefb2c1138f475af8ad
+| | | | |\  Merge: 0ce5d66 98e7bad
+| | | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | | Date:   Thu Mar 30 14:34:51 2023 +0800
+| | | | | | 
+| | | | | |     added api
+| | | | | |   
+| | | | | *   commit 98e7bad0649d58bfcefac2862489ea967d1abefd
+| | | | | |\  Merge: d9c2aea 5e978e2
+| | | | |_|/  Author: Dylan To <dylan.to@hotmail.com>
+| | | |/| |   Date:   Thu Mar 30 14:02:46 2023 +0800
+| | | | | |   
+| | | | | |       Merge branch 'frontend-navbar' of https://github.com/Agile-Web-Dev/AGWP into forum
+| | | | | | 
+| | | * | | commit 5e978e2b4a7039057a91a2cb4ee8a9a9d625369b
+| | | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | | Date:   Thu Mar 30 13:56:49 2023 +0800
+| | | | | | 
+| | | | | |     Move sidebar stuff to global css
+| | | | | | 
+| | | | * | commit 0ce5d6633d37ada56a0d13a7439bfc9126aaf3cd
+| | | | |/  Author: bobojeager <danishhilmann98@gmail.com>
+| | | | |   Date:   Thu Mar 30 14:32:21 2023 +0800
+| | | | |   
+| | | | |       added Api for get and posting Notes
+| | | | | 
+| | | | * commit d9c2aeaaca17cf4705c3f400852daefb2674b845 (origin/db-scripts, db-scripts)
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Thu Mar 30 13:41:25 2023 +0800
+| | | | | 
+| | | | |     created scripts to load fake data into db
+| | | | | 
+| | | | * commit db0e46659675686716931a62bc39c413bcff65b1
+| | | |/  Author: Dylan To <dylan.to@hotmail.com>
+| | | |   Date:   Thu Mar 30 10:44:56 2023 +0800
+| | | |   
+| | | |       Seed db script
+| | | |   
+| | | *   commit 124378c9c95989190bc15b97f76cfd69db2446ab
+| | | |\  Merge: 54e68ec cbb8248
+| | | |/  Author: Dylan To <dylan.to@hotmail.com>
+| | |/|   Date:   Thu Mar 30 09:50:51 2023 +0800
+| | | |   
+| | | |       Merge branch 'chatroom' of https://github.com/Agile-Web-Dev/AGWP into frontend-navbar
+| | | | 
+| | * | commit cbb82487a1a94394c2c6b42c635f7f6a4cb871a7
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Mon Mar 27 21:02:25 2023 +0800
+| | | | 
+| | | |     basic chat functionality
+| | | | 
+| | | * commit 54e68ecf23c70f5a6ecfe1a54df6d49bd9dbafb7
+| | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | Date:   Sun Mar 26 20:17:51 2023 +0800
+| | | | 
+| | | |     Reuse sidebar component + consistent spacing on for navbar
+| | | | 
+| | | * commit 89a3641509f33427213a79f51f4dcaa3676c339e
+| | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | Date:   Sun Mar 26 19:08:42 2023 +0800
+| | | | 
+| | | |     Fix grid spacing
+| | | | 
+| | | * commit 1fa3efb904e0a7f12a597ad120baeed1bc4eb7f0
+| | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | Date:   Sun Mar 26 17:39:16 2023 +0800
+| | | | 
+| | | |     Add scrollbar style
+| | | | 
+| | | * commit 767be3a3e11d39f70cb0638f1eb559546e579a2a
+| | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | Date:   Sun Mar 26 16:51:40 2023 +0800
+| | | | 
+| | | |     Fix navbar from merge
+| | | |   
+| | | *   commit cef0df5716ee43c996afb831dd232bcb76df506c
+| | | |\  Merge: 67def76 65a0bb6
+| | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | Date:   Sun Mar 26 16:35:51 2023 +0800
+| | | | | 
+| | | | |     Merge branch 'chatroom' of https://github.com/Agile-Web-Dev/AGWP into frontend-navbar
+| | | | | 
+| | | * | commit 67def760647ac01c768cf183fc5222b2df725ff7
+| | | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | | Date:   Sun Mar 26 16:19:04 2023 +0800
+| | | | | 
+| | | | |     Merge branch 'chatroom' of https://github.com/Agile-Web-Dev/AGWP into frontend-navbar
+| | | | | 
+| | | * | commit a9ac5bf7f3731e6a284669b66becc6f6dff500bf
+| |_|/ /  Author: Dylan To <dylan.to@hotmail.com>
+|/| | |   Date:   Sun Mar 26 15:37:30 2023 +0800
+| | | |   
+| | | |       wip navbar
+| | | |   
+| | | | * commit 458c0f7fc8924cbff94934e055b6f27a939c1b59 (origin/chatroom-socket-setup)
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Thu Mar 30 10:33:43 2023 +0800
+| | | | | 
+| | | | |     chat setup
+| | | | | 
+| | | | * commit 02061907cf5e50e5c5521968aab1b3b76567a7d3
+| | | |/  Author: bobojeager <danishhilmann98@gmail.com>
+| | |/|   Date:   Thu Mar 30 10:17:59 2023 +0800
+| | | |   
+| | | |       Co-authored-by: dct0 <dct0@users.noreply.github.com>
+| | | |   
+| | | | * commit 7fd81da7ff743caca9985b6adf4003a017afb7d7 (test)
+| | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | Date:   Mon Mar 27 20:54:39 2023 +0800
+| | | | | 
+| | | | |     test
+| | | | | 
+| | | | * commit 44cbaa35d55f25e8a38046d15b890c5d876aa32c (new-chatroom)
+| | | |/  Author: Jack Sun <jsun1590@gmail.com>
+| | |/|   Date:   Mon Mar 27 20:52:01 2023 +0800
+| | | |   
+| | | |       basic chat functionality
+| | | | 
+| | * | commit 1e5fa6725163ff2917cd481200979d26968fedcf
+| | |\| Merge: 207f6ba 65a0bb6
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Sun Mar 26 17:19:35 2023 +0800
+| | | | 
+| | | |     Merge branch 'chatroom' of https://github.com/Agile-Web-Dev/AGWP into chatroom
+| | | | 
+| | | * commit 65a0bb6b55d995fbda5fd10fa29bcc48ba5faf7a
+| | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | Date:   Sun Mar 26 16:33:29 2023 +0800
+| | | | 
+| | | |     Add colour themes
+| | | | 
+| | * | commit 207f6ba0ade663d6b70ffe3451a444770a3b7262
+| | |/  Author: Jack Sun <jsun1590@gmail.com>
+| | |   Date:   Sun Mar 26 17:14:47 2023 +0800
+| | |   
+| | |       refactor navbar
+| | | 
+| | * commit a2f9574684a3b8308c2a1f914b1facdd9720673e
+| |/  Author: Jack Sun <jsun1590@gmail.com>
+| |   Date:   Sun Mar 26 15:21:22 2023 +0800
+| |   
+| |       refactor layout
+| | 
+| * commit 0a67113124943f4dd1047a2a035ef08c108d908e
+| | Author: Jack Sun <jsun1590@gmail.com>
+| | Date:   Sun Mar 26 14:04:44 2023 +0800
+| | 
+| |     fix permissions
+| | 
+| * commit 5c1e2b0175b03b6fab5d3724a5637d5bd8156366
+| | Author: Jack Sun <jsun1590@gmail.com>
+| | Date:   Sun Mar 26 13:48:25 2023 +0800
+| | 
+| |     Capitalize Login
+| |   
+| *   commit e51defd352fe96d14a6aa707b20b76939a2e1835
+| |\  Merge: 2102182 d426c95
+| |/  Author: Jack Sun <jsun1590@gmail.com>
+|/|   Date:   Sun Mar 26 13:33:12 2023 +0800
+| |   
+| |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into frontend-auth
+| |   
+* |   commit d426c95f6932d081762c348657131d11fc9d7960
+|\ \  Merge: 3742135 915d4b4
+| | | Author: dct0 <19729435+dct0@users.noreply.github.com>
+| | | Date:   Sat Mar 25 21:09:28 2023 +0800
+| | | 
+| | |     Merge pull request #5 from Agile-Web-Dev/frontend-setup
+| | |     
+| | |     Frontend setup
+| | | 
+| * | commit 915d4b42b61302706592cf2af0bab194babd4b2c
+| | | Author: Dylan To <dylan.to@hotmail.com>
+| | | Date:   Sat Mar 25 19:31:52 2023 +0800
+| | | 
+| | |     Update readme and remove unused file
+| | | 
+| | * commit 21021824ded15df4c906b76dc275d16d344476f7
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Sun Mar 26 01:01:30 2023 +0800
+| | | 
+| | |     actually fix lint
+| | | 
+| | * commit d9dd0f08f1370029443a0f499df612b8cbab03a9
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Sun Mar 26 00:01:55 2023 +0800
+| | | 
+| | |     add login requirement to user route
+| | | 
+| | * commit 599e3127d926748d26333ee2fe12c3556b819c23
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Sat Mar 25 23:53:29 2023 +0800
+| | | 
+| | |     fix lint
+| | | 
+| | * commit 1c64736a8326a0dbca4d43c44381876c198ca9f9
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Sat Mar 25 23:50:05 2023 +0800
+| | | 
+| | |     separate authorisation handling for api vs pages
+| | | 
+| | * commit 7bfeff29c71259df23c1a9ffefd3f2c76d1eef5f
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Sat Mar 25 23:36:12 2023 +0800
+| | | 
+| | |     integrate backend apis
+| | | 
+| | * commit 35b4fd994fe8ffe8e5071e5e3a49235ad8c90e3e
+| |/  Author: Jack Sun <jsun1590@gmail.com>
+| |   Date:   Sat Mar 25 23:35:50 2023 +0800
+| |   
+| |       frontend auth
+| | 
+| * commit 28c3f8dbad681572f34eac73d19ccb2516659b36 (origin/frontend-setup, frontend-setup)
+| | Author: Jack Sun <jsun1590@gmail.com>
+| | Date:   Sat Mar 25 17:36:27 2023 +0800
+| | 
+| |     add djlint to Makefile
+| | 
+| * commit 16592ac418a05ab20522d32af2389b91204f8254
+| | Author: Jack Sun <jsun1590@gmail.com>
+| | Date:   Sat Mar 25 17:17:59 2023 +0800
+| | 
+| |     missing deps
+| |   
+| *   commit 7590fb85e51ce9c329150d25a01e18f40e67cfa4
+| |\  Merge: 3916e71 3742135
+| |/  Author: Jack Sun <jsun1590@gmail.com>
+|/|   Date:   Sat Mar 25 15:36:56 2023 +0800
+| |   
+| |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into frontend-setup
+| | 
+* | commit 37421359d23935bf9921301ef10bdfdfe2630f87
+| | Author: Jack Sun <jsun1590@gmail.com>
+| | Date:   Sat Mar 25 15:25:03 2023 +0800
+| | 
+| |     small fix to pipeline
+| |   
+* |   commit 36ff1fe0701ef05bc5312cb291bc8eb52f9a6e7e
+|\ \  Merge: ec4b474 0f1c8b6
+| | | Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+| | | Date:   Sat Mar 25 07:27:54 2023 +0800
+| | | 
+| | |     Merge pull request #4 from Agile-Web-Dev/backend-setup
+| | |     
+| | |     CITS20 Backend setup
+| | | 
+| * | commit 0f1c8b6b42792a25597b832cf9b81566ede830aa (origin/backend-setup, backend-setup)
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Fri Mar 24 22:06:40 2023 +0800
+| | | 
+| | |     fix test
+| | |   
+| * |   commit 13005cde6c7edf51ba729277fce049b5472b7a7a
+| |\ \  Merge: d2a8e63 217509c
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Fri Mar 24 21:28:04 2023 +0800
+| | | | 
+| | | |     Merge branch 'backend-setup' of https://github.com/Agile-Web-Dev/AGWP into backend-setup
+| | | | 
+| | * | commit 217509cdc5dff89205f9a94e025b79e5f705dc05
+| | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | Date:   Thu Mar 23 13:37:12 2023 +0800
+| | | | 
+| | | |     Lint indentation
+| | | | 
+| * | | commit d2a8e637e87342bbcdc05f4e2e2d350289cf2216
+| |/ /  Author: Jack Sun <jsun1590@gmail.com>
+| | |   Date:   Fri Mar 24 21:27:58 2023 +0800
+| | |   
+| | |       suggested changes
+| | | 
+| * | commit b38aba2682383a39c704984213b7578b2db2fb3d
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Tue Mar 21 23:33:11 2023 +0800
+| | | 
+| | |     add comment emoji to workflow
+| | | 
+| * | commit 066eae8e516c2c508f7a1bca947ea4e13394419a
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Tue Mar 21 23:29:49 2023 +0800
+| | | 
+| | |     coverage summarge
+| | | 
+| * | commit 863546859c5154fda87258fa0f745363138f9200
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Tue Mar 21 23:21:17 2023 +0800
+| | | 
+| | |     coverage comment
+| | | 
+| * | commit 2d631ca80e28b36f094d443c79abea9dab55340e
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Tue Mar 21 23:17:40 2023 +0800
+| | | 
+| | |     add deps
+| | | 
+| * | commit 1fc4d7f035895009154847253b3099ca5900b732
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Tue Mar 21 23:16:29 2023 +0800
+| | | 
+| | |     fix ci
+| | | 
+| * | commit c1903c323f5fc17b3fa0814ea515e7ae06b95a4b
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Tue Mar 21 23:15:29 2023 +0800
+| | | 
+| | |     revamp ci
+| | | 
+| * | commit 1deb55a1b557d67cb4e05e0bed24d244895e8860
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Tue Mar 21 22:57:07 2023 +0800
+| | | 
+| | |     fix ci
+| | | 
+| * | commit adc12458baccec8b0b48a34b5ef150e77b6d2af8
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Tue Mar 21 22:49:06 2023 +0800
+| | | 
+| | |     add logout tests
+| | | 
+| * | commit 4de8571d237d89ff762a3b39f7cd0dd0d3f765d9
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Sun Mar 19 15:44:02 2023 +0800
+| | | 
+| | |     add tests
+| | | 
+| * | commit c937fcc5ba8fbb872ef75299b3cfaf5ed69687c5
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Sun Mar 19 00:36:33 2023 +0800
+| | | 
+| | |     formatting, add logout, and add login tests
+| | | 
+| * | commit 36f300fa1bb2462bc8f7a39e235666a1908807fb
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Sun Mar 19 00:00:20 2023 +0800
+| | | 
+| | |     add name to User
+| | | 
+| * | commit 52bad04558f83dc308512bc6087301fcefeda3bb
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Sat Mar 18 23:29:10 2023 +0800
+| | | 
+| | |     add authentication
+| | | 
+| * | commit c568b080f02dbe204f044d411f7382756ddec534
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Sat Mar 18 17:23:55 2023 +0800
+| | | 
+| | |     update linting and formatting instructions
+| | | 
+| * | commit 1324d9a9cb6d104b4330149084fac55477002805
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Sat Mar 18 17:21:50 2023 +0800
+| | | 
+| | |     format code
+| | | 
+| * | commit c4ed23d280b0c56f268b1530c8ceeddbd4ee5026
+| | | Author: Jack Sun <jsun1590@gmail.com>
+| | | Date:   Sat Mar 18 17:02:47 2023 +0800
+| | | 
+| | |     change readme docs for flask_migrate
+| | |   
+| * |   commit b37b91be51d17f87bbc1357def0caa525ed1363d
+| |\ \  Merge: 768ebc3 c9183f7
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Sat Mar 18 16:59:49 2023 +0800
+| | | | 
+| | | |     Merge branch 'db-migration' of https://github.com/Agile-Web-Dev/AGWP into backend-setup
+| | | | 
+| | * | commit c9183f754fb5b853733ca8487f15a587572e3a7c (origin/db-migration, db-migration)
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Sat Mar 18 16:58:44 2023 +0800
+| | | | 
+| | | |     migrate to flask_sqlalchemy and flask_migrate, update table model and migrations
+| | | | 
+| * | | commit 768ebc39fc18c44c00ee1cd0bbab76ca1b936c4c
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Fri Mar 17 22:02:04 2023 +0800
+| | | | 
+| | | |     fix readme
+| | | | 
+| * | | commit 8792d2d01395b0bc695afe920d6865ab5caa7165
+| |\| | Merge: f895409 4d464c2
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Fri Mar 17 21:57:33 2023 +0800
+| | | | 
+| | | |     Merge branch 'db-migration' of https://github.com/Agile-Web-Dev/AGWP into backend-setup
+| | | |   
+| | * |   commit 4d464c29284c2198a448e7856fc91b3a308b7484
+| | |\ \  Merge: 1a22a62 fafcddf
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Fri Mar 17 21:38:12 2023 +0800
+| | | | | 
+| | | | |     Merge branch 'db-migration' of https://github.com/Agile-Web-Dev/AGWP into db-migration
+| | | | | 
+| | * | | commit 1a22a62dab2e05c006f165eca83fa8abf82a851d
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Fri Mar 17 21:37:35 2023 +0800
+| | | | | 
+| | | | |     added migration in readme and changed metadata target
+| | | | | 
+| * | | | commit f8954092892bb9b3bb82c34269a76679495aa8de
+| | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | Date:   Fri Mar 17 21:57:20 2023 +0800
+| | | | | 
+| | | | |     move db uri to env var
+| | | | | 
+| * | | | commit ea48418f4b501b674edcb525dc08721870933acf
+| | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | Date:   Fri Mar 17 21:35:22 2023 +0800
+| | | | | 
+| | | | |     add scripts
+| | | | |   
+| * | | |   commit 80929721806ab87d38d3b54a85ba824823a6491b
+| |\ \ \ \  Merge: 3008652 fafcddf
+| | | |/ /  Author: Jack Sun <jsun1590@gmail.com>
+| | |/| |   Date:   Fri Mar 17 21:33:22 2023 +0800
+| | | | |   
+| | | | |       Merge branch 'db-migration' of https://github.com/Agile-Web-Dev/AGWP into backend-setup
+| | | | | 
+| | * | | commit fafcddf013832d00901eaa2b71dd3ba702fe105c
+| | |\| | Merge: 18305a0 4eac55f
+| | | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | | Date:   Fri Mar 17 21:29:21 2023 +0800
+| | | | | 
+| | | | |     Merge branch 'db-migration' of https://github.com/Agile-Web-Dev/AGWP into db-migration
+| | | | | 
+| | | * | commit 4eac55ff4a446bc1c86b662fb979b2a1c137d3cc
+| | | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | | Date:   Fri Mar 17 19:58:16 2023 +0800
+| | | | | 
+| | | | |     added database schema using alembic migration
+| | | | |   
+| * | | |   commit 3008652a9a07ad59f4f457631cbfab67b8654ad9
+| |\ \ \ \  Merge: 18305a0 ec4b474
+| |/ / / /  Author: Jack Sun <jsun1590@gmail.com>
+|/| / / /   Date:   Fri Mar 17 21:32:57 2023 +0800
+| |/ / /    
+| | | |         Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into backend-setup
+| | | | 
+| * | | commit 18305a03927c9a64199f751d041b38e8e0b132af
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Fri Mar 17 21:20:15 2023 +0800
+| | | | 
+| | | |     add socketio and sql alchemy
+| | | | 
+| * | | commit 7c46bd81a300c712e800d1ab2913bb3a1f41d458
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Fri Mar 17 17:31:48 2023 +0800
+| | | | 
+| | | |     fix formatting
+| | | | 
+| * | | commit e7b10e7bfaf8cdd49d11f26ac25bcdac6a5ccabe
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Fri Mar 17 17:31:27 2023 +0800
+| | | | 
+| | | |     change ci filename
+| | | | 
+| | | * commit 3916e71af993f38b50fed37fc26ce50882a8b0cb
+| | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | Date:   Fri Mar 24 23:37:10 2023 +0800
+| | | | 
+| | | |     isort format
+| | | | 
+| | | * commit d9a2f4c05e5a88386581db47a5cdf6153d2fee1f
+| | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | Date:   Fri Mar 24 23:29:39 2023 +0800
+| | | | 
+| | | |     Update requirements
+| | | | 
+| | | * commit 0780026d1333edbc6bce9bf195950e25ca47aff4
+| | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | Date:   Fri Mar 24 23:23:03 2023 +0800
+| | | | 
+| | | |     Setup frontend tooling and structure
+| | | | 
+| | | * commit 20ca07a889553ed98619704fd9368f2a3c53294f
+| | | | Author: Dylan To <dylan.to@hotmail.com>
+| | | | Date:   Thu Mar 23 16:00:33 2023 +0800
+| | | | 
+| | | |     Setup page routes and templates
+| | | | 
+| | | * commit c32c81891e70a35ea3e8cc5e41d02cc0f5ee64d5
+| | | | Author: Jack Sun <jsun1590@gmail.com>
+| | | | Date:   Wed Mar 22 00:12:50 2023 +0800
+| | | | 
+| | | |     setup layouts
+| | | |   
+| | | *   commit 2d2a905ddf2af945254c5afa088d855b8fd8d8b9
+| | | |\  Merge: ee05a57 ec4b474
+| |_|_|/  Author: Jack Sun <jsun1590@gmail.com>
+|/| | |   Date:   Fri Mar 17 00:08:54 2023 +0800
+| | | |   
+| | | |       Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into frontend-setup
+| | | | 
+* | | | commit ec4b474b4744b36e493cd021c4b83e02692d6d78
+|\| | | Merge: 812085b 50f12bf
+| | | | Author: dct0 <19729435+dct0@users.noreply.github.com>
+| | | | Date:   Thu Mar 16 16:18:41 2023 +0800
+| | | | 
+| | | |     Merge pull request #3 from Agile-Web-Dev/project-setup
+| | | |     
+| | | |     CITS-11 Project setup
+| | | | 
+| | | * commit ee05a571cf4c3f7475e9c6da83d577ef0671e9c0
+| | |/  Author: Dylan To <dylan.to@hotmail.com>
+| |/|   Date:   Thu Mar 16 17:17:09 2023 +0800
+| | |   
+| | |       Fix style import
+| | | 
+| * | commit 50f12bf0e32c5aa8f92cb258355b86f444071468 (origin/project-setup, project-setup)
+| | | Author: Dylan To <dylan.to@hotmail.com>
+| | | Date:   Thu Mar 16 16:09:00 2023 +0800
+| | | 
+| | |     Tweak flake8 rules
+| | | 
+| * | commit 2aa6004b5b70061bcfed8406a09d4c7132d1588b
+| | | Author: Dylan To <dylan.to@hotmail.com>
+| | | Date:   Thu Mar 16 15:57:21 2023 +0800
+| | | 
+| | |     Remove unnecessary step + fix python version
+| | | 
+| * | commit 3cea0975afb7fd65bf05c82f2159a681bac7f2c0
+| | | Author: Dylan To <dylan.to@hotmail.com>
+| | | Date:   Thu Mar 16 15:54:21 2023 +0800
+| | | 
+| | |     Remove architecture in CI
+| | | 
+| * | commit 88e301c63ffbe79ffe69b0bfa9c5d3b7f74db5e1
+| | | Author: Dylan To <dylan.to@hotmail.com>
+| | | Date:   Thu Mar 16 15:51:46 2023 +0800
+| | | 
+| | |     Fix CI
+| | | 
+| * | commit 68e559e615a711c2e08a61bdd52d58f2ab691ee4
+| | | Author: Dylan To <dylan.to@hotmail.com>
+| | | Date:   Thu Mar 16 15:45:30 2023 +0800
+| | | 
+| | |     Format
+| | | 
+| * | commit 6a674229adff9c65dfac3ab06c2297b423fff651
+| | | Author: Dylan To <dylan.to@hotmail.com>
+| | | Date:   Thu Mar 16 15:39:53 2023 +0800
+| | | 
+| | |     Add actions
+| | | 
+| * | commit 2785d7e6121118c2421412cf13215a6194b589c9
+| |\| Merge: f8d6dca 82ba432
+| | | Author: Dylan To <dylan.to@hotmail.com>
+| | | Date:   Thu Mar 16 15:33:40 2023 +0800
+| | | 
+| | |     Merge branch 'project-setup' of https://github.com/Agile-Web-Dev/AGWP into project-setup
+| | |   
+| | *   commit 82ba4320055d29257a5768ec0b515ca8d36b959b
+| | |\  Merge: 8d70f7f 4973695
+| | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | Date:   Thu Mar 16 15:32:55 2023 +0800
+| | | | 
+| | | |     Merge branch 'project-setup' of https://github.com/Agile-Web-Dev/AGWP into project-setup
+| | | | 
+| | * | commit 8d70f7ff78bec55d57bcbbb0c7ca25d307135f4b
+| | | | Author: bobojeager <danishhilmann98@gmail.com>
+| | | | Date:   Thu Mar 16 15:32:03 2023 +0800
+| | | | 
+| | | |     installed  socket and sqlAlchemy
+| | | |   
+| * | |   commit f8d6dca92612b21352f5398ea494191719acd085
+| |\ \ \  Merge: 4973695 812085b
+| |/ / /  Author: Dylan To <dylan.to@hotmail.com>
+|/| | /   Date:   Thu Mar 16 15:33:34 2023 +0800
+| | |/    
+| |/|         Merge branch 'main' of https://github.com/Agile-Web-Dev/AGWP into project-setup
+| | | 
+* | | commit 812085b9ce298c9cfe443dc0a9866df71a477739
+| | | Author: dct0 <19729435+dct0@users.noreply.github.com>
+| | | Date:   Thu Mar 16 15:32:23 2023 +0800
+| | | 
+| | |     Create .github/workflows/blank.yml
+| | | 
+| * | commit 49736956dbb51c3e34fced6eaa9d900ac7fce401
+| |/  Author: Dylan To <dylan.to@hotmail.com>
+| |   Date:   Thu Mar 16 15:29:12 2023 +0800
+| |   
+| |       Add .flake8 and bootstrap
+| | 
+| * commit de493d5e155fd441e537ffd3968b3420f3b3b844
+| | Author: Jack Sun <jsun1590@gmail.com>
+| | Date:   Wed Mar 15 00:16:41 2023 +0800
+| | 
+| |     fix line endings
+| | 
+| * commit 631e023462357370e4b4a26ce9ac243e766186f2
+| | Author: Jack Sun <jsun1590@gmail.com>
+| | Date:   Tue Mar 14 23:57:26 2023 +0800
+| | 
+| |     upate README and create vs code settings
+| | 
+| * commit c23c76db922c2fbc4f885a9b94cfc6585637f7b4
+| | Author: Jack Sun <jsun1590@gmail.com>
+| | Date:   Tue Mar 14 23:56:55 2023 +0800
+| | 
+| |     add make scrips and requirements
+| | 
+| * commit 108970bb32123a796a7fa0077f818d3778ff91aa
+| | Author: Jack Sun <jsun1590@gmail.com>
+| | Date:   Tue Mar 14 23:56:17 2023 +0800
+| | 
+| |     update .gitignore
+| | 
+| * commit aa9e571bb79fdb2b7579ca6434e36d953772be5a
+|/  Author: Jack Sun <jsun1590@gmail.com>
+|   Date:   Tue Mar 14 23:55:52 2023 +0800
+|   
+|       Initial project setup
+| 
+* commit a1e4a46a622e6abedcc4064c954dd25d0a9ec3f5
+| Author: Jack Sun <jsun1590@gmail.com>
+| Date:   Tue Mar 14 22:04:07 2023 +0800
+| 
+|     add gitignore and readme
+| 
+* commit 5781a679129a3d52260e84f6d0a5c1f83083149b
+  Author: jsun1590 <40915904+jsun1590@users.noreply.github.com>
+  Date:   Tue Mar 14 21:45:41 2023 +0800
+  
+      Create LICENSE

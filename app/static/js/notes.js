@@ -24,15 +24,19 @@ jQuery(async () => {
     populateNote(this);
   });
 
-  $("#notes-searchbar-form").on("submit", (e) => {
+  $("#notes-searchbar-form").on("submit", async (e) => {
     e.preventDefault();
-
     const searchQuery = $("#notes-searchbar").val();
+
+    const response = await fetch("/api/notes/" + className[1].toUpperCase());
+    const data = await response.json();
+  
     const results = data.filter(
       (note) =>
         note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         note.content.toLowerCase().includes(searchQuery.toLowerCase())
     );
+
     noteList.html(results.map(NoteItem).join(""));
   });
 
@@ -55,7 +59,8 @@ const NoteItem = ({ title, content }) => {
       data-bs-title="${title}"
       data-bs-content="${content}"
     >
-    ${content}
+    <h4>${title}</h4>
+    <p>${content}</p>
     </div>
   `;
 };
@@ -66,10 +71,13 @@ jQuery(async () => {
   const className = currentPath.split("/");
   const fetchUser = await fetch("/api/user");
   const userData = await fetchUser.json();
-  const noteMenuBtn = $("#note-menu-button");
-  const noteMenuPopover = $("#note-menu");
   const noteHeader = $("#note-header");
   const noteContent = $("#note-content");
+
+  const clearNote = () => {
+    noteHeader.val("");
+    noteContent.val("");
+  };
 
   const postNote = async () => {
     noteHeader.prop("disabled", true);
@@ -102,24 +110,6 @@ jQuery(async () => {
     noteHeader.prop("disabled", false);
     noteContent.prop("disabled", false);
   };
-
-  Popper.createPopper(noteMenuBtn[0], noteMenuPopover[0], {
-    placement: "bottom-start",
-  });
-
-  $("#note-menu-button").on("click", () => {
-    noteMenuPopover.toggleClass("shown");
-  });
-
-  $(document).on("click", (e) => {
-    if (
-      !noteMenuPopover.is(e.target) &&
-      !noteMenuBtn.is(e.target) &&
-      noteMenuPopover.has(e.target).length === 0
-    ) {
-      noteMenuPopover.removeClass("shown");
-    }
-  });
 
   $("#note-share-button").on("click", async () => {
     if (noteHeader.val() === "" || noteContent.val() === "") return;

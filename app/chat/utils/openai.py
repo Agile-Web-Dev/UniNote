@@ -49,7 +49,7 @@ class OpenAI:
         """
         print("read")
         index_path = f"data/index/{room}"
-        if os.path.exists(index_path+"/docstore.json"):
+        if os.path.exists(index_path + "/docstore.json"):
             storage_context = StorageContext.from_defaults(persist_dir=index_path)
             index = load_index_from_storage(storage_context)
             return index

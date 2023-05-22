@@ -36,20 +36,18 @@ jQuery(() => {
   handleMediaChange();
 });
 
-const sidebarQuery = window.matchMedia("(max-width: 849.98px)");
+const sidebarQuery = window.matchMedia("(max-width: 999.98px)");
 
 const handleMediaChange = () => {
   if (sidebarQuery.matches) {
     leftOpen = false;
     rightOpen = false;
     $("#nav-bar").css({ "min-width": "0", "max-width": "0" });
-    $(".header-logo-container").css("display", "none");
     $("#note-bar").css({ "min-width": "0", "max-width": "0" });
   } else {
     leftOpen = true;
     rightOpen = true;
     $("#nav-bar").css({ "min-width": "250px", "max-width": "250px" });
-    $(".header-logo-container").css("display", "");
     $("#note-bar").css({ "min-width": "400px", "max-width": "400px" });
   }
 };

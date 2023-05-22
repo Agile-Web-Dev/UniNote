@@ -229,6 +229,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .header-logo-container h1 {
   color: var(--app-grey-0);
   margin: 0;
+  font-size: 42px;
 }
 
 .header-tab-item {
@@ -310,7 +311,8 @@ input[type="search"]::-webkit-search-cancel-button {
   transition: max-width 0.1s linear;
 }
 
-@media (max-width: 849.98px) {
+/* must change this breakpoint in app.js aswell */
+@media (max-width: 999.98px) {
   #drawer-button-container-left,
   #drawer-button-container-right {
     display: inline-block;

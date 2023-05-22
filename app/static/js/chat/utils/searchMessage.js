@@ -37,10 +37,7 @@ const scrollToMessage = (messageId) => {
 
 //clearing all highlights if exists
 const clearAllHighlights = () => {
-  const allMessages = $(".message-item");
-  allMessages.each((message) => {
-    $(message).css("background", "transparent");
-  });
+  $(".message-item").css("background", "transparent");
 };
 
 //clear the current highlighted message
@@ -57,12 +54,12 @@ const searchMessages = () => {
   index = 0;
   searchResults = [];
   const searchOption = $("#search-chat-filter");
+  const searchQuery = searchInput.val().trim();
 
+  clearAllHighlights();
   //search based on content
   if (searchOption.val() === "Content:") {
-    clearAllHighlights();
     const messages = getMessages();
-    const searchQuery = searchInput.val().trim();
     for (let i = messages.length - 1; i >= 0; i--) {
       const message = messages[i];
       if (message.content.toLowerCase().includes(searchQuery.toLowerCase())) {
@@ -84,8 +81,6 @@ const searchMessages = () => {
 
   //search based on user
   if (searchOption.val() == "From:") {
-    clearAllHighlights();
-    const searchQuery = searchInput.val().trim();
     const userMessage = getUserMessages();
     for (let i = userMessage.length - 1; i >= 0; i--) {
       const user = userMessage[i];
